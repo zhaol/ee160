@@ -1,0 +1,40 @@
+header {
+  margin-top: 10px;
+}
+
+.expand-all {
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.headline, .topic {
+  cursor: pointer;
+}
+
+.content, .details {
+  display: none;
+}
+
+.content p {
+  margin: 0;
+}
+
+ul {
+  margin-bottom: 10px;
+}
+
+.content blockquote {
+  margin-bottom: 0;
+}
+
+.key {
+  padding: 2px 4px;
+  color: #C09853;
+  font-size: 12px;
+}
+
+.file {
+  padding: 2px 4px;
+  color: #468847;
+  font-size: 12px;
+}

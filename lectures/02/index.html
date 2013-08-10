@@ -1,0 +1,93 @@
+---
+layout: default
+title: Lecture 02
+---
+
+<div class="lecture">
+  <ul class="outline">
+    <li class="item">
+      <h2 class="headline">Hello World</h2>
+      <div class="content">
+        <p>The first program:</p>
+        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/01_hello_world/hello_world.c"></script>
+        <p>Things to note:</p>  
+        <ul>
+          <li>each line of code is sequentially executed</li>
+          <li>main function, analogous to start of a <a href="http://www.writing.engr.psu.edu/workbooks/samplejobletter.html">letter</a></li>
+          <li>punctuations and brackets matter a lot</li>
+          <li>white space doesn't matter</li>
+          <li>standard library</li>
+          <li><code>\n</code> tells the computer to output a newline</li>
+        </ul>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">Compile and Execute</h2>
+      <div class="content">
+        <p>How do you compile and execute?</p>
+        <ul>
+          <li><code>gcc hello-world.c -o hello-world</code> will compile <em class="file well well-small">hello-world.c</em> to an executable file <em class="file well well-small">hello-world</em></li>
+          <li><code>./hello-world</code> will run the executable file <em class="file well well-small">hello-world</em> to run you program</li>
+        </ul>
+        <p>Why do you compile?
+        <ul>
+          <li>Compiling is needed to translate your C code into code your computer understands</li>
+          <li>A precompiled executable file (<em class="file well well-small">hello-world.c</em>) will run faster than running straight from C code (<em class="file well well-small">hello-world</em>), which is not possible for the C language</li>
+          <li>Some languages do not need to be precompiled to run, they are usually called "interpreted" languages</li>
+          <li>Some integrated development environments (IDEs) will compile automatically for you</li>
+        </ul>
+        <p>What does compiling do?</p>
+        <ul>
+          <li>
+            This <abbr title="StackOverflow" data-toggle="tooltip">SO</abbr> <a href="http://stackoverflow.com/questions/466790/assembly-code-vs-machine-code-vs-object-code#answer-1213207">answer</a> has a good visual diagram of what is happening during the compilation process
+          </li>
+          <li>the <code>gcc</code> command is doing the preprocessing, compiling, assembling, and linking for you</li>
+          <li>the compilation steps translate your C code into assembly code, object code, and then finally to machine code</li>
+        </ul>
+        <p>What does executing do?</p>
+        <ul>
+          <li>running the executable file <em class="file well well-small">hello_world</em> will:</li>
+            <ul>
+              <li>load the machine code into memory (such as RAM)
+              <li>run the machine code instructions, e.g. run your program</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">printf</h2>
+      <div class="content">
+        <p>What is <code>printf</code>?</p>
+        <ul><li>A function that outputs text</li></ul>
+        <p>More Info:</p>
+        <ul>
+          <li>You get access to <code>printf</code> when you include the <code>stdio.h</code> <a data-toggle="tooltip" title="A collection of functions">library</a></li>
+          <li><a href="http://www.codingunit.com/printf-format-specifiers-format-conversions-and-formatted-output">http://www.codingunit.com/printf-format-specifiers-format-conversions-and-formatted-output</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">Assignment</h2>
+      <div class="content">
+        <p>Compile and execute the <em class="file well well-small">hello_world.c</em> program in your own development environment</p>
+        <ul>
+          <li>Make sure your program outputs the following text:</li>
+          <li>
+<pre>Hello World
+Bye World</pre>
+           </li>
+        </ul>
+        <p>Modify, compile, and execute the <em class="file well well-small">hello_world.c</em> program to do something else</p>
+        <ul>
+          <li>Modify the program to output the following text (or any else you want your computer to output):</li>
+          <li>
+<pre>It was nice meeting you world.
+Hope to see you again soon.
+Do not forget to write.</pre>
+          </li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</div>

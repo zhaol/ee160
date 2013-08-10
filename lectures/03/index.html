@@ -1,0 +1,82 @@
+---
+layout: default
+title: Lecture 03
+---
+
+<div class="lecture">
+  <ul class="outline">
+    <li class="item">
+      <h2 class="headline">Variables</h2>
+      <div class="content">
+        <p>What are variables?</p>
+        <ul>
+          <li>holds information that can be changed</li>
+        </ul>
+        <p>Why use variables?</p>
+        <ul>
+          <li>programs with information that's predetermined is not very useful</li>
+        </ul>
+        <p>How to use variables?</p>
+        <ul>
+          <li>declare variables</li>
+          <li>initialize variables</li>
+          <li>set, change, or display variables</li>
+        </ul>
+      </div>
+    </li>  
+    <li class="item">
+      <h2 class="headline">Data types</h2>
+      <div class="content">
+        <p>What are data <span class="muted">type</span>'s?</p>
+        <ul>
+          <li>data types specifies what type of information is stored by the variable</li>
+          <li>C has many <span class="muted">type</span>'s available, they are listed <a href="http://en.wikipedia.org/wiki/C_data_types">here</a></li>
+        </ul>
+        <p>Why use data <span class="muted">type</span>'s?</p>
+        <ul>
+          <li>so the program knows how much memory to allocate and how to interpret the allocated memory</li>
+          <li>C requires all variables to be <span class="muted">type</span>'d</li>
+            <ul>
+              <li>some programming languages don't require <span class="muted">type</span>'ing</li>
+              <li>here's an <a href="http://www.rubyfleebie.com/ruby-is-dynamically-and-strongly-typed/">article</a> on dynamic vs static <span class="muted">type</span>'ing, you can just read the conclusion</li>
+            </ul>
+        </ul>
+        <p>How to use data <span class="muted">type</span>'s?</p>
+        <ul>
+          <li>to declare an integer number: <code>int i_am_an_integer;</code></li>
+          <li>to declare a character: <code>char i_am_a_char;</code></li>
+          <li>to declare a decimal number: <code>float i_am_a_float;</code></li>
+          <li>to declare a decimal number with higher precision: <code>double i_am_a_double;</code></li>
+        </ul>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">Variables Example</h2>
+      <div class="content">
+        <p>variables.c:</p>
+        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/02_variables/variables.c"></script>
+        <p>Things to note:</p>  
+        <ul>
+          <li><code>printf</code> needs the conversion specifier to know what type the variable is</li>
+          <li>the conversion specifiers are listed <a href="http://en.cppreference.com/w/c/io/fprintf">here</a></li>
+          <li>the conversion specifiers can be formatted with optional flags listed <a href="http://en.cppreference.com/w/c/io/fprintf">here</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">Assignment</h2>
+      <div class="content">
+        <p>Write a program that outputs the following:</p>
+        <ul>
+          <li>
+<pre>zero padding in front of a number: 1.2345 01.12345 001.12345
+zero padding in back of a number: 1.23450 1.234500 1.2345000
+exponentials (base 10): 1.2345E00 12.345E-01 0.12345E10
+rounded numbers: 1.235 1.235E0
+negative numbers: -1.2345 -1.2345E0</pre>
+           </li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</div>

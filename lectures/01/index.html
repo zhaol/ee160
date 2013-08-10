@@ -1,0 +1,336 @@
+---
+layout: default
+title: Lecture 01
+---
+
+<div class="lecture">
+  <ul class="outline">
+    <li class="item">
+      <h2 class="headline">Syllabus</h2>
+      <div class="content">
+        <a href="{{ site.baseurl }}/">Link to Syllabus</a>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">Background</h2>
+      <div class="content">
+        <p>Please feel free to use me as a reference to gain insight into any of the fields and paths I've experienced</p>
+        <ul>
+          <li>BS in EE from UHM</li>
+          <li>Interned at Time Warner Cable and Pearl Harbor</li>
+          <li>Worked at Northrop Grumman Space Technology as Communication Systems Engineer in Redondo Beach, CA (near LA)</li>
+          <li>MS in EE from USC under Northrop Fellowship Program</li>
+          <li>Moved back to HI and currently working at SPAWAR as a Web Developer/Programmer
+            <ul><li>Please Note: This class is not affiliated with SPAWAR in any way, shape, or form.  I'm here on my own time.</li></ul>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li id="command-line-commands" class="item">
+      <h2 class="headline">Command Line</h2>
+      <div class="content">
+        <p>Basic Commands:</p>
+        <ul>
+          <li class="point">
+            <p class="topic"><code>pwd</code>: print working directory</p>
+            <ul class="details">
+              <li>example usage:
+                <ul>
+                  <li><code>pwd</code>
+                    <p>outputs:</p>
+                    <ul>
+                      <li><pre>/Users/568531/01_hello_world</pre></li>
+                      <li><pre>/var/lib/stickshift/51f0e4a65973ca200700011e/app-root/data/568531/01_hello_world</pre></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>more info:
+                <ul>
+                  <li><a href="http://linux.about.com/library/cmd/blcmdl1_pwd.htm">http://linux.about.com/library/cmd/blcmdl1_pwd.htmd</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="point">
+            <p class="topic"><code>cd</code>: change directory</p>
+            <ul class="details">
+              <li>the <code>cd</code> command does not generate any output</li>
+              <li>if you print the current directory with <code>pwd</code>, it'll show a change in the working directory if <code>cd</code> was successful</li>
+              <li>example usage:
+                <ul>
+                  <li><code>cd ee160_directory</code>
+                    <p>will change to ee160_directory under current working directory</p>
+                  </li>
+                  <li><code>cd ee160_directory/subdirectory</code>
+                    <p>will change to subdirectory under ee160_directory (with ee160_directory being under the current working directory)</p>
+                  </li>
+                  <li><code>cd ~</code> or <code>cd</code>
+                    <p>will change to home or user root directory, i.e. highest level acessible from user account</p>
+                  </li>
+                  <li><code>cd ..</code>
+                    <p>will change to parent directory, i.e. up one level</p>
+                  </li>
+                  <li><code>cd /</code>
+                    <p>will change to system root directory, i.e. highest level accessible</p>
+                  </li>
+                </ul>
+              </li>
+              <li>more info:
+                <ul><li><a href="http://linux.about.com/od/commands/a/Example-Uses-Of-The-Command-Cd.htm">http://linux.about.com/od/commands/a/Example-Uses-Of-The-Command-Cd.htm</a></li></ul>
+              </li>
+            </ul>
+          </li>
+          <li class="point">
+            <p class="topic"><code>mkdir</code>: make directory</p>
+            <ul class="details">
+              <li>the <code>mkdir</code> command does not generate any output</li>
+              <li>if you list the current directory with <code>ls</code>, it'll show the added directory if <code>mkdir</code> was successful</li>
+              <li>example usage:
+                <ul>
+                  <li><code>mkdir ee160_directory</code>
+                    <p>will make ee160_directory under the current working directory</p>
+                  </li>
+                  <li><code>mkdir ee160_directory/subdirectory</code>
+                    <p>will make subdirectory under ee160_directory (with ee160_directory being under the current working directory)</p>
+                  </li>
+                </ul>
+              </li>
+              <li>more info:
+                <ul><li><a href="http://linux.about.com/library/cmd/blcmdl1_mkdir.htm">http://linux.about.com/library/cmd/blcmdl1_mkdir.htm</a></li></ul>
+              </li>
+            </ul>
+          </li>
+          <li class="point">
+            <p class="topic"><code>ls</code>: print working directory</p>
+            <ul class="details">
+              <li>example usage:
+                <ul>
+                  <li><code>ls</code>
+                    <p>outputs:</p>
+                    <ul>
+                      <li><pre>Gemfile         Gemfile.lock    _config.yml     _includes       _layouts        _posts          _site           css             index.html      js              labs            lectures</pre>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><code>ls -la</code>
+                    <p>outputs:</p>
+                    <ul>
+                      <li>
+<pre>total 56
+drwxr-xr-x  16 Gina  staff    544 Aug  2 18:07 .
+drwxr-xr-x   3 Gina  staff    102 Jul 20 13:11 ..
+drwxr-xr-x  13 Gina  staff    442 Aug  3 07:58 .git
+-rw-r--r--   1 Gina  staff      5 Jul 20 19:16 .gitignore
+-rw-r--r--   1 Gina  staff    223 Jul 20 13:05 Gemfile
+-rw-r--r--   1 Gina  staff    992 Jul 20 13:06 Gemfile.lock
+-rw-r--r--   1 Gina  staff     93 Jul 20 19:28 _config.yml
+drwxr-xr-x   3 Gina  staff    102 Aug  2 08:55 _includes
+drwxr-xr-x   3 Gina  staff    102 Jul 20 19:28 _layouts
+drwxr-xr-x   2 Gina  staff     68 Jul 20 13:31 _posts
+drwxr-xr-x   9 Gina  staff    306 Aug  3 15:26 _site
+drwxr-xr-x   4 Gina  staff    136 Aug  3 08:16 css
+-rw-r--r--   1 Gina  staff  11203 Aug  2 18:07 index.html
+drwxr-xr-x   3 Gina  staff    102 Aug  3 08:15 js
+drwxr-xr-x   3 Gina  staff    102 Jul 26 08:55 labs
+drwxr-xr-x  24 Gina  staff    816 Jul 27 00:29 lectures</pre>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>more info:
+                <ul>
+                  <li><a href="http://linux.about.com/od/commands/l/blcmdl1_ls.htm">http://linux.about.com/od/commands/l/blcmdl1_ls.htm</a></li>
+                  <li>in Windows: the command is <code>dir</code></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="point">
+            <p class="topic"><code>touch</code>: update file timestamp</p>
+            <ul class="details">
+              <li>the <code>touch</code> command does not generate any output</li>
+              <li>if you list the directory the file is in with <code>ls</code>, it'll show a new timestamp (the time when the file was <code>touch</code>'d), for all <code>touch</code>'d files</li>
+              <li>we'll use it to create an empty file</li>
+              <li>example usage:
+                <ul>
+                  <li><code>touch new_file.c</code>
+                    <p>will make new_file.c under the current working directory</p>
+                  </li>
+                  <li><code>mkdir ee160_directory/new_file.c</code>
+                    <p>will make new_file.c under ee160_directory (with ee160_directory being under the current working directory)</p>
+                  </li>
+                </ul>
+              </li>
+              <li>more info:
+                <ul><li><a href="http://linux.about.com/od/commands/l/blcmdl1_touch.htm">http://linux.about.com/od/commands/l/blcmdl1_touch.htm</a></li></ul>
+              </li>
+            </ul>
+          </li>
+          <li class="point">
+            <p class="topic"><code>rm</code>: remove file</p>
+            <ul class="details">
+              <li>the <code>rm</code> command does not generate any output</li>
+              <li>if you list the directory the file was originally in with <code>ls</code>, it'll no longer show the <code>rm</code>'d file in the directory, if <code>rm</code> was successful</li>
+              <li>example usage:
+                <ul>
+                  <li><code>rm file_to_be_deleted.c</code>
+                    <p>will remove file_to_be_deleted.c from the current working directory</p>
+                  </li>
+                  <li><code>rm ee160_directory/file_to_be_deleted.c</code>
+                    <p>will remove file_to_be_deleted.c under ee160_directory (with ee160_directory being under the current working directory)</p>
+                  </li>
+                  <li><code>rm -rd ee160_directory</code>
+                    <p>will remove all subdirectories and their files under ee160_directory, including ee160_directory (with ee160_directory being under the current working directory)</p>
+                    <p><code>r</code> flag is for recursive, e.g. files under subdirectories</p>
+                    <p><code>d</code> flag is for directories, i.e. delete directories as well</p>
+                  </li>
+                </ul>
+              </li>
+              <li>more info:
+                <ul><li><a href="http://linux.about.com/od/commands/l/blcmdl1_touch.htm">http://linux.about.com/od/commands/l/blcmdl1_touch.htm</a></li></ul>
+              </li>
+            </ul>
+          </li>
+          <li class="point">
+            <p class="topic"><code>mv</code>: move file</p>
+            <ul class="details">
+              <li>the <code>mv</code> command does not generate any output</li>
+              <li>if you list the origin directory with <code>ls</code>, it'll no longer show the <code>mv</code>'d file in the directory, if <code>mv</code> was successful and the file wasn't moved to the same directory</li>
+              <li>example usage:
+                <ul>
+                  <li><code>mv file_to_be_moved.c moved_file.c</code>
+                    <p>will rename file_to_be_moved.c to moved_file.c in current directory</p>
+                    <p>essentially just renamed the file</p>
+                  </li>
+                  <li><code>mv ee160_directory/file_to_be_moved.c ee160_directory/subdirectory/.</code>
+                    <p>will move file_to_be_moved.c under ee160_directory (with ee160_directory being under the current working directory) to subdirectory (under ee160_directory, which is under current directory)</p>
+                    <p>the name of the file will be the same because of <code>.</code></p>
+                  </li>
+                </ul>
+              </li>
+              <li>more info:
+                <ul><li><a href="http://linux.about.com/library/cmd/blcmdl1_mv.htm">http://linux.about.com/library/cmd/blcmdl1_mv.htm</a></li></ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <p>Extras:</p>
+        <ul>
+          <li class="point">
+            <p class="topic"><code>help</code>: help</p>
+            <ul class="details">
+              <li>example usage:
+                <ul>
+                  <li><code>help pwd</code>
+                    <p>outputs:</p>
+<pre>pwd: pwd [-LP]
+Print the current working directory.  With the -P option, pwd prints
+the physical directory, without any symbolic links; the -L option
+makes pwd follow symbolic links.</pre>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="point">
+            <p class="topic"><code>man</code>: manual page</p>
+            <ul class="details">
+              <li>example usage:
+                <ul>
+                  <li><code>man pwd</code>
+                    <p>outputs:</p>
+<pre>PWD(1)                    BSD General Commands Manual                   PWD(1)
+
+NAME
+     pwd -- return working directory name
+
+SYNOPSIS
+     pwd [-L | -P]
+
+DESCRIPTION
+     The pwd utility writes the absolute pathname of the current working directory to the standard output.
+
+     Some shells may provide a builtin pwd command which is similar or identical to this utility.  Consult the builtin(1) manual page.
+
+     The options are as follows:
+
+     -L      Display the logical current working directory.
+
+     -P      Display the physical current working directory (all symbolic links resolved).
+
+     If no options are specified, the -L option is assumed.
+
+ENVIRONMENT
+     Environment variables used by pwd:
+
+     PWD  Logical current working directory.
+
+EXIT STATUS
+     The pwd utility exits 0 on success, and >0 if an error occurs.
+
+SEE ALSO
+     builtin(1), cd(1), csh(1), sh(1), getcwd(3)
+
+STANDARDS
+     The pwd utility conforms to IEEE Std 1003.1-2001 (``POSIX.1'').
+
+BUGS
+     In csh(1) the command dirs is always faster because it is built into that shell.  However, it can give a different answer in the rare case that the current directory or a containing
+     directory was moved after the shell descended into it.
+
+     The -L option does not work unless the PWD environment variable is exported by the shell.
+
+BSD                             April 12, 2003                             BSD</pre>
+                  </li>
+                  <li>press <code>q</code> to quit manual pages</li>
+                  <li>more info at <a href="http://linux.about.com/od/commands/l/blcmdl1_man.htm">http://linux.about.com/od/commands/l/blcmdl1_man.htm</a></li>
+                  <li>not available in Cloud9 IDE</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="point">
+            <p class="topic"><em class="key well well-small">tab</em>: auto-complete</p>
+            <ul class="details">
+              <li>pressing <em class="key well well-small">tab</em> will show all auto-complete options or will auto-complete if there's only 1 option</li>
+              <li>useful in conjunction with <code>cd</code> to show available directories</li>
+            </ul>
+          </li>
+          <li class="point">
+            <p class="topic"><em class="key well well-small">up</em>: previous command in history</p>
+            <ul class="details">
+              <li>pressing <em class="key well well-small">up</em> will show last command in history</p>
+              <li>keep pressing <em class="key well well-small">up</em> until you find the command in history you want to execute</li>
+              <li>when you've reached the desired command, press <em class="key well well-small">enter</em> to execute command</li>
+              <li>pressing <em class="key well well-small">down</em> will go in reverse order</li>
+              <li>to start new command, press <em class="key well well-small">down</em> until there's no more commands in the command prompt</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">Assignment</h2>
+      <div class="content">
+        <p>Sign up for UH username/email:</p>
+        <ul>
+          <li><a href="https://myuh.hawaii.edu:8888/sessionid=nobody/am-sso-check-status">https://myuh.hawaii.edu:8888/sessionid=nobody/am-sso-check-status</a></li>
+          <li>Needed to sign up for <a href="http://piazza.com">Piazza</a></li>
+        </ul>
+        <p>Sign up for <a href="http://piazza.com">Piazza</a>:</p>
+        <ul>
+          <li>Sign up for free account at <a href="http://piazza.com">http://piazza.com</a></li>
+          <li>Sign in to EE160 under University of Hawaii <a href="http://piazza.com/hawaii">http://piazza.com/hawaii</a></li>
+        </ul>
+        <p>Sign up for <a href="http://c9.io">Cloud9 IDE</a>:</p>
+        <ul>
+          <li>Sign up for free account at <a href="http://c9.io/site/pricing/">http://c9.io/site/pricing/</a></li>
+        </ul>
+        <p>Use the command line commands listed <a href="#command-line-commands">above (Command Line Section)</a>, to create the following folder structure and files:</p>
+        <img src="{{ site.baseurl }}/assets/assignment_01_folders_and_files.png" class="img-rounded img-polaroid"/>
+      </div>
+    </li>
+  </ul>
+</div>
