@@ -1,0 +1,80 @@
+---
+layout: default
+title: Lecture 04
+---
+
+<div class="lecture">
+  <ul class="outline">
+    <li class="item">
+      <h2 class="headline">Compilation Errors</h2>
+      <div class="content">
+        <p>What are compilation errors?</p>
+        <ul>
+          <li>errors that show up when the code is getting compiled, i.e. running <code>gcc</code><li>
+        </ul>
+        <p>Why do compilation errors occur?</p>
+        <ul>
+          <li>syntax</li>
+          <li>missing punctations like <code>;</code></li>
+          <li>misspelled function names like <code>prinf</code></li>
+          <li>wrong function arguments like too many arguments or wrong types of arguments</li>
+          <li>mismatched brackets like <code>\{\{\}</code></li>
+        </ul>
+        <p>How to use compilation errors?</p>
+        <ul>
+          <li>the error message will get you close to the line number of where the error occurred</li>
+          <li>the error message will give you a sense of what's wrong</li>
+          <li>compile often so you know exactly which part of the code you recently updated that is causing the error</li>
+        </ul>
+      </div>
+    </li>  
+    <li class="item">
+      <h2 class="headline">Runtime Errors</h2>
+      <div class="content">
+        <p>What are runtime errors?</p>
+        <ul>
+          <li>errors that show up when the code is executing, i.e. after compiling and running <code>./hello_world</code></li>
+        </ul>
+        <p>Why do runtime errors occur?</p>
+        <ul>
+          <li>typos
+            <ul>
+              <li>wrong data types, i.e. using <code>int</code> instead of <code>float</code></li>
+              <li>pointers vs variables (addresses vs values)</li>
+              <li>wrong variable name</li>
+            </ul>
+          <li>logic
+            <ul>
+              <li>not accounting for a particular situation, i.e. edge case scenario</li>
+              <li>variable gets altered in unexpected way</li>
+              <li>not allocating enough memory</li>
+            </ul>
+        </ul>
+        <p>How to fix runtime errors?</p>
+        <ul>
+          <li>trace through program and isolate possible areas of error</li>
+          <li>use <code>printf</code> statements to verify the variables you are expecting</li>
+          <li>re-evaluate your algorithm</li>
+        </ul>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">Fix Me Example</h2>
+      <div class="content">
+        <p>fix <em class="file well well-small">fix_me.c</em>:</p>
+        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/02a_fix_me/fix_me.c"></script>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">Assignment</h2>
+      <div class="content">
+        <p>fix <em class="file well well-small">fix_me.c</em> by yourself</p>
+        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/02a_fix_me/fix_me.c"></script>
+        <ul>
+          <li>make sure the program can compile, run, and calculate the correct result</li>
+          <li>after fixing <em class="file well well-small">fix_me.c</em>, create your own errors and see what kind of error messages occur</li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</div>
