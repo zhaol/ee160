@@ -108,29 +108,50 @@ title: Lecture 05
       <div class="content">
         <p><em class="file well well-small">pointer.c</em>:</p>
         <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/04_pointer/pointer.c"></script>
+        <p>output of <em class="file well well-small">pointer.c</em>:</p>
+<pre>===integer===
+                   1: integer, value of 'integer' variable
+      0x7fff3f93966c: &integer, address of 'integer' variable
+                    : *integer is a syntax error
+                   1: *(&integer), value of (address of 'integer' variable)
+===integer_pointer===
+      0x7fff3f93966c: integer_pointer, value of 'integer_pointer' variable
+                   1: *integer_pointer, value of the object that the 'integer_pointer' variable points to
+      0x7fff3f939660: &integer_pointer, address of 'integer_pointer' variable
+===real_number===
+            1.100000: real_number, value of 'real_number' variable
+      0x7fff3f93965c: &real_number, address of 'real_number' variable
+                    : *real_number is a syntax error
+            1.100000: *(&real_number), value of (address of 'real_number' variable)
+===real_number_pointer===
+      0x7fff3f93965c: real_number_pointer, value of 'real_number_pointer' variable
+            1.100000: *real_number_pointer, value of the object that the 'real_number_pointer' variable points to
+      0x7fff3f939650: &real_number_pointer, address of 'real_number_pointer' variable</pre>
         <p>Takeaway:</p>  
-        <table class="table table-bordered table-striped table-hover">
-          <caption>Different Ways of Getting Values and Addresses</caption>
-          <thead><tr>
-            <th></th><th>To Get The Value</th><th>To Get The Address</th>
-          </tr></thead>
-          <tbody>
-            <tr>
-              <td>using the variable <code>integer</code></td>
-              <td><code>integer</code></td>
-              <td><code>&integer</code></td>
-            </tr>
-            <tr>
-              <td>using the pointer <code>integer_pointer</code></td>
-              <td><code>*integer_pointer</code></td>
-              <td><code>integer_pointer</code></td>
-            </tr>
-          </tbody>
-        </table>      
-        <p>Things to note:</p>  
         <ul>
+          <li><table class="table table-bordered table-striped table-hover">
+            <caption>Different Ways of Getting Values and Addresses</caption>
+            <thead><tr>
+              <th>For The <code>int</code> Case</th><th>To Get The Value</th><th>To Get The Address</th>
+            </tr></thead>
+            <tbody>
+              <tr>
+                <td>using the variable <code>integer</code></td>
+                <td><code>integer</code></td>
+                <td><code>&integer</code></td>
+              </tr>
+              <tr>
+                <td>using the pointer <code>integer_pointer</code></td>
+                <td><code>*integer_pointer</code></td>
+                <td><code>integer_pointer</code></td>
+              </tr>
+            </tbody>
+          </table></li>
           <li>the value of the variable (<code>integer</code>) is the same as the dereferenced pointer (<code>*integer_pointer</code>)</li>
           <li>the value of the pointer (<code>integer_pointer</code>) is the same as the address of the variable (<code>&integer</code>)</li>
+        </ul>
+        <p>Things to note:</p>  
+        <ul>
           <li>the pointer format identifier is <code>%p</code></li>
           <li>the <code>*</code> and <code>&</code> can be stacked like <code>*(&integer)</code></li>
           <li>the most likely pointer use cases are:
