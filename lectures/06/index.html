@@ -1,0 +1,74 @@
+---
+layout: default
+title: Lecture 06
+---
+
+<div class="lecture">
+  <ul class="outline">
+    <li class="item">
+      <h2 class="headline">Adder</h2>
+      <div class="content">
+        <p><em class="file well well-small">adder.c</em>:</p>
+        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/05_adder/adder.c"></script>
+        <p>Things to note:</p>
+        <ul>
+          <li><code>scanf</code> requires address of a variable <code>&first_number</code> as an input</li>
+          <li><code>printf</code> can take a variable <code>sum</code> or an expression <code>first_number + second_number</code></li>
+        </ul>
+      </div>
+    </li>  
+    <li class="item">
+      <h2 class="headline">Precedence</h2>
+      <div class="content">
+        <p><em class="file well well-small">precedence.c</em>:</p>
+        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/06_precedence/precedence.c"></script>
+        <p>Things to note:</p>
+        <ul>
+          <li><code>(<em>expr</em>)</code>has higher precedence than <code>-</code></li>
+          <li>having <code>(<em>expr</em>)</code> makes the intent of the equation easier to understand</li>
+        </ul>
+        <p>What is precedence?</p>
+        <ul>
+          <li>the order in which <span class="text-error">different</span> operations are executed</li>
+          <li>mostly the same as algebra</li>
+          <li>read more at <a href="http://www.isthe.com/chongo/tech/comp/c/c-precedence.html">http://www.isthe.com/chongo/tech/comp/c/c-precedence.html</a></li>
+        </ul>
+        <p>Why is precedence important?</p>
+        <ul>
+          <li>it will reduce the chances of miscommunication between you and the computer</li>
+          <li>it's best to make your code clear, but when things get ambiguous, the order of precedence are the rules that the computer will follow, hence someone reading your code can still "figure out" your code</li>
+        </ul>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">Associativity</h2>
+      <div class="content">
+        <p><em class="file well well-small">associativity.c</em>:</p>
+        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/07_associativity/associativity.c"></script>
+        <p>Things to note:</p>
+        <ul>
+          <li><code>(<em>expr</em>)</code>has higher precedence than <code>-</code></li>
+          <li>having <code>(<em>expr</em>)</code> makes the intent of the equation easier to understand</li>
+        </ul>
+        <p>What is associativity?</p>
+        <ul>
+          <li>the order in which <span class="text-error">same</span> operations are executed</li>
+          <li>mostly the same as algebra</li>
+          <li>read more at <a href="http://en.wikipedia.org/wiki/Operator_associativity">http://en.wikipedia.org/wiki/Operator_associativity</a></li>
+          <li>read more at <a href="http://www.isthe.com/chongo/tech/comp/c/c-precedence.html">http://www.isthe.com/chongo/tech/comp/c/c-precedence.html</a></li>
+        </ul>
+        <p>Why is associativity important?</p>
+        <ul>
+          <li>it will reduce the chances of miscommunication between you and the computer</li>
+          <li>it's best to make your code clear, but when things get ambiguous, the associativity are the rules that the computer will follow, hence someone reading your code can still "figure out" your code</li>
+        </ul>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">Assignment</h2>
+      <div class="content">
+        <p>write a program that takes in 2 numbers ($x$ & $y$) and calculates $z={-x+√{x^2-4y}}/{2y}$</p>
+      </div>
+    </li>
+  </ul>
+</div>
