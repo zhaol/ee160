@@ -1,18 +1,16 @@
 #include <stdio.h>
+#include <math.h>
 
 main() {
     int i_am_an_integer;
-    char i_am_a_char;
     float i_am_a_float;
-    double i_am_a_double;
 
     i_am_an_integer = 11;
-    i_am_a_char = 'c';
-    i_am_a_float = 2.51;
-    i_am_a_double = 1.23;
+    i_am_a_float = 3.99;
 
-    printf("This is an integer: %f \n", (double) i_am_an_integer * 2.0);
-    printf("This is an char: %c \n", i_am_a_char);
-    printf("This is an float: %i \n", (int) i_am_a_float * 2);
-    printf("This is an double: %f \n", i_am_a_double);
+    printf("This is type cast to a float: %f \n", (float) i_am_an_integer * 2.0);
+    printf("The variable is still an integer: %i \n", i_am_an_integer);
+    printf("This is type cast to an integer: %i \n", (int) floor(i_am_a_float) * 2);
+    printf("This operation remains a float: %f \n", floor(i_am_a_float) * 2);
+    printf("The variable is still a float: %f \n", i_am_a_float);
 }

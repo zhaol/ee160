@@ -1,0 +1,57 @@
+---
+layout: default
+title: Lecture 08
+---
+
+<div class="lecture">
+  <ul class="outline">
+    <li class="item">
+      <h2 class="headline">Type Casting</h2>
+      <div class="content">
+        <p><em class="file well well-small">type_casting.c</em>:</p>
+        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/09_type_casting/type_casting.c"></script>
+        <p>Things to note:</p>
+        <ul>
+          <li>going from a float to an int truncates the decimals
+            <ul>
+              <li>but it will be unclear if you were expecting the float to be truncated or to be rounded</li>
+              <li>it's unclear if that's a bug or if it's intentional</li>    
+              <li>it's good practice to be explicit in your code</li>
+            </ul>
+          <li>type casting an int to a float is not necessary if you're performing an operation with another float
+            <ul>
+              <li>C can make these assumptions for you</li>
+              <li>but it's unclear if it's intentional or a bug</li>
+              <li>it's best to be explicit</li>
+            </ul>
+          </li>
+        </ul>
+        <p>What is type casting?</p>
+        <ul>
+          <li>changing the type of a variable's value temporarily to perform an operation</li>
+          <li>the variable is unchanged after the operation and type casting</li>
+        </ul>
+        <p>Why is type casting important?</p>
+        <ul>
+          <li>you don't need a separate variable to hold the same value but in a different type
+            <ul>
+              <li>e.g. <code>variable_as_int = 1</code> and <code>variable_as_float = 1.0</code></li>
+            </ul>
+          </li>
+          <li>you can specify how the operation is to be performed, e.g. gives you flexibility</li>
+        </ul>
+        <p>How to type cast?</p>
+        <ul>
+          <li><code>(new_type) expression</code></li>
+          <li>e.g. <code>(float) something_integer</code></li>
+        </ul>
+      </div>
+    </li>  
+    <li class="item">
+      <h2 class="headline">Assignment</h2>
+      <div class="content">
+        <p>write a program that takes in one integer ($x$) & one real number ($y$) and calculates $z={-x+√{x^2-4y}}/{2y}$</p>
+      </div>
+    </li>
+  </ul>
+</div>
