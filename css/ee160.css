@@ -38,3 +38,7 @@ ul {
   color: #468847;
   font-size: 12px;
 }
+
+code strong {
+  text-decoration: underline;
+}
