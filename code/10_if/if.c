@@ -5,8 +5,6 @@
 main() {
     int number;
 
-    number = 5;
-    
     printf ("Enter a magical number: ");
     scanf ("%d", &number);
     
