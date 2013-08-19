@@ -4,8 +4,6 @@ main() {
     int number;
     int counter;
 
-    number = 5;
-    
     printf ("Sofia The First, how many times would you like this to be done? ");
     scanf ("%d", &number);
     
