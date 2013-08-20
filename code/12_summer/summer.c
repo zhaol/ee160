@@ -7,9 +7,9 @@ main() {
     int counter;
     int value_entered;
     
-    counter = 0;
-    while (counter < MAX_NUMBER_OF_VALUES) {
-        if (counter == MAX_NUMBER_OF_VALUES - 1) {
+    counter = 1;
+    while (counter <= MAX_NUMBER_OF_VALUES) {
+        if (counter == MAX_NUMBER_OF_VALUES) {
             printf ("Please enter the last number...make it count!: ");
         } else {
             printf ("Enter a number to be added, pretty please: ");
