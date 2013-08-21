@@ -1,0 +1,70 @@
+---
+layout: default
+title: Lecture 12
+---
+
+<div class="lecture">
+  <ul class="outline">
+    <li class="item">
+      <h2 class="headline">Functions</h2>
+      <div class="content">
+        <div class="point">
+          <p class="topic">What is a function?:</p>
+          <ul class="details">
+            <li>a function is a group of code that takes in some arguments (inputs) and returns a value (output)</li>
+          </ul>
+        </div>
+        <div class="point">
+          <p class="topic">Why is a function important?:</p>
+          <ul class="details">
+            <li>you can reuse code</li>
+            <li>you can update a function and everywhere that calls the function will get the updated code</li>
+            <li>you can give a group of code a name to express what the group of code is trying to do</li>
+          </ul>
+        </div>
+        <div class="point">
+          <p class="topic">When is a good time to utilize functions?:</p>
+          <ul class="details">
+            <li>whenever you find yourself copy and pasting code</li>
+            <li>whenever you find yourself wanting to add a comment
+              <ul>
+                <li>we'll discuss more about comments later</li>
+                <li>for now, think of comments as notes to yourself and other programmers within the code</li>
+                <li>like Post-It notes on a word document</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="point">
+          <p class="topic">How to utilize functions?:</p>
+          <ul class="details">
+            <li>define a function</li>
+            <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/13_functions/function_definition.syntax"></script>
+            <li>call a function</li>
+            <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/13_functions/function_call.syntax"></script>
+            <li>read more at <a href="http://www.mycplus.com/tutorials/c-programming-tutorials/functions/">http://www.mycplus.com/tutorials/c-programming-tutorials/functions/</a></li>
+            <li>read more at <a href="http://en.wikibooks.org/wiki/C_Programming/Procedures_and_functions">http://en.wikibooks.org/wiki/C_Programming/Procedures_and_functions</a>; it's a long read but contains a lot of useful information</li>
+            <li>read more at <a href="http://www.tutorialspoint.com/ansi_c/c_using_functions.htm">http://www.tutorialspoint.com/ansi_c/c_using_functions.htm</a>; it's a long read but contains a lot of useful information</li>
+          </ul>
+        </div>
+      </div>
+    </li>  
+    <li class="item">
+      <h2 class="headline">Assignment</h2>
+      <div class="content">
+        <p>rewrite <em class="file well well-small">summer.c</em></p>
+        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/12_summer/summer.c"></script>
+        <ul>
+          <li>move <a href="https://github.com/zhaol/ee160/blob/gh-pages/code/12_summer/summer.c#L12-16">lines 12-16</a> into a function</li>
+          <li>the program should work the same as before:
+            <ul>
+              <li>asks the user for a number 3 times</li>
+              <li>for the 3rd number the user is asked for the number with a different statement</li>
+              <li>the program then outputs the sum of the 3 numbers</li>  
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</div>
