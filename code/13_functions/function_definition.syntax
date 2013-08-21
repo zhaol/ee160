@@ -1,0 +1,4 @@
+double your_function(int first_argument, double second_argument) {
+  /* your function code */
+  return some_double;
+}
