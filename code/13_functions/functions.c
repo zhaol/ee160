@@ -10,7 +10,7 @@ main() {
 }
 
 int simple_function(int input_argument) {
-    printf ("Hi from simple_function\n");
-    printf ("You passed in an argument with the value of %i\n", input_argument);
+    printf ("-Hi from simple_function\n");
+    printf ("-You passed in an argument with the value of %i\n", input_argument);
     return 2;
 }
