@@ -38,6 +38,9 @@ ul {
   color: #468847;
   font-size: 12px;
 }
+.file a {
+  color: #468847;
+}
 
 code strong {
   text-decoration: underline;
