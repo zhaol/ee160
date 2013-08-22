@@ -1,0 +1,83 @@
+---
+layout: default
+title: Lecture 13
+---
+
+<div class="lecture">
+  <ul class="outline">
+    <li class="item">
+      <h2 class="headline">Abstraction</h2>
+      <div class="content">
+        <div>
+          <p>What is abstraction?:</p>
+          <ul>
+            <li>hiding away the implementation details</li>
+            <li>read more at <a href="http://en.wikipedia.org/wiki/Abstraction_(computer_science)">http://en.wikipedia.org/wiki/Abstraction_(computer_science)</a> (only the first paragraph is enough)</li>
+          </ul>
+        </div>
+        <div>
+          <p>Why is abstraction important?:</p>
+          <ul>
+            <li>it makes code more maintainable and extensible (e.g. easier to read, update, and debug)</li>
+            <li>some reading the code later can focus on "what" the code is doing</li>
+            <li>when they've found the area of the code they want to focus on then they can dig deeper and focus "how" the code is working</li>
+          </ul>
+        </div>
+        <div>
+          <p>How to abstract?:</p>
+          <ul>
+            <li>there's no exact science</li>
+            <li>there are some guidelines</li>
+            <li>abstraction really is about writing high quality code, which is outside the scope of this class</li>
+            <li>I just want to introduce you to the concept so you're aware of it</li>
+          </ul>
+        </div>
+      </div>
+    </li>  
+    <li class="item">
+      <h2 class="headline">Refactor Summer</h2>
+      <div class="content">
+        <div>
+          <p><em class="file well well-small">refactored_summer.c</em>:</p>
+          <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/14_refactored_summer/refactored_summer.c"></script>
+        </div>
+        <div>
+          <p>Let's Compare:</p>
+          <ul>
+            <li>original summer:
+              <ul>
+                <li><em class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/12_summer/summer.c">summer.c</a></em></li>
+              </ul>
+            </li>
+            <li>refactored summer:
+              <ul>
+                <li><em class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/14_refactored_summer/refactored_summer.c">refactored_summer.c</a></em></li>
+                <li><em class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/14_refactored_summer/refactored_summer.h">refactored_summer.h</a></em></li>
+                <li><em class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/14_refactored_summer/helpers.c">helpers.c</a></em></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <p>Things to Note:</p>
+          <ul>
+            <li>easier to read and understand</li>
+            <li>shorter, cleaner, and less cluttered</li>
+            <li>difference might be small for this simple example, but as a program gets larger, difference will be much larger</li>
+            <li>more smaller files is usually better than one big file</li>
+          </ul>
+        </div>
+      </div>
+    </li>  
+    <li class="item">
+      <h2 class="headline">Assignment</h2>
+      <div class="content">
+        <p>read about and try out variable scopes:</p>
+        <ul>
+          <li><a href="http://icecube.wisc.edu/~dglo/c_class/scope.html">http://icecube.wisc.edu/~dglo/c_class/scope.html</a></li>
+          <li><a href="http://www.tutorialspoint.com/cprogramming/c_scope_rules.htm">http://www.tutorialspoint.com/cprogramming/c_scope_rules.htm</a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</div>
