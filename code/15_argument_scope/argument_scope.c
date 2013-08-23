@@ -5,17 +5,16 @@
 
 #include <stdio.h>
 #define LOOPS 1
-#include "function_without_arguments.c"
 
-int       int_var = 0;
-double double_var = 0.0;
+// GLOBAL VARIABLES
+int       int_var = 10;
+double double_var = 10.0;
 
 /*  This program prints out variables at different points in the program to see which variables are in scope  */
 main() {
-    /*
-    int       int_var = 0;
-    double double_var = 0.0;
-    */
+    // LOCAL VARIABLES TO MAIN
+    int       int_var = 20;
+    double double_var = 20.0;
     
     printf ("[Start of Main]    int_var: %i \n",    int_var);
     printf ("[Start of Main] double_var: %f \n", double_var);
@@ -34,10 +33,9 @@ main() {
 
 /*  this function will test how arguments are scoped  */
 int function_with_arguments(int passed_in_int_var, double passed_in_double_var) {
-    /*
-    int       int_var = 0;
-    double double_var = 0.0;
-    */
+    // LOCAL VARIABLES TO FUNCTION_WITH_ARGUMENTS
+    int       int_var = 30;
+    double double_var = 30.0;
     
     printf ("[Start of function_with_arguments]              int_var: %i \n",              int_var);
     printf ("[Start of function_with_arguments]           double_var: %f \n",           double_var);
@@ -46,10 +44,10 @@ int function_with_arguments(int passed_in_int_var, double passed_in_double_var) 
     
     int counter = 0;
     while (counter < LOOPS) {
-        int_var              =              int_var + 10;
-        double_var           =           double_var + 10.0;
-        passed_in_int_var    =    passed_in_int_var + 10;
-        passed_in_double_var = passed_in_double_var + 10.0;
+        int_var              =              int_var + 5;
+        double_var           =           double_var + 5.0;
+        passed_in_int_var    =    passed_in_int_var + 5;
+        passed_in_double_var = passed_in_double_var + 5.0;
         counter++;
     }
     
