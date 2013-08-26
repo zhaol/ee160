@@ -46,7 +46,10 @@ code strong {
   text-decoration: underline;
 }
 
+.answer.group .button {
+  cursor: pointer;
+}
+
 .answer.group .details {
   display: none;
-}
 }
