@@ -54,7 +54,7 @@ title: Lecture 03
       <h2 class="headline">Variables Example</h2>
       <div class="content">
         <p>variables.c:</p>
-        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/02_variables/variables.c"></script>
+        <script src="http://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/02_variables/variables.c"></script>
         <p>Things to note:</p>  
         <ul>
           <li><code>printf</code> needs the conversion specifier to know what type the variable is</li>
@@ -69,12 +69,18 @@ title: Lecture 03
         <p>Write a program that outputs the following:</p>
         <ul>
           <li>
-<pre>zero padding in front of a number: 1.2345 01.12345 001.12345
-zero padding in back of a number: 1.23450 1.234500 1.2345000
-exponentials (base 10): 1.2345E00 12.345E-01 0.12345E10
-rounded numbers: 1.235 1.235E0
-negative numbers: -1.2345 -1.2345E0</pre>
-           </li>
+<pre>zero padding in back of a number: 1.23450 1.234500 1.2345000
+zero padding in front of a number: 1.2345 01.2345 001.2345
+exponentials (base 10): 1.2345e+00 1.23450e+00 1.234500e+00
+truncation vs rounding of numbers: 1.234 
+negative numbers: -1.2345 -1.2345e+00</pre>
+          </li>
+          <li class="answer group"><span class="answer button">Click to show the answer</span>
+            <div class="answer details">
+              <p><em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/assignments/02_print_format/print_format.c">print_format.c</a></em>:</p>
+              <script src="http://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/assignments/02_print_format/print_format.c"></script>
+            </div>
+          </li>
         </ul>
       </div>
     </li>
