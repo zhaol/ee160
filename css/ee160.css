@@ -45,3 +45,8 @@ ul {
 code strong {
   text-decoration: underline;
 }
+
+.answer.group .details {
+  display: none;
+}
+}
