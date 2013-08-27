@@ -8,41 +8,71 @@ title: Lecture 02
     <li class="item">
       <h2 class="headline">Hello World</h2>
       <div class="content">
+        <p>What is the Hello World program?:</p>
+        <ul>
+          <li>A very simple program to show what makes up a program</li>
+          <li>The intent of the program is to print the following text to the screen:
+<pre>Hello World
+Bye World</pre>
+          </li>
+        </ul>
         <p>The first program, <em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/01_hello_world/hello_world.c">hello_world.c</a></em> :</p>
         <script src="http://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/01_hello_world/hello_world.c"></script>
-        <p>Things to note:</p>  
+        <p>Basic Rules:</p>  
         <ul>
+          <li>computers are very strict about punctuations and brackets
+            <ul>
+              <li>every statement needs to end with a semicolon <code>;</code></li>
+              <li>every open parenthesis <code>(</code> must be closed with a close parenthesis <code>)</code></li>
+              <li>every open curly braces <code>{</code> must be closed with a close curly braces <code>}</code></li>
+              <li>every open quote <code>"</code> must be matched with a close quote <code>"</code></li>
+              <li>every open square bracket <code>[</code> must be closed with a close square bracket <code>]</code></li>
+            </ul>
+          </li>
           <li>each line of code is sequentially executed</li>
-          <li>main function, analogous to start of a <a href="http://www.writing.engr.psu.edu/workbooks/samplejobletter.html">letter</a></li>
-          <li>punctuations and brackets matter a lot</li>
-          <li>white space doesn't matter</li>
-          <li>standard library</li>
-          <li><code>\n</code> tells the computer to output a newline</li>
+          <li>the <code>main</code> function is the start of our program, analogous to start of a <a href="http://www.writing.engr.psu.edu/workbooks/samplejobletter.html">letter</a></li>
+          <li><code>main(){}</code> is how we define a function
+            <ul>
+              <li>function name: <code>main</code></li>
+              <li>argument list: <code>()</code>, there are no arguments expected for the main function</li>
+              <li>function definition: <code>{}</code>, what the function does is defined in the curly brackets</li>
+              <li>we'll discuss more about functions later</li>
+            </ul>
+          </li>
+          <li>you can call other functions, like <code>printf</code>
+            <ul>
+              <li>specify the name of the function: <code>printf</code></li>              
+              <li>specify the arguments to the function: <code>"Hello World\n"</code> and <code>"Bye World\n"</code></li>
+            </ul>
+          </li>
+          <li>including the standard input/output library <code>#include &lt;stdio.h&gt;</code> to gain more functionality
+            <ul>
+              <li>analogous to attachments in letters/emails (something you can refer to and "use" within your letter/program)</li>
+              <li>read more about the functionalities included with this library at <a href="http://en.wikipedia.org/wiki/C_file_input/output">http://en.wikipedia.org/wiki/C_file_input/output</a></li>
+            </ul>
+          </li>
+          <li><code>\n</code> tells the computer to output a newline, read more about escaping characters at <a href="http://en.wikipedia.org/wiki/Escape_sequences_in_C">http://en.wikipedia.org/wiki/Escape_sequences_in_C</a></li>
+          <li>white space doesn't matter, but is necessary to allow other humans to read your code</li>
+          <li>you can add comments to your code to explain what you are trying to do in your code
+            <ul>
+              <li>single line comments: <code>// everything after the 2 slashes is ignored</code></li>
+              <li>multi line comments: <code>/* this comment can end on a different line */</code></li>
+              <li>read more at <a href="http://en.wikipedia.org/wiki/C_syntax#Comments">http://en.wikipedia.org/wiki/C_syntax#Comments</a> (Section Comments)</li>
+            </ul>
+          </li>
         </ul>
       </div>
     </li>
     <li class="item">
       <h2 class="headline">Compile and Execute</h2>
       <div class="content">
-        <p>How do you compile and execute?</p>
-        <ul>
-          <li><code>gcc hello-world.c -o hello-world</code> will compile <em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/01_hello_world/hello_world.c">hello_world.c</a></em> to an executable file <em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/01_hello_world/hello_world">hello_world</a></em></li>
-          <li><code>./hello-world</code> will run the executable file <em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/01_hello_world/hello_world">hello_world</a></em> to run you program</li>
-        </ul>
-        <p>Why do you compile?
-        <ul>
-          <li>Compiling is needed to translate your C code into code your computer understands</li>
-          <li>A precompiled executable file (<em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/01_hello_world/hello_world">hello_world</a></em>) will run faster than running straight from C code (<em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/01_hello_world/hello_world.c">hello_world.c</a></em>), which is not possible for the C language</li>
-          <li>Some languages do not need to be precompiled to run, they are usually called "interpreted" languages</li>
-          <li>Some integrated development environments (IDEs) will compile automatically for you</li>
-        </ul>
         <p>What does compiling do?</p>
         <ul>
+          <li>the compilation steps translate your C code into assembly code, object code, and then finally to machine code</li>
           <li>
             This <abbr title="StackOverflow" data-toggle="tooltip">SO</abbr> <a href="http://stackoverflow.com/questions/466790/assembly-code-vs-machine-code-vs-object-code#answer-1213207">answer</a> has a good visual diagram of what is happening during the compilation process
           </li>
           <li>the <code>gcc</code> command is doing the preprocessing, compiling, assembling, and linking for you</li>
-          <li>the compilation steps translate your C code into assembly code, object code, and then finally to machine code</li>
         </ul>
         <p>What does executing do?</p>
         <ul>
@@ -52,6 +82,20 @@ title: Lecture 02
               <li>run the machine code instructions, e.g. run your program</li>
             </ul>
           </li>
+        </ul>
+        <p>How do you compile and execute?</p>
+        <ul>
+          <li><code>gcc hello_world.c -o hello_world</code> will compile <em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/01_hello_world/hello_world.c">hello_world.c</a></em> to an executable file <em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/01_hello_world/hello_world">hello_world</a></em></li>
+          <li>syntax (pattern/grammar): <code>gcc input_filename -o output_filename</code></li>
+          <li><code>./hello_world</code> will run the executable file <em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/01_hello_world/hello_world">hello_world</a></em> to run you program</li>
+          <li>if you are not in the same directory as <em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/01_hello_world/hello_world">hello_world</a></em>, then you'll need to use something like <code>folder_name/hello_world</code></li>
+        </ul>
+        <p>Why do you compile?
+        <ul>
+          <li>Compiling is needed to translate your C code into code your computer understands</li>
+          <li>A precompiled executable file (<em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/01_hello_world/hello_world">hello_world</a></em>) will run faster than running straight from C code (<em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/01_hello_world/hello_world.c">hello_world.c</a></em>), which is not possible for the C language</li>
+          <li>Some languages do not need to be precompiled to run, they are usually called "interpreted" languages</li>
+          <li>Some integrated development environments (IDEs) will compile automatically for you</li>
         </ul>
       </div>
     </li>
@@ -85,12 +129,6 @@ Bye World</pre>
 <pre>It was nice meeting you, world.
 Hope to see you again soon. :-\
 Don't forget to write.</pre>
-          </li>
-          <li class="answer group"><span class="answer button">Click to show the answer</span>
-            <div class="answer details">
-              <p><em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/assignments/01_bye_world/bye_world.c">bye_world.c</a></em>:</p>
-              <script src="http://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/assignments/01_bye_world/bye_world.c"></script>
-            </div>
           </li>
         </ul>
       </div>
