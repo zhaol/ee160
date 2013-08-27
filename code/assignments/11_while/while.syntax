@@ -1,3 +1,0 @@
-while (boolean_expression) {
-  /* statement(s) will execute until boolean express is false */
-}
