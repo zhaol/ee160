@@ -13,6 +13,6 @@ main() {
 
     printf("This is an integer: %i \n", i_am_an_integer);
     printf("This is an char: %c \n", i_am_a_char);
-    printf("This is an float: %f \n", i_am_a_float);
+    printf("This is an float: %2.3f \n", i_am_a_float);
     printf("This is an double: %f \n", i_am_a_double);
 }
