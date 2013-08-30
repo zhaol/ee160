@@ -10,7 +10,7 @@ title: Lecture 04
       <div class="content">
         <p>What are compilation errors?</p>
         <ul>
-          <li>errors that show up when the code is getting compiled, i.e. running <code>gcc</code><li>
+          <li>errors that show up when the code is getting compiled, i.e. running <code>gcc</code></li>
         </ul>
         <p>Why do compilation errors occur?</p>
         <ul>
@@ -37,16 +37,19 @@ title: Lecture 04
         </ul>
         <p>Why do runtime errors occur?</p>
         <ul>
-          <li>typos
+          <li>simple mistake
             <ul>
               <li>wrong data types, i.e. using <code>int</code> instead of <code>float</code></li>
+              <li>wrong conversion specifier</li>
+              <li>not taking into accoun the edge cases, like if it's a negative number, a really small/big number, etc</li>
               <li>pointers vs variables (addresses vs values)</li>
               <li>wrong variable name</li>
             </ul>
           <li>logic
             <ul>
-              <li>not accounting for a particular situation, i.e. edge case scenario</li>
+              <li>not accounting for a particular situation, i.e. edge case scenario like when a user enters a special character instead of a letter</li>
               <li>variable gets altered in unexpected way</li>
+              <li>a simple mistake else where causes the error to other parts of the program</li>
               <li>not allocating enough memory</li>
             </ul>
         </ul>
@@ -56,6 +59,18 @@ title: Lecture 04
           <li>use <code>printf</code> statements to verify the variables you are expecting</li>
           <li>re-evaluate your algorithm</li>
         </ul>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">When you want to throw your computer out the window...</h2>
+      <div class="content">
+        <ul>
+          <li>Take a deep breath, go for a jog, take a shower, or do some yoga</li>
+          <li>Sometimes the solution will just come to you after you take a break from it</li>
+          <li>If you're still lost, then delete/comment out whatever you need to get the program working, even if it's just an empty <code>main</code> function</li>
+          <li>Then add one line back at a time to see which line of code is causing the error (you don't have to be a genius to program, you have to be determined and persistent)</li>
+          <li>Refer back to this lecture and see if there's any debugging methods you haven't tried</li>
+          <li>Ask someone to look over your code with fresh eyes and see if they can catch anything you missed</li>
       </div>
     </li>
     <li class="item">
