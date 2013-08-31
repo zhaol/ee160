@@ -6,39 +6,180 @@ title: Lecture 07
 <div class="lecture">
   <ul class="outline">
     <li class="item">
-      <h2 class="headline">Macros</h2>
+      <h2 class="headline">Addresses</h2>
       <div class="content">
-        <p><em class="file well well-small">macro.c</em>:</p>
-        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/08_macro/macro.c"></script>
-        <p><em class="file well well-small">common_constants.h</em>:</p>
-        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/08_macro/common_constants.h"></script>
-        <p>Things to note:</p>
+        <p>What are addresses?</p>
         <ul>
-          <li>macros can be in same file or included from separate file</li>
-          <li>macros allow you to make a change in one location and have the change reflected everywhere else in the program</li>
-          <li>macros are more useful with things that are used repeatedly</li>
-          <li>read more at <a href="http://en.wikipedia.org/wiki/C_preprocessor#Macro_definition_and_expansion">http://en.wikipedia.org/wiki/C_preprocessor</a> (Section Macro Definition and Expansion</li>
-          <li>read more at <a href="http://gcc.gnu.org/onlinedocs/cpp/Macros.html">http://gcc.gnu.org/onlinedocs/cpp/Macros.html</a> if you want to learn more advance uses of macros</li>
+          <li>location of computer memory</li>
+          <li>it's an overly simplified explanation, but it's all you need to know for programming</li>
+        </ul>
+        <p>Why are addresses important for programming?</p>
+        <ul>
+          <li>the C programming language allows the programmer the flexibility to manage memory</li>
+          <li>having a high level of control over memory allows C programs to be more efficient and take up less memory</li>
+          <li>other program languages take care of some memory issues for programmers</li>
+        </ul>
+        <p>How do you use addresses?</p>
+        <ul>
+          <li>address of operator <code>&</code>
+            <ul>
+              <li><code>&value_variable</code>: address of "value_variable"</li>
+              <li>"value_variable" is how we "normally" think of variables in mathematics</li>
+              <li>in programming, variables can hold both "normal" values and also addresses; this is all just vocabulary (or semantics)</li>
+              <li>read more at <a href="http://www.c4learn.com/pointer-address-operator-in-c-programming.html">http://www.c4learn.com/pointer-address-operator-in-c-programming.html</a></li>
+            </ul>
+          </li>
+          <li>de-reference operator <code>*</code>
+            <ul>
+              <li><code>*pointer_variable</code>: value of "pointer_variable"</li>
+              <li>read more at <a href="http://wiki.answers.com/Q/Dereferencing_operator_in_c">http://wiki.answers.com/Q/Dereferencing_operator_in_c</a></li>
+            </ul>
+          </li>
+          <li>pointers, i.e. variables that hold an address as its value
+            <ul>
+              <li><code>float* pointer</code>: declare "pointer" as a pointer to an object of type float</li>
+              <li>pointers are variables that hold an address as its value</li>
+              <li>it is used in conjunction with the de-reference operator <code>*</code></li>
+              <li>pointers are just variables used in a specific way</li>
+              <li>read more at <a href="http://www.physics.drexel.edu/courses/Comp_Phys/General/C_basics/#pointers">http://www.physics.drexel.edu/courses/Comp_Phys/General/C_basics/#pointers</a> (Section 6. Pointers)</li>
+            </ul>
+          </li>
         </ul>
       </div>
     </li>  
     <li class="item">
-      <h2 class="headline">Assignment</h2>
+      <h2 class="headline">Values (Data) vs Addresses</h2>
       <div class="content">
-        <p>write a program that includes a macro file (similar to <em class="file well well-small">common_constants.h</em>)</p>
+        <p>What are values and addresses?</p>
         <ul>
-          <li>the macro file will define the value for PI and a function to calculate the area of a square</li>
-          <li>the program will ask for a length and then calculate the following:
+          <li>values are things like:
             <ul>
-              <li>circumference of a circle with a diameter equal to the inputted length</li>
-              <li>area of a circle with a diameter equal to the inputted length</li>
-              <li>area of a square with a side equal to the inputted length</li>
+              <li>1 (integer)</li>
+              <li>1.1 (real number)</li>
+              <li>a (character)</li>
             </ul>
           </li>
-          <li>if 1 was the inputted length, the program will use macros to print out the following:
-<pre>the circumference of the circle is: 3.14
-the area of the circle is: 6.28
-the area of the square is: 1</pre></li>
+          <li>addresses are things like:
+            <ul>
+              <li>0x7fff68db4100 (hexidecimal number)</li>
+            </ul>
+          </li>
+        </ul>
+        <p>Why are values and addresses needed?</p>
+        <ul>
+          <li>Values are used by humans
+            <ul>
+             <li>though a value like "1" is still kept in computer memory as some other type of machine readable concept (bit, byte, hexidecimal, etc)</li>
+            </ul>
+          <li>Addresses are used by computers
+            <ul>
+              <li>addresses are represented in this way because computers work with binary values (i.e. 0/1, true/false, or on/off)</li>
+            </ul>
+          </li>
+        </ul>
+        <p>Analogy of Addresses and Values</p>
+        <table class="table table-bordered table-striped table-hover">
+          <caption>Analogy of Addresses and Values</caption>
+          <thead><tr>
+            <th>Concept</th><th>Programming World</th><th>Real World</th>
+          </tr></thead>
+          <tbody>
+            <tr>
+              <td>Address</td>
+              <td>0x7fff68db4100</td>
+              <td>MSB114, 2500 Campus Rd, Honolulu, HI 96822</td>
+            </tr>
+            <tr>
+              <td>Value</td>
+              <td>1.234</td>
+              <td>EE160 Class</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Things to note:</p>
+        <ul>
+          <li>addresses are physical locations that should be treated as not changing, like classroom MSB114</li>
+          <li>values are transient data that can be modified, like MSB114 can house another class like MATH101</li>
+        </ul>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">Example of Pointers, Address-Of Operator, and De-Reference Operator</h2>
+      <div class="content">
+        <p><em class="file well well-small">pointer.c</em>:</p>
+        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/04_pointer/pointer.c"></script>
+        <p>output of <em class="file well well-small">pointer.c</em>:</p>
+<pre>===integer===
+                   1: integer, value of 'integer' variable
+      0x7fff3f93966c: &integer, address of 'integer' variable
+                    : *integer is a syntax error
+                   1: *(&integer), value of (address of 'integer' variable)
+===integer_pointer===
+      0x7fff3f93966c: integer_pointer, value of 'integer_pointer' variable
+                   1: *integer_pointer, value of the object that the 'integer_pointer' variable points to
+      0x7fff3f939660: &integer_pointer, address of 'integer_pointer' variable
+===real_number===
+            1.100000: real_number, value of 'real_number' variable
+      0x7fff3f93965c: &real_number, address of 'real_number' variable
+                    : *real_number is a syntax error
+            1.100000: *(&real_number), value of (address of 'real_number' variable)
+===real_number_pointer===
+      0x7fff3f93965c: real_number_pointer, value of 'real_number_pointer' variable
+            1.100000: *real_number_pointer, value of the object that the 'real_number_pointer' variable points to
+      0x7fff3f939650: &real_number_pointer, address of 'real_number_pointer' variable</pre>
+        <p>Takeaway:</p>  
+        <ul>
+          <li><table class="table table-bordered table-striped table-hover">
+            <caption>Different Ways of Getting Values and Addresses</caption>
+            <thead><tr>
+              <th>For The <code>int</code> Case</th><th>To Get The Value</th><th>To Get The Address</th>
+            </tr></thead>
+            <tbody>
+              <tr>
+                <td>using the variable <code>integer</code></td>
+                <td><code>integer</code></td>
+                <td><code>&integer</code></td>
+              </tr>
+              <tr>
+                <td>using the pointer <code>integer_pointer</code></td>
+                <td><code>*integer_pointer</code></td>
+                <td><code>integer_pointer</code></td>
+              </tr>
+            </tbody>
+          </table></li>
+          <li>the value of the variable (<code>integer</code>) is the same as the dereferenced pointer (<code>*integer_pointer</code>)</li>
+          <li>the value of the pointer (<code>integer_pointer</code>) is the same as the address of the variable (<code>&integer</code>)</li>
+        </ul>
+        <p>Things to note:</p>  
+        <ul>
+          <li>the pointer format identifier is <code>%p</code></li>
+          <li>the <code>*</code> and <code>&</code> can be stacked like <code>*(&integer)</code></li>
+          <li>the most likely pointer use cases are:
+            <ul>for <code>int</code>s:
+              <li>initialize pointer: <code>int* integer_pointer</code></li>
+              <li>set to the address of a variable <code>= &integer</code></li>
+              <li>get the value of the variable that the pointer is pointing to <code>*integer_pointer</code></li>
+            </ul>
+            <ul>for <code>float</code>s:
+              <li>initialize pointer: <code>float* real_number_pointer</code></li>
+              <li>set to the address of a variable <code>= &real_number</code></li>
+              <li>get the value of the variable that the pointer is pointing to <code>*real_number_pointer</code></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">Assignment</h2>
+      <div class="content">
+        <p>write a program that takes in a value with the <code>scanf</code> function and prints the value out with a <code>printf</code> function</p>
+        <ul>
+          <li>Add some other feature to program that uses the <code>scanf</code> function</li>
+        </ul>
+        <ul>References:
+          <li><a href="http://forum.codecall.net/topic/37537-how-to-use-scanf-in-c/">http://forum.codecall.net/topic/37537-how-to-use-scanf-in-c/</a> (just reading the first post is fine)</li>
+          <li><a href="http://en.wikipedia.org/wiki/Scanf_format_string">http://en.wikipedia.org/wiki/Scanf_format_string</a></li>
+          <li><a href="http://www.cplusplus.com/reference/cstdio/scanf/">http://www.cplusplus.com/reference/cstdio/scanf/</a></li>
         </ul>
       </div>
     </li>
