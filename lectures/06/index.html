@@ -1,103 +1,46 @@
 ---
 layout: default
-title: Lecture 6
+title: Lecture 05
 ---
 
 <div class="lecture">
   <ul class="outline">
     <li class="item">
-      <h2 class="headline">While Loop</h2>
+      <h2 class="headline">if/else</h2>
       <div class="content">
-        <p><em class="file well well-small">while.c</em>:</p>
-        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/11_while/while.c"></script>
         <div class="point">
-          <p class="topic">Things to note:</p>
-          <ul class="details">
-            <li>there's a <em><code>condition</code></em> to test whether things are <code>true</code> or <code>false</code>
-              <ul>
-                <li>a <em><code>condition</code></em> is an expression that simplifies to <code>true</code> or <code>false</code></li>
-              </ul>
-            </li>
-            <li>there's one block of code
-              <ul>
-                <li>the block of code is executed whenever the <em><code>condition</code></em> is <code>true</code></li>
-                <li>after the block of code has finished executing, the condition is re-evaluated and the process is repeated until the condition is <code>false</code></li>
-              </ul>
-            <li>there's no <code>false</code> block of code
-              <ul>
-                <li>the block of code is skipped when the <em><code>condition</code></em> is <code>false</code></li>
-              </ul>
-            </li>
-            <li><em class="file well well-small">loop.c</em> is utilizing the <code>while</code> loop <span class="text-success">control statement</span>
-              <ul>
-                <li>read more at <a href="http://en.wikipedia.org/wiki/While_loop">http://en.wikipedia.org/wiki/While_loop</a>
-                  <ul>
-                    <li>read the introduction</li>
-                    <li>read the Equivalent Constructs Section, if you are curious</li>
-                    <li>there's not much value in reading the Demonstrating While Loops Section</li>
-                  </ul>
-                </li>
-                <li>read more at <a href="http://www.codingunit.com/c-tutorial-for-loop-while-loop-break-and-continue">http://www.codingunit.com/c-tutorial-for-loop-while-loop-break-and-continue</a>
-                  <ul>
-                    <li>read the While Loop Section</li>
-                    <li>read the Break And Continue Section
-                      <ul>
-                        <li>it's best to avoid using <code>break</code> and <code>continue</code>, if possible</li>
-                        <li><code>break</code> and <code>continue</code> makes the program flow a bit harder to understand</li>
-                        <li>in C, you might have to use <code>break</code> and <code>continue</code> in some situations</li>
-                        <li>we'll discuss <code>break</code> and <code>continue</code> later</li>
-                      </ul>
-                    </li>
-                    <li>read about the other types of loops, if you can
-                      <ul>
-                        <li>the <code>for</code> loop is more commonly used that the <code>do..while</code> loop</li>
-                        <li>we'll touch more on the <code>for</code> loop later</li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <div class="point">
-          <p class="topic">What is the <code>while</code> loop <span class="text-success">control statement</span>?</p>
+          <p class="topic">What is the <code>if</code>/<code>else</code> <span class="text-success">control statement</span>?</p>
           <div class="details">
             <p>A group of code that includes:</p>
             <ul>
               <li>a <em><code>condition</code></em>
-              <li>a block of code that is executed whenever the <em><code>condition</code></em> is <code>true</code>
+              <li>a block of code that is executed when the <em><code>condition</code></em> is <code>true</code></li>
+              <li>a block of code that is executed when the <em><code>condition</code></em> is <code>false</code></li>
                 <ul>
-                  <li>after the block of code has finished executing, the condition is re-evaluated and the process is repeated until the condition is <code>false</code></li>
+                  <li>the <code>false</code> block of code is optional</li>
+                  <li>when there's no <code>false</code> block of code, then the <span class="text-success">control statement</span> is called the <code>if</code> <span class="text-success">control statement</span></li>
                 </ul>
-              </li>
             </ul>
           </div>
         </div>
         <div class="point">
-          <p class="topic">Why is the <code>while</code> loop <span class="text-success">control statement</span> important?</p>
+          <p class="topic">Why is the <code>if</code>/<code>else</code> <span class="text-success">control statement</span> important?</p>
           <ul class="details">
-            <li>it allows a program to repeat without having to predetermine how many times the program needs to be repeated</li>
+            <li>it allows a program to have logic and branching</li>
               <ul>
-                <li>that means: it allows your program to perform repetitive tasks for an unknown number of times</li>
-                <li>a program without looping is like a train that:
+                <li>that means: it allows your program to handle different scenarios</li>
+                <li>a program without branching is like a train that:
                   <ul>
-                    <li>loops between Honolulu and Waipahu a set number of times
-                      <ul>
-                        <li>some passengers might be left without a train if they've missed the last train</li>
-                        <li>sometimes the train might be running with no passengers on board</li>
-                      </ul>
-                    </li>
+                    <li>starts at Honolulu</li>
+                    <li>ends at Waipahu</li>
                   </ul>
                 </li>
-                <li>a program with looping is like a train that: 
+                <li>a program with branching is like a train that: 
                   <ul>
-                    <li>loops between Honolulu and Waipahu until all commuters have reached their destinations
-                      <ul>
-                        <li>no passengers will be left stranded</li>
-                        <li>the train won't ever run when it's not needed</li>
-                      </ul>
-                    </li>
+                    <li>starts at Honolulu</li>
+                    <li>pauses at Pearl City and thinks about where to go</li>
+                    <li>it could end up in Mililani</li>
+                    <li>it could end up in Waipahu</li>
                   </ul>
                 </li>
               </ul>
@@ -105,15 +48,42 @@ title: Lecture 6
           </ul>
         </div>
         <div class="point">
-          <p class="topic">How to use the <code>while</code> loop <span class="text-success">control statement</span>?</p>
+          <p class="topic">How to use the <code>if</code>/<code>else</code> <span class="text-success">control statement</span>?</p>
           <ul class="details">
-            <li><script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/11_while/while.syntax"></script></li>
-            <li>the keyword is <code>while</code></li>
-            <li>the <code>while</code> keyword starts the <code>while</code> loop <span class="text-success">control statement</span></li>
-            <li>the condition follows the <code>while</code> keyword, like <code><strong>while</strong> (condition)</code></li>
+            <li><script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/if/if.syntax"></script></li>
+            <li>the keywords are <code>if</code> and <code>else</code></li>
+            <li>the <code>if</code> keyword starts the <code>if</code>/<code>else</code> <span class="text-success">control statement</span></li>
+            <li>the condition follows the <code>if</code> keyword, like <code><strong>if</strong> (condition)</code></li>
             <li>the condition is wrapped in parenthesis <code>(<strong>condition</strong>)</code></li>
-            <li>the block of code is wrapped in curly braces, like <code><strong>{</strong> /*block of code*/ <strong>}</strong></code></li>
-            <li>read more at <a href="http://en.wikipedia.org/wiki/While_loop">http://en.wikipedia.org/wiki/While_loop</a></li>
+            <li>the <code>true</code> and <code>false</code> blocks of code are wrapped in curly braces, like <code><strong>{</strong> /*true block of code*/ <strong>}</strong></code></li>
+            <li>the <code>else</code> keyword is between the ending curly braces of the <code>true</code> block and the starting curly braces of the <code>false</code> block, like <code>{ /* true block */ } <strong>else</strong> { /* false block */ }</code></li>
+            <li>read more at <a href="http://www.tutorialspoint.com/cprogramming/if_else_statement_in_c.htm">http://www.tutorialspoint.com/cprogramming/if_else_statement_in_c.htm</a></li>
+          </ul>
+        </div>
+        <p><em class="file well well-small">if.c</em>:</p>
+        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/if/if.c"></script>
+        <div class="point">
+          <p class="topic">Things to note:</p>
+          <ul class="details">
+            <li>there's a <em><code>condition</code></em> to test whether things are <code>true</code> or <code>false</code></li>
+              <ul>
+                <li>a <em><code>condition</code></em> is an expression that simplifies to <code>true</code> or <code>false</code></li>
+              </ul>
+            <li>there's a <code>true</code> block of code
+              <ul>
+                <li>these lines of code are executed when the <em><code>condition</code></em> is <code>true</code></li>
+              </ul>
+            <li>there's a <code>false</code> block of code
+              <ul>
+                <li>these lines of code are executed when the <em><code>condition</code></em> is <code>false</code></li>
+              </ul>
+            </li>
+            <li><em class="file well well-small">if.c</em> is utilizing the <code>if</code>/<code>else</code> <span class="text-success">control statement</span>
+              <ul>
+                <li>read more at <a href="http://www.tutorialspoint.com/ansi_c/c_control_statements.htm">http://www.tutorialspoint.com/ansi_c/c_control_statements.htm</a> (Section Branching, Sub-Section If Statement)</li>
+                <li>read more at <a href="http://www.tutorialspoint.com/cprogramming/if_else_statement_in_c.htm">http://www.tutorialspoint.com/cprogramming/if_else_statement_in_c.htm</a></li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>
@@ -121,7 +91,7 @@ title: Lecture 6
     <li class="item">
       <h2 class="headline">Assignment</h2>
       <div class="content">
-        <p>write a program that asks the user for a number until the user gives a number that is greater than 100</p>
+        <p>write a program that takes in 2 numbers and tells the user which number is greater</p>
       </div>
     </li>
   </ul>
