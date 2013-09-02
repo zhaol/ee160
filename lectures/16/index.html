@@ -1,0 +1,149 @@
+---
+layout: default
+title: Lecture 16
+---
+
+<div class="lecture">
+  <ul class="outline">
+    <li class="item">
+      <h2 class="headline">Array</h2>
+      <div class="content">
+        <div>
+          <div class="point">
+            <p class="topic">What is an array?:</p>
+            <ul class="details">
+              <li>collection of data items with that represent the same thing (e.g. test scores of a class, data measurements from an experiment, balances of bank accounts, etc.)</li>
+              <li>it could be a collection of <code>int</code>'s, <code>float</code>'s, <code>char</code>'s, etc.</li>
+              <li>you can think of arrays like PO boxes</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="point">
+            <p class="topic">Why are arrays important?:</p>
+            <ul class="details">
+              <li>arrays allow you to group data items that are related</li>
+              <li>arrays allow you to add new data items to the group easily</li>
+              <li>compare how you would do things with and without arrays
+                <ul>with arrays:
+                  <li>
+                    <p><em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/array_benefits/with_arrays.c">with_arrays.c</a></em>:</p>
+                    <script src="http://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/array_benefits/with_arrays.c"></script>
+                  </li>
+                </ul>
+                <ul>without arrays:
+                  <li>
+                    <p><em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/array_benefits/without_arrays.c">without_arrays.c</a></em>:</p>
+                    <script src="http://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/array_benefits/without_arrays.c"></script>
+                  </li>
+                </ul>
+                <p>The power of arrays shines through when it is time to update the code to make the program handle a longer list.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="point">
+            <p class="topic">How to use an array?:</p>
+            <ul class="details">
+              <li>same as variables: declare it, initialize it, and use (set, change, or display) it</li>
+              <li>special rules for arrays:
+                <ul>
+                  <li>all data items must be of the same <span class="muted">type</span> (e.g. all <code>int</code>'s, all <code>char</code>'s)</li>
+                  <li>individual data items in the array are accessed by a subscript or index (e.g. <code>i_am_an_array[<strong>0</strong>]</code>, <code>i_am_an_array[<strong>5</strong>]</code></li>
+                  <li>array subscript starts at 0 (e.g. to get to the first data item of an array, you need to use <code>i_am_an_array[<strong>0</strong>]</code>, instead of <code>i_am_an_array[<strong>1</strong>]</code></li>
+                  <li>the size of the array need to be specified when declaring the array <code>int list_of_values[<strong>6</strong>]</code></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="point">
+            <p class="topic">What is an array similar to?:</p>
+            <ul class="details">
+              <li>
+                <div class="array-example">
+                  <p>Honolulu Post Office <code>honolulu_po_box</code></p>
+                  <div>PO Box 1 at Honolulu Post Office<br/><code>honolulu_po_box[0]</code></div>
+                  <div>PO Box 2 at Honolulu Post Office<br/><code>honolulu_po_box[1]</code></div>
+                  <div>PO Box 3 at Honolulu Post Office<br/><code>honolulu_po_box[2]</code></div>
+                </div>
+                <table class="table table-bordered table-striped table-hover">
+                  <caption>Array Analogy</caption>
+                  <thead><tr>
+                    <th>Real World</th><th>Programming World</th>
+                  </tr></thead>
+                  <tbody>
+                    <tr>
+                      <td>Honolulu Post Office</td>
+                      <td><code>honolulu_po_box</code></td>
+                    </tr>
+                    <tr>
+                      <td>PO Box 1 at Honolulu Post Office</td>
+                      <td><code>honolulu_po_box[0]</code></td>
+                    </tr>
+                    <tr>
+                      <td>PO Box 2 at Honolulu Post Office</td>
+                      <td><code>honolulu_po_box[1]</code></td>
+                    </tr>
+                    <tr>
+                      <td>PO Box 3 at Honolulu Post Office</td>
+                      <td><code>honolulu_po_box[2]</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table class="table table-bordered table-striped table-hover">
+                  <caption>Array Statement Analogy</caption>
+                  <thead><tr>
+                    <th>Real World</th><th>Programming World</th>
+                  </tr></thead>
+                  <tbody>
+                    <tr>
+                      <td>My package is somewhere inside the Honolulu Post Office</td>
+                      <td>My data is stored in the <code>honolulu_po_box</code> array</td>
+                    </tr>
+                    <tr>
+                      <td>My parckage is in PO Box 1 at Honolulu Post Office</td>
+                      <td>My data is stored in the first array element of the <code>honolulu_po_box</code> array, <code>honolulu_po_box[0]</code></td>
+                    </tr>
+                    <tr>
+                      <td>My parckage is in PO Box 2 at Honolulu Post Office</td>
+                      <td>My data is stored in the second array element of the <code>honolulu_po_box</code> array, <code>honolulu_po_box[1]</code></td>
+                    </tr>
+                    <tr>
+                      <td>My parckage is in PO Box 3 at Honolulu Post Office</td>
+                      <td>My data is stored in the third array element of the <code>honolulu_po_box</code> array, <code>honolulu_po_box[2]</code></td>
+                    </tr>
+                    <tr>
+                      <td>All the po boxes at the Honolulu Post Office can only hold 4 inch x 4 inch x 4 inch boxes</td>
+                      <td>The <code>honolulu_po_box</code> array can only hold <code>int</code>'s, <code><strong>int</strong> honolulu_po_box[3]</code></td>
+                    </tr>
+                    <tr>
+                      <td>The Honolulu Post Office has 3 PO Boxes available</td>
+                      <td>The <code>honolulu_po_box</code> array has 3 array elements, <code>int honolulu_po_box[<strong>3</strong>]</code></td>
+                    </tr>
+                  </tbody>
+                </table>            
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </li>  
+    <li class="item">
+      <h2 class="headline">Assignment</h2>
+      <div class="content">
+        <!--
+        <p>develop the algorithm for <em class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/12_summer/summer.c">summer.c</a></em> (though the algorithm should have been done before the coding):</p>
+        <ul>
+          <li>write out the algorithm in words</li>
+          <li>draw out the algorithm in block diagram</li>
+          <li>get a sense of which method works better for you so you can practice designing algorithms with words or pictures (though the block diagram still has words)</li>
+        </ul>
+        <p>read <a href="http://ee.hawaii.edu/~tep/EE160/Book/chap3/chapter2.1.html#SECTION0010000000000000000">http://ee.hawaii.edu/~tep/EE160/Book/chap3/chapter2.1.html#SECTION0010000000000000000</a></p>
+        -->
+      </div>
+    </li>
+  </ul>
+</div>
