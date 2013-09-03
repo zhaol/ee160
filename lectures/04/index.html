@@ -17,6 +17,7 @@ title: Lecture 04
           <li>syntax</li>
           <li>missing punctations like <code>;</code></li>
           <li>misspelled function names like <code>prinf</code></li>
+          <li>wrong case like <code>Prinf</code></li>
           <li>wrong function arguments like too many arguments or wrong types of arguments</li>
           <li>mismatched brackets like <code>{{ "{{ " }} }</code></li>
         </ul>
@@ -25,6 +26,7 @@ title: Lecture 04
           <li>the error message will get you close to the line number of where the error occurred</li>
           <li>the error message will give you a sense of what's wrong</li>
           <li>compile often so you know exactly which part of the code you recently updated that is causing the error</li>
+          <li>remove half the code so you can see which half is producing the error; repeat to narrow down the bad line of code</li>
         </ul>
       </div>
     </li>  
@@ -56,6 +58,8 @@ title: Lecture 04
         <p>How to fix runtime errors?</p>
         <ul>
           <li>trace through program and isolate possible areas of error</li>
+          <li>use <code>printf</code> statements to figure out where the code is dying</li>
+          <li>use <code>printf</code> statemetns to follow which logic branch is getting executed</li>
           <li>use <code>printf</code> statements to verify the variables you are expecting</li>
           <li>re-evaluate your algorithm</li>
         </ul>
