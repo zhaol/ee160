@@ -8,6 +8,6 @@ main() {
     first_number = 3;
     second_number = 5;
     
-    result = (first_number + second_number) * (second_number - second_number);
+    result = (first_number + second_number) \ (second_number - second_number);
     
     printf ("The result is: %d \n", result);
