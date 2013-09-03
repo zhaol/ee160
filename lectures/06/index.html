@@ -6,6 +6,53 @@ title: Lecture 06
 <div class="lecture">
   <ul class="outline">
     <li class="item">
+      <h2 class="headline">Boolean Expressions</h2>
+      <div class="content">
+        <div class="point">
+          <p class="topic">What are boolean expressions?</p>
+          <div class="details">
+            <ul>
+              <li>Expressions that return true or false (on/off, 1/0)</li>
+              <li>Expressions that use the logical operators, read more here <a href="http://en.wikipedia.org/wiki/Operators_in_C_and_C%2B%2B#Comparison_operators.2Frelational_operators">http://en.wikipedia.org/wiki/Operators_in_C_and_C%2B%2B</a> (Seciont Comparision Operators)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="point">
+          <p class="topic">Why are boolean expressions important?:</p>
+          <div class="details">
+            <p>It allow the program to ask true/false questions</p>
+          </div>
+        </div>
+        <div class="point">
+          <p class="topic">How are boolean expressions used?:</p>
+          <div class="details">
+            <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/boolean_statement/boolean_statement.c"></script>
+            <ul>
+              <li>Program outputs:
+<pre>1 means true
+0 means false
+
+2 <  3: 1
+2 >  3: 0
+
+2 <= 3: 1
+3 <= 3: 1
+2 >= 3: 0
+3 >= 3: 1
+
+3 == 3: 1
+2 == 3: 0
+
+3 != 3: 0
+2 != 3: 1</pre>              
+              </li>
+              <li>Note that the C language treats <code>1</code> as true and <code>0</code> as false</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="item">
       <h2 class="headline">if/else</h2>
       <div class="content">
         <div class="point">
@@ -60,36 +107,35 @@ title: Lecture 06
             <li>read more at <a href="http://www.tutorialspoint.com/cprogramming/if_else_statement_in_c.htm">http://www.tutorialspoint.com/cprogramming/if_else_statement_in_c.htm</a></li>
           </ul>
         </div>
-        <p><em class="file well well-small">if.c</em>:</p>
-        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/if/if.c"></script>
         <div class="point">
-          <p class="topic">Things to note:</p>
-          <ul class="details">
-            <li>there's a <em><code>condition</code></em> to test whether things are <code>true</code> or <code>false</code></li>
-              <ul>
-                <li>a <em><code>condition</code></em> is an expression that simplifies to <code>true</code> or <code>false</code></li>
-              </ul>
-            <li>there's a <code>true</code> block of code
-              <ul>
-                <li>these lines of code are executed when the <em><code>condition</code></em> is <code>true</code></li>
-              </ul>
-            <li>there's a <code>false</code> block of code
-              <ul>
-                <li>these lines of code are executed when the <em><code>condition</code></em> is <code>false</code></li>
-              </ul>
-            </li>
-            <li><em class="file well well-small">if.c</em> is utilizing the <code>if</code>/<code>else</code> <span class="text-success">control statement</span>
-              <ul>
-                <li>read more at <a href="http://www.tutorialspoint.com/ansi_c/c_control_statements.htm">http://www.tutorialspoint.com/ansi_c/c_control_statements.htm</a> (Section Branching, Sub-Section If Statement)</li>
-                <li>read more at <a href="http://www.tutorialspoint.com/cprogramming/if_else_statement_in_c.htm">http://www.tutorialspoint.com/cprogramming/if_else_statement_in_c.htm</a></li>
-              </ul>
-            </li>
-          </ul>
+          <p class="topic">Example <code>if</code>/<code>else</code>, <em class="file well well-small">if.c</em>:</p>
+          <div class="details">
+            <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/if/if.c"></script>        
+            <p class="topic">Things to note:</p>
+            <ul class="details">
+              <li>there's a <em><code>condition</code></em> to test whether things are <code>true</code> or <code>false</code></li>
+                <ul>
+                  <li>a <em><code>condition</code></em> is a boolean expression (or function) that returns <code>true</code> or <code>false</code></li>
+                </ul>
+              <li>there's a <code>true</code> block of code
+                <ul>
+                  <li>these lines of code are executed when the <em><code>condition</code></em> is <code>true</code></li>
+                </ul>
+              <li>there's a <code>false</code> block of code
+                <ul>
+                  <li>these lines of code are executed when the <em><code>condition</code></em> is <code>false</code></li>
+                </ul>
+              </li>
+              <li><em class="file well well-small">if.c</em> is utilizing the <code>if</code>/<code>else</code> <span class="text-success">control statement</span>
+                <ul>
+                  <li>read more at <a href="http://www.tutorialspoint.com/ansi_c/c_control_statements.htm">http://www.tutorialspoint.com/ansi_c/c_control_statements.htm</a> (Section Branching, Sub-Section If Statement)</li>
+                  <li>read more at <a href="http://www.tutorialspoint.com/cprogramming/if_else_statement_in_c.htm">http://www.tutorialspoint.com/cprogramming/if_else_statement_in_c.htm</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </li>
-    <li class="item">
-      boolean expressions
     </li>
     <li class="item">
       <h2 class="headline">Assignment</h2>
