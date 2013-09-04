@@ -6,6 +6,41 @@ title: Lecture 08
 <div class="lecture">
   <ul class="outline">
     <li class="item">
+      <h2 class="headline">Arithmetic Operators</h2>
+      <div class="content">
+        <div class="point">
+          <p class="topic">What are arithmetic operators?</p>
+          <div class="details">
+            <ul>
+              <li>addition <code>+</code></li>
+              <li>subtraction <code>-</code></li>
+              <li>multiplication <code>*</code></li>
+              <li>division <code>/</code></li>
+              <li>Read more here <a href="http://en.wikipedia.org/wiki/Operators_in_C_and_C%2B%2B#Arithmetic_operators">http://en.wikipedia.org/wiki/Operators_in_C_and_C%2B%2B#Arithmetic_operators</a> (Section Arithmetic Operators)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="point">
+          <p class="topic">Why are arithmetic operators important?</p>
+          <div class="details">
+            <ul>
+              <li>you can now manipulate and process data</li>
+              <li>instead of reading it in and redisplaying it</li>
+            </ul>
+          </div>
+        </div>
+        <div class="point">
+          <p class="topic">How do are arithmetic operators important used?</p>
+          <div class="details">
+            <ul>
+              <li>place them between 2 values, like an algebraic expression</li>
+              <li><code>1 + 1</code></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </li>  
+    <li class="item">
       <h2 class="headline">Adder</h2>
       <div class="content">
         <p><em class="file well well-small">adder.c</em>:</p>
@@ -20,56 +55,73 @@ title: Lecture 08
     <li class="item">
       <h2 class="headline">Precedence</h2>
       <div class="content">
-        <p><em class="file well well-small">precedence.c</em>:</p>
-        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/06_precedence/precedence.c"></script>
-        <p>output of <em class="file well well-small">precedence.c</em>:</p>
+        <div class="point">
+          <p class="topic">What is precedence?</p>
+          <ul class="details">
+            <li>the order in which <span class="text-error">different</span> operations are executed</li>
+            <li>mostly the same as algebra</li>
+            <li>read more at <a href="http://www.isthe.com/chongo/tech/comp/c/c-precedence.html">http://www.isthe.com/chongo/tech/comp/c/c-precedence.html</a></li>
+          </ul>
+        </div>
+        <div class="point">
+          <p class="topic">Why is precedence important?</p>
+          <ul class="details">
+            <li>it will reduce the chances of miscommunication between you and the computer</li>
+            <li>it's best to make your code clear, but when things get ambiguous, the order of precedence are the rules that the computer will follow, hence someone reading your code can still "figure out" your code</li>
+          </ul>
+        </div>
+        <div class="point">
+          <p class="topic">An example of precendence</p>
+          <div class="details">
+            <p><em class="file well well-small">precedence.c</em>:</p>
+            <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/precedence/precedence.c"></script>
+            <p>output of <em class="file well well-small">precedence.c</em>:</p>
 <pre>1 + 2 * 2 = 5 
 (1 + 2) * 2 = 6 
 1 + (2 * 2) = 5</pre>
-        <p>Things to note:</p>
-        <ul>
-          <li><code>(<em>expr</em>)</code>has higher precedence than <code>-</code></li>
-          <li>having <code>(<em>expr</em>)</code> makes the intent of the equation easier to understand</li>
-        </ul>
-        <p>What is precedence?</p>
-        <ul>
-          <li>the order in which <span class="text-error">different</span> operations are executed</li>
-          <li>mostly the same as algebra</li>
-          <li>read more at <a href="http://www.isthe.com/chongo/tech/comp/c/c-precedence.html">http://www.isthe.com/chongo/tech/comp/c/c-precedence.html</a></li>
-        </ul>
-        <p>Why is precedence important?</p>
-        <ul>
-          <li>it will reduce the chances of miscommunication between you and the computer</li>
-          <li>it's best to make your code clear, but when things get ambiguous, the order of precedence are the rules that the computer will follow, hence someone reading your code can still "figure out" your code</li>
-        </ul>
+            <p>Things to note:</p>
+            <ul>
+              <li><code>(<em>expr</em>)</code>has higher precedence than <code>-</code></li>
+              <li>having <code>(<em>expr</em>)</code> makes the intent of the equation easier to understand</li>
+            </ul>
+          </div>
       </div>
     </li>
     <li class="item">
       <h2 class="headline">Associativity</h2>
       <div class="content">
-        <p><em class="file well well-small">associativity.c</em>:</p>
-        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/07_associativity/associativity.c"></script>
-        <p>output of <em class="file well well-small">associativity.c</em>:</p>
+        <div class="point">
+          <p class="topic">What is associativity?</p>
+          <ul class="details">
+            <li>the order in which <span class="text-error">same</span> operations are executed</li>
+            <li>mostly the same as algebra</li>
+            <li>read more at <a href="http://en.wikipedia.org/wiki/Operator_associativity">http://en.wikipedia.org/wiki/Operator_associativity</a></li>
+            <li>read more at <a href="http://www.isthe.com/chongo/tech/comp/c/c-precedence.html">http://www.isthe.com/chongo/tech/comp/c/c-precedence.html</a></li>
+          </ul>
+        </div>
+        <div class="point">
+          <p class="topic">Why is associativity important?</p>
+          <ul class="details">
+            <li>it will reduce the chances of miscommunication between you and the computer</li>
+            <li>it's best to make your code clear, but when things get ambiguous, the associativity are the rules that the computer will follow, hence someone reading your code can still "figure out" your code</li>
+          </ul>
+        </div>
+        <div class="point">
+          <p class="topic">An example of associativity</p>
+          <div class="details">
+            <p><em class="file well well-small">associativity.c</em>:</p>
+            <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/07_associativity/associativity.c"></script>
+            <p>output of <em class="file well well-small">associativity.c</em>:</p>
 <pre>4 - 3 - 2 = -1
 (4 - 3) - 2 = -1
 4 - (3 - 2) = 3</pre>
-        <p>Things to note:</p>
-        <ul>
-          <li><code>(<em>expr</em>)</code>has higher precedence than <code>-</code></li>
-          <li>having <code>(<em>expr</em>)</code> makes the intent of the equation easier to understand</li>
-        </ul>
-        <p>What is associativity?</p>
-        <ul>
-          <li>the order in which <span class="text-error">same</span> operations are executed</li>
-          <li>mostly the same as algebra</li>
-          <li>read more at <a href="http://en.wikipedia.org/wiki/Operator_associativity">http://en.wikipedia.org/wiki/Operator_associativity</a></li>
-          <li>read more at <a href="http://www.isthe.com/chongo/tech/comp/c/c-precedence.html">http://www.isthe.com/chongo/tech/comp/c/c-precedence.html</a></li>
-        </ul>
-        <p>Why is associativity important?</p>
-        <ul>
-          <li>it will reduce the chances of miscommunication between you and the computer</li>
-          <li>it's best to make your code clear, but when things get ambiguous, the associativity are the rules that the computer will follow, hence someone reading your code can still "figure out" your code</li>
-        </ul>
+            <p>Things to note:</p>
+            <ul>
+              <li><code>(<em>expr</em>)</code>has higher precedence than <code>-</code></li>
+              <li>having <code>(<em>expr</em>)</code> makes the intent of the equation easier to understand</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </li>
     <li class="item">
