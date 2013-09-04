@@ -9,17 +9,17 @@ title: Lecture 15
     <li class="item">
       <h2 class="headline">Algorithm Design</h2>
       <div class="content">
-        <div>
-          <p>What is an algorithm?:</p>
-          <ul>
+        <div class="point">
+          <p class="topic">What is an algorithm?:</p>
+          <ul class="details">
             <li>a step-by-step procedure</li>
             <li>every program is essentially a step-by-step procedure</li>
             <li>so in essence algorithm design is designing your program</li>
           </ul>
         </div>
-        <div>
-          <p>Why is algorithm design important?:</p>
-          <ul>
+        <div class="point">
+          <p class="topic">Why is algorithm design important?:</p>
+          <ul class="details">
             <li>fixing an algorithm is easier than fixing code</li>
             <li>same reason why you make blueprints for a house before building it</li>
             <li>by designing the entire algorithm before coding, you know ahead of time what to expect and can account for things that you wouldn't have though about</li>
@@ -27,9 +27,9 @@ title: Lecture 15
             <li>it is hard to think of every scenario beforehand, but thinking about the algorithm will at least flush out some things</li>
           </ul>
         </div>
-        <div>
-          <p>How to design an algorithm?:</p>
-          <ul>
+        <div class="point">
+          <p class="topic">How to design an algorithm?:</p>
+          <ul class="details">
             <li>start from the top and then go down; top-down approach
               <ul>
                 <li>be generic</li>
@@ -49,9 +49,9 @@ title: Lecture 15
             <li>in practice, it will be a mixture of these 2 approaches</li>
           </ul>
         </div>
-        <div>
-          <p>An example algorithm for getting milk from the grocery store:</p>
-          <ul>
+        <div class="point">
+          <p class="topic">An example algorithm for getting milk from the grocery store:</p>
+          <ul class="details">
             <li>If you like to think in words:
 <pre>start
   drive to the store
@@ -67,6 +67,17 @@ end</pre>
                 <li>turn on the car</li>
                 <li>take out your wallet</li>
                 <li>etc.</li>
+              </ul>
+            </li>
+            <li>The top-down approach would be to:
+              <ul>
+                <li>break the task of "getting milk from the grocery store" into smaller pieces, like "drive to the store", etc.</li>
+              </ul>
+            </li>
+            <li>The bottom-up approach would be to:
+              <ul>
+                <li>develop the task of "drive to the store"</li>
+                <li>after developing "drive to the store", "buy the milk" can be developed an added on</li>
               </ul>
             </li>
           </ul>
