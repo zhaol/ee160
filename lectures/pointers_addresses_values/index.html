@@ -6,6 +6,36 @@ title: Lecture 05
 <div class="lecture">
   <ul class="outline">
     <li class="item">
+      <h2 class="headline">Classrooms and Classes</h2>
+      <div class="content">
+        <div class="point">
+          <p class="topic">You are already familiar with how classrooms and classes work:</p>
+          <ul class="details">
+            <li>classrooms hold classes</li>
+            <li>classrooms are permanent fixtures</li>
+            <li>classrooms can hold different classes at different times</li>
+          </ul>        
+        </div>
+        <div class="point">
+          <p class="topic">Now imagine all of University Of Hawaii's classrooms side by side like this:</p>  
+          <div class="details">
+            <img src="https://docs.google.com/drawings/d/1AB7Iz62XxL6Vi5R8AwfKhDKdDSwAU5tMycNWsqctg3M/pub?w=730&amp;h=719">  
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">Same Thing With Computer Memory</h2>
+      <div class="content">
+        <div class="point">
+          <p class="topic">Classrooms are to addresses as classes are to values:</p>
+          <div class="details">
+            <img src="https://docs.google.com/drawings/d/17U-aS2pksP0IJDwzJjThwfNdzb8qqicfvQoF1BdNhs0/pub?w=730&amp;h=719">
+          </div>        
+        </div>
+      </div>
+    </li>
+    <li class="item">
       <h2 class="headline">Addresses</h2>
       <div class="content">
         <p>What are addresses?</p>
@@ -19,36 +49,27 @@ title: Lecture 05
           <li>having a high level of control over memory allows C programs to be more efficient and take up less memory</li>
           <li>other program languages take care of some memory issues for programmers</li>
         </ul>
-        <p>How do you use addresses?</p>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">Values</h2>
+      <div class="content">
+        <p>What are values?</p>
         <ul>
-          <li>address of operator <code>&</code>
-            <ul>
-              <li><code>&value_variable</code>: address of "value_variable"</li>
-              <li>"value_variable" is how we "normally" think of variables in mathematics</li>
-              <li>in programming, variables can hold both "normal" values and also addresses; this is all just vocabulary (or semantics)</li>
-              <li>read more at <a href="http://www.c4learn.com/pointer-address-operator-in-c-programming.html">http://www.c4learn.com/pointer-address-operator-in-c-programming.html</a></li>
-            </ul>
-          </li>
-          <li>de-reference operator <code>*</code>
-            <ul>
-              <li><code>*pointer_variable</code>: value of "pointer_variable"</li>
-              <li>read more at <a href="http://wiki.answers.com/Q/Dereferencing_operator_in_c">http://wiki.answers.com/Q/Dereferencing_operator_in_c</a></li>
-            </ul>
-          </li>
-          <li>pointers, i.e. variables that hold an address as its value
-            <ul>
-              <li><code>float* pointer</code>: declare "pointer" as a pointer to an object of type float</li>
-              <li>pointers are variables that hold an address as its value</li>
-              <li>it is used in conjunction with the de-reference operator <code>*</code></li>
-              <li>pointers are just variables used in a specific way</li>
-              <li>read more at <a href="http://www.physics.drexel.edu/courses/Comp_Phys/General/C_basics/#pointers">http://www.physics.drexel.edu/courses/Comp_Phys/General/C_basics/#pointers</a> (Section 6. Pointers)</li>
-            </ul>
-          </li>
+          <li>data</li>
+          <li>could be real number, integer, or character</li>
+          <li>things you have been storing in your variables</li>
+        </ul>
+        <p>Why are values important for programming?</p>
+        <ul>
+          <li>programs ultimately have to interact with some sort of value</li>
+          <li>values are important to humans</li>
+          <li>processing values (data) are what makes programs important</li>
         </ul>
       </div>
     </li>  
     <li class="item">
-      <h2 class="headline">Values (Data) vs Addresses</h2>
+      <h2 class="headline">Addresses vs Values</h2>
       <div class="content">
         <p>What are values and addresses?</p>
         <ul>
@@ -99,74 +120,127 @@ title: Lecture 05
         <p>Things to note:</p>
         <ul>
           <li>addresses are physical locations that should be treated as not changing, like classroom MSB114</li>
-          <li>values are transient data that can be modified, like MSB114 can house another class like MATH101</li>
+          <li>values are transient data that can be modified, like MSB114 can house EE160 now and then later house another class like MATH101</li>
         </ul>
       </div>
     </li>
     <li class="item">
-      <h2 class="headline">Example of Pointers, Address-Of Operator, and De-Reference Operator</h2>
+      <h2 class="headline">Reference and Dereference Operators</h2>
       <div class="content">
-        <p><em class="file well well-small">pointer.c</em>:</p>
-        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/pointer/pointer.c"></script>
-        <p>output of <em class="file well well-small">pointer.c</em>:</p>
+        <div class="point">
+          <p class="topic">What are the reference and dereference operators?</p>
+          <ul class="details">
+            <li>reference operator <code>&</code>
+              <ul>
+                <li><code>&value_variable</code>: "address of" <code>value_variable</code></li>
+                <li>read more at <a href="http://www.c4learn.com/pointer-address-operator-in-c-programming.html">http://www.c4learn.com/pointer-address-operator-in-c-programming.html</a></li>
+              </ul>
+            </li>
+            <li>de-reference operator <code>*</code>
+              <ul>
+                <li><code>*pointer_variable</code>: "value pointed by" <code>pointer_variable</code></li>
+                <li>read more at <a href="http://wiki.answers.com/Q/Dereferencing_operator_in_c">http://wiki.answers.com/Q/Dereferencing_operator_in_c</a></li>
+              </ul>
+            </li>
+            <li>pointers
+              <ul>
+                <li><code>int* pointer_variable</code>: declare <code>pointer_variable</code> as a pointer to an object of type <code>int</code></li>
+                <li>in programming, variables can store integers, real numbers, characters, or addresses</li>
+                <li>you have mainly been working with variables that store integers, real numbers, and characters</li>
+                <li>pointers are variables that store an address</li>
+                <li>pointers are usually used in conjunction with the de-reference operator <code>*</code></li>
+                <li>pointers are just variables used in a specific way</li>
+                <li>you will be using pointers later on in the course</li>
+                <li>read more at <a href="http://www.physics.drexel.edu/courses/Comp_Phys/General/C_basics/#pointers">http://www.physics.drexel.edu/courses/Comp_Phys/General/C_basics/#pointers</a> (Section 6. Pointers)</li>
+                <li><code>int* pointer_variable</code> is different than <code>*pointer_variable</code></li>
+              </ul>
+            </li>
+          </ul>    
+        </div>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">Example of Pointers, Reference (Address Of) Operator, and De-Reference (Value Pointed By) Operator</h2>
+      <div class="content">
+        <div class="point">
+          <p class="topic">Examine <span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/pointer/pointer.c">pointer.c</a></span>:</p>
+          <div class="details">
+            <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/pointer/pointer.c"></script>
+            <p>output of <em class="file well well-small">pointer.c</em>:</p>
 <pre>===integer===
                    1: integer, value of 'integer' variable
-      0x7fff3f93966c: &integer, address of 'integer' variable
+      0x7fff81d4c12c: &integer, address of 'integer' variable
                     : *integer is a syntax error
-                   1: *(&integer), value of (address of 'integer' variable)
+
 ===integer_pointer===
-      0x7fff3f93966c: integer_pointer, value of 'integer_pointer' variable
+      0x7fff81d4c12c: integer_pointer, value of 'integer_pointer' variable
                    1: *integer_pointer, value of the object that the 'integer_pointer' variable points to
-      0x7fff3f939660: &integer_pointer, address of 'integer_pointer' variable
-===real_number===
-            1.100000: real_number, value of 'real_number' variable
-      0x7fff3f93965c: &real_number, address of 'real_number' variable
-                    : *real_number is a syntax error
-            1.100000: *(&real_number), value of (address of 'real_number' variable)
-===real_number_pointer===
-      0x7fff3f93965c: real_number_pointer, value of 'real_number_pointer' variable
-            1.100000: *real_number_pointer, value of the object that the 'real_number_pointer' variable points to
-      0x7fff3f939650: &real_number_pointer, address of 'real_number_pointer' variable</pre>
-        <p>Takeaway:</p>  
-        <ul>
-          <li><table class="table table-bordered table-striped table-hover">
-            <caption>Different Ways of Getting Values and Addresses</caption>
-            <thead><tr>
-              <th>For The <code>int</code> Case</th><th>To Get The Value</th><th>To Get The Address</th>
-            </tr></thead>
-            <tbody>
-              <tr>
-                <td>using the variable <code>integer</code></td>
-                <td><code>integer</code></td>
-                <td><code>&integer</code></td>
-              </tr>
-              <tr>
-                <td>using the pointer <code>integer_pointer</code></td>
-                <td><code>*integer_pointer</code></td>
-                <td><code>integer_pointer</code></td>
-              </tr>
-            </tbody>
-          </table></li>
-          <li>the value of the variable (<code>integer</code>) is the same as the dereferenced pointer (<code>*integer_pointer</code>)</li>
-          <li>the value of the pointer (<code>integer_pointer</code>) is the same as the address of the variable (<code>&integer</code>)</li>
-        </ul>
-        <p>Things to note:</p>  
-        <ul>
-          <li>the pointer format identifier is <code>%p</code></li>
-          <li>the <code>*</code> and <code>&</code> can be stacked like <code>*(&integer)</code></li>
-          <li>the most likely pointer use cases are:
-            <ul>for <code>int</code>s:
-              <li>initialize pointer: <code>int* integer_pointer</code></li>
-              <li>set to the address of a variable <code>= &integer</code></li>
-              <li>get the value of the variable that the pointer is pointing to <code>*integer_pointer</code></li>
-            </ul>
-            <ul>for <code>float</code>s:
-              <li>initialize pointer: <code>float* real_number_pointer</code></li>
-              <li>set to the address of a variable <code>= &real_number</code></li>
-              <li>get the value of the variable that the pointer is pointing to <code>*real_number_pointer</code></li>
-            </ul>
-          </li>
-        </ul>
+      0x7fff81d4c120: &integer_pointer, address of 'integer_pointer' variable</pre>                  
+          </div>
+        </div>
+        <div class="point">
+          <p class="topic">Step through the first part of the code (setting the information):</p>
+          <div class="details">
+            <img src="https://docs.google.com/drawings/d/12r9r_K6kAjUJkex-2evioXpPqBUavlRy5zrluQPa_9g/pub?w=1215&amp;h=867">
+          </div>
+        </div>
+        <div class="point">
+          <p class="topic">In the end, you have something like this:</p>
+          <div class="details">
+            <img src="https://docs.google.com/drawings/d/1YKEv5nvpY-4C_hM010S35rVKcrT68HiwvmYeL31tbnU/pub?w=875&amp;h=708">
+          </div>
+        </div>
+        <div class="point">
+          <p class="topic">Step through last part of the code (getting the information):</p>
+          <div class="details">
+            <img src="https://docs.google.com/drawings/d/1Z3uj_7i_ZMs6afK1Qi_HjVd-tRoKp_ZFI1gKJJdaNvg/pub?w=1635&amp;h=875">
+          </div>
+        </div>
+        <div class="point">
+          <p class="topic">Pointer and Detour Analogy:</p>
+          <div class="details">
+            <img src="https://docs.google.com/drawings/d/1FVcpdXNEvvtH_fm7hZEnBbWoSQPdbxBxFp5IcbbjN5M/pub?w=1676&amp;h=534">
+          </div>
+        </div>
+        <div class="point">
+          <p class="topic">Takeaway:</p>  
+          <ul class="details">
+            <li><table class="table table-bordered table-striped table-hover">
+              <caption>Different Ways of Getting Values and Addresses</caption>
+              <thead><tr>
+                <th></th><th>To Get The Value</th><th>To Get The Address</th>
+              </tr></thead>
+              <tbody>
+                <tr>
+                  <td>using the variable <code>integer</code></td>
+                  <td><code>integer</code></td>
+                  <td><code>&integer</code></td>
+                </tr>
+                <tr>
+                  <td>using the pointer <code>integer_pointer</code></td>
+                  <td><code>*integer_pointer</code></td>
+                  <td><code>integer_pointer</code></td>
+                </tr>
+              </tbody>
+            </table></li>
+            <li>the value of the variable (<code>integer</code>) is the same as the dereferenced pointer (<code>*integer_pointer</code>)</li>
+            <li>the value of the pointer (<code>integer_pointer</code>) is the same as the address of the variable (<code>&integer</code>)</li>
+          </ul>
+        </div>
+        <div class="point">
+          <p class="topic">Things to note:</p>  
+          <ul class="details">
+            <li>the pointer conversion specifier is <code>%p</code></li>
+            <li>the <code>*</code> and <code>&</code> can be stacked like <code>*(&integer)</code></li>
+            <li>the most likely pointer use cases are:
+              <ul>for <code>int</code>s:
+                <li>initialize pointer: <code>int* integer_pointer</code></li>
+                <li>set to the address of a variable <code>integer_pointer = &integer</code></li>
+                <li>get the value of the variable that the pointer is pointing to <code>*integer_pointer</code></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </div>
     </li>
     <li class="item">
