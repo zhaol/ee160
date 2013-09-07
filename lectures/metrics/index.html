@@ -1,0 +1,132 @@
+---
+layout: default
+title: Lecture 14
+---
+
+<div class="lecture">
+  <ul class="outline">
+    <li class="item">
+      <h2 class="headline">Problem Statement</h2>
+      <div class="content">
+        <p>Write a program for the Bank of EE160. The teller will type in the account type and account balance. The program will let the teller know if a minimum balance fee needs to be charged. The Bank of EE160 has saving accounts and checking accounts. For saving accounts, the minimum balance is \$1,000. For checking accounts, the minimum balance is \$500. The program will allow the teller to continue entering in account balances and types until the teller is done entering all of the accounts.</p><br/>
+        <p>The program will also print out a summary of all the accounts.  This summary will contain the total number of accounts, the total amount in all accounts, the percentage of minimum balance fees relative to the total amount in all accounts, and the percentage of accounts that were charged a minimum balance fee.  Also, after the teller has finished entering in each account's information, the program will calculate the percentage the minimum balance fee is relative to the account balance.</p>
+        <p>Assume the minimum balance fee is $35</p>
+        <div class="point">
+          <p class="topic">What is the problem asking for?</p>
+          <div class="details">
+            <p>A program that takes in the account type and account balance.  The program returns whether or not a minimum balance fee should be charged to the account</p>
+            <p>The program prints a summary of all the accounts detailing the total number of accounts and total amount in all accounts</p>
+            <ul>
+              <li>input:
+                <ul>
+                  <li>account balance (decimal number)</li>
+                  <li>account type (character)</li>
+                  <li>exit program (character)</li>
+                </ul>
+              <li>output:
+                <ul>
+                  <li>message telling the teller if the minimum balance fee should be charged or not ("A minimum balance fee needs to be charged to this account." or "A minimum balance fee does not need to be charged to this account."</li>
+                  <li>accounts summary with the following information:
+                    <ul>
+                      <li>total number of accounts</li>
+                      <li>total amount in all accounts</li>
+                      <li>percentage of total minimum balance fees charged compared to the total balance of all the accounts</li>
+                      <li>percentage of accounts that were charged a minimum balance fee</li>
+                    </ul>
+                  </li>
+                  <li>each account will also have a summary with the following information:
+                    <ul>
+                      <li>percentage of the minimum balance fee charged compared to the account balance of each of the accounts</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">Algorithm Design</h2>
+      <div class="content">
+        <div class="point">
+          <p class="topic">How can a computer solve this in a step-by-step manner?</p>
+          <div class="details">
+            <ul>What are some questions the program needs to ask:
+              <li>it needs to check if the account is a saving account</li>
+              <li>it needs to check if the account is a checking account</li>
+              <li>it needs to check if the account balance is less than $1,000 for saving account</li>
+              <li>it needs to check if the account balance is less than $500 for checking account</li>
+              <li>it needs to check if the teller wants to exit the program</li>
+            </ul>
+            <ul>What are some tasks the program need to do:
+              <li>it needs to display a message to tell the teller to charge a minimum balance</li>
+              <li>it needs to display a message to tell the teller to not charge a minimum balance</li>
+              <li>it needs to continue reading in account balances and account types until the user wants to exit the program</li>
+              <li>it needs to count the number of accounts</li>
+              <li>it needs to total the amount of all the accounts</li>
+              <li>it needs to calculate the percentage of minimum balance fees charged compared to the total amount of all the accounts</li>
+              <li>it needs to calculate the percentage of minimum balance fee charged compared to the the balance on the account for each account</li>
+            </ul>
+            <p>How can we arrange the questions and tasks to develop an algoirthm (step-by-step procedure) that will meet our requirements?:</p>
+            <ul>Some questions to ask:
+              <li>How can we simplify the problem?</li>
+              <li>What order should the questions be asked?</li>
+              <li>What order should the program tasks be done?</li>
+            </ul>
+          </div>  
+        </div>
+        <div class="point">
+          <p class="topic">What is the algorithm?</p>
+          <div class="details">
+            <ul>Using words:
+              <li>
+<pre>while there are more accounts to be checked
+  check if the account is a saving account
+    if yes, then
+      check if the account balance is less than \$1000
+        if yes, then
+          tell the teller to charge the minimum balance fee
+        otherwise
+          tell the teller to not charge the minimum balance fee
+  otherwise (assume) the account is a checking account
+    check if the account balance is less than \$500
+      if yes, then
+        tell the teller to charge the minimum balance fee
+      otherwise
+        tell the teller to not charge the minimum balance fee
+  display account summary for individual account
+  update accounts summary information
+  ask the user if there are more accounts to be checked
+display accounts summary information</pre>
+            </ul>
+            <ul>Using block diagrams:
+              <li>
+              <a href="https://docs.google.com/drawings/d/1KgsHua37qmuwbu5smToWGetqN5UBL8xZn6gYRy8eyQg/pub?w=1797&amp;h=1590"><img src="https://docs.google.com/drawings/d/1KgsHua37qmuwbu5smToWGetqN5UBL8xZn6gYRy8eyQg/pub?w=1797&amp;h=1590"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">Write the program</h2>
+      <div class="content">
+        <p>translate your algorithm into code, <span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/metrics/metrics.c">accounts_summary.c</a></span>:</p>
+        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/metrics/metrics.c"></script>
+        <ul>Things to note:
+          <li>You can use constants (like <code>100.0</code>) to change the type</li>
+          <li>Be sure to use the constants on the first operation</li>
+          <li><code>int_variable / int_variable2 * 100.0</code> will not work</li>
+        </ul>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">Assignment</h2>
+      <div class="content">
+        <p>modify <span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/metrics/metrics.c">metrics.c</a></span> so you do not need <code>minimum_balance_fee_charged_flag</code>:</p>
+        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/metrics/metrics.c"></script>
+      </div>
+    </li>
+  </ul>
+</div>
