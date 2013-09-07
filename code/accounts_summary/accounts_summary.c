@@ -38,7 +38,7 @@ main() {
     scanf (" %c", &exit_program_flag);
   }
   
-  // Display account summary information
+  // Display accounts summary information
   printf ("==== Accounts Summary ====\n");
   printf ("The total number of accounts: %d\n", total_number_of_accounts);
   printf ("The total amount in all accounts: $%.2f\n", total_amount_in_accounts);
