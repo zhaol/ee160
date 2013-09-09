@@ -58,16 +58,7 @@ title: Lecture 06
         <div class="point">
           <p class="topic">What is the <code>if</code>/<code>else</code> <span class="text-success">control statement</span>?</p>
           <div class="details">
-            <p>A group of code that includes:</p>
-            <ul>
-              <li>a <em><code>condition</code></em>
-              <li>a block of code that is executed when the <em><code>condition</code></em> is <code>true</code></li>
-              <li>a block of code that is executed when the <em><code>condition</code></em> is <code>false</code></li>
-                <ul>
-                  <li>the <code>false</code> block of code is optional</li>
-                  <li>when there's no <code>false</code> block of code, then the <span class="text-success">control statement</span> is called the <code>if</code> <span class="text-success">control statement</span></li>
-                </ul>
-            </ul>
+            <p>The <code>if</code>/<code>else</code> <span class="text-success">control statement</span> is a group of code that tells the program to execute some code (and not others) based on a decision criteria</p>
           </div>
         </div>
         <div class="point">
@@ -96,45 +87,60 @@ title: Lecture 06
         </div>
         <div class="point">
           <p class="topic">How to use the <code>if</code>/<code>else</code> <span class="text-success">control statement</span>?</p>
-          <ul class="details">
-            <li><script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/if/if.syntax"></script></li>
-            <li>the keywords are <code>if</code> and <code>else</code></li>
-            <li>the <code>if</code> keyword starts the <code>if</code>/<code>else</code> <span class="text-success">control statement</span></li>
-            <li>the condition follows the <code>if</code> keyword, like <code><strong>if</strong> (condition)</code></li>
-            <li>the condition is wrapped in parenthesis <code>(<strong>condition</strong>)</code></li>
-            <li>the <code>true</code> and <code>false</code> blocks of code are wrapped in curly braces, like <code><strong>{</strong> /*true block of code*/ <strong>}</strong></code></li>
-            <li>the <code>else</code> keyword is between the ending curly braces of the <code>true</code> block and the starting curly braces of the <code>false</code> block, like <code>{ /* true block */ } <strong>else</strong> { /* false block */ }</code></li>
-            <li>read more at <a href="http://www.tutorialspoint.com/cprogramming/if_else_statement_in_c.htm">http://www.tutorialspoint.com/cprogramming/if_else_statement_in_c.htm</a></li>
-          </ul>
-        </div>
-        <div class="point">
-          <p class="topic">Example <code>if</code>/<code>else</code>, <em class="file well well-small">if.c</em>:</p>
           <div class="details">
-            <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/if/if.c"></script>        
-            <p class="topic">Things to note:</p>
-            <ul class="details">
-              <li>there's a <em><code>condition</code></em> to test whether things are <code>true</code> or <code>false</code></li>
+            <p>A group of code that includes:</p>
+            <ul>
+              <li>a <em><code>condition</code></em>
+              <li>a block of code that is executed when the <em><code>condition</code></em> is <code>true</code></li>
+              <li>a block of code that is executed when the <em><code>condition</code></em> is <code>false</code></li>
                 <ul>
-                  <li>a <em><code>condition</code></em> is a boolean expression (or function) that returns <code>true</code> or <code>false</code></li>
+                  <li>the <code>false</code> block of code is optional</li>
+                  <li>when there's no <code>false</code> block of code, then the <span class="text-success">control statement</span> is called the <code>if</code> <span class="text-success">control statement</span></li>
                 </ul>
-              <li>there's a <code>true</code> block of code
-                <ul>
-                  <li>these lines of code are executed when the <em><code>condition</code></em> is <code>true</code></li>
-                </ul>
-              <li>there's a <code>false</code> block of code
-                <ul>
-                  <li>these lines of code are executed when the <em><code>condition</code></em> is <code>false</code></li>
-                </ul>
-              </li>
-              <li><em class="file well well-small">if.c</em> is utilizing the <code>if</code>/<code>else</code> <span class="text-success">control statement</span>
-                <ul>
-                  <li>read more at <a href="http://www.tutorialspoint.com/ansi_c/c_control_statements.htm">http://www.tutorialspoint.com/ansi_c/c_control_statements.htm</a> (Section Branching, Sub-Section If Statement)</li>
-                  <li>read more at <a href="http://www.tutorialspoint.com/cprogramming/if_else_statement_in_c.htm">http://www.tutorialspoint.com/cprogramming/if_else_statement_in_c.htm</a></li>
-                </ul>
-              </li>
+            </ul>
+            <p>Syntax:</p>
+            <ul>
+              <li><script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/if/if.syntax"></script></li>
+              <li>the keywords are <code>if</code> and <code>else</code></li>
+              <li>the <code>if</code> keyword starts the <code>if</code>/<code>else</code> <span class="text-success">control statement</span></li>
+              <li>the condition follows the <code>if</code> keyword, like <code><strong>if</strong> (condition)</code></li>
+              <li>the condition is wrapped in parenthesis <code>(<strong>condition</strong>)</code></li>
+              <li>the <code>true</code> and <code>false</code> blocks of code are wrapped in curly braces, like <code><strong>{</strong> /*true block of code*/ <strong>}</strong></code></li>
+              <li>the <code>else</code> keyword is between the ending curly braces of the <code>true</code> block and the starting curly braces of the <code>false</code> block, like <code>{ /* true block */ } <strong>else</strong> { /* false block */ }</code></li>
+              <li>read more at <a href="http://www.tutorialspoint.com/cprogramming/if_else_statement_in_c.htm">http://www.tutorialspoint.com/cprogramming/if_else_statement_in_c.htm</a></li>
             </ul>
           </div>
         </div>
+
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">if/else Example</h2>
+      <div class="content">
+        <p>Example <code>if</code>/<code>else</code>, <em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/if/if.c">if.c</a></em>:</p>
+        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/if/if.c"></script>        
+        <p>Things to note:</p>
+        <ul>
+          <li>there's a <em><code>condition</code></em> to test whether things are <code>true</code> or <code>false</code></li>
+            <ul>
+              <li>a <em><code>condition</code></em> is a boolean expression (or function) that returns <code>true</code> or <code>false</code></li>
+            </ul>
+          <li>there's a <code>true</code> block of code
+            <ul>
+              <li>these lines of code are executed when the <em><code>condition</code></em> is <code>true</code></li>
+            </ul>
+          <li>there's a <code>false</code> block of code
+            <ul>
+              <li>these lines of code are executed when the <em><code>condition</code></em> is <code>false</code></li>
+            </ul>
+          </li>
+          <li><em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/if/if.c">if.c</a></em> is utilizing the <code>if</code>/<code>else</code> <span class="text-success">control statement</span>
+            <ul>
+              <li>read more at <a href="http://www.tutorialspoint.com/ansi_c/c_control_statements.htm">http://www.tutorialspoint.com/ansi_c/c_control_statements.htm</a> (Section Branching, Sub-Section If Statement)</li>
+              <li>read more at <a href="http://www.tutorialspoint.com/cprogramming/if_else_statement_in_c.htm">http://www.tutorialspoint.com/cprogramming/if_else_statement_in_c.htm</a></li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </li>
     <li class="item">
