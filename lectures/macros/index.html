@@ -8,9 +8,18 @@ title: Lecture 17
     <li class="item">
       <h2 class="headline">Macros</h2>
       <div class="content">
-        <p><em class="file well well-small">macro.c</em>:</p>
+        <p>What are macros?</p>
+        <ul>
+          <li>they tell the compiler to substitute an identifier with expressions, statements, or group of statements</li>
+          <li>you can think of macros as if they are a way to tell the compiler to replace some code with other code</li>
+        </ul>
+        <p>Why are macros important?</p>
+        <ul>
+          <li>they make your code easier to read and maintain</li>
+        </ul>
+        <p><em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/macro/macro.c">macro.c</a></em>:</p>
         <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/macro/macro.c"></script>
-        <p><em class="file well well-small">common_constants.h</em>:</p>
+        <p><em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/macro/common_constants.h">common_constants.h</a></em>:</p>
         <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/macro/common_constants.h"></script>
         <p>Things to note:</p>
         <ul>
@@ -21,8 +30,43 @@ title: Lecture 17
           <li>read more at <a href="http://gcc.gnu.org/onlinedocs/cpp/Macros.html">http://gcc.gnu.org/onlinedocs/cpp/Macros.html</a> if you want to learn more advance uses of macros</li>
         </ul>
       </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">More Advanced Macros and Compilation Techniques</h2>
+      <div class="content">
+        <p>Macros for expressions and multiline statements</p>
+        <ul>
+          <li>they can be faster than using functions</li>
+          <li>functions are more flexible and easier to maintain</li>
+          <li>recommend using functions first and only switch to macros if there's a need for it</li>
+          <li>examples:
+            <ul>
+              <li>Macro for an expression:
+                <p><em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/macro/area.c">area.c</a></em>:</p>
+                <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/macro/area.c"></script>
+              </li>
+              <li>Macro for a function:
+                <p><em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/macro/count.c">count.c</a></em>:</p>
+                <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/macro/count.c"></script>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <p>Conditional Compilation</p>
+        <ul>
+          <li>compiling some code based on a condition</li>
+          <li>useful for inserting debug statements when necessary</li>
+          <li>example:
+            <ul>
+              <li>Compile a debug statement only when debugging:
+                <p><em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/macro/debug.c">debug.c</a></em>:</p>
+                <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/macro/debug.c"></script>    
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </li>  
-    <!-- #### TODO: add conditional and multiline macros -->
     <li class="item">
       <h2 class="headline">Assignment</h2>
       <div class="content">
