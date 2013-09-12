@@ -2,6 +2,10 @@ header {
   margin-top: 10px;
 }
 
+body {
+  font-size: 16px;
+}
+
 .expand-all {
   margin-top: 10px;
   cursor: pointer;
