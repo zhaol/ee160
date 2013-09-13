@@ -28,32 +28,34 @@ title: Lecture 18
           <ul>
             <li>there's no exact science</li>
             <li>there are some guidelines</li>
-            <li>abstraction really is about writing high quality code, which is outside the scope of this class</li>
+            <li>abstraction really is about writing high quality code, which is hard to measure, quantify, or deem to be right or wrong</li>
+            <li>sometimes it could be personal preference</li>
+            <li>it is possible to keep on abstracting and making code more readable indefinitely, but sometimes you just need to choose a point to stop</li>
             <li>I just want to introduce you to the concept so you're aware of it</li>
           </ul>
         </div>
       </div>
     </li>  
     <li class="item">
-      <h2 class="headline">Refactor Summer</h2>
+      <h2 class="headline">Refactor Net Balance</h2>
       <div class="content">
         <div>
-          <p><em class="file well well-small">refactored_summer.c</em>:</p>
-          <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/refactored_summer/refactored_summer.c"></script>
+          <p>Let us refactor (e.g. update the code while preserving it's functionalities) <em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/refactored_net_balance/refactored_net_balance.c">refactored_net_balance.c</a></em> to abstract away some implementation details:</p>
+          <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/refactored_net_balance/refactored_net_balance.c"></script>
         </div>
         <div>
           <p>Let's Compare:</p>
           <ul>
-            <li>original summer:
+            <li>original version:
               <ul>
-                <li><em class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/12_summer/summer.c">summer.c</a></em></li>
+                <li><em class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/net_balance/net_balance.c">net_balance.c</a></em></li>
               </ul>
             </li>
-            <li>refactored summer:
+            <li>refactored version:
               <ul>
-                <li><em class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/refactored_summer/refactored_summer.c">refactored_summer.c</a></em></li>
-                <li><em class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/refactored_summer/refactored_summer.h">refactored_summer.h</a></em></li>
-                <li><em class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/refactored_summer/helpers.c">helpers.c</a></em></li>
+                <li><em class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/refactored_net_balance/refactored_net_balance.c">refactored_net_balance.c</a></em></li>
+                <li><em class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/refactored_net_balance/magic_numbers.h">magic_numbers.h</a></em></li>
+                <li><em class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/refactored_net_balance/helper_functions.c">helper_functions.c</a></em></li>
               </ul>
             </li>
           </ul>
@@ -72,11 +74,8 @@ title: Lecture 18
     <li class="item">
       <h2 class="headline">Assignment</h2>
       <div class="content">
-        <p>read about and try out variable scopes:</p>
-        <ul>
-          <li><a href="http://icecube.wisc.edu/~dglo/c_class/scope.html">http://icecube.wisc.edu/~dglo/c_class/scope.html</a></li>
-          <li><a href="http://www.tutorialspoint.com/cprogramming/c_scope_rules.htm">http://www.tutorialspoint.com/cprogramming/c_scope_rules.htm</a></li>
-        </ul>
+        <p>to refactor <span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/refactored_net_balance/refactored_net_balance.c">refactored_net_balance.c</a></span> so the block of code to display the accounts summary information is performed using a function:</p>
+        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/refactored_net_balance/refactored_net_balance_with_accounts_summary_function.c"></script>
       </div>
     </li>
   </ul>
