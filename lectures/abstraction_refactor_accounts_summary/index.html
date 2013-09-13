@@ -39,13 +39,15 @@ title: Lecture 18
     <li class="item">
       <h2 class="headline">Refactor Net Balance</h2>
       <div class="content">
-        <div>
-          <p>Let us refactor (e.g. update the code while preserving it's functionalities) <em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/refactored_net_balance/refactored_net_balance.c">refactored_net_balance.c</a></em> to abstract away some implementation details:</p>
-          <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/refactored_net_balance/refactored_net_balance.c"></script>
+        <div class="point">
+          <p class="topic">Let us refactor (e.g. update the code while preserving it's functionalities) <em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/refactored_net_balance/refactored_net_balance.c">refactored_net_balance.c</a></em> to abstract away some implementation details:</p>
+          <div class="details">
+            <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/refactored_net_balance/refactored_net_balance.c"></script>
+          </div>
         </div>
-        <div>
-          <p>Let's Compare:</p>
-          <ul>
+        <div class="point">
+          <p class="topic">Let's Compare:</p>
+          <ul class="details">
             <li>original version:
               <ul>
                 <li><em class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/net_balance/net_balance.c">net_balance.c</a></em></li>
@@ -70,9 +72,15 @@ title: Lecture 18
             </li>
           </ul>
         </div>
-        <div>
-          <p>Things to Note:</p>
-          <ul>
+        <div class="point">
+          <p class="topic">Let's just compare what matters</p>
+          <div class="details">
+            <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/refactored_net_balance/side_by_side.comparison"></script>
+          </div>
+        </div>
+        <div class="point">
+          <p class="topic">Things to Note:</p>
+          <ul class="details">
             <li>easier to read and understand</li>
             <li>shorter, cleaner, and less cluttered</li>
             <li>difference might be small for this simple example, but as a program gets larger, difference will be much larger</li>

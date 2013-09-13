@@ -1,0 +1,48 @@
+while (exit_program_flag == EXIT_PROGRAM) {
+  account_balance = get_account_balance();
+  account_type = get_account_type();
+
+  if (account_type == 's') {
+    minimum_balance_fee_charged_flag = is_account_below_minimum_balance(account_balance, SAVINGS_ACCOUNT_MINIMUM_BALANCE);
+  } else {
+    minimum_balance_fee_charged_flag = is_account_below_minimum_balance(account_balance, CHECKING_ACCOUNT_MINIMUM_BALANCE);
+  }  
+  
+  update_account_summary_information(&total_number_of_accounts, &total_amount_in_accounts, account_balance);
+  exit_program_flag = ask_to_exit();
+}
+
+while (exit_program_flag == 'n') {
+  printf ("Please enter the account balance: ");
+  scanf ("%f", &account_balance);
+  printf ("c = checking, s = saving\n");
+  printf ("Please enter the account type:\n");
+  scanf (" %c", &account_type);
+    
+  if (account_type == 's') {
+    if (account_balance < 1000) {
+      minimum_balance_fee_charged_flag = 1;
+      printf ("A minimum balance fee needs to be charged to this account.\n");
+    } else {
+      minimum_balance_fee_charged_flag = 0;
+      printf ("A minimum balance fee does not need to be charged to this account.\n");
+    }
+  } else {
+    if (account_balance < 500) {
+      minimum_balance_fee_charged_flag = 1;
+      printf ("A minimum balance fee needs to be charged to this account.\n");
+    } else {
+      minimum_balance_fee_charged_flag = 0;
+      printf ("A minimum balance fee does not need to be charged to this account.\n");
+    }
+  }  
+  
+  // Update account summary information
+  total_number_of_accounts++;
+  total_amount_in_accounts += account_balance;
+  
+  printf ("\n");
+  printf ("Are you finished checking all your accounts?:\n");
+  printf ("Enter 'n' to check more accounts; Enter any other character to exit\n");
+  scanf (" %c", &exit_program_flag);
+}
