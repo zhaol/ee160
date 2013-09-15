@@ -32,18 +32,25 @@ ul {
 }
 
 .key {
-  padding: 2px 4px;
+  padding: 1px 4px;
   color: #C09853;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .file {
-  padding: 2px 4px;
+  padding: 1px 4px;
   color: #468847;
-  font-size: 12px;
+  font-size: 14px;
 }
+
 .file a {
   color: #468847;
+}
+
+.value {
+  padding: 1px 4px;
+  font-size: 14px;
+  color: #999999;
 }
 
 code strong {
