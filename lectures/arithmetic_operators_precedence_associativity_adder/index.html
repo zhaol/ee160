@@ -47,7 +47,6 @@ title: Lecture 11
         <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/adder/adder.c"></script>
         <p>Things to note:</p>
         <ul>
-          <li><code>scanf</code> requires address of a variable <code>&first_number</code> as an input</li>
           <li><code>printf</code> can take a variable <code>sum</code> or an expression <code>first_number + second_number</code></li>
         </ul>
       </div>
@@ -81,7 +80,7 @@ title: Lecture 11
 1 + (2 * 2) = 5</pre>
             <p>Things to note:</p>
             <ul>
-              <li><code>(<em>expr</em>)</code>has higher precedence than <code>-</code></li>
+              <li><code>(<em>expr</em>)</code>has higher precedence than other operators (<code>+</code><code>-</code><code>*</code><code>/</code>)</li>
               <li>having <code>(<em>expr</em>)</code> makes the intent of the equation easier to understand</li>
             </ul>
           </div>
@@ -117,7 +116,7 @@ title: Lecture 11
 4 - (3 - 2) = 3</pre>
             <p>Things to note:</p>
             <ul>
-              <li><code>(<em>expr</em>)</code>has higher precedence than <code>-</code></li>
+              <li><code>(<em>expr</em>)</code>has higher precedence than other operators (<code>+</code><code>-</code><code>*</code><code>/</code>)</li>
               <li>having <code>(<em>expr</em>)</code> makes the intent of the equation easier to understand</li>
             </ul>
           </div>
@@ -125,9 +124,52 @@ title: Lecture 11
       </div>
     </li>
     <li class="item">
+      <h2 class="headline">Write out the quadratic equation in code</h2>
+      <p class="content">just use <code>+</code> instead of +/-</p>
+    </li>
+    <li class="item">
       <h2 class="headline">Assignment</h2>
       <div class="content">
+        <ul>Homework Problem 11.1, at the end of this assignment you should have:
+          <li>a folder named <span class="file well well-small">11_1</span></li>
+          <li>a file inside the <span class="file well well-small">11_1</span> folder named <span class="file well well-small">equation.c</span></li>
+          <li>an executable file inside the <span class="file well well-small">11_1</span> folder named <span class="file well well-small">equation</span></li>
+          <li>
+            <ul>example:
+              <li><span class="file well well-small">/11_1/equation.c</span></li>
+              <li><span class="file well well-small">/11_1/equation</span></li>
+            </ul>
+          </li>
+        </ul>
         <p>write a program that takes in 2 numbers ($x$ & $y$) and calculates $z={-x+{x^2-4y}}*{2y}$</p>
+        <ul>
+          <li>test case 1:
+            <ul>
+              <li>input: x=2, y=2</li>
+              <li>output: -30</li>
+            </ul>
+          </li>
+          <li>test case 2:
+            <ul>
+              <li>input: x=4, y=6</li>
+              <li>output: -276</li>
+            </ul>
+          </li>
+        </ul>
+        <ul>Homework Problem 11.2, at the end of this assignment you should have:
+          <li>a folder named <span class="file well well-small">11_2</span></li>
+          <li>a file inside the <span class="file well well-small">11_2</span> folder named <span class="file well well-small">operators.txt</span></li>
+          <li>
+            <ul>example:
+              <li><span class="file well well-small">/11_2/operators.txt</span></li>
+            </ul>
+          </li>
+        </ul>
+        <ul>using words, explain what the following operators do (sometimes, it is easier to try the operators out in a simple program than it is to understand the documentation):
+          <li><code>++</code></li>
+          <li><code>--</code></li>
+          <li><code>%</code></li>
+        </ul>
       </div>
     </li>
   </ul>
