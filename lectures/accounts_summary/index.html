@@ -73,18 +73,18 @@ title: Lecture 12
               <li>
 <pre>while there are more accounts to be checked
   check if the account is a saving account
-    if yes, then
+    when yes, then
       check if the account balance is less than \$1000
-        if yes, then
+        when yes, then
+          tell the teller to charge the minimum balance fee
+        otherwise,
+          tell the teller to not charge the minimum balance fee
+    otherwise, (assume) the account is a checking account
+      check if the account balance is less than \$500
+        when yes, then
           tell the teller to charge the minimum balance fee
         otherwise
           tell the teller to not charge the minimum balance fee
-  otherwise (assume) the account is a checking account
-    check if the account balance is less than \$500
-      if yes, then
-        tell the teller to charge the minimum balance fee
-      otherwise
-        tell the teller to not charge the minimum balance fee
   update accounts summary information
   ask the user if there are more accounts to be checked
 display accounts summary information</pre>
@@ -104,8 +104,22 @@ display accounts summary information</pre>
       </div>
     </li>
     <li class="item">
+      <h2 class="headline">Modify the program</h2>
+      <div class="content">
+        <p>update the program to report the number of accounts with balances above the minimum balance</p>
+      </div>
+    </li>
+    <li class="item">
       <h2 class="headline">Assignment</h2>
       <div class="content">
+        <ul>Homework Problem 12.1, at the end of this assignment you should upload to your Laulima dropbox:
+          <li>a file named <span class="file well well-small">UHusername_12_1.c</span></li>
+          <li>
+            <ul>example:
+              <li><span class="file well well-small">zhaol_12_1.c</span></li>
+            </ul>
+          </li>
+        </ul>
         <p>improve <span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/accounts_summary/accounts_summary.c">accounts_summary.c</a></span> to show total amount of minimum balance fees to be collected (assume the fee is $20):</p>
         <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/accounts_summary/accounts_summary.c"></script>
       </div>
