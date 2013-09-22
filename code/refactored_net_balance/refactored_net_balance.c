@@ -5,6 +5,7 @@
 
 #include <stdio.h>
 #include "magic_numbers.h"
+#include "helper_functions.h"
 #include "helper_functions.c"
 
 // This program allows a teller to enter in account details and the program will calculate account information for the teller
