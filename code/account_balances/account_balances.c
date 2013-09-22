@@ -1,10 +1,16 @@
+/*   File:  account_holders.c
+//   By:    The Awesome Class of EE160
+//   Date:	Today :)
+*/
+
 #include <stdio.h>
 #include "magic_numbers.h"
 #include "helper_functions.c"
 
 #define MAX_NUMBER_OF_ACCOUNTS 10
 
-main() {
+// This program allows a teller to enter in account details and the program will calculate account information for the teller
+int main() {
   float account_balance;
   char account_type;
   char exit_program_flag = EXIT_PROGRAM;
@@ -57,4 +63,6 @@ main() {
     printf ("%3d: $%8.2f\n", balances_display_counter, account_balances[balances_display_counter]);
     balances_display_counter++;
   }
+  
+  return 0;
 }
