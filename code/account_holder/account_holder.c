@@ -1,4 +1,4 @@
-/*   File:  account_holders.c
+/*   File:  account_holder.c
 //   By:    The Awesome Class of EE160
 //   Date:	Today :)
 */
@@ -7,8 +7,6 @@
 #include "magic_numbers.h"
 #include "helper_functions.h"
 #include "helper_functions.c"
-
-#define MAX_NUMBER_OF_ACCOUNTS 10
 
 // This program allows a teller to enter in account details and the program will calculate account information for the teller
 int main() {
@@ -23,11 +21,16 @@ int main() {
   int minimum_balance_fee_charged_flag = 0;
   float account_balances[MAX_NUMBER_OF_ACCOUNTS];
   int current_account_number = 0;
+  char account_holder[MAX_ACCOUNT_HOLDER_SIZE]; 
   
   while (exit_program_flag == EXIT_PROGRAM) {
+    // get account holder information
+    printf ("Please enter the account holder:\n");
+    scanf ("%s", &account_holder);
+    
     account_balance = get_account_balance();
     account_type = get_account_type();
-
+    
     if (account_type == 's') {
       minimum_balance_fee_charged_flag = is_account_below_minimum_balance(account_balance, SAVINGS_ACCOUNT_MINIMUM_BALANCE);
     } else {
@@ -35,6 +38,7 @@ int main() {
     }  
     
     // Display account summary information
+    printf ("=== Account Information for %s's Account ===\n", account_holder);
     if (minimum_balance_fee_charged_flag) {
       total_accounts_with_minimum_balance_fees++;
       total_minimum_balance_fees =+ minimum_balance_fee;

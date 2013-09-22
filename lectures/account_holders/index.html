@@ -1,0 +1,175 @@
+---
+layout: default
+title: Lecture 22
+---
+
+<div class="lecture">
+  <ul class="outline">
+    <li class="item">
+      <h2 class="headline">Problem Statement</h2>
+      <div class="content">
+        <p>Write a program for the Bank of EE160. The teller will type in the account holder, account type, and account balance. The program will let the teller know if a minimum balance fee needs to be charged and also the balance after adjusting for the minimum balance fee. The Bank of EE160 has saving accounts and checking accounts. For saving accounts, the minimum balance is \$1,000. For checking accounts, the minimum balance is \$500. The program will allow the teller to continue entering in account balances and types until the teller is done entering all of the accounts.</p><br/>
+        <p>The program will also print out a summary of all the accounts.  This summary will contain the total number of accounts, the total amount in all accounts, the percentage of minimum balance fees relative to the total amount in all accounts, and the percentage of accounts that were charged a minimum balance fee.  Also, after the teller has finished entering in each account's information, the program will display the account holder information and calculate the percentage the minimum balance fee is relative to the account balance.</p>
+        <p>After the summary of all the accounts, the program will print out a list of all the account balances entered by the teller.</p>
+        <p>Assume the minimum balance fee is $35</p>
+        <div class="point">
+          <p class="topic">What is the problem asking for?</p>
+          <div class="details">
+            <p>A program that takes in the account type and account balance.  The program returns whether or not a minimum balance fee should be charged to the account</p>
+            <p>The program prints a summary of all the accounts detailing the total number of accounts and total amount in all accounts</p>
+            <ul>
+              <li>input:
+                <ul>
+                  <li>account holder (string)</li>
+                  <li>account balance (decimal number)</li>
+                  <li>account type (character)</li>
+                  <li>exit program (character)</li>
+                </ul>
+              <li>output:
+                <ul>
+                  <li>message telling the teller if the minimum balance fee should be charged or not ("A minimum balance fee needs to be charged to this account." or "A minimum balance fee does not need to be charged to this account."</li>
+                  <li>each account will also have a summary with the following information:
+                    <ul>
+                      <li>account holder information</li>
+                      <li>percentage of the minimum balance fee charged compared to the account balance of each of the accounts</li>
+                    </ul>
+                  </li>
+                  <li>accounts summary with the following information:
+                    <ul>
+                      <li>total number of accounts</li>
+                      <li>total amount in all accounts</li>
+                      <li>percentage of total minimum balance fees charged compared to the total balance of all the accounts</li>
+                      <li>percentage of accounts that were charged a minimum balance fee</li>
+                    </ul>
+                  </li>
+                  <li>list of account balances entered by the teller</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">Algorithm Design</h2>
+      <div class="content">
+        <div class="point">
+          <p class="topic">How can a computer solve this in a step-by-step manner?</p>
+          <div class="details">
+            <ul>What are some questions the program needs to ask:
+              <li>it needs to check if the account is a saving account</li>
+              <li>it needs to check if the account is a checking account</li>
+              <li>it needs to check if the account balance is less than $1,000 for saving account</li>
+              <li>it needs to check if the account balance is less than $500 for checking account</li>
+              <li>it needs to check if the teller wants to exit the program</li>
+            </ul>
+            <ul>What are some tasks the program need to do:
+              <li>it needs to display a message to tell the teller to charge a minimum balance</li>
+              <li>it needs to display a message to tell the teller to not charge a minimum balance</li>
+              <li>it needs to continue reading in account balances and account types until the user wants to exit the program</li>
+              <li>it needs to count the number of accounts</li>
+              <li>it needs to total the amount of all the accounts</li>
+              <li>it needs to calculate the percentage of minimum balance fees charged compared to the total amount of all the accounts</li>
+              <li>it needs to calculate the percentage of minimum balance fee charged compared to the the balance on the account for each account</li>
+              <li>it needs to calculate the adjusted balance after the minimum balance fee is accounted for</li>
+              <li>it needs to list the account balances</li>
+              <li>it needs to display the account holder information</li>
+            </ul>
+            <p>How can we arrange the questions and tasks to develop an algoirthm (step-by-step procedure) that will meet our requirements?:</p>
+            <ul>Some questions to ask:
+              <li>How can we simplify the problem?</li>
+              <li>What order should the questions be asked?</li>
+              <li>What order should the program tasks be done?</li>
+            </ul>
+          </div>  
+        </div>
+        <div class="point">
+          <p class="topic">What is the algorithm?</p>
+          <div class="details">
+            <ul>Using words:
+              <li>
+<pre>while there are more accounts to be checked
+  get account holder information
+  check if the account is a saving account
+    when yes, then
+      check if the account balance is less than \$1000
+        when yes, then
+          tell the teller to charge the minimum balance fee
+        otherwise
+          tell the teller to not charge the minimum balance fee
+  otherwise (assume) the account is a checking account
+    check if the account balance is less than \$500
+      when yes, then
+        tell the teller to charge the minimum balance fee
+      otherwise
+        tell the teller to not charge the minimum balance fee
+  display account holder information
+  display account summary for individual account
+  update accounts summary information
+  update list of account balances
+  ask the user if there are more accounts to be checked
+display accounts summary information
+display list of account balances</pre>
+            </ul>
+            <ul>Using block diagrams:
+              <li>
+              <a href="https://docs.google.com/drawings/d/1j_PeS444Q3EZVsOJI908Ok3cOhWiUFdgUUVOSn_YX_0/pub?w=1208&h=1410"><img src="https://docs.google.com/drawings/d/1j_PeS444Q3EZVsOJI908Ok3cOhWiUFdgUUVOSn_YX_0/pub?w=1208&h=1410"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">Write the program</h2>
+      <div class="content">
+        <p>translate your algorithm into code, <span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/account_holder/account_holder.c">account_holder.c</a></span>:</p>
+        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/account_holder/account_holder.c"></script>
+        <p>translate your algorithm into code, <span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/account_holder/helper_functions.c">helper_functions.c</a></span>:</p>
+        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/account_holder/helper_functions.h"></script>
+        <p>translate your algorithm into code, <span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/account_holder/helper_functions.h">helper_functions.h</a></span>:</p>
+        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/account_holder/helper_functions.c"></script>
+        <p>translate your algorithm into code, <span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/account_holder/magic_numbers.c">magic_numbers.c</a></span>:</p>
+        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/account_holder/magic_numbers.c"></script>
+        <ul>Things to note:
+          <li>the use of the string conversion specifier <code>%s</code></li>
+        </ul>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">Write the program using a function</h2>
+      <div class="content">
+        <p>translate your algorithm into code, <span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/account_holder_with_function/account_holder_with_function.c">account_holder_with_function.c</a></span>:</p>
+        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/account_holder_with_function/account_holder.c"></script>
+        <p>translate your algorithm into code, <span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/account_holder_with_function/helper_functions.c">helper_functions.c</a></span>:</p>
+        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/account_holder_with_function/helper_functions.h"></script>
+        <p>translate your algorithm into code, <span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/account_holde_with_functionr/helper_functions.h">helper_functions.h</a></span>:</p>
+        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/account_holder_with_function/helper_functions.c"></script>
+        <p>translate your algorithm into code, <span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/account_holder_with_function/magic_numbers.c">magic_numbers.c</a></span>:</p>
+        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/account_holder_with_function/magic_numbers.c"></script>
+        <ul>Things to note:
+          <li>specifying an array in the function prototype <code>void get_account_holder(<strong>char account_holder[]</strong>);</code></li>
+          <li>passing an array to the function <code>get_account_holder(<strong>account_holder</strong>)</code></li>
+          <li>be careful of when to have square brackets and when they are not needed</li>
+          <li>C is actually translating the array name to a point for you
+            <ul>you can read more here:
+              <li><a href="http://www.tutorialspoint.com/cprogramming/c_passing_arrays_to_functions.htm">http://www.tutorialspoint.com/cprogramming/c_passing_arrays_to_functions.htm</a></li>
+              <li><a href="http://stackoverflow.com/questions/5573310/difference-between-passing-array-and-array-pointer-into-function-in-c">http://stackoverflow.com/questions/5573310/difference-between-passing-array-and-array-pointer-into-function-in-c</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">Assignment</h2>
+      <div class="content">
+        <ul>
+          <li>Homework Problem 22.1
+            <p>Update <span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/account_balances_with_function/account_balances_with_function.c">account_balances_with_function.c</a></span> so that the account holder information is displayed with its first character capitalized</p>
+            <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/account_balances_with_function/account_balances_with_function.c"></script>
+          </li>      
+        </ul>
+      </div>
+    </li>
+  </ul>
+</div>

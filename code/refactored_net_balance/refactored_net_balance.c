@@ -1,8 +1,15 @@
+/*   File:  account_holders.c
+//   By:    The Awesome Class of EE160
+//   Date:	Today :)
+*/
+
 #include <stdio.h>
 #include "magic_numbers.h"
+#include "helper_functions.h"
 #include "helper_functions.c"
 
-main() {
+// This program allows a teller to enter in account details and the program will calculate account information for the teller
+int main() {
   float account_balance;
   char account_type;
   char exit_program_flag = EXIT_PROGRAM;
@@ -44,4 +51,6 @@ main() {
   printf ("The total amount in all accounts: $%.2f\n", total_amount_in_accounts);
   printf ("The percentage of the total minimum balance fees with respect to the total account balances: %.1f%%\n", total_minimum_balance_fees / total_amount_in_accounts * PERCENT_CONVERSION_FACTOR);
   printf ("The percentage of accounts that were charged a minimum balance fee: %.1f%%\n", PERCENT_CONVERSION_FACTOR * total_accounts_with_minimum_balance_fees / total_number_of_accounts);
+  
+  return 0;
 }
