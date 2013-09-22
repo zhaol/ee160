@@ -5,6 +5,7 @@
 
 #include <stdio.h>
 #include "magic_numbers.h"
+#include "helper_functions.h"
 #include "helper_functions.c"
 
 #define MAX_NUMBER_OF_ACCOUNTS 10
