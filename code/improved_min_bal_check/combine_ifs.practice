@@ -1,0 +1,13 @@
+if (valid_account_type_flag == VALID_ACCOUNT_TYPE) {
+  if (minimum_balance_fee_charged_flag) {
+    total_accounts_with_minimum_balance_fees++;
+    total_minimum_balance_fees =+ minimum_balance_fee;
+    printf ("Minimum Balance Fee to Account Balance Percentage: %.1f%%\n", minimum_balance_fee / account_balance * PERCENT_CONVERSION_FACTOR);
+    printf ("The new account balance is %.2f\n", net_balance(account_balance, minimum_balance_fee));
+  } else {
+    printf ("Minimum Balance Fee to Account Balance Percentage: %.1f%%\n", NO_MINIMUM_BALANCE / account_balance);
+    printf ("The new account balance is $%.2f\n", net_balance(account_balance, NO_MINIMUM_BALANCE));
+  }
+} else {
+  printf ("Account type is not valid");
+}
