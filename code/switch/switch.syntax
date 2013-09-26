@@ -1,0 +1,19 @@
+switch (expression) {
+  case value1: 
+    // do this if expression equals value1
+    break;
+    
+  case value2: 
+    // do this if expression equals value2
+    break;
+    
+  ...
+  
+  case valueN:
+    // do this if expression equals valueN
+    break;
+
+  default : 
+    // do this if expression does not equals any of the case values above
+
+}

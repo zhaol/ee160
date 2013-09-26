@@ -1,0 +1,7 @@
+if (expression1) {
+  // do this if expression1 is true
+} else if (expression2) {
+  // do this if expression2 is true
+} else {
+  // do this if expression1 and expression2 are false
+}
