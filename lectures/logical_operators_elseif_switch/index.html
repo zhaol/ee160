@@ -1,0 +1,275 @@
+---
+layout: default
+title: Lecture 25
+---
+
+<div class="lecture">
+  <ul class="outline">
+    <li class="item">
+      <h2 class="headline">Logical Operators</h2>
+      <div class="content">
+        <div>
+          <div class="point">
+            <p class="topic">Why are logical operators important?:</p>
+            <ul class="details">
+              <li>logical operators allow your boolean expressions to be more direct</li>
+              <li>using logical operators can simplify nested <code>if</code>/<code>else</code> statements which are hard to read</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="point">
+            <p class="topic">What are logical operators?:</p>
+            <ul class="details">
+              <li><code>&amp;&amp;</code>: and</li>
+              <li><code>||</code>: or</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="point">
+            <p class="topic">How to use logical operators?:</p>
+            <ul class="details">
+              <li>logical operators are placed between 2 boolean expressions</li>
+              <li>expressions containing logical operators simplify like this:
+                <ul>
+                  <li>
+                    <table class="table table-bordered table-striped table-hover">
+                      <caption>AND Operator <code>&amp;&amp;</code></caption>
+                      <thead><tr>
+                        <th>Expression 1</th><th>Expression 2</th><th>Result</th>
+                      </tr></thead>
+                      <tbody>
+                        <tr>
+                          <td>true</td>
+                          <td>true</td>
+                          <td>true</td>
+                        </tr>
+                        <tr>
+                          <td>true</td>
+                          <td>false</td>
+                          <td>false</td>
+                        </tr>
+                        <tr>
+                          <td>false</td>
+                          <td>true</td>
+                          <td>false</td>
+                        </tr>
+                        <tr>
+                          <td>false</td>
+                          <td>false</td>
+                          <td>false</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </li>
+                  <li>
+                    <table class="table table-bordered table-striped table-hover">
+                      <caption>OR Operator <code>||</code></caption>
+                      <thead><tr>
+                        <th>Expression 1</th><th>Expression 2</th><th>Result</th>
+                      </tr></thead>
+                      <tbody>
+                        <tr>
+                          <td>true</td>
+                          <td>true</td>
+                          <td>true</td>
+                        </tr>
+                        <tr>
+                          <td>true</td>
+                          <td>false</td>
+                          <td>true</td>
+                        </tr>
+                        <tr>
+                          <td>false</td>
+                          <td>true</td>
+                          <td>true</td>
+                        </tr>
+                        <tr>
+                          <td>false</td>
+                          <td>false</td>
+                          <td>false</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </li>
+                  <li><code>&amp;&amp;</code> asks "is expression1 AND expression2 true?"</li>
+                  <li><code>||</code> asks "is expression1 OR expression2 true?"</li>
+                </ul>                
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </li>  
+    <li class="item">
+      <h2 class="headline">Logical Operator Examples</h2>
+      <div class="content">
+        <div class="point">
+          <p class="topic">How does C interpret logical operators?</p>
+          <div class="details">
+            <p>This program shows how logical operators are interpretted in C</p>
+            <p><em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/logical_operators/logical_operators.c">logical_operators.c</a></em>:</p>
+            <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/logical/logical_operators.c"></script>
+            <p>Program output:</p>
+<pre>T &amp;&amp; T: 1
+T &amp;&amp; F: 0
+F &amp;&amp; T: 0
+F &amp;&amp; F: 0
+
+T || T: 1
+T || F: 1
+F || T: 1
+F || F: 0</pre>
+          </div>
+        </div>
+        <div class="point">
+          <p class="topic">Comparing logical operators with nested <code>if</code>/<code>else</code>:</p>
+          <div class="details">
+            <p>This program compares using logical operators with nested <code>if</code>/<code>else</code></p>
+            <p><em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/logical_operators/logical_operators.c">logical_operators.c</a></em>:</p>
+            <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/logical/logical_operators.c"></script>
+            <ul>Things to note:
+              <li>both blocks of code do the same thing</li>
+              <li>the block of code using logical operators is more direct and the reader can easily understand the intent</li>
+              <li>the nested <code>if</code>/<code>else</code> statements allows you to handle "less than 0" differently than "greater than 100"</li>
+              <li>the logical operator will save you from copying and pasting code if you want to handle "less than 0" and "greater than 100" the same</li>
+            </ul>
+          </div>
+        </div>
+      </div>      
+    </li>
+    <li class="item">
+      <h2 class="headline">else if</h2>
+      <div class="content">
+        <div class="point">
+          <p class="topic">Why use <code>else if</code>:</p>
+          <div class="details">
+            <p>using <code>else if</code> conveys more intent than nested <code>if</code>/<code>else</code> statement</p>
+          </div>
+        </div>
+        <div class="point">
+          <p class="topic">How to use <code>else if</code>:</p>
+          <div class="details">
+            <p><em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/else_if/else_if.syntax">else_if.syntax</a></em>:</p>
+            <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/else_if/else_if.syntax"></script>
+          </div>
+        </div>      
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">else if Example</h2>
+      <div class="content">
+        <div class="point">
+          <p class="topic">Comparing <code>else if</code> with nested <code>if</code>/<code>else</code>:</p>
+          <div class="details">
+            <p>This program compares using <code>else if</code> with nested <code>if</code>/<code>else</code></p>
+            <p><em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/else_if/else_if_vs_nested_if.c">else_if_vs_nested_if.c</a></em>:</p>
+            <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/else_if/else_if_vs_nested_if.c">else_if_vs_nested_if.c</script>
+            <ul>Things to note:
+              <li>using <code>else if</code> makes the code easier to read and understand</li>
+              <li>using <code>else if</code> allows the reader to quickly understand the intent of the writer</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">switch</h2>
+      <div class="content">
+        <div class="point">
+          <p class="topic">Why use <code>switch</code>:</p>
+          <div class="details">
+            <p>using <code>switch</code> conveys more intent than nested <code>if</code>/<code>else</code> statement</p>
+          </div>
+        </div>
+        <div class="point">
+          <p class="topic">How to use <code>switch</code>:</p>
+          <div class="details">
+            <p><em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/switch/switch.syntax">switch.syntax</a></em>:</p>
+            <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/switch/switch.syntax"></script>
+          </div>
+        </div>      
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">switch Example</h2>
+      <div class="content">
+        <div class="point">
+          <p class="topic">Comparing <code>switch</code> with nested <code>if</code>/<code>else</code>:</p>
+          <div class="details">
+            <p>This program compares using <code>switch</code> with nested <code>if</code>/<code>else</code></p>
+            <p><em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/switch/switch.c">switch.c</a></em>:</p>
+            <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/switch/switch.c">switch.c</script>
+            <ul>Things to note:
+              <li>comparing <code>0</code>(an <code>int</code>) is different than comparing <code>'0'</code>(a <code>char</code>)</li>
+              <li>do not forget the <code>break;</code> statement at the end of each <code>case</code>
+                <ul>
+                  <li>without the <code>break;</code> statement, the <code>switch</code> will continue executing code until it reaches a <code>break;</code> statement or exits the <code>switch</code> block of code</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">else if vs switch</h2>
+      <div class="content">
+        <div class="point">
+          <p class="topic">Comparing <code>else if</code> with <code>switch</code>:</p>
+          <div class="details">
+            <p>This program compares using <code>else if</code> with <code>switch</code></p>
+            <p><em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/comparisons/else_if_vs_switch.c">else_if_vs_switch.c</a></em>:</p>
+            <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/comparisons/else_if_vs_switch.c">else_if_vs_switch.c</script>
+            <ul>Things to note:
+              <li><code>else if</code> can match ranges</li>
+              <li><code>switch</code> can only test for equality</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">switch with Characters</h2>
+      <div class="content">
+        <p>Write a program that translates alphabets to their military phonetic alphabet</p>
+        <table class="table table-bordered table-striped table-hover">
+          <caption>Alphabet Translation</caption>
+          <thead><tr>
+            <th>alphabet</th><th>military phonetic alphabet</th>
+          </tr></thead>
+          <tbody>
+            <tr>
+              <td>a</td>
+              <td>alpha</td>
+            </tr>
+            <tr>
+              <td>b</td>
+              <td>bravo</td>
+            </tr>
+            <tr>
+              <td>c</td>
+              <td>charlie</td>
+            </tr>
+            <tr>
+              <td>(anything else)</td>
+              <td>(ran out of funding)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">Assignment</h2>
+      <div class="content">
+        <!-- ### TODO: write a program that asks user for an alphabet
+          if upper case
+            vowels are winning characters
+          if lower case
+            q and r are winning characters
+        -->
+      </div>
+    </li>
+  </ul>
+</div>
