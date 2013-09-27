@@ -1,0 +1,132 @@
+---
+layout: default
+title: Lecture 27
+---
+
+<div class="lecture">
+  <ul class="outline">
+    <li class="item">
+      <h2 class="headline">for Loop</h2>
+      <div class="content">
+        <div>
+          <div class="point">
+            <p class="topic">Why use <code>for</code> loops?:</p>
+            <ul class="details">
+              <li>more expressive, succinct, and compact when expressing loops that execute a known number of iterations</li>
+              <li><code>for</code> loops convey more intent than <code>while</code> loops that execute a known number of iterations</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="point">
+            <p class="topic">How to use <code>for</code> loops?:</p>
+            <div class="details">
+              <p><em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/for/for.syntax">for.syntax</a></em>:</p>
+              <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/for/for.syntax"></script>
+              <ul>Things to note:
+                <li>any variable used in <code>expression1</code>, <code>expression2</code>, or <code>expression3</code> will need to be previously declared</li>
+                <li><code>expression1</code> is used to initialize some parameter, typically called an index</li>
+                <li><code>expression2</code> is a condition that must be <code>true</code> for the loop to continue execution</li>
+                <li><code>expression3</code> is is used to alter the value of the parameter initially assigned by <code>expression1</code></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>  
+    <li class="item">
+      <h2 class="headline">for Loop Example</h2>
+      <div class="content">
+        <div class="point">
+          <p class="topic">Comparing <code>for</code> loop with <code>while</code> loop:</p>
+          <div class="details">
+            <p>This program compares using a <code>for</code> loop with using a <code>while</code> loop</p>
+            <p><em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/for/for_vs_while.c">for_vs_while.c</a></em>:</p>
+            <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/for/for_vs_while.c"></script>
+            <ul>Things to note:
+              <li>both blocks of code do the same thing</li>
+              <li><code>for</code> loop is more compact vertically</li>
+              <li><code>for</code> loop is more concise and all relevant statements are located in one place</li>
+              <li><code>while</code> loop is more compact horizontally</li>
+              <li><code>for</code> loop is better for loops with a known number of iterations</li>
+              <li><code>while</code> loop is better for loops with an unknown number of iterations
+                <ul>
+                  <li>
+                    <p><em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/for/unknown_iterations.c">unknown_iterations.c</a></em>:</p>
+                    <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/for/unknown_iterations.c"></script>
+                  </li>
+                </ul>  
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>      
+    </li>
+    <li class="item">
+      <h2 class="headline">do while Loop</h2>
+      <div class="content">
+        <div>
+          <div class="point">
+            <p class="topic">Why use <code>do while</code> loops?:</p>
+            <ul class="details">
+              <li><code>do while</code> loops convey more intent than <code>while</code> loops when the code should be executed once before the condition is checked</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="point">
+            <p class="topic">How to use <code>for</code> loops?:</p>
+            <div class="details">
+              <p><em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/do_while/do_while.syntax">do_while.syntax</a></em>:</p>
+              <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/do_while/do_while.syntax"></script>
+              <ul>Things to note:
+                <li>the code is executed once before the condition is evaluated</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>    
+    <li class="item">
+      <h2 class="headline">for Loop Examples</h2>
+      <div class="content">
+        <div class="point">
+          <p class="topic">Comparing <code>do while</code> loop with <code>while</code> loop:</p>
+          <div class="details">
+            <p>This program compares using a <code>for</code> loop with using a <code>while</code> loop</p>
+            <p><em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/do_while/do_while_vs_while.c">do_while_vs_while.c</a></em>:</p>
+            <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/do_while/do_while_vs_while.c"></script>
+            <ul>Things to note:
+              <li>both blocks of code do the same thing</li>
+              <li>the code is executed once before the condition is evaluated</li>
+              <li>both blocks of code are nearly identical</li>
+            </ul>
+          </div>
+        </div>
+        <div class="point">
+          <p class="topic">One Example of Where Using the <code>do while</code> Loop is More Natural Than Using the while Loop:</p>
+          <div class="details">
+            <p>This program compares uses a <code>do while</code> loop to remove an unnecessary variable initialization</p>
+            <p><em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/do_while/do_while_vs_while_no_initialization.c">do_while_vs_while_no_initialization.c</a></em>:</p>
+            <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/do_while/do_while_vs_while_no_initialization.c"></script>
+            <ul>Things to note:
+              <li>you do not need to initialize the <code>input</code> to be some arbitrary made up value to drop into the <code>while</code> loop</li>
+              <li>other than initializing <code>input</code>, both blocks of code behaves the same</li>
+            </ul>
+          </div>
+        </div>
+      </div>      
+    </li>
+    <li class="item">
+      <h2 class="headline">Assignment</h2>
+      <div class="content">
+        <!-- ### TODO: write a program that asks user for an alphabet
+          if upper case
+            vowels are winning characters
+          if lower case
+            q and r are winning characters
+        -->
+      </div>
+    </li>
+  </ul>
+</div>
