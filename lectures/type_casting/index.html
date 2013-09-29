@@ -8,51 +8,77 @@ title: Lecture 13
     <li class="item">
       <h2 class="headline">Type Casting</h2>
       <div class="content">
+        <div class="point">
+          <p class="topic">What is type casting?</p>
+          <ul class="details">
+            <li>changing the type of a variable's value temporarily to perform an operation</li>
+            <li>the variable is unchanged after the operation and type casting</li>
+          </ul>        
+        </div>
+        <div class="point">
+          <p class="topic">Why is type casting important?</p>
+          <ul class="details">
+            <li>you don't need a separate variable to hold the same value but in a different type
+              <ul>
+                <li>e.g. <code>variable_as_int = 1</code> and <code>variable_as_float = 1.0</code></li>
+              </ul>
+            </li>
+            <li>you can specify a data type that you need at the time of the operation, e.g. this gives you flexibility</li>
+          </ul>        
+        </div>
+        <div class="point">
+          <p class="topic">How to type cast?</p>
+          <ul class="details">
+            <li><code>(new_type) expression</code></li>
+            <li>e.g. <code>(float) some_integer</code></li>
+            <li>read more at <a href="http://www.tutorialspoint.com/cprogramming/c_type_casting.htm">http://www.tutorialspoint.com/cprogramming/c_type_casting.htm</a></li>
+            <li>read more at <a href="http://www.cprogramming.com/tutorial/c/lesson11.html">http://www.cprogramming.com/tutorial/c/lesson11.html</a></li>
+          </ul>        
+        </div>
+      </div>
+    </li>  
+    <li class="item">
+      <h2 class="headline">Type Cast Example</h2>
+      <div class="content">
         <p><em class="file well well-small">type_casting.c</em>:</p>
         <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/type_casting/type_casting.c"></script>
         <p>Things to note:</p>
         <ul>
           <li>going from a float to an int truncates the decimals
             <ul>
-              <li>but it will be unclear if you were expecting the float to be truncated or to be rounded</li>
-              <li>it's unclear if that's a bug or if it's intentional</li>    
-              <li>it's good practice to be explicit in your code</li>
+              <li>it might be unclear whether you were expecting the float to be truncated or to be rounded</li>
+              <li>it might be unclear if the truncating behavior in your program was an oversight (e.g. a bug) or if it was intentional</li>    
+              <li>it's good practice to be explicit in your code, e.g. use a truncating or rounding function</li>
             </ul>
           <li>type casting an int to a float is not necessary if you're performing an operation with another float
             <ul>
-              <li>C can make these assumptions for you</li>
-              <li>but it's unclear if it's intentional or a bug</li>
-              <li>it's best to be explicit</li>
+              <li>C makes some of these assumptions for you</li>
+              <li>be sure you know what C will do before using it</li>
             </ul>
           </li>
-        </ul>
-        <p>What is type casting?</p>
-        <ul>
-          <li>changing the type of a variable's value temporarily to perform an operation</li>
-          <li>the variable is unchanged after the operation and type casting</li>
-        </ul>
-        <p>Why is type casting important?</p>
-        <ul>
-          <li>you don't need a separate variable to hold the same value but in a different type
-            <ul>
-              <li>e.g. <code>variable_as_int = 1</code> and <code>variable_as_float = 1.0</code></li>
-            </ul>
-          </li>
-          <li>you can specify how the operation is to be performed, e.g. gives you flexibility</li>
-        </ul>
-        <p>How to type cast?</p>
-        <ul>
-          <li><code>(new_type) expression</code></li>
-          <li>e.g. <code>(float) something_integer</code></li>
-          <li>read more at <a href="http://www.tutorialspoint.com/cprogramming/c_type_casting.htm">http://www.tutorialspoint.com/cprogramming/c_type_casting.htm</a></li>
-          <li>read more at <a href="http://www.cprogramming.com/tutorial/c/lesson11.html">http://www.cprogramming.com/tutorial/c/lesson11.html</a></li>
         </ul>
       </div>
-    </li>  
+    </li>
+    <li class="item">
+      <h2 class="headline">Where to Type Cast?</h2>
+      <div class="content">
+        <p>write a program that takes in one integer ($x$) &amp; one real number ($y$) and calculates $z={-x+(x^2-4y)}/{2y}$</p>
+      </div>
+    </li>
     <li class="item">
       <h2 class="headline">Assignment</h2>
       <div class="content">
-        <p>write a program that takes in one integer ($x$) & one real number ($y$) and calculates $z={-x+√{x^2-4y}}/{2y}$</p>
+        <ul>Homework Problem 13.1, at the end of this assignment you should upload to your Laulima dropbox:
+          <li>a file named <span class="file well well-small">UHusername_13_1.c</span></li>
+          <li>
+            <ul>example:
+              <li><span class="file well well-small">zhaol_13_1.c</span></li>
+            </ul>
+          </li>
+        </ul>
+        <p>update <span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/type_casting/fix_me.c">fix_me.c</a></span> to output the correct value:</p>
+        <p>the expressions <code>integer1/decimal</code> and <code>integer1/integer2</code> should not be modified for this exercise</p>
+        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/type_casting/fix_me.c"></script>
       </div>
     </li>
   </ul>
