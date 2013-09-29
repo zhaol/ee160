@@ -9,5 +9,9 @@ int main() {
   printf("int / float: %d\n", integer1/decimal);
   printf("int / int: %d\n", integer1/integer2);
   
+  // you need to figure out what is the mod operator and how to use the mod operator
+  // the output should be 1
+  printf("using the %% operator: %f\n", decimal % integer1);
+  
   return 0;
 }
