@@ -60,5 +60,5 @@ main() {
   printf ("The total number of accounts: %d\n", total_number_of_accounts);
   printf ("The total amount in all accounts: $%.2f\n", total_amount_in_accounts);
   printf ("The percentage of the total minimum balance fees with respect to the total account balances: %.1f%%\n", total_minimum_balance_fees / total_amount_in_accounts * 100);
-  printf ("The percentage of accounts that were charged a minimum balance fee: %.1f%%\n", 100.0 * total_accounts_with_minimum_balance_fees / total_number_of_accounts);
+  printf ("The percentage of accounts that were charged a minimum balance fee: %.1f%%\n", 100 * (float) total_accounts_with_minimum_balance_fees / total_number_of_accounts);
 }
