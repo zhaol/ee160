@@ -17,9 +17,18 @@ title: Lecture 15
         <div class="point">
           <p class="topic">Why is a function important?:</p>
           <ul class="details">
-            <li>you can reuse code</li>
+            <li>you can reuse code
+              <ul>
+                <li>you can reuse the code inside the function</li>
+                <li>you can reuse functions</li>
+              </ul>
+            </li>
             <li>you can update a function and everywhere that calls the function will get the updated code</li>
-            <li>you can give a group of code a name to express what the group of code is trying to do</li>
+            <li>you can give a group of code a name to express what the group of code is trying to do
+              <ul>
+                <li>using functions with expressive names makes your code easier to read than using comments</li>
+              </ul>
+            </li>
           </ul>
         </div>
         <div class="point">
@@ -46,15 +55,41 @@ multi-line comment: line2 */</pre>
         <div class="point">
           <p class="topic">How to utilize functions?:</p>
           <ul class="details">
-            <li>define a function</li>
-            <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/functions/function_definition.syntax"></script>
-            <li>call a function</li>
-            <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/functions/function_call.syntax"></script>
+            <li>define a function
+              <ul>
+                <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/functions/function_definition.syntax"></script>
+                <li><code>your_function</code> is the function name</li>
+                <li><code><strong>double</strong> your_function</code> tells the compiler that the function is going to return a value with type <code>double</code></li>
+                <li><code>your_function <strong>(int first_argument, double second_argument)</strong></code> is the argument list; the list of arguments (and the type of each argument) that the functions expects as inputs</li>
+              </ul>
+            </li>
+            <li>call a function
+              <ul>
+                <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/functions/function_call.syntax"></script>
+                <li><code>your_function(first_argument, second_argument)</code> is calls the function</li>
+                <li><code>your_function(<strong>first_argument, second_argument</strong>)</code> are the arguments passed to the function</li>
+              </ul>
+            </li>
+            <li>function prototype:
+              <ul>
+                <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/functions/function_prototype.syntax"></script>              
+                <li>a function can be declared first with a function prototype, called, and then defined</li>
+                <li>when building a program using multiple .c files, function prototypes will make your life easier (and the program might not compile without it)</li>
+                <li>the function prototype tells compiler the name of the function (e.g. <code>your_function</code>, the inputs of the function (arguments and argument type, e.g. <code>int first_argument</code> &amp; <code>double second_argument</code>), and the output of the function (the type of the value, e.g. <code><strong>double</strong> your_function</code>)</li>
+              </ul>
+            </li>
+            <li>arguments are values or variables that is passed to the function</li>
             <li>read more at <a href="http://www.mycplus.com/tutorials/c-programming-tutorials/functions/">http://www.mycplus.com/tutorials/c-programming-tutorials/functions/</a></li>
             <li>read more at <a href="http://en.wikibooks.org/wiki/C_Programming/Procedures_and_functions">http://en.wikibooks.org/wiki/C_Programming/Procedures_and_functions</a>; it's a long read but contains a lot of useful information</li>
             <li>read more at <a href="http://www.tutorialspoint.com/ansi_c/c_using_functions.htm">http://www.tutorialspoint.com/ansi_c/c_using_functions.htm</a>; it's a long read but contains a lot of useful information</li>
           </ul>
         </div>
+
+      </div>
+    </li>  
+    <li class="item">
+      <h2 class="headline">An Example Program that Uses a Function</h2>
+      <div class="content">
         <div class="point">
           <p class="topic">An example program (<em class="file well well-small">functions.c</em>) that uses a function:</p>
           <ul class="details">
@@ -80,7 +115,7 @@ Bye from main
           </ul>
         </div>
       </div>
-    </li>  
+    </li>
     <li class="item">
       <h2 class="headline">Scope</h2>
       <div class="content">
@@ -109,26 +144,19 @@ Bye from main
           <p><em class="file well well-small">scope.c</em>:</p>
           <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/scope/scope.c"></script>
           <p>output:</p>
-<pre>[Start of Main]    int_var: 20 
-[Start of Main] double_var: 20.000000 
-[Start of function1]              int_var: 30 
-[Start of function1]           double_var: 30.000000 
-[Start of function1]    passed_in_int_var: 21 
-[Start of function1] passed_in_double_var: 21.000000 
-[End of function1]              int_var: 35 
-[End of function1]           double_var: 35.000000 
-[End of function1]    passed_in_int_var: 26 
-[End of function1] passed_in_double_var: 26.000000 
-[Inside function2]              int_var: 40 
-[Inside function2]           double_var: 40.000000 
-[End of Main]    int_var: 21 
-[End of Main] double_var: 21.000000</pre>
+<pre>[Start of Main] int_var: 20 
+[Start of function1] int_var: 30 
+[Start of function1] passed_in_int_var: 21 
+[End of function1] int_var: 35 
+[End of function1] passed_in_int_var: 26 
+[Inside function2] int_var: 10 
+[End of Main] int_var: 21</pre>
         </div>
         <div>
           <p>Things to Note:</p>
           <ul>
             <li>the more "local" variable "overrides" the more "global" variable</li>
-            <li>if there's no local variable the C language will search in outer function until it reaches the global layer; other languages might not do this</li>
+            <li>if there's no local variable the C language will search in outer function (<code>main</code> is also considered a function) until it reaches the global layer</li>
             <li>use of global variables should be avoided; other functions might change the variable value unexpected and will cause bugs that are hard to debug</li>
             <li>if you use global variables, try to store only values that is set at the beginning of the program and never modified afterwards (there's always exceptions to guidelines)</li>
             <li>function1 uses the value of the arguments; the actual variable is unaltered (to alter the actual variable, pass pointers to the function; more on this later)</li>
@@ -137,23 +165,29 @@ Bye from main
       </div>
     </li>  
     <li class="item">
+      <h2 class="headline">Write Your First Function</h2>
+      <div class="content">
+        <p>write a function that:</p>
+        <ul>
+          <li>takes in an integer, a decimal, a character</li>
+          <li>print out their values</li>
+          <li>return the decimal number as the output of the function</li>
+        </ul>
+      </div>
+    </li>
+    <li class="item">
       <h2 class="headline">Assignment</h2>
       <div class="content">
-        <p>rewrite <em class="file well well-small">summer.c</em></p>
-        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/summer/summer.c"></script>
-        <ul>
-          <li>move <a href="https://github.com/zhaol/ee160/blob/gh-pages/code/summer/summer.c#L12-16">lines 12-16</a> into a function</li>
-          <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/functions/summer.snippet"></script>
-          <li>the program should work the same as before:
-            <ul>
-              <li>asks the user for a number 3 times</li>
-              <li>for the 3rd number the user is asked for the number with a different statement</li>
-              <li>the program then outputs the sum of the 3 numbers</li>  
+        <ul>Homework Problem 15.1, at the end of this assignment you should upload to your Laulima dropbox:
+          <li>a file named <span class="file well well-small">UHusername_15_1.c</span></li>
+          <li>
+            <ul>example:
+              <li><span class="file well well-small">zhaol_15_1.c</span></li>
             </ul>
           </li>
         </ul>
-        <p>modify <em class="file well well-small">scope.c</em> to have <code>function2</code> called within <code>function1</code> and see how scope affects the output of the program</p>
-        <p>modify <em class="file well well-small">scope.c</em> to have <code>function2</code> (with the function2 local variables removed) called within <code>function1</code> and see how scope affects the output of the program</p>
+        <p>fill in the <code>add</code> function in <span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/functions/add.c">add.c</a></span>:</p>
+        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/functions/add.c"></script>
       </div>
     </li>
   </ul>
