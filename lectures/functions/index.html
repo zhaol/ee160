@@ -251,8 +251,8 @@ Bye from main
                 <li>but if you had 2 variables to update, you would need to:
                   <ul>
                     <li>write 2 functions and pass each variable separately, e.g. something like this:
-                      <p><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/pass_by_reference/pass_by_reference_workaround.c"><em class="file well well-small">pass_by_reference_workaround.c</em></a>:</p>
-                      <script src="http://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/pass_by_reference/pass_by_reference_workaround.c"></script>
+                      <p><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/pass_by_reference/pass_by_value_workaround.c"><em class="file well well-small">pass_by_value_workaround.c</em></a>:</p>
+                      <script src="http://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/pass_by_reference/pass_by_value_workaround.c"></script>
                     </li>
                     <li>or pass both variables by reference to the function</li>
                   </ul>
@@ -288,12 +288,12 @@ Bye from main
               <tr>
                 <td>defining the function</td>
                 <td><code>function(int function_variable);</code><br/>(initialize an <code>int</code> variable)</td>
-                <td><code>function(int* function_variable)</code><br/>(initialize a pointer to an <code>int</code></td>
+                <td><code>function(int* function_variable_pointer)</code><br/>(initialize a pointer to an <code>int</code></td>
               </tr>
               <tr>
                 <td>within the function</td>
                 <td><code>function_variable++;</code><br/>(process as a variable)</td>
-                <td><code>(*function_variable)++;</code><br/>(process as a pointer)</td>
+                <td><code>(*function_variable_pointer)++;</code><br/>(process as a pointer)</td>
               </tr>
               <tr>
                 <td>effect on variable</td>
