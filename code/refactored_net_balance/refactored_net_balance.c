@@ -12,7 +12,7 @@
 int main() {
   float account_balance;
   char account_type;
-  char exit_program_flag = EXIT_PROGRAM;
+  char exit_program_flag = CONTINUE_PROGRAM;
   int total_number_of_accounts = 0;
   float total_amount_in_accounts = 0;
   int minimum_balance_fee = 35;
@@ -20,7 +20,7 @@ int main() {
   int total_accounts_with_minimum_balance_fees = 0;
   int minimum_balance_fee_charged_flag = 0;
   
-  while (exit_program_flag == EXIT_PROGRAM) {
+  while (exit_program_flag == CONTINUE_PROGRAM) {
     account_balance = get_account_balance();
     account_type = get_account_type();
 

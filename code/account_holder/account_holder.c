@@ -12,7 +12,7 @@
 int main() {
   float account_balance;
   char account_type;
-  char exit_program_flag = EXIT_PROGRAM;
+  char exit_program_flag = CONTINUE_PROGRAM;
   int total_number_of_accounts = 0;
   float total_amount_in_accounts = 0;
   int minimum_balance_fee = 35;
@@ -23,7 +23,7 @@ int main() {
   int current_account_number = 0;
   char account_holder[MAX_ACCOUNT_HOLDER_SIZE]; 
   
-  while (exit_program_flag == EXIT_PROGRAM) {
+  while (exit_program_flag == CONTINUE_PROGRAM) {
     // get account holder information
     printf ("Please enter the account holder:\n");
     scanf ("%s", &account_holder);
