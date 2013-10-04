@@ -1,0 +1,79 @@
+---
+layout: default
+title: Lab 08
+---
+
+<div class="lecture">
+  <ul class="outline">
+    <li class="item">
+      <h2 class="headline">Display</h2>
+      <div class="content">
+        <p>Download the display program (do not use the copy of display from previous lab, this lab references a newer version of display) and make sure you can compile and run <em class="file well well-small">display.c</em></p>
+        <div class="point">
+          <p class="topic">You can download the display program with any of the following methods:</p>
+          <div class="details">
+            <ul>Using GIT:
+              <li><code>cd</code> into your lab folder</li>
+              <li>issue these command at the command prompt:
+                <ul>
+                  <li>git clone https://github.com/zhaol/game_scaffold.git</li>
+                  <li>cd game_scaffold</li>
+                  <li>git checkout tags/v1.1.1</li>
+                </ul>
+              </li>
+            </ul>
+            <ul>Using the web browser:
+              <li>download the zip here: <a href="https://github.com/zhaol/game_scaffold/archive/v1.1.1.zip">https://github.com/zhaol/game_scaffold/archive/v1.1.1.zip</a></li>
+              <li>upload the files into your Cloud9 IDE:
+                <ul>
+                  <li>File -> Upload Local Files</li>
+                </ul>
+              </li>
+            </ul>          
+            <ul>Manually copying and pasting the files:
+              <li>all the necessary files are listed here: <a href="https://github.com/zhaol/game_scaffold/tree/v1.1.1">https://github.com/zhaol/game_scaffold/tree/v1.1.1</a></li>
+              <li>when copying and pasting the file content, be sure you are copying and pasting the contents of the files for version 1.1.1 (you should see "tag: v1.1.1" in the top left area)</li>
+            </ul>
+            <p>No matter which method you choose, be sure the <em class="file well well-small">version.txt</em> file says:</p>
+<pre>v1.1.1
+
+Lab 08:
+Contrain token to inside boundaries
+Add items for token to "pick up"</pre>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">Update Display</h2>
+      <div class="content">
+        <p>Change <em class="file well well-small">display.c</em> to <em class="file well well-small">UHusername_UHID_display_boundaries_items.c</em> (e.g. <em class="file well well-small">zhaol_12345678_display_boundaries_items.c</em>)</p>
+        <p>Understand how the display program works (the program has changed slightly from the previous lab) and make the following modifications:</p>
+        <ol>
+          <li class="point">
+            <p class="topic">Add boundaries to the program:</p>  
+            <ul class="details">
+              <li>update the <code>update_y_position</code> and the <code>update_x_position</code> functions (in <a href="https://github.com/zhaol/game_scaffold/blob/v1.1.1/display_helpers.c"><em class="file well well-small">display_helpers.c</em></a>) so the token can never go outside the screen</li>
+            </ul>
+          </li>
+          <li class="point">
+            <p class="topic">Add items to the program:</p>
+            <ul class="details">
+              <li>update the program so an item is randomly placed somewhere on the screen at the beginning of the program</li>
+              <li>whenever the token moves "on top" of the item, the item dissappears and a new item appears randomly somewhere else on the screen</li>
+            </ul>
+          </li>        
+          <div class="point">
+            <p class="topic">Hints (feel free to not use them):</p>
+            <ul class="details">
+              <li>use <code>rand()</code> to generate a random number: read more at <a href="http://www.cplusplus.com/reference/cstdlib/rand/">http://www.cplusplus.com/reference/cstdlib/rand/</a></li>
+              <li>you will most likely need to track another set of x and y positions</li>
+              <li>you will most likely need to have a function that compares the x and y positions of the token and the item</li>
+              <li>you will need to update the <code>redraw_screen()</code> function in <a href="https://github.com/zhaol/game_scaffold/blob/v1.1.1/display_helpers.c"><em class="file well well-small">display_helpers.c</em></a> to display the item</li>
+            </ul>  
+          </div>
+        </ol>
+      </div>
+    </li>
+  </ul>
+</div>
