@@ -34,60 +34,73 @@ title: Lecture 17
     <li class="item">
       <h2 class="headline">More Advanced Macros and Compilation Techniques</h2>
       <div class="content">
-        <p>Macros for expressions and multiline statements</p>
-        <ul>
-          <li>they can be faster than using functions</li>
-          <li>functions are more flexible and easier to maintain</li>
-          <li>recommend using functions first and only switch to macros if there's a need for it</li>
-          <li>examples:
-            <ul>
-              <li>Macro for an expression:
-                <p><em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/macro/area.c">area.c</a></em>:</p>
-                <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/macro/area.c"></script>
-              </li>
-              <li>Macro for a function:
-                <p><em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/macro/count.c">count.c</a></em>:</p>
-                <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/macro/count.c"></script>
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <p>Conditional Compilation</p>
-        <ul>
-          <li>compiling some code based on a condition</li>
-          <li>useful for inserting debug statements when necessary</li>
-          <li>example:
-            <ul>
-              <li>Compile a debug statement only when debugging:
-                <p><em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/macro/debug.c">debug.c</a></em>:</p>
-                <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/macro/debug.c"></script>    
-              </li>
-            </ul>
-          </li>
-        </ul>
+        <div class="point">
+          <p class="topic">Macros for expressions and multiline statements</p>
+          <ul class="details">
+            <li>they can be faster than using functions</li>
+            <li>functions are more flexible and easier to maintain</li>
+            <li>recommend using functions first and only switch to macros if there's a need for it</li>
+            <li>examples:
+              <ul>
+                <li>Macro for an expression:
+                  <p><em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/macro/area.c">area.c</a></em>:</p>
+                  <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/macro/area.c"></script>
+                </li>
+                <li>Macro for a function:
+                  <p><em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/macro/count.c">count.c</a></em>:</p>
+                  <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/macro/count.c"></script>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="point">
+          <p class="topic">Conditional Compilation</p>
+          <ul class="details">
+            <li>compiling some code based on a condition</li>
+            <li>useful for inserting debug statements when necessary</li>
+            <li>example:
+              <ul>
+                <li>Compile a debug statement only when debugging:
+                  <p><em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/macro/debug.c">debug.c</a></em>:</p>
+                  <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/macro/debug.c"></script>    
+                </li>
+              </ul>
+            </li>
+          </ul>        
+        </div>
       </div>
     </li>  
     <li class="item">
       <h2 class="headline">Assignment</h2>
       <div class="content">
-        <p>write a program that includes a macro file (similar to <em class="file well well-small">common_constants.h</em>)</p>
-        <ul>
-          <li>the macro file will define the value for PI and an expression to calculate the area of a square</li>
-          <li>the program will ask for a length and then calculate the following:
-            <ul>
-              <li>circumference of a circle with a diameter equal to the inputted length</li>
-              <li>area of a circle with a diameter equal to the inputted length</li>
-              <li>area of a square with a side equal to the inputted length</li>
+        <ul>Homework Problem 17.1, at the end of this assignment you should upload to your Laulima dropbox:
+          <li>a file named <em class="file well well-small">UHusername_17_1.c</em></li>
+          <li>a file named <em class="file well well-small">UHusername_17_1_constants.h</em></li>
+          <li>
+            <ul>example:
+              <li><em class="file well well-small">zhaol_17_1.c</em></li>
+              <li><em class="file well well-small">zhaol_17_1_constants.h</em></li>
             </ul>
           </li>
-          <li>if 1 was the inputted length, the program will use macros to print out the following:
-<pre>the circumference of the circle is: 3.14
-the area of the circle is: 6.28
-the area of the square is: 1</pre></li>
+        </ul>
+        <p>write a program that includes a macro file (it will be named <em class="file well well-small">UHusername_17_1_constants.h</em> and will be similar to <em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/macro/common_constants.h">common_constants.h</a></em>)</p>
+        <ul>
+          <li>the macro file will define the value for PI, an expression to calculate the area of a circle, and an expression to calculate the area of a square</li>
+          <li>the program will ask for a length and then calculate the following:
+            <ul>
+              <li>circumference of a circle</li>
+              <li>area of a circle</li>
+              <li>area of a square</li>
+            </ul>
+          </li>
+          <li>if 3 was the inputted length, the program will use macros to print out the following:
+<pre>the circumference of the circle is: 18.84
+the area of the circle is: 28.26
+the area of the square is: 9.00</pre>
+          </li>
         </ul>
       </div>
     </li>
   </ul>
 </div>
-
-<!-- add conditional compilation and functions -->
