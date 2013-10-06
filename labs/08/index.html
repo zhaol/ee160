@@ -12,7 +12,7 @@ title: Lab 08
         <div class="point">
           <p class="topic">You can download the display program with any of the following methods:</p>
           <div class="details">
-            <ul>Using GIT:
+            <ul>Using GIT (recommended):
               <li><code>cd</code> into your lab folder</li>
               <li>issue these command at the command prompt:
                 <ul>
@@ -66,7 +66,12 @@ Add items for token to "pick up"</pre>
           <div class="point">
             <p class="topic">Hints (feel free to not use them):</p>
             <ul class="details">
-              <li>use <code>rand()</code> to generate a random number: read more at <a href="http://www.cplusplus.com/reference/cstdlib/rand/">http://www.cplusplus.com/reference/cstdlib/rand/</a></li>
+              <li>use <code>rand()</code> to generate a random number
+                <ul>
+                  <li>read more at <a href="http://www.cplusplus.com/reference/cstdlib/rand/">http://www.cplusplus.com/reference/cstdlib/rand/</a></li>
+                  <li>the <code>seed_random_generator()</code> function in <a href="https://github.com/zhaol/game_scaffold/blob/v1.1.1/display_helpers.c"><em class="file well well-small">display_helpers.c</em></a> should make it easier for you to use the <code>rand()</code> function</li>
+                </ul>
+              </li>
               <li>you will most likely need to track another set of x and y positions</li>
               <li>you will most likely need to have a function that compares the x and y positions of the token and the item</li>
               <li>you will need to update the <code>redraw_screen()</code> function in <a href="https://github.com/zhaol/game_scaffold/blob/v1.1.1/display_helpers.c"><em class="file well well-small">display_helpers.c</em></a> to display the item</li>
