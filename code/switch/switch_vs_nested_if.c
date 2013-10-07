@@ -35,6 +35,7 @@ int main () {
       break;
     default:
       printf("The number is not 0, 1, or 2 (using switch)\n");
+      break;
   }
   
   return 0;  
