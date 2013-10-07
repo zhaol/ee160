@@ -1,0 +1,6 @@
+goto label;
+
+// somewhere else in your program
+
+label:
+// do something
