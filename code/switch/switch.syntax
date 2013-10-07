@@ -15,5 +15,6 @@ switch (expression) {
 
   default : 
     // do this if expression does not equals any of the case values above
+    break; // this is optional, but is good practice
 
 }
