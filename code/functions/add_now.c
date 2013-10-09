@@ -16,8 +16,8 @@ int main() {
   scanf("%d", &number2);
 
   add_now(&number1, &number2);
-  printf("The first number is now: %d\n", first_number);
-  printf("The second number is now: %d\n", second_number);
+  printf("The first number is now: %d\n", number1);
+  printf("The second number is now: %d\n", number2);
   
   return 0;
 }
