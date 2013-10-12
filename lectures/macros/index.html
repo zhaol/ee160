@@ -8,27 +8,33 @@ title: Lecture 17
     <li class="item">
       <h2 class="headline">Macros</h2>
       <div class="content">
-        <p>What are macros?</p>
-        <ul>
-          <li>they tell the compiler to substitute an identifier with expressions, statements, or group of statements</li>
-          <li>you can think of macros as if they are a way to tell the compiler to replace some code with other code</li>
-        </ul>
-        <p>Why are macros important?</p>
-        <ul>
-          <li>they make your code easier to read and maintain</li>
-        </ul>
-        <p><em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/macro/macro.c">macro.c</a></em>:</p>
-        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/macro/macro.c"></script>
-        <p><em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/macro/common_constants.h">common_constants.h</a></em>:</p>
-        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/macro/common_constants.h"></script>
-        <p>Things to note:</p>
-        <ul>
-          <li>macros can be in same file or included from separate file</li>
-          <li>macros allow you to make a change in one location and have the change reflected everywhere else in the program</li>
-          <li>macros are more useful with things that are used repeatedly</li>
-          <li>read more at <a href="http://en.wikipedia.org/wiki/C_preprocessor#Macro_definition_and_expansion">http://en.wikipedia.org/wiki/C_preprocessor</a> (Section Macro Definition and Expansion</li>
-          <li>read more at <a href="http://gcc.gnu.org/onlinedocs/cpp/Macros.html">http://gcc.gnu.org/onlinedocs/cpp/Macros.html</a> if you want to learn more advance uses of macros</li>
-        </ul>
+        <div class="point">
+          <p class="topic">What are macros?</p>
+          <ul class="details">
+            <li>they tell the compiler to substitute an identifier with expressions, statements, or group of statements</li>
+            <li>you can think of macros as if they are a way to tell the compiler to replace some code with other code</li>
+          </ul>        
+        </div>
+        <div class="point">
+          <p class="topic">Why are macros important?</p>
+          <div class="details">
+            <ul>
+              <li>they make your code easier to read and maintain</li>
+            </ul>
+            <p><em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/macro/macro.c">macro.c</a></em>:</p>
+            <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/macro/macro.c"></script>
+            <p><em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/macro/common_constants.h">common_constants.h</a></em>:</p>
+            <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/macro/common_constants.h"></script>
+            <p>Things to note:</p>
+            <ul>
+              <li>macros can be in same file or included from separate file</li>
+              <li>macros allow you to make a change in one location and have the change reflected everywhere else in the program</li>
+              <li>macros are more useful with things that are used repeatedly</li>
+              <li>read more at <a href="http://en.wikipedia.org/wiki/C_preprocessor#Macro_definition_and_expansion">http://en.wikipedia.org/wiki/C_preprocessor</a> (Section Macro Definition and Expansion</li>
+              <li>read more at <a href="http://gcc.gnu.org/onlinedocs/cpp/Macros.html">http://gcc.gnu.org/onlinedocs/cpp/Macros.html</a> if you want to learn more advance uses of macros</li>
+            </ul>                  
+          </div>
+        </div>
       </div>
     </li>
     <li class="item">
