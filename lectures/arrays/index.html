@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Lecture 16
+title: Lecture 19
 ---
 
 <div class="lecture">
@@ -33,7 +33,6 @@ title: Lecture 16
             <p class="topic">How to picture an array?:</p>
             <ul class="details">
               <li>
-                <!-- #### TODO Add box picture too -->
                 <div class="array-example">
                   <p>Honolulu Post Office <code>honolulu_po_box</code></p>
                   <div>PO Box 1 at Honolulu Post Office<br/><code>honolulu_po_box[0]</code></div>
@@ -114,7 +113,7 @@ title: Lecture 16
                 <li>all data items must be of the same <span class="muted">type</span> (e.g. all <code>int</code>'s, all <code>char</code>'s)</li>
                 <li>individual data items in the array are accessed by a subscript or index (e.g. <code>i_am_an_array[<strong>0</strong>]</code>, <code>i_am_an_array[<strong>5</strong>]</code></li>
                 <li>array subscript starts at 0 (e.g. to get to the first data item of an array, you need to use <code>i_am_an_array[<strong>0</strong>]</code>, instead of <code>i_am_an_array[<strong>1</strong>]</code></li>
-                <li>the size of the array need to be specified when declaring the array <code>int list_of_values[<strong>6</strong>]</code></li>
+                <li>the size of the array need to be specified when declaring the array <code>int list_of_values[<strong>6</strong>]</code>, there are exceptions to this rule</li>
               </ul>
             </li>
           </ul>
@@ -125,7 +124,6 @@ title: Lecture 16
             <p><em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/array/simple_arrays.c">simple_arrays.c</a></em>:</p>
             <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/array/simple_arrays.c"></script>
             <p>Be aware of the null character <code>\0</code> when working with strings</p>
-            <p>Read more about the null character at <a href="http://en.wikipedia.org/wiki/Null_character">http://en.wikipedia.org/wiki/Null_character</a></p>
           </div>
         </div>
         <div class="point">
@@ -143,6 +141,12 @@ title: Lecture 16
           </ul>
         </div>
       </div>      
+    </li>
+    <li class="item">
+      <h2 class="headline">Arrays are Handled Almost like Pointers</h2>
+      <div class="content">
+        <a href="https://docs.google.com/drawings/d/1xvCtXWhU7pXsR5ihafQiybBp8nD0rdHHL2G8hRnit4Y/pub?w=1034&h=471"><img src="https://docs.google.com/drawings/d/1xvCtXWhU7pXsR5ihafQiybBp8nD0rdHHL2G8hRnit4Y/pub?w=1034&h=471"></a>
+      </div>
     </li>
     <li class="item">
       <h2 class="headline">Assignment</h2>
