@@ -1,0 +1,117 @@
+---
+layout: default
+title: Lecture 31
+---
+
+<div class="lecture">
+  <ul class="outline">
+    <li class="item">
+      <h2 class="headline">2D Arrays</h2>
+      <div class="content">
+        <div>
+          <div class="point">
+            <p class="topic">What is a 2D array?:</p>
+            <ul class="details">
+              <li>same as a regular array (1-dimensional) but in 2 dimensions</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="point">
+            <p class="topic">Why are 2D arrays important?:</p>
+            <ul class="details">
+              <li>same benefits as 1D arrays</li>
+              <li>1D arrays are useful to represent lists</li>
+              <li>2D arrays are useful to represent tables</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </li>  
+    <li class="item">
+      <h2 class="headline">Implementing a Table using a 2D Array</h2>
+      <div class="content">
+        <div class="point">
+          <p class="topic">Implement this Table:</p>
+          <ul class="details">
+            <table class="table table-bordered table-striped table-hover">
+              <caption>Table of Values</caption>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>4</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>6</td>
+                </tr>
+              </tbody>
+            </table>
+          </ul>
+        </div>
+        <div class="point">
+          <p class="topic">Build the Table with a 2D Array:</p>
+          <div class="details">
+            <p><em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/2d_arrays/2d_arrays.c">2d_arrays.c</a></em>:</p>
+            <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/2d_arrays/2d_arrays.c"></script>
+          </div>
+        </div>
+        <div class="point">
+          <p class="topic">In Summary:</p>
+          <div class="details">
+            <a href="https://docs.google.com/drawings/d/1YE8UI2_RQ7ABeCxDdse4hld3zYSsXTTiAGPmIUuEX34/pub?w=724&h=335"><img src="https://docs.google.com/drawings/d/1YE8UI2_RQ7ABeCxDdse4hld3zYSsXTTiAGPmIUuEX34/pub?w=724&h=335"></a>
+            <ul>Things to note:
+              <li>
+                <ul>the subscript rule is:
+                  <li>the last (rightmost) subscript increases most rapidly, e.g. columns</li>
+                  <li>the first (leftmost) subscript increases least rapidly, e.g. rows</li>
+                </ul>
+              </li>
+              <li>to use 3D arrays (sets of tables), use 3 subscripts, e.g. <code>set_of_tables_of_values[TABLE][ROW][COLUMN]</code></li>
+              <li>to use n-dimensional arrays, use n subscripts, e.g. <code>set_of_tables_of_values[sub1][sub2]..[subn]</code>
+                <ul><li>if you need to do this, consider using another programming language or tool like Matlab</li></ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>      
+    </li>
+    <li class="item">
+      <h2 class="headline">3D Arrays</h2>
+      <p class="content">Modify <em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/2d_arrays/2d_arrays.c">2d_arrays.c</a></em> to be a 3D array</p>
+    </li>
+    <li class="item">
+      <h2 class="headline">Assignment</h2>
+      <div class="content">
+        <ul>Homework Problem 31.1, at the end of this assignment you should upload to your Laulima dropbox:
+          <li>a file named <em class="file well well-small">UHusername_31_1.c</em></li>
+          <li>
+            <ul>example:
+              <li><em class="file well well-small">zhaol_31_1.c</em></li>
+            </ul>
+          </li>
+        </ul>
+        <p>write a program that:</p>
+        <ul>
+          <li>allows a user to specify the size of a table s/he wants to populate</li>
+          <li>the user is then allowed to input values into the m x n table (m rows and n columns)</li>
+          <li>the program displays the table of values back to the user
+            <ul>
+              <li>it is sufficient to output the table in the same manner as <em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/2d_arrays/2d_arrays.c">2d_arrays.c</a></em>, i.e. you don't need to display borders</li>
+            </ul>
+          </li>
+          <li>the program also outputs the averages for:
+            <ul>
+              <li>each column</li>
+              <li>each row</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</div>
