@@ -1,0 +1,117 @@
+---
+layout: default
+title: Lecture 33
+---
+
+<div class="lecture">
+  <ul class="outline">
+    <li class="item">
+      <h2 class="headline">Pointer Arithmetic</h2>
+      <div class="content">
+        <div>
+          <div class="point">
+            <p class="topic">What is pointer arithmetic?:</p>
+            <ul class="details">
+              <li>operations performed on pointers:
+                <ul>
+                  <li><code>pointer = &amp;variable</code>: a pointer variable can be assigned the address of an ordinary variable</li>
+                  <li><code>pointer1 = pointer2</code>: a pointer variable can be assigned the value of another pointer variable (which is usually an address), if both pointers point to objects of the same data type</li>
+                  <li><code>pointer = NULL</code>: a pointer can be assigned a null (zero) value to indicate a special condition, e.g. the pointer variable has not been assigned</li>
+                  <li><code>pointer + 3</code>, <code>++pointer</code>: an integer quantity can be added to or subtracted from a pointer variable</li>
+                  <li><code>pointer1 - pointer2</code>: one pointer variable can be subtracted from another pointer variable if both pointers point to elements of the same array, e.g. find the number of array elements between the array elements the pointers are pointing to</li>
+                  <li><code>pointer1 >= pointer2</code>: two pointer variables can be compared if both pointers point to elements of the same data type
+                    <ul>
+                      <li><code>pointer1 == pointer2</code>: is pointer1 and pointer2 pointing to the same object</li>
+                      <li><code>pointer1 >= pointer2</code>: is pointer1 pointing to an array element that has a higher index than the array element that pointer2 is pointing to
+                        <ul>
+                          <li><code>a[1] > a[0]</code> is true</li>
+                          <li><code>a[1] < a[0]</code> is false</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="point">
+            <p class="topic">Why are pointer arithmetic important?:</p>
+            <ul class="details">
+              <li>allows you to "walk" around complex structures
+                <ul>
+                  <li>you can have arrays of arrays</li>
+                  <li>you can have arrays of pointers</li>
+                  <li>you can have pointers to pointer to array</li>
+                </ul>
+              </li>
+              <li>allows you to compare the index of array elements</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </li>  
+    <li class="item">
+      <h2 class="headline">Using Pointers vs Array Index</h2>
+      <div class="content">
+        <div class="point">
+          <p class="topic">Example:</p>
+          <div class="details">
+            <p><em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/pointer_arithmetic/pointer_arithmetic_vs_array_index.c">pointer_arithmetic_vs_array_index.c</a></em>:</p>
+            <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/pointer_arithmetic/pointer_arithmetic_vs_array_index.c"></script>
+            <ul>Things to note:
+              <li>you need to dereference after the pointer arithmetic, i.e. <code><strong>*</strong>(array_pointer + 5)</code> happens after <code>*(<strong>array_pointer + 5</strong>)</code></li>
+              <li>both ways are equivalent
+                <ul>
+                  <li>recommend using array indexing</li>
+                  <li>use pointers only if absolutely necessary, e.g. when dealing with complex data structures</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>      
+    </li>
+    <li class="item">
+      <h2 class="headline">Other Considerations</h2>
+      <div class="content">
+        <div class="point">
+          <p class="topic">Arrays are actually just pointers</p>
+          <div class="details">
+            <p><em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/pointer_arithmetic/arrays_are_pointers.c">arrays_are_pointers.c</a></em>:</p>
+            <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/pointer_arithmetic/arrays_are_pointers.c"></script>
+          </div>
+        </div>
+        <div class="point">
+          <p class="topic">Pointer arithmetic takes care of the byte counting for you</p>
+          <div class="details">
+            <a href="https://docs.google.com/drawings/d/1Tz3Qj1l8PTFO-T5o3HifiX5yiZRTm2yjxtzS2DlwWLA/pub?w=992&h=296"><img src="https://docs.google.com/drawings/d/1Tz3Qj1l8PTFO-T5o3HifiX5yiZRTm2yjxtzS2DlwWLA/pub?w=992&h=296"></a>
+          </div>
+        </div>
+      </div>      
+    </li>
+    <li class="item">
+      <h2 class="headline">Showing Array Backwards with Pointer Arithmetic</h2>
+      <p class="content">Update <em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/pointer_arithmetic/backward_array.c">backward_array.c</a></em> so the program shows the array elements backwards</p>
+      <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/pointer_arithmetic/backward_array.problem"></script>
+    </li>
+    <li class="item">
+      <h2 class="headline">Assignment</h2>
+      <div class="content">
+        <ul>Homework Problem 31.1, at the end of this assignment you should upload to your Laulima dropbox:
+          <li>a file named <em class="file well well-small">UHusername_33_1.c</em></li>
+          <li>
+            <ul>example:
+              <li><em class="file well well-small">zhaol_33_1.c</em></li>
+              <!-- check for palindromes wow or wowe-->
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</div>
+<!-- add, subtract, compare
+different types are handled for you (4 bytes vs 2 bytes)
+arrays are pointers
