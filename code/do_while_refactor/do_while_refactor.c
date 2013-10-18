@@ -49,7 +49,7 @@ int main() {
       printf ("=== Account Information for %s's Account ===\n", account_holder);
       if (minimum_balance_fee_charged_flag) {
         total_accounts_with_minimum_balance_fees++;
-        total_minimum_balance_fees =+ minimum_balance_fee;
+        total_minimum_balance_fees += minimum_balance_fee;
         printf ("Minimum Balance Fee to Account Balance Percentage: %.1f%%\n", minimum_balance_fee / account_balance * PERCENT_CONVERSION_FACTOR);
         printf ("The new account balance is %.2f\n", net_balance(account_balance, minimum_balance_fee));
       } else {

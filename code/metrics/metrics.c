@@ -39,7 +39,7 @@ main() {
     // Display account summary information
     if (minimum_balance_fee_charged_flag) {
       total_accounts_with_minimum_balance_fees++;
-      total_minimum_balance_fees =+ minimum_balance_fee;
+      total_minimum_balance_fees += minimum_balance_fee;
       printf ("Minimum Balance Fee to Account Balance Percentage: %.1f%%", minimum_balance_fee / account_balance * 100);
     } else {
       printf ("Minimum Balance Fee to Account Balance Percentage: %.1f%%", 0 / account_balance);
