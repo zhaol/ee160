@@ -40,7 +40,6 @@ int ask_to_exit() {
   return(exit_program_flag);
 }
 
-
 void update_account_summary_information(int* total_number_of_accounts, float* total_amount_in_accounts, float account_balance) {
   (*total_number_of_accounts)++;
   *total_amount_in_accounts += account_balance;
