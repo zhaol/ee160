@@ -124,8 +124,8 @@ display list of account balances</pre>
         <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/account_balances/helper_functions.h"></script>
         <p>translate your algorithm into code, <span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/account_balances/helper_functions.c">helper_functions.c</a></span>:</p>
         <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/account_balances/helper_functions.c"></script>
-        <p>translate your algorithm into code, <span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/account_balances/magic_numbers.c">magic_numbers.c</a></span>:</p>
-        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/account_balances/magic_numbers.c"></script>
+        <p>translate your algorithm into code, <span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/account_balances/magic_numbers.h">magic_numbers.h</a></span>:</p>
+        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/account_balances/magic_numbers.h"></script>
         <ul>Things to note:
           <li>the first array element is index 0 <code>array[0]</code></li>
           <li>to define a 2 element array you put 2 in the brackets <code>int array[2];</code>
@@ -138,15 +138,31 @@ display list of account balances</pre>
       </div>
     </li>
     <li class="item">
+      <h2 class="headline">Print out also the minimum balance fee associated with each account balance</h2>
+      <div class="content">
+      </div>
+    </li>
+    <li class="item">
       <h2 class="headline">Assignment</h2>
       <div class="content">
-        <ul>
-          <li>Homework Problem 20.1
-            <p>Update <span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/account_balances/account_balances.c">account_balances.c</a></span> so that the account balances are listed from lowest balance to highest balance</p>
-            <p>do not use any built-in functions, such as <code>qsort</code></p>        
-            <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/account_balances/account_balances.c"></script>
-          </li>      
+        <ul>Homework Problem 20.1, at the end of this assignment you should upload to your Laulima dropbox:
+          <li>a file named <em class="file well well-small">UHusername_20_1.c</em></li>
+          <li>a file named <em class="file well well-small">UHusername_20_1_magic_numbers.h</em></li>
+          <li>a file named <em class="file well well-small">UHusername_20_1_helper_functions.h</em></li>
+          <li>a file named <em class="file well well-small">UHusername_20_1_helper_functions.c</em></li>
+          <li>
+            <ul>example:
+              <li><em class="file well well-small">zhaol_20_1.c</em></li>
+              <li><em class="file well well-small">zhaol_20_1_magic_numbers.h</em></li>
+              <li><em class="file well well-small">zhaol_20_1_helper_functions.h</em></li>
+              <li><em class="file well well-small">zhaol_20_1_helper_functions.c</em></li>
+            </ul>
+          </li>
         </ul>
+        <p>Update <span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/account_balances/account_balances.c">account_balances.c</a></span> so that the account balances are listed from lowest balance to highest balance, regardless of how the teller entered in the account balances (i.e. sort the account balances from lowest to highest)</p>
+        <p>do not use any built-in functions, such as <code>qsort</code></p>        
+        <p>assume the teller will never enter in more than 5 accounts</p>
+        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/account_balances/account_balances.c"></script>
       </div>
     </li>
   </ul>
