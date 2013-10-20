@@ -1,0 +1,165 @@
+---
+layout: default
+title: Exam 2
+---
+
+<div class="lecture">
+  <ul class="outline">
+    <li class="item">
+      <h2 class="headline">Materials Covered</h2>
+      <div class="content">
+        <p>Be sure to know:</p>
+        <ul>
+          <li>Everything covered in <a href="{{ site.baseurl }}/exams/1/">Exam 1</a></li>
+          <li>type casting
+            <ul>
+              <li><code>(int)</code></li>
+              <li><code>(float)</code></li>
+              <li><code>(double)</code></li>
+              <li><code>(char)</code></li>
+            </ul>
+          </li>
+          <li>functions
+            <ul>
+              <li>pass by value</li>
+              <li>pass by reference</li>
+            </ul>
+          </li>
+          <li>macros</li>
+          <li>arrays and strings</li>
+          <li>how to write a program that requires critical thinking in the algorithm development process
+            <ul>here are some example problems that require critical thinking and problem solving:
+              <li>sorting algorithm development from <a href="{{ site.baseurl }}/lectures/account_balances/">Homework 20.1</a> and <a href="{{ site.baseurl }}/lectures/strings">Homework 21.1</a></li>
+              <li>feature development from lab assignments involving the Display program and the Uber dataset, i.e. how to development an algorithm that implements a specific program feature</li>
+              <li><a href="http://www-ee.eng.hawaii.edu/~tep/EE160/S12/Exams/mdtm1.pdf">Dr. Dobry's Orbit Prediction Problem</a>
+                <ul>
+                  <li>how to tell a computer to register:
+                    <ul>
+                      <li>61 seconds as 1 minute 1 second</li>
+                      <li>61 minutes and 61 seconds as 1 hour 2 minute 1 second</li>
+                      <li>3601 seconds as 1 hour 1 second</li>
+                      <li>3661 seconds as 1 hour 1 minute 1 second</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="http://www-ee.eng.hawaii.edu/~tep/EE160/S12/Exams/mdtm2.pdf">Dr. Dobry's Days of the Week Problem</a>
+                <ul>
+                  <li>given that 1 Jan 2000 (Julian day of this date will be returned with the julian_date function) was a Saturday, how can you tell that:
+                    <ul>
+                      <li>5 Jan 2000 is a Wednesday</li>
+                      <li>8 Jan 2000 is a Saturday</li>
+                      <li>12 Jan 2000 is a Wednesday</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">Things to Bring</h2>
+      <div class="content">
+        <ul>Needed:
+          <li>Student ID</li>
+          <li>Writing utensils</li>
+        </ul>
+        <ul>Allowed:
+          <li>Two 8 x 11 in. sheet of paper for notes</li>
+        </ul>
+        <ul>Not Allowed:
+          <li>Calculators</li>
+          <li>Books</li>
+          <li>Electronic devices</li>
+        </ul>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">Testing Philosophy</h2>
+      <div class="content">
+        <ul>
+          <li>exams will follow the examination goals listed on the <a href="{{ site.baseurl }}/#examination_goals">syllabus</a> (Section Grading Policy; Sub Section Midterms/Finals)
+          <li>students should not utilize built-in C functions that were not discussed in class, such as:
+            <ul>
+              <li><code>pow</code></li>
+              <li><code>qsort</code></li>
+              <li><code>exp</code></li>
+              <li><code>log</code></li>
+              <li><code>strlen</code></li>
+              <li><code>atoi</code></li>
+              <li><code>atof</code></li>
+              <li><code>strtol</code></li>
+              <li><code>sprintf</code></li>
+              <li><code>sscanf</code></li>
+              <li>any function in libraries outside of stdio.h, such as stdlib.h, math.h, string.h, or etc</li>
+            </ul>
+            <p>the problem will state which functions are allowed</p>
+            <p>if you are unsure, just ask</p>
+          </li>
+          <li>students who cannot make the exam date will need to arrange for a make up exam in advance with the instructor</li>
+        </ul>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">Student Led Q&amp;A</h2>
+    </li>
+    <!--
+    <li class="item">
+      <h2 class="headline">Post Exam Material</h2>
+      <div class="content">
+        <ul>
+          <li>Recovery Assignment
+            <ul>Recovery 1.1, at the end of this assignment you should upload to your Laulima dropbox:
+              <li>a file named <span class="file well well-small">UHusername_r_1_1.c</span></li>
+              <li>
+                <ul>example:
+                  <li><span class="file well well-small">zhaol_r_1_1.c</span></li>
+                </ul>
+              </li>
+              <li>This recovery assignment is an individual effort, please do not post any questions or your code about the recovery assignment on Piazza</li>
+              <li>If you have questions about the recovery assignment, please email me directly</li>
+              <li>Write a program that:
+                <ul>
+                  <li>allows the user to input a number</li>
+                  <li>depending on the number entered by the user, the program will do one of the following:
+                    <table class="table table-bordered table-striped table-hover">
+                      <caption>Input and Output Mapping</caption>
+                      <thead><tr>
+                        <th>When User Input is:</th><th>The Program Will:</th><th>Then The Program Will:</th>
+                      </tr></thead>
+                      <tbody>
+                        <tr>
+                          <td>0 - 2</td>
+                          <td>ask user for a decimal</td>
+                          <td>print out the decimal to the 1st power<br/>
+                            print out the decimal to the 2nd power<br/>
+                            print out the decimal to the 25th power<br/>
+                            (do not use any built-in C functions like <code>pow</code>,<br/>
+                            test with small numbers to avoid C memory)
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>97 - 122</td>
+                          <td>ask user for an integer</td>
+                          <td>print out the corresponding ASCII character</td>
+                        </tr>
+                        <tr>
+                          <td>anything else</td>
+                          <td>ask user for a character</td>
+                          <td>print out the character 25 times</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </li>
+    -->
+  </ul>
+</div>
