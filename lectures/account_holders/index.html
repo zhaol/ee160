@@ -129,8 +129,8 @@ display list of account balances</pre>
         <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/account_holder/helper_functions.h"></script>
         <p>translate your algorithm into code, <span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/account_holder/helper_functions.c">helper_functions.c</a></span>:</p>
         <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/account_holder/helper_functions.c"></script>
-        <p>translate your algorithm into code, <span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/account_holder/magic_numbers.c">magic_numbers.c</a></span>:</p>
-        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/account_holder/magic_numbers.c"></script>
+        <p>translate your algorithm into code, <span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/account_holder/magic_numbers.h">magic_numbers.h</a></span>:</p>
+        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/account_holder/magic_numbers.h"></script>
         <ul>Things to note:
           <li>the use of the string conversion specifier <code>%s</code></li>
         </ul>
@@ -140,13 +140,13 @@ display list of account balances</pre>
       <h2 class="headline">Write the program using a function</h2>
       <div class="content">
         <p>translate your algorithm into code, <span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/account_holder_with_function/account_holder_with_function.c">account_holder_with_function.c</a></span>:</p>
-        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/account_holder_with_function/account_holder.c"></script>
+        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/account_holder_with_function/account_holder_with_function.c"></script>
         <p>translate your algorithm into code, <span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/account_holder_with_function/helper_functions.h">helper_functions.h</a></span>:</p>
         <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/account_holder_with_function/helper_functions.h"></script>
         <p>translate your algorithm into code, <span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/account_holde_with_functionr/helper_functions.c">helper_functions.c</a></span>:</p>
         <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/account_holder_with_function/helper_functions.c"></script>
-        <p>translate your algorithm into code, <span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/account_holder_with_function/magic_numbers.c">magic_numbers.c</a></span>:</p>
-        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/account_holder_with_function/magic_numbers.c"></script>
+        <p>translate your algorithm into code, <span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/account_holder_with_function/magic_numbers.h">magic_numbers.h</a></span>:</p>
+        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/account_holder_with_function/magic_numbers.h"></script>
         <ul>Things to note:
           <li>specifying an array in the function prototype <code>void get_account_holder(<strong>char account_holder[]</strong>);</code></li>
           <li>passing an array to the function <code>get_account_holder(<strong>account_holder</strong>)</code></li>
@@ -163,13 +163,23 @@ display list of account balances</pre>
     <li class="item">
       <h2 class="headline">Assignment</h2>
       <div class="content">
-        <ul>
-          <li>Homework Problem 22.1
-            <p>Update <span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/account_balances_with_function/account_balances_with_function.c">account_balances_with_function.c</a></span> so that the account holder information is displayed with its first character capitalized</p>
-            <p>You can use the <code>toupper()</code> function or write your own.</p>
-            <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/account_balances_with_function/account_balances_with_function.c"></script>
-          </li>      
+        <ul>Homework Problem 22.1, at the end of this assignment you should upload to your Laulima dropbox:
+          <li>a file named <em class="file well well-small">UHusername_22_1.c</em></li>
+          <li>a file named <em class="file well well-small">UHusername_22_1_magic_numbers.h</em></li>
+          <li>a file named <em class="file well well-small">UHusername_22_1_helper_functions.h</em></li>
+          <li>a file named <em class="file well well-small">UHusername_22_1_helper_functions.c</em></li>
+          <li>
+            <ul>example:
+              <li><em class="file well well-small">zhaol_22_1.c</em></li>
+              <li><em class="file well well-small">zhaol_22_1_magic_numbers.h</em></li>
+              <li><em class="file well well-small">zhaol_22_1_helper_functions.h</em></li>
+              <li><em class="file well well-small">zhaol_22_1_helper_functions.c</em></li>
+            </ul>
+          </li>
         </ul>
+        <p>Update <span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/account_balances_with_function/account_balances_with_function.c">account_balances_with_function.c</a></span> so that the account holder information is displayed with its first character capitalized</p>
+        <p>Do not use the <code>toupper()</code> function, write your own function to capitalize letters</p>
+        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/account_balances_with_function/account_balances_with_function.c"></script>
       </div>
     </li>
   </ul>
