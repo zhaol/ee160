@@ -11,7 +11,7 @@ main() {
 	printf("%d\n", main_variable);
 }
 
-function(int* function_variable) {
+function(int *function_variable) {
 	(*function_variable)++;
 	printf("%d\n", *function_variable);
 }

@@ -144,7 +144,7 @@ title: Lecture 05
             </li>
             <li>pointers
               <ul>
-                <li><code>int* pointer_variable</code>: declare <code>pointer_variable</code> as a pointer to an object of type <code>int</code></li>
+                <li><code>int *pointer_variable</code>: declare <code>pointer_variable</code> as a pointer to an object of type <code>int</code></li>
                 <li>in programming, variables can store integers, real numbers, characters, or addresses</li>
                 <li>you have mainly been working with variables that store integers, real numbers, and characters</li>
                 <li>pointers are variables that store an address</li>
@@ -152,7 +152,6 @@ title: Lecture 05
                 <li>pointers are just variables used in a specific way</li>
                 <li>you will be using pointers later on in the course</li>
                 <li>read more at <a href="http://www.physics.drexel.edu/courses/Comp_Phys/General/C_basics/#pointers">http://www.physics.drexel.edu/courses/Comp_Phys/General/C_basics/#pointers</a> (Section 6. Pointers)</li>
-                <li><code>int* pointer_variable</code> is different than <code>*pointer_variable</code></li>
               </ul>
             </li>
           </ul>    
@@ -231,11 +230,11 @@ title: Lecture 05
           <p class="topic">Things to note:</p>  
           <ul class="details">
             <li>the pointer conversion specifier is <code>%p</code></li>
-            <li>the <code>*</code> and <code>&</code> can be stacked like <code>*(&integer)</code></li>
+            <li>the <code>*</code> and <code>&amp;</code> can be stacked like <code>*(&amp;integer)</code></li>
             <li>the most likely pointer use cases are:
               <ul>for <code>int</code>s:
-                <li>initialize pointer: <code>int* integer_pointer</code></li>
-                <li>set to the address of a variable <code>integer_pointer = &integer</code></li>
+                <li>initialize pointer: <code>int *integer_pointer</code></li>
+                <li>set to the address of a variable <code>integer_pointer = &amp;integer</code></li>
                 <li>get the value of the variable that the pointer is pointing to <code>*integer_pointer</code></li>
               </ul>
             </li>

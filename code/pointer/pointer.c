@@ -3,7 +3,7 @@
 main() {
     int integer;
     integer = 1;
-    int* integer_pointer;
+    int *integer_pointer;
     integer_pointer = &integer;
 
     printf ("===integer===\n");

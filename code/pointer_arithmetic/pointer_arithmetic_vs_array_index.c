@@ -9,7 +9,7 @@
 int main () {
   int array[] = {0, 1, 2, 3, 4, 10};
   int i = 0;
-  int* array_pointer = &array[0];
+  int *array_pointer = &array[0];
   
   printf("array[0]: %d\n", array[i]);
   printf("*array_pointer: %d\n", *array_pointer);  
