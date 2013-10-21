@@ -67,10 +67,9 @@ void output_list_of_account_balances(float account_balances[][MAX_NUMBER_OF_ATTR
     
     fprintf (file_pointer, "==== List of Account Balances ====\n");
     while (balances_display_counter < number_of_accounts) {
-      fprintf (file_pointer, "%3d: $%8.2f $%6.2f $%8.2f\n",
+      fprintf (file_pointer, "%3d: $%8.2f $%8.2f\n",
         balances_display_counter,
         account_balances[balances_display_counter][START_ACCOUNT_BALANCE],
-        account_balances[balances_display_counter][FEES_CHARGED],
         account_balances[balances_display_counter][END_ACCOUNT_BALANCE]);
       balances_display_counter++;
     }  
