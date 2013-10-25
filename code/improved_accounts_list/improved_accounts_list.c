@@ -11,6 +11,7 @@
 // This program allows a teller to enter in account details and the program will calculate account information for the teller
 int main() {
   float account_balance;
+  float end_account_balance;
   char account_type;
   char exit_program_flag;
   int total_number_of_accounts = 0;
@@ -56,7 +57,7 @@ int main() {
         total_accounts_with_minimum_balance_fees++;
         total_minimum_balance_fees += minimum_balance_fee;
         fees_charged = minimum_balance_fee / account_balance * PERCENT_CONVERSION_FACTOR;
-        end_account_balance = net_balance(account_balance, minimum_balance_fee)
+        end_account_balance = net_balance(account_balance, minimum_balance_fee);
       } else {
         fees_charged = NO_MINIMUM_BALANCE / account_balance;
         end_account_balance = net_balance(account_balance, NO_MINIMUM_BALANCE);
@@ -66,7 +67,6 @@ int main() {
       
       update_account_summary_information(&total_number_of_accounts, &total_amount_in_accounts, account_balance);
       account_balances[current_account_number][START_ACCOUNT_BALANCE] = account_balance;
-      account_balances[current_account_number][FEES_CHARGED] = fees_charged;
       account_balances[current_account_number][END_ACCOUNT_BALANCE] = end_account_balance;
       current_account_number++;
     }

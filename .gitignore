@@ -2,4 +2,5 @@ _site
 .c9revisions
 code/generate_reports/outputs
 code/improved_min_bal_check/outputs
+code/improved_accounts_list/outputs
 .ruby-version

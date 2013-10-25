@@ -1,0 +1,134 @@
+---
+layout: default
+title: Lecture 34
+---
+
+<div class="lecture">
+  <ul class="outline">
+    <li class="item">
+      <h2 class="headline">Problem Statement</h2>
+      <div class="content">
+        <p>The Bank of EE160 manager wants to start tracking the teller line movements to gain insight into when the busiest and least busiest times are for the bank.  This information can eventually help the manager schedule the right number of tellers to handle the volume of customers. As a first step, the program needs to model the behavior of the teller lines. Write a program that allows the manager enter in the customer id to add the customer to the line, 0 to remove the first customer from the line, and -1 to quit the program. The program also prints out the status of the line after each command entered by the manager.
+        <div class="point">
+          <p class="topic">What is the problem asking for?</p>
+          <div class="details">
+            <p>A program that keeps track of a teller line based on input from the manager. The program prints out the status of the line after each input from the manager.</p>
+            <ul>
+              <li>input:
+                <ul>
+                  <li>manager input (integer)</li>
+                </ul>
+              <li>output:
+                <ul>
+                  <li>the status of the line</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">Visualize the Behavior of the Line</h2>
+      <div class="content">
+        <table class="table table-bordered table-striped table-hover">
+          <caption>Behavior of the Line</caption>
+          <thead>
+            <tr><th>Manager Input</th><th>Status of the Line</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>1</td></tr>
+            <tr><td>2</td><td>1, 2</td></tr>
+            <tr><td>3</td><td>1, 2, 3</td></tr>
+            <tr><td>0</td><td>2, 3</td></tr>
+            <tr><td>4</td><td>2, 3, 4</td></tr>
+            <tr><td>0</td><td>3, 4</td></tr>
+            <tr><td>0</td><td>4</td></tr>
+            <tr><td>-1</td><td>program ends</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">Algorithm Design</h2>
+      <div class="content">
+        <div class="point">
+          <p class="topic">How can a computer solve this in a step-by-step manner?</p>
+          <div class="details">
+            <ul>What are some questions the program needs to ask:
+              <li>it needs to check if the input is a -1</li>
+              <li>it needs to check if the input is a 0</li>
+            </ul>
+            <ul>What are some tasks the program need to do:
+              <li>it needs to display the status of the line</li>
+              <li>it needs to add a customer to the line</li>
+              <li>it needs to remove a customer from the line</li>
+            </ul>
+            <p>How can we arrange the questions and tasks to develop an algoirthm (step-by-step procedure) that will meet our requirements?:</p>
+            <ul>Some questions to ask:
+              <li>How can we simplify the problem?</li>
+              <li>What order should the questions be asked?</li>
+              <li>What order should the program tasks be done?</li>
+            </ul>
+          </div>  
+        </div>
+        <div class="point">
+          <p class="topic">What is the algorithm?</p>
+          <!-- TODO: write out the overall algorithm and the queue algorithm -->
+          <div class="details">
+            <ul>Using words:
+              <li>
+<pre>do
+  get manager input
+  check if input is 0
+    when yes, then
+      check if somebody is in line (first_position_in_line != last_position_in_line)
+        remove first customer in line (remove first integer of array at first_position_in_line)
+        increment first_position_in_line
+    otherwise
+      add new customer to end of line (add input to array at last_position_in_line)
+      increment last_position_in_line
+
+  set display_counter to 0
+  while display_counter is less than MAX_NUMBER_OF_CUSTOMERS  
+    print array[display_counter]
+    increment display_counter
+while input does not equal -1</pre>
+            </ul>
+            <ul>Using block diagrams:
+              <li>
+              <a href="https://docs.google.com/drawings/d/1fibkWOx6sy-svQO3HP38eHhBj4eJ6M48m1AvojPzPWk/pub?w=630&h=1144"><img src="https://docs.google.com/drawings/d/1fibkWOx6sy-svQO3HP38eHhBj4eJ6M48m1AvojPzPWk/pub?w=630&h=1144"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">Write the program</h2>
+      <div class="content">
+        <p>translate your algorithm into code, <span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/teller_line/teller_line.c">teller_line.c</a></span>:</p>
+        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/teller_line/teller_line.c"></script>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">Update the List of Accounts</h2>
+      <div class="content">
+        <p>Include the account holders name when outputting the list of accounts (there's quite of bit of extra coding involved, so just think of the main things you need to do, i.e. concentrate on the algorithm and don't worry about the coding part)</p>
+        <ul>Things to note:
+          <li>needed two pointers to the same array</li>
+          <li>could have used two counters with array indexing instead of using pointers</li>
+        </ul>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">How do you solve the max number of customer problem?</h2>
+    </li>
+    <li class="item">
+      <h2 class="headline">Assignment</h2>
+      <div class="content">
+        <!-- TODO: circular queue -->
+      </div>
+    </li>
+  </ul>
+</div>
