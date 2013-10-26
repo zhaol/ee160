@@ -23,7 +23,7 @@ void get_account_holder(char account_holder[]) {
 }
 
 int ask_to_exit() {
-  int exit_program_flag;
+  char exit_program_flag;
   printf ("\n");
   printf ("Are you finished checking all your accounts?:\n");
   printf ("Enter 'n' to check more accounts; Enter any other character to exit\n");

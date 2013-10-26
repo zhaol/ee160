@@ -37,7 +37,7 @@ int is_account_below_minimum_balance(float account_balance, float minimum_balanc
 }
 
 int ask_to_exit() {
-  int exit_program_flag;
+  char exit_program_flag;
   printf ("\n");
   printf ("Are you finished checking all your accounts?:\n");
   printf ("Enter 'n' to check more accounts; Enter any other character to exit\n");
