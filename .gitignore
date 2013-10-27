@@ -3,4 +3,5 @@ _site
 code/generate_reports/outputs
 code/improved_min_bal_check/outputs
 code/improved_accounts_list/outputs
+code/files/data
 .ruby-version
