@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 
-#define MAX_LINE 100
-
 int main () {
   char sentence[] = "first word second word";
   char word[] = "word";
