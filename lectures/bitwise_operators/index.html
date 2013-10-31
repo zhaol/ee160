@@ -1,0 +1,188 @@
+---
+layout: default
+title: Lecture 35
+---
+
+<div class="lecture">
+  <ul class="outline">
+    <li class="item">
+      <h2 class="headline">Why use bit level operators?</h2>
+      <div class="content">
+        <p>To control hardware</p>
+        <div class="point">
+          <p class="topic">One example:</p>
+          <div class="details">
+            <p>Microchips have pins that send signals to hardware (e.g. LED lights, USB cables)</p>
+            <img src="http://upload.wikimedia.org/wikipedia/commons/5/5c/Microchips.jpg"/>
+            <img src="http://www.mostphotos.com/preview/102992/two-port-of-the-usb-close-up-isolated-on-a-white-background.jpg"/>
+          </div>
+        </div>
+        <div class="point">
+          <p class="topic">A set of pins can be represented by a sequence of digits:</p>
+          <div class="details">
+            <a href="https://docs.google.com/drawings/d/1w6qD_XpMroonDbaLoPdL_b8mBfeWW1l8Dsimk7A0HpE/pub?w=642&h=411"><img src="https://docs.google.com/drawings/d/1w6qD_XpMroonDbaLoPdL_b8mBfeWW1l8Dsimk7A0HpE/pub?w=642&h=411"/></a>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">One's Complement Operator</h2>
+      <div class="content">
+        <div class="point">
+          <p class="topic">What is the one's complement operator?:</p>
+          <ul class="details">
+            <li><code>~</code></li>
+            <li>the one's complement operator changes:
+              <ul>
+                <li><code>1</code>s to <code>0</code>s</li>
+                <li><code>0</code>s to <code>1</code>s</li>
+              </ul>
+          </ul>
+        </div>
+        <div class="point">
+          <p class="topic">Why one's complement operator important?:</p>
+          <div class="details">
+            <p>Toggling pins on and off is fundamental to controlling hardware</p>
+          </div>
+        </div>
+        <div class="point">
+          <p class="topic">How to use one's complement operator?:</p>
+          <div class="details">
+            <p><span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/bitwise_operators/ones_complement.c">ones_complement.c</a></span>:</p>
+            <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/bitwise_operators/ones_complement.c"></script>  
+            <ul>Things to note:
+              <li>all bits are flipped</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </li>  
+    <li class="item">
+      <h2 class="headline">Logical Bitwise Operators</h2>
+      <div class="content">
+        <div class="point">
+          <p class="topic">What are the logical bitwise operators?:</p>
+          <ul class="details">
+            <li>bitwise and: <code>&amp;</code>
+              <ul>
+                <li>if bit1 AND bit2 are <code>1</code>, then the result is <code>1</code></li>
+                <li>otherwise the result is <code>0</code></li>
+              </ul>
+            </li>
+            <li>bitwise or: <code>|</code>
+              <ul>
+                <li>if bit1 OR bit2 is <code>1</code>, then the result is <code>1</code></li>
+                <li>otherwise the result is <code>0</code></li>
+              </ul>
+            </li>
+            <li>bitwise exclusive or: <code>^</code>
+              <ul>
+                <li>if ONLY bit1 OR bit2 is <code>1</code>, then the result is <code>1</code></li>
+                <li>otherwise the result is <code>0</code></li>
+                <li>common notation: bit1 XOR bit2</li>
+              </ul>
+            </li>
+            <li>summary:
+              <table class="table table-bordered table-striped table-hover">
+                <caption>Bitwise Logical Operators</caption>
+                <thead>
+                  <tr><th>bit1</th><th>bit2</th><th>bit1 &amp; bit2</th><th>bit2 | bit2</th><th>bit1 ^ bit2</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td></tr>
+                  <tr><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td></tr>
+                  <tr><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td></tr>
+                  <tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                </tbody>
+              </table>
+            </li>
+          </ul>
+        </div>
+        <div class="point">
+          <p class="topic">Why are logical bitwise operators important?:</p>
+          <div class="details">
+            <p>they are the building blocks of comparisons</p>
+          </div>
+        </div>
+        <div class="point">
+          <p class="topic">How to use logical bitwise operators?:</p>
+          <div class="details">
+            <p><span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/bitwise_operators/logical_bitwise.c">logical_bitwise.c</a></span>:</p>
+            <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/bitwise_operators/logical_bitwise.c"></script>  
+            <ul>Things to note:
+              <li>the comparison is made on a bit by bit basis</li>
+              <li>nth bit is compared with nth bit</li>
+            </ul>
+          </div>
+        </div>
+        <div class="point">
+          <p class="topic">How to mask with logical bitwise operators?</p>
+          <div class="details">
+            <p><span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/bitwise_operators/mask.c">mask.c</a></span>:</p>
+            <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/bitwise_operators/mask.c"></script>  
+            <ul>Things to note:
+              <li>masks work like filters</li>
+              <li>masks affect certain bit position and leave other bit positions unaffected</li>
+              <li>the concept of masks can be applied to many applications, i.e. mask a matrix to only show a portion of an image, subnet mask for IP addresses in a network</li>
+            </ul>
+          </div>
+        </div>
+      </div>      
+    </li>
+    <li class="item">
+      <h2 class="headline">Shift Operators</h2>
+      <div class="content">
+        <div class="point">
+          <p class="topic">What are the shift operators?:</p>
+          <ul class="details">
+            <li>left shift: <code><<</code>
+              <ul>
+                <li>shifts the bits a certain number of bits over to the left</li>
+                <li>a certain number of bits that are furthest to the left will be lost</li>
+              </ul>
+            </li>
+            <li>right shift: <code>>></code>
+              <ul>
+                <li>shifts the bits a certain number of bits over to the right</li>
+                <li>a certain number of bits that are furthest to the right will be lost</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="point">
+          <p class="topic">Why are shift operators important?:</p>
+          <div class="details">
+            <p>you can read the article at <a href="http://stackoverflow.com/questions/520625/have-you-ever-had-to-use-bit-shifting-in-real-projects">http://stackoverflow.com/questions/520625/have-you-ever-had-to-use-bit-shifting-in-real-projects</a></p>
+          </div>
+        </div>
+        <div class="point">
+          <p class="topic">How to use shift operators?:</p>
+          <div class="details">
+            <p><span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/bitwise_operators/shift.c">shift.c</a></span>:</p>
+            <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/bitwise_operators/shift.c"></script>  
+            <ul>Things to note:
+              <li>some bits will be lost</li>
+            </ul>
+          </div>
+        </div>    
+      </div>      
+    </li>
+    <li class="item">
+      <h2 class="headline">Bitwise Operation with Lights:</h2>
+      <div class="content">
+        <div class="point">
+          <p class="topic">Blinking Light:</p>
+          <div class="details">
+            <a href="https://docs.google.com/drawings/d/1PP9tUyxvqlqX6-Jv3Cz9JwalM6xpbHFWAb4wHddZkLI/pub?w=644&h=666"><img src="https://docs.google.com/drawings/d/1PP9tUyxvqlqX6-Jv3Cz9JwalM6xpbHFWAb4wHddZkLI/pub?w=644&h=666"/></a>
+          </div>
+        </div>
+        <div class="point">
+          <p class="topic">Running Light:</p>
+          <div class="details">
+            <a href="https://docs.google.com/drawings/d/1YX1JaXo6LkgjAdRl5N1pvjuGNBmwGX1lxHPShBx8KlI/pub?w=644&h=666"><img src="https://docs.google.com/drawings/d/1YX1JaXo6LkgjAdRl5N1pvjuGNBmwGX1lxHPShBx8KlI/pub?w=644&h=666"/></a>
+          </div>
+        </div>
+      </div>      
+    </li>
+  </ul>
+</div>
