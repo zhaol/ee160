@@ -91,6 +91,23 @@ Calculate the distance travelled for each ride</pre>
             <p class="topic">determine the distance travelled for each ride:</p>
             <ul class="details">
               <li>assume the 3rd (x) and 4th (y) column of the data represent distance (in meters) from some arbitrary origin to simplify the calculations (the 3rd and 4th columns are actually lattitude and longitude, respectively)</li>
+                <li>you can calculate the distance travelled using any of the following methods:
+                <ul>
+                  <li>$distance_x = {end\_position_x - start\_position_x}$, $distance_y = {end\_position_y - start\_position_y}$, $distance = √(distance_x^2+distance_y^2)$</li>
+                  <li>$distance_x = ({Δdistance}_{x,1} + {Δdistance}_{x,2} + ... + {Δdistance}_{x,n})$, $distance_y = ({Δdistance}_{y,1} + {Δdistance}_{y,2} + ... + {Δdistance}_{y,n})$, $distance = √(distance_x^2+distance_y^2)$</li>
+                </ul>
+              </li>
+              <li>Feel free to use the <code>sqrt</code> function from the <code>math.h</code> library
+                <ul>
+                  <li>How to use the <code>sqrt</code>: <a href="http://www.cplusplus.com/reference/cmath/sqrt/">http://www.cplusplus.com/reference/cmath/sqrt/</a>
+                  <li>How to compile with the <code>math.h</code> library: <a href="http://stackoverflow.com/questions/4120592/c-programming-sqrt-function">http://stackoverflow.com/questions/4120592/c-programming-sqrt-function</a></li>
+                </ul>
+              <li>Or you can write your own <code>sqrt</code> function
+                <ul>Use at your own risk:
+                  <li><a href="http://en.wikipedia.org/wiki/Methods_of_computing_square_roots">http://en.wikipedia.org/wiki/Methods_of_computing_square_roots</a></li>
+                  <li><a href="http://stackoverflow.com/questions/1623375/writing-your-own-square-root-function">http://stackoverflow.com/questions/1623375/writing-your-own-square-root-function</a></li>
+                </ul>
+              </li>
             </ul>
           </li>
           <li class="point">
