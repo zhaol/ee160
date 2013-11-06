@@ -1,4 +1,4 @@
-switch (expression) {
+switch (thing_to_be_compared) {
   case value1: 
     // do this if expression equals value1
     break;
