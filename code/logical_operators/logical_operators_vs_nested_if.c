@@ -19,7 +19,7 @@ int main() {
     printf("This number is less than 0\n");
   }
   
-  if ((number >= 0) && (number <= 100)) {
+  if ((0 <= number) && (number <= 100)) {
     printf("This number is between 0 and 100 (using logical operators)\n", number);
   } else {
     printf("This number could be less than 0 or greater than 100\n");

@@ -1,7 +1,9 @@
 if (expression1) {
   // do this if expression1 is true
 } else if (expression2) {
-  // do this if expression2 is true
+  // do this if expression2 is true (and expression1 is false)
+} else if (expression3) {
+  // do this if expression3 is true (and expression1 and expression2 are false)
 } else {
   // do this if expression1 and expression2 are false
 }
