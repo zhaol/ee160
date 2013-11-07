@@ -1,3 +1,0 @@
-==== List of Account Balances ====
-  0: $  200.00
-  1: $  300.00

@@ -38,7 +38,7 @@ void update_account_summary_information(int *total_number_of_accounts, float *to
 
 void output_account_summary_to_file(int total_number_of_accounts, float total_amount_in_accounts, float total_minimum_balance_fees, int total_accounts_with_minimum_balance_fees) {
   FILE *file_pointer;  
-  file_pointer = fopen("outputs/account_summary.txt", "w");
+  file_pointer = fopen("account_summary.txt", "w");
   
   if (file_pointer == NULL) {
     printf("Error opening file\n");
@@ -58,7 +58,7 @@ void output_account_summary_to_file(int total_number_of_accounts, float total_am
 void output_list_of_account_balances(float account_balances[], int number_of_accounts) {
   int balances_display_counter = 0;
   FILE *file_pointer;  
-  file_pointer = fopen("outputs/list_of_account_balances.txt", "w");
+  file_pointer = fopen("list_of_account_balances.txt", "w");
   
   if (file_pointer == NULL) {
     printf("Error opening file\n");
