@@ -33,20 +33,28 @@ title: Lecture 36
     <li class="item">
       <h2 class="headline">Why use unions?</h2>
       <div class="content">
-        <div class="point">
-          <p class="topic">What are the logical bitwise operators?:</p>
-          <ul class="details">
-          </ul>
-        </div>
+        <p>To allow a variable to hold different types of values</p>
       </div>      
     </li>
     <li class="item">
       <h2 class="headline">How to use a union?</h2>
       <div class="content">
         <div class="point">
-          <p class="topic">What are the shift operators?:</p>
-          <ul class="details">
-          </ul>
+          <p class="topic">Syntax:</p>
+          <div class="details">
+            <p><span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/unions/union.syntax">union.syntax</a></span>:</p>
+            <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/unions/union.syntax"></script>  
+          </div>
+        </div>
+        <div class="point">
+          <p class="topic">Example:</p>
+          <div class="details">
+            <p><span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/unions/union.c">union.c</a></span>:</p>
+            <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/unions/union.c"></script>  
+            <ul>Note:
+              <li>program won't work if the union <cod>input</cod> was used at the end to display all the attributes at once</li>
+            </ul>
+          </div>
         </div>
       </div>      
     </li>
@@ -54,8 +62,18 @@ title: Lecture 36
       <h2 class="headline">Struct vs Union</h2>
       <div class="content">
         <div class="point">
-          <p class="topic">Blinking Light:</p>
+          <p class="topic">A Truck AND A Robot vs A Transformer:</p>
           <div class="details">
+            <table class="table table-bordered table-striped table-hover">
+              <caption>Comparing A Struct and An Union</caption>
+              <thead><tr><th>Object</th><th>Pros</th><th>Cons</th></tr></thead>
+              <tbody>
+                <tr><td>A transformer is able to battle as a robot and transport as a truck<br/><img src="http://www.tfw2005.com/resources/attach/4/0/5/9/7/MECHTECH-VOYAGER-OPTIMUS-PRIME-both-modes-28737_1297894705.jpg" class="img-rounded img-polaroid" style="width:300px;height:300px;"/></td><td>only require one transformer to do both tasks</td><td>cannot do both tasks at once</td></tr>
+                <tr><td>A robot to battle and a truck to transport</br><img src="http://mazadqtr.com/images/18-wheeler-trucks-pictures-i0.jpg" class="img-rounded img-polaroid" style="width:150px;height:150px;"/>&nbsp;<img id="wall-e" src="http://i1056.photobucket.com/albums/t361/stevethegoose2/terminator_zps7206cd86.jpg" class="img-rounded img-polaroid" style="width:150px;height:150px;"</td><td>can do both tasks at once</td><td>requires a robot and a truck to do both tasks</td></tr>
+                <tr><td>An union is able to use a memory block in multiple ways</td><td>only require one memory block to hold multiple types of data</td><td>cannot store/use all types of data at the same time</td></tr>
+                <tr><td>A struct is able to store multiple types of data at the same time</td><td>can store/use all types of data at the same time</td><td>requires more memory blocks to store/use all types of data</td></tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>      
