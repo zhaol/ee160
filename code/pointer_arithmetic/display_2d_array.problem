@@ -1,0 +1,22 @@
+/*   File:  display_2d_array.c
+//   By:    The Awesome Class of EE160
+//   Date:	Today :)
+*/
+
+#include <stdio.h>
+#define MAX_COL 3
+#define MAX_ROW 2
+#define ARRAY_OFFSET -1
+
+// This program prints out the content of a 2D array
+int main () {
+  int array[MAX_ROW][MAX_COL] = {{11, 12, 13}, {14, 15, 16}};
+  int *array_pointer = &array[0][0];
+  int pointer_counter;
+  
+  for (...) {
+    // fill in this for loop to print out each element of the 2D array
+  }
+  
+  return 0;
+}
