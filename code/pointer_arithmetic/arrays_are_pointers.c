@@ -5,7 +5,7 @@
 
 #include <stdio.h>
 
-// This program prints an array backwards
+// This program demostrates that arrays are pointers
 int main () {
   int array[] = {0, 1, 2, 3, 4, 5};
   
