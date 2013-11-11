@@ -1,0 +1,80 @@
+/*   File:  improved_accounts_list.c
+//   By:    The Awesome Class of EE160
+//   Date:	Today :)
+*/
+
+#include <stdio.h>
+#include "magic_numbers.h"
+#include "helper_functions.h"
+#include "helper_functions.c"
+
+// This program allows a teller to enter in account details and the program will calculate account information for the teller
+int main() {
+  float account_balance;
+  float end_account_balance;
+  char account_type;
+  char exit_program_flag;
+  int total_number_of_accounts = 0;
+  float total_amount_in_accounts = 0;
+  int minimum_balance_fee = 35;
+  int total_minimum_balance_fees = 0;
+  int total_accounts_with_minimum_balance_fees = 0;
+  int minimum_balance_fee_charged_flag = 0;
+  float account_balances[MAX_NUMBER_OF_ACCOUNTS][MAX_NUMBER_OF_ATTRIBUTES];
+  int current_account_number = 0;
+  char list_of_account_holders[MAX_NUMBER_OF_ACCOUNTS][MAX_ACCOUNT_HOLDER_SIZE]; 
+  char valid_account_type_flag = VALID_ACCOUNT_TYPE;
+  float fees_charged = 0;
+  
+  do  {
+    current_account_number++;
+    minimum_balance_fee_charged_flag = MINIMUM_BALANCE_FEE_NOT_CHARGED;
+    valid_account_type_flag = VALID_ACCOUNT_TYPE;
+    get_account_holder(list_of_account_holders, current_account_number);
+    if (strcmp(list_of_account_holders[current_account_number+ARRAY_OFFSET], "obama") == 0) {
+      printf("Treat this account differently\n");  
+      break;
+    }
+    account_balance = get_account_balance();
+    account_type = get_account_type();
+    
+    if ((account_type == 's') && (account_balance < SAVINGS_ACCOUNT_MINIMUM_BALANCE)) {
+      minimum_balance_fee_charged_flag = MINIMUM_BALANCE_FEE_CHARGED;
+    } else if ((account_type == 'c') && (account_balance < CHECKING_ACCOUNT_MINIMUM_BALANCE)) {
+      minimum_balance_fee_charged_flag = MINIMUM_BALANCE_FEE_CHARGED;
+    } else {
+      if ((account_type != 's') && (account_type != 'c')) {
+        printf ("The account type was invalid\n");
+        valid_account_type_flag = INVALID_ACCOUNT_TYPE;
+      } else {
+        printf ("A minimum balance fee does not need to be charged to this account\n");
+      }
+    }      
+    if (valid_account_type_flag == VALID_ACCOUNT_TYPE) {
+      // Display account summary information
+      printf ("=== Account Information for %s's Account ===\n", list_of_account_holders[current_account_number+ARRAY_OFFSET]);
+      if (minimum_balance_fee_charged_flag) {
+        total_accounts_with_minimum_balance_fees++;
+        total_minimum_balance_fees += minimum_balance_fee;
+        fees_charged = minimum_balance_fee / account_balance * PERCENT_CONVERSION_FACTOR;
+        end_account_balance = net_balance(account_balance, minimum_balance_fee);
+      } else {
+        fees_charged = NO_MINIMUM_BALANCE / account_balance;
+        end_account_balance = net_balance(account_balance, NO_MINIMUM_BALANCE);
+      }
+      printf ("Minimum Balance Fee to Account Balance Percentage: %.1f%%\n", fees_charged);
+      printf ("The new account balance is %.2f\n", end_account_balance);    
+      
+      account_balances[current_account_number+ARRAY_OFFSET][START_ACCOUNT_BALANCE] = account_balance;
+      account_balances[current_account_number+ARRAY_OFFSET][END_ACCOUNT_BALANCE] = end_account_balance;
+      update_account_summary_information(&total_number_of_accounts, &total_amount_in_accounts, account_balance);
+    }
+    
+    exit_program_flag = ask_to_exit();
+  } while (exit_program_flag == CONTINUE_PROGRAM);
+  
+  output_account_summary_to_file(total_number_of_accounts, total_amount_in_accounts, total_minimum_balance_fees, total_accounts_with_minimum_balance_fees);
+  output_list_of_account_balances(list_of_account_holders, account_balances, total_number_of_accounts);
+  
+  stop_program: return 0;
+}

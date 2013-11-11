@@ -167,14 +167,38 @@ output list of account balances to a file</pre>
       </div>
     </li>
     <li class="item">
-      <h2 class="headline">Update the List of Accounts</h2>
-      <p class="content">Include the account holders name when outputting the list of accounts (there's quite of bit of extra coding involved, so just think of the main things you need to do, i.e. concentrate on the algorithm and don't worry about the coding part)</p>
+      <h2 class="headline">Add Account Holder to the List of Accounts</h2>
+      <ul class="content">
+        <li>When outputting the list of accounts, replace the account id with the account holder name.</li>
+        <li>There are other ways to implement a list of strings: <a href="http://stackoverflow.com/questions/1088622/how-do-i-create-an-array-of-strings-in-c">http://stackoverflow.com/questions/1088622/how-do-i-create-an-array-of-strings-in-c</a></li>
+      </ul>
     </li>
     <li class="item">
       <h2 class="headline">Assignment</h2>
       <div class="content">
-        <!-- TODO: list of strings -->
-        <!-- http://stackoverflow.com/questions/1088622/how-do-i-create-an-array-of-strings-in-c -->
+        No graded assignments
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">Optional Assignments</h2>
+      <div class="content">
+        <p>Optional assignments are not graded and does not need to be turned in. It is intended to give you more practice (if you want it) using the programming concepts discussed in lecture.</p>
+        <p>If the optional assignment is modifying a required assignment, be sure to leave your previous assignment work untouched by copying them to a new folder for this optional assignment and modify only the files in the new folder</p>
+        <div class="point">
+          <p class="topic">Track Account Balances for Each Month</p>  
+          <ul class="details">
+            <li>Write a program that allows the teller to enter in the month-end account balances for each month of the current year for multiple account holders</li>
+            <li>The program will then display the spreadsheet/table of month-end account balances for the current year</li>
+            <li>You can reference account holders with an account ID</li>
+          </ul>
+        </div>
+        <div class="point">
+          <p class="topic">Hints (Feel free to not use them):</p>  
+          <ul class="details">
+            <li>A 2D array of <code>float</code>s can be used to track the account balances with each row representing a different account holder and each column representing a different month</li>
+            <li>The account holder IDs can also be used as the row counter</li>
+          </ul>
+        </div>
       </div>
     </li>
   </ul>
