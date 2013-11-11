@@ -24,6 +24,7 @@ int main() {
   char account_holder[MAX_ACCOUNT_HOLDER_SIZE]; 
   
   while (exit_program_flag == CONTINUE_PROGRAM) {
+    current_account_number++;
     get_account_holder(account_holder);
     account_balance = get_account_balance();
     account_type = get_account_type();
@@ -47,14 +48,13 @@ int main() {
     }
     
     update_account_summary_information(&total_number_of_accounts, &total_amount_in_accounts, account_balance);
-    account_balances[current_account_number] = account_balance;
-    current_account_number++;
+    account_balances[current_account_number+ARRAY_OFFSET] = account_balance;
     
     exit_program_flag = ask_to_exit();
   }
   
   output_account_summary_to_file(total_number_of_accounts, total_amount_in_accounts, total_minimum_balance_fees, total_accounts_with_minimum_balance_fees);
-  output_list_of_account_balances(account_balances, current_account_number);
+  output_list_of_account_balances(account_balances, total_number_of_accounts);
   
   return 0;
 }

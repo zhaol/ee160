@@ -27,6 +27,7 @@ int main() {
   float fees_charged = 0;
   
   do  {
+    current_account_number++;
     minimum_balance_fee_charged_flag = MINIMUM_BALANCE_FEE_NOT_CHARGED;
     valid_account_type_flag = VALID_ACCOUNT_TYPE;
     get_account_holder(account_holder);
@@ -66,16 +67,15 @@ int main() {
       printf ("The new account balance is %.2f\n", end_account_balance);    
       
       update_account_summary_information(&total_number_of_accounts, &total_amount_in_accounts, account_balance);
-      account_balances[current_account_number][START_ACCOUNT_BALANCE] = account_balance;
-      account_balances[current_account_number][END_ACCOUNT_BALANCE] = end_account_balance;
-      current_account_number++;
+      account_balances[current_account_number+ARRAY_OFFSET][START_ACCOUNT_BALANCE] = account_balance;
+      account_balances[current_account_number+ARRAY_OFFSET][END_ACCOUNT_BALANCE] = end_account_balance;
     }
     
     exit_program_flag = ask_to_exit();
   } while (exit_program_flag == CONTINUE_PROGRAM);
   
   output_account_summary_to_file(total_number_of_accounts, total_amount_in_accounts, total_minimum_balance_fees, total_accounts_with_minimum_balance_fees);
-  output_list_of_account_balances(account_balances, current_account_number);
+  output_list_of_account_balances(account_balances, total_number_of_accounts);
   
   stop_program: return 0;
 }

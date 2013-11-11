@@ -25,6 +25,7 @@ int main() {
   int current_account_number = 0;
   
   while (exit_program_flag == CONTINUE_PROGRAM) {
+    current_account_number++;
     account_balance = get_account_balance();
     account_type = get_account_type();
 
@@ -46,8 +47,7 @@ int main() {
     }
     
     update_account_summary_information(&total_number_of_accounts, &total_amount_in_accounts, account_balance);
-    account_balances[current_account_number] = account_balance;
-    current_account_number++;
+    account_balances[current_account_number+ARRAY_OFFSET] = account_balance;
     
     exit_program_flag = ask_to_exit();
   }
@@ -58,10 +58,10 @@ int main() {
   printf ("The total amount in all accounts: $%.2f\n", total_amount_in_accounts);
   printf ("The percentage of the total minimum balance fees with respect to the total account balances: %.1f%%\n", total_minimum_balance_fees / total_amount_in_accounts * PERCENT_CONVERSION_FACTOR);
   printf ("The percentage of accounts that were charged a minimum balance fee: %.1f%%\n", PERCENT_CONVERSION_FACTOR * total_accounts_with_minimum_balance_fees / total_number_of_accounts);
-  int balances_display_counter = 0;
+  int balances_display_counter = 1;
   printf ("==== List of Account Balances ====\n");
-  while (balances_display_counter < current_account_number) {
-    printf ("%3d: $%8.2f\n", balances_display_counter, account_balances[balances_display_counter]);
+  while (balances_display_counter <= total_number_of_accounts) {
+    printf ("%3d: $%8.2f\n", balances_display_counter, account_balances[balances_display_counter+ARRAY_OFFSET]);
     balances_display_counter++;
   }
   

@@ -56,7 +56,7 @@ void output_account_summary_to_file(int total_number_of_accounts, float total_am
 }
 
 void output_list_of_account_balances(float account_balances[][MAX_NUMBER_OF_ATTRIBUTES], int number_of_accounts) {
-  int balances_display_counter = 0;
+  int balances_display_counter = 1;
   FILE *file_pointer;  
   file_pointer = fopen("list_of_account_balances.txt", "w");
   
@@ -66,11 +66,11 @@ void output_list_of_account_balances(float account_balances[][MAX_NUMBER_OF_ATTR
     printf("Successfully opened file\n");
     
     fprintf (file_pointer, "==== List of Account Balances ====\n");
-    while (balances_display_counter < number_of_accounts) {
+    while (balances_display_counter <= number_of_accounts) {
       fprintf (file_pointer, "%3d: $%8.2f $%8.2f\n",
         balances_display_counter,
-        account_balances[balances_display_counter][START_ACCOUNT_BALANCE],
-        account_balances[balances_display_counter][END_ACCOUNT_BALANCE]);
+        account_balances[balances_display_counter+ARRAY_OFFSET][START_ACCOUNT_BALANCE],
+        account_balances[balances_display_counter+ARRAY_OFFSET][END_ACCOUNT_BALANCE]);
       balances_display_counter++;
     }  
     fclose(file_pointer);
