@@ -4,10 +4,12 @@
 */
 
 #include <stdio.h>
+#define MAX_ROWS 3
+#define MAX_COLS 2
 
 /*  This program stores declares, initializes, and uses a 2D array */
 int main() {
-  int table_of_values[3][2] = {
+  int table_of_values[MAX_ROWS][MAX_COLS] = {
     {1, 2},
     {3, 4},
     {5, 6}

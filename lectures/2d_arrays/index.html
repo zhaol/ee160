@@ -81,6 +81,26 @@ title: Lecture 31
       </div>      
     </li>
     <li class="item">
+      <h2 class="headline">Comparing Usage of Multi-Dimensional Array</h2>
+      <div class="content">
+        <table class="table table-bordered table-striped table-hover">
+          <caption>Comparing Usage of Multi-Dimensional Array</caption>
+          <thead>
+            <tr><th>Programming Operation (In English)</th><th>Scalar Variables</th><th>1D Array</th><th>2D Array</th><th>3D Array</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Declaration/Initialization (Save exactly this much space for me to use)</td><td><code>int scalar = 0;</code></td><td><code>int list[MAX_COL] = {0};</code></td><td><code>int table[MAX_ROW][MAX_COL] = {0};</code></td><td><code>int book[MAX_PAGE][MAX_ROW][MAX_COL] = {0};</code></td></tr>
+            <tr><td>Pass to Function (This is what you need to use; and here is where it begins)</td><td><code>function(scalar);</code></td><td><code>function(list);</code></td><td><code>function(table);</code></td><td><code>function(book);</code></td></tr>
+            <tr><td>Function Prototype/Definition (I'll be using a list, but I'm not sure how long the list is; I'll be using a table of X columns, but I'm not sure how long the table is; I'll be using a book of tables with X columns and Y rows, but I'm not sure how many pages the book has)</td><td><code>void function(int scalar);</code><br/><code>void function(int scalar){...}</code></td><td><code>void function(int list[]);</code><br/><code>void function(int list[]){...}</code></td><td><code>void function(int table[][MAX_COL]);</code><br/><code>void function(int table[][MAX_COL]){...}</code></td><td><code>void function(int book[][MAX_ROW][MAX_COL]);</code><br/><code>void function(int book[][MAX_ROW][MAX_COL]){...}</code></td></tr>
+          </tbody>
+        </table>
+        <ul>Things to note:
+          <li>An example program implementing the above code snippets: <em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/comparisons/scalar_array_2darray_3darray.c">scalar_array_2darray_3darray.c</a></em></li>
+          <li>Imagine stacking rows of wire frame cube shelves (<a href="http://img1.targetimg1.com/wcsstore/TargetSAS//img/p/10/88/10882811.jpg">like this one</a>); the structure will be unstable if you stack a row of 3 cubes onto rows of 2 cubes; that is why C needs to know exactly how many you plan to stack in each row</li>
+        </ul>
+      </div>
+    </li>
+    <li class="item">
       <h2 class="headline">3D Arrays</h2>
       <p class="content">Modify <em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/2d_arrays/2d_arrays.c">2d_arrays.c</a></em> to be a 3D array</p>
     </li>
@@ -104,13 +124,159 @@ title: Lecture 31
               <li>it is sufficient to output the table in the same manner as <em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/2d_arrays/2d_arrays.c">2d_arrays.c</a></em>, i.e. you don't need to display borders</li>
             </ul>
           </li>
-          <li>the program also outputs the averages for:
-            <ul>
-              <li>each column</li>
-              <li>each row</li>
+          <li>example output:
+<pre>How many rows are needed?
+&lt;user enters 3&gt;
+How many columns are needed?
+&lt;user enters 2&gt;
+Please enter value for [0][0]:
+&lt;user enters 1&gt;
+Please enter value for [0][1]:
+&lt;user enters 2&gt;
+Please enter value for [1][0]:
+&lt;user enters 3&gt;
+Please enter value for [1][1]:
+&lt;user enters 4&gt;
+Please enter value for [2][0]:
+&lt;user enters 5&gt;
+Please enter value for [2][1]:
+&lt;user enters 6&gt;
+[0][0]: 1, [0][1]: 2
+[1][0]: 3, [1][1]: 4
+[2][0]: 5, [2][1]: 6</pre>
+          </li>
+        </ul>
+        <ul>Homework Problem 31.2, at the end of this assignment you should upload to your Laulima dropbox:
+          <li>a file named <em class="file well well-small">UHusername_31_2.c</em></li>
+          <li>a file named <em class="file well well-small">UHusername_31_2_helpers.h</em></li>
+          <li>a file named <em class="file well well-small">UHusername_31_2_helpers.c</em></li>
+          <li>a file named <em class="file well well-small">UHusername_31_2_input.txt</em></li>
+          <li>
+            <ul>example:
+              <li><em class="file well well-small">zhaol_31_2.c</em></li>
+              <li><em class="file well well-small">zhaol_31_2_helpers.h</em></li>
+              <li><em class="file well well-small">zhaol_31_2_helpers.c</em></li>
+              <li><em class="file well well-small">zhaol_31_2_input.txt</em></li>
             </ul>
           </li>
         </ul>
+        <p>Write a program that reads in a file into a matrix of characters. The file has the following content:</p>
+<pre>OOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOO
+OOOXOOOOOOOXOOO
+OOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOO
+OOOOOOOXOOOOOOO
+OOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOO
+OOXOOOOOOOOOXOO
+OOOXXXXXXXXXOOO
+OOOOOOOOOOOOOOO
+OOOOOOOOOOOOOOO</pre>
+        <p>The program then "grows" the x's and prints out the new matrix of characters. The matrix of characters should now look like this:</p>
+<pre>OOOOOOOOOOOOOOO
+OOXXXOOOOOXXXOO
+OOXXXOOOOOXXXOO
+OOXXXOOOOOXXXOO
+OOOOOOXXXOOOOOO
+OOOOOOXXXOOOOOO
+OOOOOOXXXOOOOOO
+OXXXOOOOOOOXXXO
+OXXXXXXXXXXXXXO
+OXXXXXXXXXXXXXO
+OOXXXXXXXXXXXOO
+OOOOOOOOOOOOOOO</pre>
+        <p>You can assume the arrangement (i.e. dimensions) of the input characters will not change</p>
+        <p>Extra tidbit: Every digital picture, whether taken with a professional single lens reflex camera or a consumer mobile phone camera, at the very core is represented as a matrix of values. Each element of the matrix represents a pixel. The program you just made essentially boldened the edges of a picture. For more information about this, please read the problem statement for the picture problem in the "Optional Assignments" Section</p>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">Optional Assignments</h2>
+      <div class="content">
+        <p>Optional assignments are not graded and does not need to be turned in. It is intended to give you more practice (if you want it) using the programming concepts discussed in lecture.</p>
+        <p>If the optional assignment is modifying a required assignment, be sure to leave your previous assignment work untouched by copying them to a new folder for this optional assignment and modify only the files in the new folder</p>
+        <div class="point">
+          <p class="topic">Update 31.1 to output the averages</p>  
+          <ul class="details">
+            <li>Modify the program to also output the averages for:
+              <ul>
+                <li>each column</li>
+                <li>each row</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="point">
+          <p class="topic">Picture 31.2</p>  
+          <ul class="details">
+            <li>Modify the program to generate a data file that will later be converted to an actual picture
+              <ul>
+                <li>The data file of a greyscale picture (i.e. a black and white photo with shades of grey) consists of integer values ranging from 0 to 255. This integer specifies how dark/light a pixel is. So 0 is black and 255 is white.</li>
+                <li>Convert the matrix of characters to a matrix of integers using the following transformation rules:
+                  <ul>
+                    <li>'X' -> 0</li>
+                    <li>'O' -> 255</li>
+                  </ul>
+                </li>
+                <li>Output the matrix of integers into a data file named <em class="file well well-small">pic.data</em></li>
+                <li>For the input file specified in 31.2, <em class="file well well-small">pic.data</em> will look like the following:
+<pre>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 255 255 255 0 0 0 0 0 255 255 255 0 0 
+0 0 255 255 255 0 0 0 0 0 255 255 255 0 0 
+0 0 255 255 255 0 0 0 0 0 255 255 255 0 0 
+0 0 0 0 0 0 255 255 255 0 0 0 0 0 0 
+0 0 0 0 0 0 255 255 255 0 0 0 0 0 0 
+0 0 0 0 0 0 255 255 255 0 0 0 0 0 0 
+0 255 255 255 0 0 0 0 0 0 0 255 255 255 0 
+0 255 255 255 255 255 255 255 255 255 255 255 255 255 0 
+0 255 255 255 255 255 255 255 255 255 255 255 255 255 0 
+0 0 255 255 255 255 255 255 255 255 255 255 255 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</pre>
+                </li>
+                <li>To generate the actual picture file takes a few more steps than I would like because I ran out of time to simplify things. But it is definitely do-able:
+                  <ol>
+                    <li>in the same folder, create a file named <em class="file well well-small">matrix_to_picture.py</em> with the following content:
+<pre>import png
+with open('pic.data') as file:
+  array = []
+  for line in file:
+    array.append([int(x) for x in line.split()])
+png.from_array(array, 'L').save("hello.png")  
+</pre>
+                    </li>
+                    <li>copy <a href="http://pypng.googlecode.com/svn/trunk/code/png.py">png.py</a> to the same folder</li>
+                    <li>after your program has generated <em class="file well well-small">pic.data</em>, run <code>python matrix_to_picture.py</code> from the command line</li>
+                    <li>you should see <em class="file well well-small">hello.png</em> after running <code>python matrix_to_picture.py</code></li>
+                    <li>download your workspace to your computer to view the image file</li>
+                    <li>you shoud see something like: <img src="{{ site.baseurl }}/assets/hello.png" class="img-rounded img-polaroid"/></li>
+                  </ol>
+                </li>
+                <li>
+                  <p>Let's think about what we just did:</p>
+                  <div>
+                    <p>Using an integer to represent the intensity of gray, our single matrix of integers stores the information that can be translated to a grayscale image. If we had three matrices of integers, each matrix representing a different color (such as red, green, and blue (RGB)), we can then store the information necessary to represent a color image.</p>
+                    <p>Taking it one step further, if we had a sequence of singular matices, we can then represent a black and white video. One step after that, a sequence of three matrices, can be used to represent a color video. Going backwards in technology, sound can be represented as an array of integers. Looking to the future, holograms and our current pseudo 3D technologies, more matrices can be added to take into account spatial data.</p>
+                    <p>The hardest part with all these technologies is being able to compress the data so the data can be processed fast enough to be used, but the loss in data content cannot be noticeable to the human eye. For example, most pictures have many pixels that are the same color or close to the same color within the same region. Videos must be processed fast enough so it doesn't look choppy to the user.</p>
+                    <table class="table table-bordered table-striped table-hover">
+                      <caption>Summarizing</caption>
+                      <thead>
+                        <tr><th>Technologies</th><th>Simplistic Matrix Configuration</th></tr>
+                      </thead>
+                      <tbody>
+                        <tr><td>Sound</td><td>1xM array</td></tr>
+                        <tr><td>Greyscale Image</td><td>MxN matrix</td></tr>
+                        <tr><td>Color Image</td><td>3 MxN matrices</td></tr>
+                        <tr><td>Black and White Video</td><td>Sequence of MxN matrices</td></tr>
+                        <tr><td>Color Video</td><td>Sequence of 3 MxN matrices</td></tr>
+                        <tr><td>Hologram/3D</td><td><a href="http://en.wikipedia.org/wiki/3D_scanner#From_a_set_of_2D_slice">More Matrices</a></td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </div>
     </li>
   </ul>
