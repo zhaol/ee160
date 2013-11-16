@@ -1,0 +1,1 @@
+enum enum_type_name { list_item1, list_item2, ..., list_itemN };
