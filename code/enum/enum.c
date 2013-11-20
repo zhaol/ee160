@@ -5,16 +5,15 @@
 
 #include <stdio.h>
 
-// This program demonstrates using enum (enumerator)
+// This program demonstrates using enum (enumeration)
 int main () {
-  enum fruits { APPLES, ORANGES, BANANAS };
-  enum fruits my_fruit = APPLES;
-  printf("%d\n", my_fruit);
+  enum colors { black, blue, green, red };
   
-  // this works also and is shorter to type, but fruits is now in the global namespace
-  // typedef enum { APPLES, ORANGES, BANANAS } fruits;
-  // fruits my_fruit = APPLES;
-  // printf("%d\n", my_fruit);
+  enum colors foreground = blue;
+  enum colors background = red;
+  
+  printf("%d\n", foreground);
+  printf("%d\n", background);
   
   return 0;
 }

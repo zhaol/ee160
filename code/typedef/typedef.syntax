@@ -1,1 +1,1 @@
-typedef [type] [new type name]
+typedef type new_type_name;

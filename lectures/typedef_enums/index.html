@@ -51,10 +51,34 @@ title: Lecture 37
           <div class="details">
             <p><span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/enum/enum.c">enum.c</a></span>:</p>
             <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/enum/enum.c"></script>  
-            <ul>Note:
-              <li>using <code>typedef</code> will reduce typing out <code>enum</code> each time, but will put your <code>enum_type_name</code> into the global namespace</li>
-            </ul>
           </div>
+        </div>
+      </div>      
+    </li>
+    <li class="item">
+      <h2 class="headline">Using typedef with enum</h2>
+      <div class="content">
+        <p class="topic">Example:</p>
+        <div class="details">
+          <p><span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/enum/enum_with_typedef.c">enum_with_typedef.c</a></span>:</p>
+          <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/enum/enum_with_typedef.c"></script>  
+          <ul>Note:
+            <li>using <code>typedef</code> will reduce typing out <code>enum</code> each time, but will put your <code>enum_type_name</code> into the global namespace</li>
+          </ul>
+        </div>
+      </div>      
+    </li>
+    <li class="item">
+      <h2 class="headline">Using enum with switch</h2>
+      <div class="content">
+        <p class="topic">Example:</p>
+        <div class="details">
+          <p><span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/enum/enum_with_typedef.c">enum_with_typedef.c</a></span>:</p>
+          <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/enum/enum_with_typedef.c"></script>  
+          <ul>Note:
+            <li>the <code>switch</code> statement is far more espressive than using integers</li>
+            <li>the management of the numbering scheme (adding/removing/reordering of members) is handled by C</li>
+          </ul>
         </div>
       </div>      
     </li>
