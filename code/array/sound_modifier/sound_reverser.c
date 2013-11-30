@@ -3,7 +3,7 @@
 #include "sound_helpers.h"
 #include "sound_helpers.c"
 
-// This program creates a file of audio data that represents a lower volume
+// This program creates a file of audio data that represents a reversed audio signal
 int main() {
   char input_filename[MAX_FILENAME_LENGTH] = "original.data";
   char output_filename[MAX_FILENAME_LENGTH] = "reversed.data";
