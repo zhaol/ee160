@@ -3,4 +3,4 @@ _site
 code/files/data
 **/account_summary.txt
 **/list_of_account_balances.txt
-.ruby-version
+.bundle
