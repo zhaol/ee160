@@ -30,7 +30,7 @@ title: Lecture 01
     <li class="item">
       <h2 class="headline">Syllabus</h2>
       <div class="content">
-        <a href="{{ site.baseurl }}/">Link to Syllabus</a>
+        <a href="{{ site.baseurl }}/">https://zhaol.github.io/ee160/</a>
       </div>
     </li>
     <li id="command-line-commands" class="item">
@@ -264,11 +264,14 @@ makes pwd follow symbolic links.</pre>
     <li class="item">
       <h2 class="headline">Assignment</h2>
       <div class="content">
-        <p>Sign up for UH username/email and Wiliki account:</p>
+        <p>Sign up for UH username/email:</p>
         <ul>
           <li><a href="https://myuh.hawaii.edu:8888/sessionid=nobody/am-sso-check-status">https://myuh.hawaii.edu:8888/sessionid=nobody/am-sso-check-status</a></li>
-          <li>UH email needed to sign up for <a href="http://piazza.com">Piazza</a></li>
-          <li>A Wiliki account is needed to access the lab computers
+          <li>UH email needed to access class account on <a href="http://piazza.com">Piazza</a></li>
+        </ul>
+        <p>Sign up for Wiliki account:</p>
+        <ul>
+          <li>A Wiliki account is needed to access the lab computers so please do this before your first lab session
             <ul>
               <li>you can get a Wiliki account at Student Services in Holmes Hall 250</li>
               <li>if your Wiliki account still needs a couple more days to obtain, then ask for a guest Wiliki account to use for the time being</li>
@@ -283,10 +286,13 @@ makes pwd follow symbolic links.</pre>
         <p>Sign up for <a href="http://c9.io">Cloud9 IDE</a>:</p>
         <ul>
           <li>Sign up for free account at <a href="http://c9.io/site/pricing/">http://c9.io/site/pricing/</a></li>
+          <li>Create a new <span class="text-warning">private</span> (as opposed to <span class="muted">Open and Discoverable</span>) workspace by following <a href="https://docs.c9.io/creating_new_workspace.html">these instructions</a></li>
+          <li>Once inside the newly created private workspace, open a <a href="https://docs.c9.io/terminal.html">terminal</a> and run <code>wget -O - https://raw.githubusercontent.com/zhaol/ee160_scripts/master/bootstrap.rb | ruby</code></li>
+          <li>Use the command line commands listed <a href="#command-line-commands">above (Command Line Section)</a>, to create the following folder structure and files:<br/>
+            <img src="{{ site.baseurl }}/assets/assignment_01_folders_and_files.png" class="img-rounded img-polaroid"/>
+          </li>
         </ul>
         <!-- ######## TODO: Add in folder structure for assignments and 2 separate workspaces for TA and grader -->
-        <p>Use the command line commands listed <a href="#command-line-commands">above (Command Line Section)</a>, to create the following folder structure and files:</p>
-        <img src="{{ site.baseurl }}/assets/assignment_01_folders_and_files.png" class="img-rounded img-polaroid"/>
       </div>
     </li>
   </ul>
