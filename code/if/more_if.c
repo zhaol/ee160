@@ -6,14 +6,14 @@ main() {
   // the else portion isn't neccessary
   if (number >= 0) {
     printf("debug: program made it to point A\n");
-  };
+  }
   
   // if/else statements can be nested
   if (number >= 0) {
     if (number <= 0) {
       printf("debug: program made it to point B\n");
-    };
-  };
+    }
+  }
   
   if (0) {
     printf("0 is true\n");
