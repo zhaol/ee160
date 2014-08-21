@@ -1,0 +1,114 @@
+---
+layout: default
+title: Lab 07
+---
+
+<div class="lecture">
+  <ul class="outline">
+    <li class="item">
+      <h2 class="headline">Updated Displayer</h2>
+      <div class="content">
+        <h4>At the end of this problem you should submit to Laulima:</h4>
+        <ul>
+          <li>a file named <span class="file well well-small">UHusername_updated_displayer.c</span>
+            <p>example:</p>
+            <ul>
+              <li><span class="file well well-small">zhaol_updated_displayer.c</span></li>
+            </ul>
+          </li>
+          <li>
+            <p>Update your displayer program from <a href="{{ site.baseurl }}/labs/averager_calculator_displayer#displayer">Lab 06</a> so it prints out the following:
+<pre>+++++++++++++
+{   O   O   }
+{     >     }
+{  /`````\  }
++++++++++++++</pre>
+            <p>If you find yourself doing a lot of copy and pasting or if making this change took a lot of mind less updates to the code (imagine if the picture was 100 lines tall), then that is an indication that your code could be improved</p>
+            <p>Of course, without knowing how this image was going to be used by a program will make it hard to know how to "improve" the code to draw the image</p>          
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">Display</h2>
+      <div class="content">
+        <p>Download the display program and make sure you can compaile and run <em class="file well well-small">display.c</em> runs</p>
+        <div class="point">
+          <p class="topic">You can download the display program with any of the following methods:</p>
+          <div class="details">
+            <ul>Using GIT (recommended):
+              <li><code>cd</code> into your lab folder</li>
+              <li>issue these command at the command prompt:
+                <ul>
+                  <li>git clone https://github.com/zhaol/game_scaffold.git</li>
+                  <li>cd game_scaffold</li>
+                  <li>git checkout tags/v1.0.2</li>
+                </ul>
+              </li>
+            </ul>
+            <ul>Using the web browser:
+              <li>download the zip here: <a href="https://github.com/zhaol/game_scaffold/archive/v1.0.2.zip">https://github.com/zhaol/game_scaffold/archive/v1.0.2.zip</a></li>
+              <li>upload the files into your Cloud9 IDE:
+                <ul>
+                  <li>File -> Upload Local Files</li>
+                </ul>
+              </li>
+            </ul>          
+            <ul>Manually copying and pasting the files:
+              <li>all the necessary files are listed here: <a href="https://github.com/zhaol/game_scaffold/tree/v1.0.2">https://github.com/zhaol/game_scaffold/tree/v1.0.2</a></li>
+              <li>when copying and pasting the file content, be sure you are copying and pasting the contents of the files for version 1.0.2 (you should see "tag: v1.0.2" in the top left area)</li>
+            </ul>
+            <p>No matter which method you choose, be sure the <em class="file well well-small">version.txt</em> file says:</p>
+<pre>v1.0.2
+
+For Lab 07:
+modify display size and border</pre>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">Update Display</h2>
+      <div class="content">
+        <h4>At the end of this problem you should submit to Laulima:</h4>
+        <ul>
+          <li>a file named <span class="file well well-small">UHusername_display.c</span>
+          <li>a file named <span class="file well well-small">UHusername_display.h</span>
+          <li>a file named <span class="file well well-small">UHusername_display_constants.h</span>
+          <li>a file named <span class="file well well-small">UHusername_display_helpers.c</span>
+          <li>a file named <span class="file well well-small">UHusername_display_helpers.h</span>
+          <li>a file named <span class="file well well-small">UHusername_display_setup.h</span>
+          <li>a file named <span class="file well well-small">UHusername_picture_constants.h</span>
+          <li>a file named <span class="file well well-small">UHusername_picture_helpers.c</span>
+          <li>a file named <span class="file well well-small">UHusername_picture_helpers.h</span>
+            <p>example:</p>
+            <ul>
+              <li><span class="file well well-small">zhaol_display.c</span></li>
+              <li><span class="file well well-small">zhaol_display.h</span></li>
+              <li><span class="file well well-small">zhaol_display_constants.h</span></li>
+              <li><span class="file well well-small">zhaol_display_helpers.c</span></li>
+              <li><span class="file well well-small">zhaol_display_helpers.h</span></li>
+              <li><span class="file well well-small">zhaol_display_setup.h</span></li>
+              <li><span class="file well well-small">zhaol_picture_constants.h</span></li>
+              <li><span class="file well well-small">zhaol_picture_helpers.c</span></li>
+              <li><span class="file well well-small">zhaol_picture_helpers.h</span></li>
+            </ul>
+          </li>
+          <li>
+            <p>Update the display program</p>
+            <p>Understand how the display program works (this might take a fair amount of time) and make the following modifications:</p>
+            <ul>
+              <li>change the top border and bottom border to be <code>+</code></li>
+              <li>change the left border to be <code>{</code></li>
+              <li>change the right border to be <code>}</code></li>
+              <li>change the frowney eyes to be <code>O</code></li>
+            </ul>
+            <p>Notice that the left and right borders were not separated and the change was not as easy. However, having refactored and abstracted other parts of the code, this change was not as bad as it could have been.  The take away is: you don't need to refactor all of your code for refactoring to be useful.</p>
+            <p>Some of our future labs will be building off of the display program, so please familiarize yourself with the code base</p>
+            <p>Feel free to reuse any of the code in the display program for other future lab assignments</p>          
+          </li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</div>
