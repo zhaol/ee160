@@ -151,41 +151,45 @@ output list of account balances to a file</pre>
     <li class="item">
       <h2 class="headline">Assignment</h2>
       <div class="content">
-        <ul>Homework Problem 24.1, at the end of this assignment you should upload to your Laulima dropbox:
-          <li>a file named <em class="file well well-small">UHusername_24_1.c</em></li>
-          <li>a file named <em class="file well well-small">UHusername_24_1_magic_numbers.h</em></li>
-          <li>a file named <em class="file well well-small">UHusername_24_1_helper_functions.h</em></li>
-          <li>a file named <em class="file well well-small">UHusername_24_1_helper_functions.c</em></li>
+        <h4>Homework Problem 24.1, at the end of this problem you should submit to Laulima:</h4>
+        <ul>
+          <li>a file named <span class="file well well-small">UHusername_24_1.c</span></li>
+          <li>a file named <span class="file well well-small">UHusername_24_1_magic_numbers.h</span></li>
+          <li>a file named <span class="file well well-small">UHusername_24_1_helper_functions.c</span></li>
+          <li>a file named <span class="file well well-small">UHusername_24_1_helper_functions.h</span></li>
           <li>
             <ul>example:
-              <li><em class="file well well-small">zhaol_24_1.c</em></li>
-              <li><em class="file well well-small">zhaol_24_1_magic_numbers.h</em></li>
-              <li><em class="file well well-small">zhaol_24_1_helper_functions.h</em></li>
-              <li><em class="file well well-small">zhaol_24_1_helper_functions.c</em></li>
+              <li><span class="file well well-small">zhaol_24_1.c</span></li>
+              <li><span class="file well well-small">zhaol_24_1_magic_numbers.h</span></li>
+              <li><span class="file well well-small">zhaol_24_1_helper_functions.c</span></li>
+              <li><span class="file well well-small">zhaol_24_1_helper_functions.h</span></li>
             </ul>
-          </li>
-        </ul>
-        <p>Update <span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/generate_report/generate_report.c">generate_report.c</a></span> to generate a file for each account entered by the user</p>
-        <ul>For example:
-          <li>if the teller enters in
-            <ul>
-              <li>account holder: obama</li>
-              <li>account balance: 100</li>
-              <li>account type: checking</li>
+          </li>  
+          <li>
+            <p>Update <span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/generate_report/generate_report.c">generate_report.c</a></span> to generate a file for each account entered by the user</p>
+            <ul>For example:
+              <li>if the teller enters in
+                <ul>
+                  <li>account holder: obama</li>
+                  <li>account balance: 100</li>
+                  <li>account type: checking</li>
+                </ul>
+              </li>
+              <li>the program will generate a file named <span class="file well well-small">obama.txt</span> with the following content:
+    <pre>=== Account Information for obama's Account ===
+    Minimum Balance Fee to Account Balance Percentage: 35.0%
+    The new account balance is 65.00</pre>
+              </li>
             </ul>
-          </li>
-          <li>the program will generate a file named <span class="file well well-small">obama.txt</span> with the following content:
-<pre>=== Account Information for obama's Account ===
-Minimum Balance Fee to Account Balance Percentage: 35.0%
-The new account balance is 65.00</pre>
+            <ul>Things to note for this assignment:
+              <li>assume the filename won't be greater than 100 characters long</li>
+              <li>look into string concatenation: <a href="http://en.wikipedia.org/wiki/Concatenation">http://en.wikipedia.org/wiki/Concatenation</a></li>
+              <li>look into how to use the <code>strcat</code> function: <a href="http://www.cplusplus.com/reference/cstring/strcat/">http://www.cplusplus.com/reference/cstring/strcat/</a></li>
+            </ul>
+            <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/generate_report/generate_report.c"></script>          
+            </li>
           </li>
         </ul>
-        <ul>Things to note for this assignment:
-          <li>assume the filename won't be greater than 100 characters long</li>
-          <li>look into string concatenation: <a href="http://en.wikipedia.org/wiki/Concatenation">http://en.wikipedia.org/wiki/Concatenation</a></li>
-          <li>look into how to use the <code>strcat</code> function: <a href="http://www.cplusplus.com/reference/cstring/strcat/">http://www.cplusplus.com/reference/cstring/strcat/</a></li>
-        </ul>
-        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/generate_report/generate_report.c"></script>
       </div>
     </li>
   </ul>
