@@ -1,0 +1,177 @@
+---
+layout: default
+title: Lab 10
+---
+
+<div class="lecture">
+  <ul class="outline">
+    <li class="item">
+      <h2 class="headline">High Score</h2>
+      <div class="content">
+        <h4>At the end of this problem you should submit to Laulima (please zip these files to work around the 5 file limit):</h4>
+        <ul>
+          <li>a file named <span class="file well well-small">UHusername_display_highscore.c</span>
+          <li>a file named <span class="file well well-small">UHusername_display_highscore.h</span>
+          <li>a file named <span class="file well well-small">UHusername_display_highscore_constants.h</span>
+          <li>a file named <span class="file well well-small">UHusername_display_highscore_helpers.c</span>
+          <li>a file named <span class="file well well-small">UHusername_display_highscore_helpers.h</span>
+          <li>a file named <span class="file well well-small">UHusername_display_highscore_setup.h</span>
+          <li>a file named <span class="file well well-small">UHusername_picture_highscore_constants.h</span>
+          <li>a file named <span class="file well well-small">UHusername_picture_highscore_helpers.c</span>
+          <li>a file named <span class="file well well-small">UHusername_picture_highscore_helpers.h</span>
+            <p>example:</p>
+            <ul>
+              <li><span class="file well well-small">zhaol_display_highscore.c</span></li>
+              <li><span class="file well well-small">zhaol_display_highscore.h</span></li>
+              <li><span class="file well well-small">zhaol_display_highscore_constants.h</span></li>
+              <li><span class="file well well-small">zhaol_display_highscore_helpers.c</span></li>
+              <li><span class="file well well-small">zhaol_display_highscore_helpers.h</span></li>
+              <li><span class="file well well-small">zhaol_display_highscore_setup.h</span></li>
+              <li><span class="file well well-small">zhaol_picture_highscore_constants.h</span></li>
+              <li><span class="file well well-small">zhaol_picture_highscore_helpers.c</span></li>
+              <li><span class="file well well-small">zhaol_picture_highscore_helpers.h</span></li>
+            </ul>
+          </li>
+          <li>
+            <p>Update the display program that you completed from <a href="{{ site.baseurl }}/labs/display_attacker_teleportation/">Lab 09</a></p>
+            <p>It will be beneficial for you to leave your previous lab work untouched by copying them to a new folder for this lab and modify only the files in the new folder</p>
+            <p>If you were not able to complete Display with Attacker and Warp Speed from the <a href="{{ site.baseurl }}/labs/display_attacker_teleportation/">Lab 09</a>, you can modify a fresh copy of the display program. The feature set between both lab assignments are independent. Just follow the download instructions from <a href="{{ site.baseurl }}/labs/display_boundaries_items/">Lab 08</a> and coordinate with your lab instructor.</p>
+            <p>Update your Display with Attacker and Warp Speed program from <a href="{{ site.baseurl }}/labs/display_attacker_teleportation/">Lab 09</a> to add the following features:</p>
+            <ol>
+              <li class="point">
+                <p class="topic">Implement a high score feature:</p>
+                <ul class="details">
+                  <li>each time the token moves "on top" of an item, increment the score by 1</li>
+                  <li>when an attacker moves "on top" of the token, the game ends</li>
+                  <li>when the game ends, the current score is compared with the high score
+                    <ul>
+                      <li>the high score is read/written to a file for persistence, i.e. the high score can be retrieved after the program ends</li>
+                      <li>if the current score is greater than the high score, then the program will ask the user for his/her name and stores the user's name and high score to the file</li>
+                    </ul>
+                  </li>
+                  <li>if you were not able to get the item and attacker to work, then:
+                    <ul>
+                      <li>increment the score each time the token is at one of the 4 corners of the screen</li>
+                      <li>the game ends when the token is at a particular "trap" position, you can choose the "trap" position or make the "trap" position be random</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ol>          
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">Uber</h2>
+      <div class="content">
+        <p><a href="http://www.uber.com">Uber</a> is a rideshare company that started in San Francisco, California.  We will be analyzing a subset of their data from <a href="http://www.infochimps.com/datasets/uber-anonymized-gps-logs">http://www.infochimps.com/datasets/uber-anonymized-gps-logs</a> (do not analyze the data hosted at infochimps; that data file will be too large for your program to handle)</p>
+        <p>Download the modify Uber data</p>
+        <div class="point">
+          <p class="topic">You can download the dataset with any of the following methods:</p>
+          <div class="details">
+            <ul>Using GIT (recommended):
+              <li><code>cd</code> into your lab folder</li>
+              <li>issue these command at the command prompt:
+                <ul>
+                  <li>git clone https://github.com/zhaol/datasets.git</li>
+                  <li>cd datasets</li>
+                  <li>git checkout tags/uber.1.0.1</li>
+                </ul>
+              </li>
+            </ul>
+            <ul>Using the web browser:
+              <li>download the zip here: <a href="https://github.com/zhaol/datasets/archive/uber.1.0.1.zip">https://github.com/zhaol/datasets/archive/uber.1.0.1.zip</a></li>
+              <li>upload the files into your Cloud9 IDE:
+                <ul>
+                  <li>File -> Upload Local Files</li>
+                </ul>
+              </li>
+            </ul>          
+            <ul>Manually copying and pasting the files:
+              <li>all the necessary files are listed here: <a href="https://github.com/zhaol/datasets/tree/uber.1.0.1">https://github.com/zhaol/datasets/tree/uber.1.0.1</a></li>
+              <li>when copying and pasting the file content, be sure you are copying and pasting the contents of the files for version uber.1.0.1 (you should see "tag: uber.1.0.1" in the top left area)</li>
+            </ul>
+            <p>No matter which method you choose, be sure the <em class="file well well-small">version.txt</em> file says:</p>
+<pre>uber.1.0.1
+
+Lab 10:
+Count the number of rides
+Calculate the distance travelled for each ride</pre>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">Uber Ride Count and Distance</h2>
+      <div class="content">
+        <h4>At the end of this problem you should submit to Laulima:</h4>
+        <ul>
+          <li>a file named <span class="file well well-small">UHusername_uber_ridecount_distance.c</span>
+          <li>a file named <span class="file well well-small">UHusername_uber_ridecount_distance.h</span>
+          <li>a file named <span class="file well well-small">UHusername_uber_ridecount_distance_constants.h</span>
+          <li>a file named <span class="file well well-small">UHusername_uber_ridecount_distance_helpers.c</span>
+          <li>a file named <span class="file well well-small">UHusername_uber_ridecount_distance_helpers.h</span>
+            <p>example:</p>
+            <ul>
+              <li><span class="file well well-small">zhaol_uber_ridecount_distance.c</span></li>
+              <li><span class="file well well-small">zhaol_uber_ridecount_distance.h</span></li>
+              <li><span class="file well well-small">zhaol_uber_ridecount_distance_constants.h</span></li>
+              <li><span class="file well well-small">zhaol_uber_ridecount_distance_helpers.c</span></li>
+              <li><span class="file well well-small">zhaol_uber_ridecount_distance_helpers.h</span></li>
+            </ul>
+          </li>
+          <li>
+            <p>For this lab assignment, you will be turning in <em class="file well well-small">UHusername_UHID_uber_ride_count_distance.c</em> (e.g. <em class="file well well-small">zhaol_12345678_uber_ride_count_distance.c</em>)</p>
+            <p>Analyze the Uber data to do the following:
+            <ol>
+              <li class="point">
+                <p class="topic">determine the number of rides in the data set:</p>
+                <ul class="details">
+                  <li>do not just use the ID column for this; there is no guaratee that the IDs are in sequential order and are not skipped within the data set
+                    <br/>for instance, the data record for each ID could be ordered as follows:
+<pre>1
+1
+5
+5
+4
+4
+3
+3</pre>
+                  </li>
+                </ul>
+              </li>
+              <li class="point">
+                <p class="topic">determine the distance travelled for each ride:</p>
+                <ul class="details">
+                  <li>assume the 3rd (x) and 4th (y) column of the data represent distance (in meters) from some arbitrary origin to simplify the calculations (the 3rd and 4th columns are actually lattitude and longitude, respectively)</li>
+                    <li>you can calculate the distance travelled using any of the following methods:
+                    <ul>
+                      <li>$distance_x = {end\_position_x - start\_position_x}$, $distance_y = {end\_position_y - start\_position_y}$, $distance = &radic;(distance_x^2+distance_y^2)$</li>
+                      <li>$distance_x = ({&Delta;distance}_{x,1} + {&Delta;distance}_{x,2} + ... + {&Delta;distance}_{x,n})$, $distance_y = ({&Delta;distance}_{y,1} + {&Delta;distance}_{y,2} + ... + {&Delta;distance}_{y,n})$, $distance = &radic;(distance_x^2+distance_y^2)$</li>
+                    </ul>
+                  </li>
+                  <li>Feel free to use the <code>sqrt</code> function from the <code>math.h</code> library
+                    <ul>
+                      <li>How to use the <code>sqrt</code>: <a href="http://www.cplusplus.com/reference/cmath/sqrt/">http://www.cplusplus.com/reference/cmath/sqrt/</a>
+                      <li>How to compile with the <code>math.h</code> library: <a href="http://stackoverflow.com/questions/4120592/c-programming-sqrt-function">http://stackoverflow.com/questions/4120592/c-programming-sqrt-function</a></li>
+                    </ul>
+                  <li>Or you can write your own <code>sqrt</code> function
+                    <ul>Use at your own risk:
+                      <li><a href="http://en.wikipedia.org/wiki/Methods_of_computing_square_roots">http://en.wikipedia.org/wiki/Methods_of_computing_square_roots</a></li>
+                      <li><a href="http://stackoverflow.com/questions/1623375/writing-your-own-square-root-function">http://stackoverflow.com/questions/1623375/writing-your-own-square-root-function</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <p>output the number of rides and distance travelled for each ride to an output file, <span class="file well well-small">uber_ridecount_distance_output.txt</span></p>
+              </li>
+            </ol>          
+          </li>
+        </ul>
+      </div>
+    </li>
+    <!-- #### TODO: add paragraph about engineering and processing data -->
+  </ul>
+</div>
