@@ -8,45 +8,64 @@ title: Lab 11
     <li class="item">
       <h2 class="headline">Uber Velocity and Fastest List</h2>
       <div class="content">
-        <p>For this lab assignment, you will be turning in <em class="file well well-small">UHusername_UHID_uber_velocity_fastest_list.c</em> (e.g. <em class="file well well-small">zhaol_12345678_uber_velocity_fastest_list.c</em>)</p>
-        <p>It will be beneficial for you to leave your previous lab work untouched by copying them to a new folder for this lab and modify only the files in the new folder</p>
-        <p>If you were not able to complete Uber Ride Count and Distance from the <a href="{{ site.baseurl }}/labs/10/">Lab 10</a>, you can create a brand new program. The feature set between both lab assignments are independent, however, calculating velocity requires distance to be calculated as well. Just follow the download instructions from <a href="{{ site.baseurl }}/labs/10/">Lab 10</a></p>
-        <p>Update your Uber Ride Count and Distance program from <a href="{{ site.baseurl }}/labs/10/">Lab 10</a> to add the following features (or write a new program that does the following):</p>
-        <ol>
-          <li class="point">
-            <p class="topic">Calculate the average velocity for each ride:</p>
-            <ul class="details">
-              <li>you can calculate the average velocity using any of the following methods (the results will be different depending on which method you choose):
-                <ul>
-                  <li>$velocity_x = {end\_position_x - start\_position_x}/{end\_time_x - start\_time_x}$, $velocity_y = {end\_position_y - start\_position_y}/{end\_time_y - start\_time_y}$, $average\_velocity = &radic;(velocity_x^2+velocity_y^2)$</li>
-                  <li>
-                    $velocity_x = {velocity_{x,1} + velocity_{x,2} + ... + velocity_{x,n}} / n$, $velocity_{x,i} = {&Delta;distance}_{x,i} / {&Delta;duration}_{x,i}$, <br/>
-                    $velocity_y = {velocity_{y,1} + velocity_{y,2} + ... + velocity_{y,n}} / n$, $velocity_{y,i} = {&Delta;distance}_{y,i} / {&Delta;duration}_{y,i}$, <br/>
-                    $average\_velocity = &radic;(velocity_x^2+velocity_y^2)$</li>
-                  <li>$velocity_i = &radic;{({&Delta;distance}_{x,i})^2 + (&Delta;distance_{y,i})^2} / {&Delta;duration_i}$, $average\_velocity = {velocity_1 + velocity_2 + ... + velocity_n} / n$</li>
-                </ul>
-              </li>
-              <li>Feel free to use the <code>sqrt</code> function from the <code>math.h</code> library
-                <ul>
-                  <li>How to use the <code>sqrt</code>: <a href="http://www.cplusplus.com/reference/cmath/sqrt/">http://www.cplusplus.com/reference/cmath/sqrt/</a>
-                  <li>How to compile with the <code>math.h</code> library: <a href="http://stackoverflow.com/questions/4120592/c-programming-sqrt-function">http://stackoverflow.com/questions/4120592/c-programming-sqrt-function</a></li>
-                </ul>
-              <li>Or you can write your own <code>sqrt</code> function
-                <ul>Use at your own risk:
-                  <li><a href="http://en.wikipedia.org/wiki/Methods_of_computing_square_roots">http://en.wikipedia.org/wiki/Methods_of_computing_square_roots</a></li>
-                  <li><a href="http://stackoverflow.com/questions/1623375/writing-your-own-square-root-function">http://stackoverflow.com/questions/1623375/writing-your-own-square-root-function</a></li>
-                </ul>
-              </li>
+        <h4>At the end of this problem you should submit to Laulima:</h4>
+        <ul>
+          <li>a file named <span class="file well well-small">UHusername_uber_velocity_fastest_list.c</span></li>
+          <li>a file named <span class="file well well-small">UHusername_uber_velocity_fastest_list.h</span></li>
+          <li>a file named <span class="file well well-small">UHusername_uber_velocity_fastest_list_constants.h</span></li>
+          <li>a file named <span class="file well well-small">UHusername_uber_velocity_fastest_list_helpers.c</span></li>
+          <li>a file named <span class="file well well-small">UHusername_uber_velocity_fastest_list_helpers.h</span>
+            <p>example:</p>
+            <ul>
+              <li><span class="file well well-small">zhaol_uber_velocity_fastest_list.c</span></li>
+              <li><span class="file well well-small">zhaol_uber_velocity_fastest_list.h</span></li>
+              <li><span class="file well well-small">zhaol_uber_velocity_fastest_list_constants.h</span></li>
+              <li><span class="file well well-small">zhaol_uber_velocity_fastest_list_helpers.c</span></li>
+              <li><span class="file well well-small">zhaol_uber_velocity_fastest_list_helpers.h</span></li>
             </ul>
           </li>
-          <li class="point">
-            <p class="topic">Generate a list of velocities sorted with the fastest ride on top:</p>
-            <ul class="details">
-              <li>output to a file a list of ride IDs with their average velocity</li>
-              <li>the ride IDs their average velocity are sorted with the fastest ride on top</li>
-            </ul>
+          <li>
+            <p>For this lab assignment, you will be turning in <em class="file well well-small">UHusername_UHID_uber_velocity_fastest_list.c</em> (e.g. <em class="file well well-small">zhaol_12345678_uber_velocity_fastest_list.c</em>)</p>
+            <p>It will be beneficial for you to leave your previous lab work untouched by copying them to a new folder for this lab and modify only the files in the new folder</p>
+            <p>If you were not able to complete Uber Ride Count and Distance from the <a href="{{ site.baseurl }}/labs/10/">Lab 10</a>, you can create a brand new program. The feature set between both lab assignments are independent, however, calculating velocity requires distance to be calculated as well. Just follow the download instructions from <a href="{{ site.baseurl }}/labs/10/">Lab 10</a></p>
+            <p>Update your Uber Ride Count and Distance program from <a href="{{ site.baseurl }}/labs/10/">Lab 10</a> to add the following features (or write a new program that does the following):</p>
+            <ol>
+              <li class="point">
+                <p class="topic">Calculate the average velocity for each ride:</p>
+                <ul class="details">
+                  <li>you can calculate the average velocity using any of the following methods (the results will be different depending on which method you choose):
+                    <ul>
+                      <li>$velocity_x = {end\_position_x - start\_position_x}/{end\_time_x - start\_time_x}$, $velocity_y = {end\_position_y - start\_position_y}/{end\_time_y - start\_time_y}$, $average\_velocity = &radic;(velocity_x^2+velocity_y^2)$</li>
+                      <li>
+                        $velocity_x = {velocity_{x,1} + velocity_{x,2} + ... + velocity_{x,n}} / n$, $velocity_{x,i} = {&Delta;distance}_{x,i} / {&Delta;duration}_{x,i}$, <br/>
+                        $velocity_y = {velocity_{y,1} + velocity_{y,2} + ... + velocity_{y,n}} / n$, $velocity_{y,i} = {&Delta;distance}_{y,i} / {&Delta;duration}_{y,i}$, <br/>
+                        $average\_velocity = &radic;(velocity_x^2+velocity_y^2)$</li>
+                      <li>$velocity_i = &radic;{({&Delta;distance}_{x,i})^2 + (&Delta;distance_{y,i})^2} / {&Delta;duration_i}$, $average\_velocity = {velocity_1 + velocity_2 + ... + velocity_n} / n$</li>
+                    </ul>
+                  </li>
+                  <li>Feel free to use the <code>sqrt</code> function from the <code>math.h</code> library
+                    <ul>
+                      <li>How to use the <code>sqrt</code>: <a href="http://www.cplusplus.com/reference/cmath/sqrt/">http://www.cplusplus.com/reference/cmath/sqrt/</a>
+                      <li>How to compile with the <code>math.h</code> library: <a href="http://stackoverflow.com/questions/4120592/c-programming-sqrt-function">http://stackoverflow.com/questions/4120592/c-programming-sqrt-function</a></li>
+                    </ul>
+                  <li>Or you can write your own <code>sqrt</code> function
+                    <ul>Use at your own risk:
+                      <li><a href="http://en.wikipedia.org/wiki/Methods_of_computing_square_roots">http://en.wikipedia.org/wiki/Methods_of_computing_square_roots</a></li>
+                      <li><a href="http://stackoverflow.com/questions/1623375/writing-your-own-square-root-function">http://stackoverflow.com/questions/1623375/writing-your-own-square-root-function</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="point">
+                <p class="topic">Generate a list of velocities sorted with the fastest ride on top:</p>
+                <ul class="details">
+                  <li>output to a file a list of ride IDs with their average velocity</li>
+                  <li>the ride IDs their average velocity are sorted with the fastest ride on top</li>
+                </ul>
+              </li>
+            </ol>
           </li>
-        </ol>
+        </ul>
       </div>
     </li>
   </ul>
