@@ -1,0 +1,73 @@
+---
+layout: default
+title: Lab 07
+---
+
+<div class="lecture">
+  <ul class="outline">
+    <li class="item">
+      <h2 class="headline">Trader</h2>
+      <div class="content">
+        <h4>At the end of this problem you should submit to Laulima:</h4>
+        <ul>
+          <li>a file named <span class="file well well-small">UHusername_trader.c</span>
+            <p>example:</p>
+            <ul>
+              <li><span class="file well well-small">zhaol_trader.c</span></li>
+            </ul>
+          </li>
+          <li>
+            <p>Options are contracts to buy or sell a given stock at a given strike price.  The buyer of a put option can exercise the right to sell a given stock at a strike price from the seller of the put option.  The buyer of a call option can exercise the right to buy a given stock at a strike price to the seller of the call option.</p>
+            <p>Write a program that allows an option trader to enter in a stock’s market price and the highest strike price available in the options market for that particular stock.  The program will output the difference between the stock’s current market price and the strike price for each of the available strike prices.  The program will also tell the option trader how much money s/he will make/lose if s/he owned the call/put option and exercised the right to buy/sell the given stock.</p>
+            <p>Assume the contracts are only for 1 stock and the available strike prices are at \$5 intervals from the highest available strike price until the strike price is no longer above $0.00.</p>
+            <p>Don't worry about rounding or truncating errors. Just let <code>printf</code> handle the precision. The program will exit after displaying the results for one market price and one strike price</p>
+            <div class="point">
+              <p class="topic">Examples Cases:</p>
+              <ul class="details">
+                <li>example case 1:
+<pre>Enter in market price:
+[user enters in 11 as the stock's market price]
+Enter in strike price:
+[user enters in 12 as the highest available strike price]
+---
+Strike Price: \$12.00
+Call: Gain \$1.00
+Put: Lose \$1.00
+---
+Stricke Price: \$7.00
+Call: Lose \$4.00
+Put: Gain \$4.00
+---
+Strike Price: \$2.00
+Call: Lose \$9.00
+Put: Gain \$9.00
+</pre>
+                  
+                </li>
+                <li>example case 2:
+<pre>Enter in market price:
+[user enters in 15 as the stock's market price]
+Enter in strike price:
+[user enters in 13 as the highest available strike price]
+---
+Strike Price: \$13.00
+Call: Lose \$2.00
+Put: Gain \$2.00
+---
+Stricke Price: \$8.00
+Call: Lose \$7.00
+Put: Gain \$7.00
+---
+Strike Price: \$3.00
+Call: Lose \$12.00
+Put: Gain \$12.00
+</pre>
+                </li>
+              </ul>
+            </div>          
+          </li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</div>
