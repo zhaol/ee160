@@ -56,8 +56,8 @@ title: Lecture 31
         <div class="point">
           <p class="topic">Build the Table with a 2D Array:</p>
           <div class="details">
-            <p><em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/2d_arrays/2d_arrays.c">2d_arrays.c</a></em>:</p>
-            <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/2d_arrays/2d_arrays.c"></script>
+            <p><em class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/2d_arrays/2d_arrays.c">2d_arrays.c</a></em>:</p>
+            <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/2d_arrays/2d_arrays.c"></script>
           </div>
         </div>
         <div class="point">
@@ -95,14 +95,14 @@ title: Lecture 31
           </tbody>
         </table>
         <ul>Things to note:
-          <li>An example program implementing the above code snippets: <em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/comparisons/scalar_array_2darray_3darray.c">scalar_array_2darray_3darray.c</a></em></li>
+          <li>An example program implementing the above code snippets: <em class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/comparisons/scalar_array_2darray_3darray.c">scalar_array_2darray_3darray.c</a></em></li>
           <li>Imagine stacking rows of wire frame cube shelves (<a href="http://img1.targetimg1.com/wcsstore/TargetSAS//img/p/10/88/10882811.jpg">like this one</a>); the structure will be unstable if you stack a row of 3 cubes onto rows of 2 cubes; that is why C needs to know exactly how many you plan to stack in each row</li>
         </ul>
       </div>
     </li>
     <li class="item">
       <h2 class="headline">3D Arrays</h2>
-      <p class="content">Modify <em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/2d_arrays/2d_arrays.c">2d_arrays.c</a></em> to be a 3D array</p>
+      <p class="content">Modify <em class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/2d_arrays/2d_arrays.c">2d_arrays.c</a></em> to be a 3D array</p>
     </li>
     <li class="item">
       <h2 class="headline">Assignment</h2>
@@ -122,7 +122,7 @@ title: Lecture 31
               <li>the user is then allowed to input values into the m x n table (m rows and n columns)</li>
               <li>the program displays the table of values back to the user
                 <ul>
-                  <li>it is sufficient to output the table in the same manner as <em class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/2d_arrays/2d_arrays.c">2d_arrays.c</a></em>, i.e. you don't need to display borders</li>
+                  <li>it is sufficient to output the table in the same manner as <em class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/2d_arrays/2d_arrays.c">2d_arrays.c</a></em>, i.e. you don't need to display borders</li>
                 </ul>
               </li>
               <li>example output:</li>
@@ -237,61 +237,35 @@ OOOOOOOOOOOOOOO</pre>
 255 255 0 0 0 0 0 0 0 0 0 0 0 255 255 
 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255</pre>
                 </li>
-                <!-- ### TODO: Replace with new directions next semester
-                <li>Instructions to generate image file:
-                  <ol>
-                    <li>Include and use this function to convert your image data file into a .png file:
-                      <ul>
-                        <p><span class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/2d_arrays/picture/picture_helpers.c">picture_helpers.c</a></span>:</p>
-                        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/2d_arrays/picture_helpers/picture_helpers.c"></script>
-                      </ul>
-                    </li>
-                    <li>download your workspace to your computer to view the image file</li>
-                    <li>you should see something like: <img src="{{ site.baseurl }}/assets/hello.png" class="img-rounded img-polaroid"/></li>
-                  </ol>
+                <li>Include and use this function to convert your image data file into a .png file:
+                  <p><span class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/2d_arrays/picture/picture_helpers.c">picture_helpers.c</a></span>:</p>
+                  <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/2d_arrays/picture/picture_helpers.c"></script>                        
                 </li>
-                -->
-                <li>To generate the actual picture file takes a few more steps than I would like because I ran out of time to simplify things. But it is definitely do-able:
-                  <ol>
-                    <li>in the same folder, create a file named <em class="file well well-small">matrix_to_picture.py</em> with the following content:
-<pre>import png
-with open('pic.data') as file:
-  array = []
-  for line in file:
-    array.append([int(x) for x in line.split()])
-png.from_array(array, 'L').save("hello.png")  
-</pre>
-                    </li>
-                    <li>copy <a href="http://pypng.googlecode.com/svn/trunk/code/png.py">png.py</a> to the same folder</li>
-                    <li>after your program has generated <em class="file well well-small">pic.data</em>, run <code>python matrix_to_picture.py</code> from the command line</li>
-                    <li>you should see <em class="file well well-small">hello.png</em> after running <code>python matrix_to_picture.py</code></li>
-                    <li>download your workspace to your computer to view the image file</li>
-                    <li>you shoud see something like: <img src="{{ site.baseurl }}/assets/hello.png" class="img-rounded img-polaroid"/></li>
-                  </ol>
-                </li>
-                <li>
-                  <p>Let's think about what we just did:</p>
-                  <div>
-                    <p>Using an integer to represent the intensity of gray, our single matrix of integers stores the information that can be translated to a grayscale image. If we had three matrices of integers, each matrix representing a different color (such as red, green, and blue (RGB)), we can then store the information necessary to represent a color image.</p>
-                    <p>Taking it one step further, if we had a sequence of singular matices, we can then represent a black and white video. One step after that, a sequence of three matrices, can be used to represent a color video. Going backwards in technology, sound can be represented as an array of integers. Looking to the future, holograms and our current pseudo 3D technologies, more matrices can be added to take into account spatial data.</p>
-                    <p>The hardest part with all these technologies is being able to compress the data so the data can be processed fast enough to be used, but the loss in data content cannot be noticeable to the human eye. For example, most pictures have many pixels that are the same color or close to the same color within the same region. Videos must be processed fast enough so it doesn't look choppy to the user.</p>
-                    <table class="table table-bordered table-striped table-hover">
-                      <caption>Summarizing</caption>
-                      <thead>
-                        <tr><th>Technologies</th><th>Simplistic Matrix Configuration</th></tr>
-                      </thead>
-                      <tbody>
-                        <tr><td>Sound</td><td>1xM array</td></tr>
-                        <tr><td>Greyscale Image</td><td>MxN matrix</td></tr>
-                        <tr><td>Color Image</td><td>3 MxN matrices</td></tr>
-                        <tr><td>Black and White Video</td><td>Sequence of MxN matrices</td></tr>
-                        <tr><td>Color Video</td><td>Sequence of 3 MxN matrices</td></tr>
-                        <tr><td>Hologram/3D</td><td><a href="http://en.wikipedia.org/wiki/3D_scanner#From_a_set_of_2D_slice">More Matrices</a></td></tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </li>
+                <li>After your program creates your .png file, you should be able to double click it in the Cloud9 file tree and view it within Cloud9</li>
+                <li>You shoud see something like: <img src="{{ site.baseurl }}/assets/hello.png" class="img-rounded img-polaroid"/></li>
               </ul>
+            </li>
+            <li>
+              <p>Let's think about what we just did:</p>
+              <div>
+                <p>Using an integer to represent the intensity of gray, our single matrix of integers stores the information that can be translated to a grayscale image. If we had three matrices of integers, each matrix representing a different color (such as red, green, and blue (RGB)), we can then store the information necessary to represent a color image.</p>
+                <p>Taking it one step further, if we had a sequence of singular matices, we can then represent a black and white video. One step after that, a sequence of three matrices, can be used to represent a color video. Going backwards in technology, sound can be represented as an array of integers. Looking to the future, holograms and our current pseudo 3D technologies, more matrices can be added to take into account spatial data.</p>
+                <p>The hardest part with all these technologies is being able to compress the data so the data can be processed fast enough to be used, but the loss in data content cannot be noticeable to the human eye. For example, most pictures have many pixels that are the same color or close to the same color within the same region. Videos must be processed fast enough so it doesn't look choppy to the user.</p>
+                <table class="table table-bordered table-striped table-hover">
+                  <caption>Summarizing</caption>
+                  <thead>
+                    <tr><th>Technologies</th><th>Simplistic Matrix Configuration</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Sound</td><td>1xM array</td></tr>
+                    <tr><td>Greyscale Image</td><td>MxN matrix</td></tr>
+                    <tr><td>Color Image</td><td>3 MxN matrices</td></tr>
+                    <tr><td>Black and White Video</td><td>Sequence of MxN matrices</td></tr>
+                    <tr><td>Color Video</td><td>Sequence of 3 MxN matrices</td></tr>
+                    <tr><td>Hologram/3D</td><td><a href="http://en.wikipedia.org/wiki/3D_scanner#From_a_set_of_2D_slices">More Matrices</a></td></tr>
+                  </tbody>
+                </table>
+              </div>
             </li>
           </ul>
         </div>
