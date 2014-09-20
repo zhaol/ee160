@@ -6,23 +6,114 @@ title: Tools
 <div class="lecture">
   <ul class="outline">
     <li class="item">
-      <h2 class="headline">Tools</h2>
-      <!--
+      <h2 class="headline">Homework Self Checking</h2>
       <div class="content">
         <div class="point">
-          <p class="topic">grade</p>
-          <ul class="details"></ul>
+          <p class="topic">What is homework self checking?</p>
+          <ul class="details">
+            <li>most assignments will be graded using a computer program</li>
+            <li>we have made this computer program available to the students so they can check their work before submitting it</li>
+          </ul>
         </div>
         <div class="point">
-          <p class="topic">wget</p>
-          <ul class="details"></ul>
+          <p class="topic">Why use the homework self checking tool?</p>
+          <ul class="details">
+            <li>so you can know if you are on the right track while doing your homework assignments</li>
+            <li>a side note:
+              <ul>
+                <li>what you are essentially doing is <a href="http://en.wikipedia.org/wiki/Test-driven_development">test driven development (TDD)</a> (yes, there are programs that test programs)</li>
+                <li>you are writing programs that fulfills certain requirements (or tests)</li>
+                <li>typically with TDD, you will be writing the tests and the programs, whereas, in our case, the graders have written the tests for your programs to be built against</li>
+                <li>TDD is an industry best practice</li>
+                <li>there are other flavors/extensions of TDD such as <a href="http://en.wikipedia.org/wiki/Behavior-driven_development">behavior driven development (BDD)</a></li>
+              </ul>
+            </li>
+          </ul>
         </div>
         <div class="point">
-          <p class="topic">webdav/submit</p>
-          <ul class="details"></ul>
+          <p class="topic">How to use the homework self checking tool?</p>
+          <ul class="details">
+            <li>syntax: <code>ruby ~/grade check ASSIGNMENT UH_USERNAME</code> (still under development)</li>
+            <li>example: <code>ruby ~/grade check 02_1 zhaol</code></li>
+            <li>the homework self checking tool will print out a report (e.g. <em class="file">zhaol_02_1.report</em> to show you your rough score as well as which criterion was not satisfied</li>
+            <li>you can modify your assignment and rerun the self checking program as many times as you want or need</li>
+          </ul>
         </div>
       </div>
-      -->
+    </li>
+    <li class="item">
+      <h2 class="headline">Homework Submissions</h2>
+      <div class="content">
+        <div class="point">
+          <p class="topic">What is submitted and graded?</p>
+          <ul class="details">
+            <li>every assignment statement will list files to be submitted</li>
+            <li>these files are named in a particular format to facilitate grading</li>
+            <li>only properly named files attached to your Laulima Assignments are graded
+              <ul>
+                <li>improperly named files are not graded because our grading program cannot recognize it</li>
+                <li>files on Laulima Dropbox are not graded (only the files attached to Laulima Assignments are graded)</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="point">
+          <p class="topic">Why use the homework submission tool?</p>
+          <ul class="details">
+            <li>it is a pain to download the files from your Cloud9 workspace and then upload them to Laulima Assignments</li>
+          </ul>
+        </div>
+        <div class="point">
+          <p class="topic">How to use the homework submission tool?</p>
+          <ul class="details">
+            <li>syntax: <code>ruby ~/grade check ASSIGNMENT UH_USERNAME</code> (still under development)</li>
+            <li>example: <code>ruby ~/grade check 02_1 zhaol</code></li>
+            <li>the homework submission tool will package your assignment files and then upload them to your Laulima Dropbox</li>
+            <li>then you are able to attach the files from Laulima Dropbox to your Laulima Assignments, without needing to upload the files manually</li>
+            <li>Laulima Assignments will allow you to resubmit/reattach files up until the deadline, in case you made some changes to the assignment</li>
+            <li>if the homework submission tool does not package and upload all of the required assignment files, then please post this issue to Piazza</li>
+            <li>please note that it is the student's responsibility to ensure that all of the required files are properly named and attached to Laulima Assignments (file in Laulima Dropbox and your Cloud9 workspace are not graded)</li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">wget</h2>
+      <div class="content">
+        <div class="point">
+          <p class="topic">What is <code>wget</code>?</p>
+          <ul class="details">
+            <li>it is a command line program that can copy files available on the web to your computer</li>
+            <li><a href="http://en.wikipedia.org/wiki/Wget">http://en.wikipedia.org/wiki/Wget</a></li>
+          </ul>
+        </div>
+        <div class="point">
+          <p class="topic">Why use <code>wget</code>?</p>
+          <div class="details">
+            <p>without <code>wget</code> one would need to:</p>
+            <ul>
+              <li>create a new file</li>
+              <li>copy &amp; paste the code from <a href="https://github.com/zhaol/ee160/blob/gh-pages/code/hello_world/hello_world.c">hello_world.c</a> to the new file</li>
+            </ul>
+            <p>doing things without <code>wget</code> is both tedious and error prone (i.e. you might miss copying a character when the programs get larger)</p>
+          </div>
+        </div>
+        <div class="point">
+          <p class="topic">How to use <code>wget</code>?</p>
+          <ul class="details">
+            <p>syntax: <code>wget URL_TO_FILE</code></p>
+            <ul>
+              <li>example: <code>wget https://raw.githubusercontent.com/zhaol/ee160/gh-pages/code/hello_world/hello_world.c</code></li>
+            </ul>
+            <p>to get the URL to the raw file:</p>
+            <ul>
+              <li>from the <a href="http://zhaol.github.io/ee160/lectures/hello_world/">lecture/assignment page</a>, there are links to get to the Github page of the file, similar to this one <a href="https://github.com/zhaol/ee160/blob/gh-pages/code/hello_world/hello_world.c">hello_world.c</a></li>
+              <li>from the <a href="https://github.com/zhaol/ee160/blob/gh-pages/code/hello_world/hello_world.c">Github page</a>, you can click the "Raw" button to get to the raw file</li>
+              <li>from the <a href="https://raw.githubusercontent.com/zhaol/ee160/gh-pages/code/hello_world/hello_world.c">raw file page</a>, you can copy the URL</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
     </li>  
   </ul>
 </div>
