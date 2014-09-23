@@ -8,7 +8,7 @@
 
 // This program compares the initialization process when using a do while loop vs when using a while loop
 int main () {
-  int input;
+  char input;
   
   // do while loop
   // do while loop does not require initializing input to an arbitrary value
