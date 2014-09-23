@@ -5,7 +5,7 @@ int main() {
   int integer2 = 4;
   float decimal = 4;
   
-  // both statements should print out correct answer to 3/4
+  // both statements should print out correct answer to 3/4 (e.g. 0.75)
   printf("int / float: %d\n", integer1/decimal);
   printf("int / int: %d\n", integer1/integer2);
   
