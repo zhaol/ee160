@@ -119,6 +119,18 @@ display accounts summary information</pre>
           <li>Be sure to use the constants on the first operation</li>
           <li><code>int_variable / int_variable2 * 100.0</code> will not work</li>
         </ul>
+        <!-- Note:
+Show Using Flags:
+Remember to reset flag
+Show Perils of Not Using Typecasting:
+https://github.com/zhaol/ee160/blob/gh-pages/code/metrics/metrics.c#L63
+to show:
+100 * (float) total_accounts_with_minimum_balance_fees / total_number_of_accounts
+to this:
+100.0 * total_number_of_accounts_charged / total_number_of_accounts
+and lastly to this:
+total_number_of_accounts_charged / total_number_of_accounts * 100.0); // will compile but give wrong calculation
+        -->
       </div>
     </li>
     <li class="item">
