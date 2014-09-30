@@ -28,7 +28,7 @@ int main() {
     
     // get account holder information
     printf ("Please enter the account holder:\n");
-    scanf ("%s", &account_holder);
+    scanf ("%s", account_holder);
     
     account_balance = get_account_balance();
     account_type = get_account_type();
