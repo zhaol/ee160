@@ -1,5 +1,5 @@
 /*   File:  do_while_vs_while_no_initialization.c
-//   By:    The Awesome Class of EE160
+//   By:    The Awesome Students of EE160
 //   Date:	Today :)
 */
 

@@ -1,5 +1,5 @@
 /*   File:  finish_array.c
-//   By:    The Awesome Class of EE160
+//   By:    The Awesome Students of EE160
 //   Date:  Today :)
 */
 
