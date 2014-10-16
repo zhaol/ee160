@@ -9,15 +9,19 @@
 
 /*  This program uses an array to store data */
 main() {
-    int list_of_values[LIST_SIZE];
-    int index;
+  int list_of_values[LIST_SIZE];
+  int index;
 
-    for (index = 0; index < LIST_SIZE; index++) {
-        printf("Add a value:\n");
-        scanf ("%d", &list_of_values[index]);
-    }
-    
-    for (index = 0; index < LIST_SIZE; index++) {
-        printf("The list of values are: %d \n", list_of_values[index]);
-    }
+  index = 0;
+  while (index < LIST_SIZE) {
+    printf("Add a value:\n");
+    scanf ("%d", &list_of_values[index]);
+    index++;
+  }
+  
+  index = 0;
+  while (index < LIST_SIZE) {
+    printf("The list of values are: %d \n", list_of_values[index]);
+    index++;
+  }
 }
