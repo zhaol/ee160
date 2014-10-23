@@ -45,13 +45,15 @@ int main() {
     exit_program_flag = ask_to_exit();
   }
   
-  /* ##### REPLACE THIS BLOCK OF CODE WITH A FUNCTION
+  /* ### REPLACE THIS BLOCK OF CODE... ###
   // Display accounts summary information
-  printf ("==== Accounts Summary ====\n");
-  printf ("The total number of accounts: %d\n", total_number_of_accounts);
-  printf ("The total amount in all accounts: $%.2f\n", total_amount_in_accounts);
-  printf ("The percentage of the total minimum balance fees with respect to the total account balances: %.1f%%\n", total_minimum_balance_fees / total_amount_in_accounts * PERCENT_CONVERSION_FACTOR);
-  printf ("The percentage of accounts that were charged a minimum balance fee: %.1f%%\n", PERCENT_CONVERSION_FACTOR * total_accounts_with_minimum_balance_fees / total_number_of_accounts);
+  // printf ("==== Accounts Summary ====\n");
+  // printf ("The total number of accounts: %d\n", total_number_of_accounts);
+  // printf ("The total amount in all accounts: $%.2f\n", total_amount_in_accounts);
+  // printf ("The percentage of the total minimum balance fees with respect to the total account balances: %.1f%%\n", total_minimum_balance_fees / total_amount_in_accounts * PERCENT_CONVERSION_FACTOR);
+  // printf ("The percentage of accounts that were charged a minimum balance fee: %.1f%%\n", PERCENT_CONVERSION_FACTOR * total_accounts_with_minimum_balance_fees / total_number_of_accounts);
+     ### ...WITH THIS FUNCTION ###
+  // display_accounts_summary_information(total_number_of_accounts, total_amount_in_accounts, total_minimum_balance_fees, total_accounts_with_minimum_balance_fees);
   */
   
   return 0;
