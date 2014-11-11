@@ -1,0 +1,170 @@
+---
+layout: default
+title: Source Control & GIT
+---
+
+<div class="lecture">
+  <ul class="outline">
+    <li class="item">
+      <h2 class="headline">Source Control</h2>
+      <div class="content">
+        <div class="point">
+          <p class="topic">What is Source Control?</p>
+          <ul class="details">
+            <li>A control/system/tool used to control your (source) code</li>
+            <li><a href="http://en.wikipedia.org/wiki/Revision_control">Also known as revision control</a></li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">GIT: A Source Control Tool</h2>
+      <div class="content">
+        <div class="point">
+          <p class="topic">Why use GIT?</p>
+          <ul class="details">
+            <li>it allows you to backup and restore your code to a previously known (and hopefully working) state
+              <ul>
+                <li>you can now make updates (and add features) to your code worry-free because you know you can always get back to a working state</li>
+                <li>you can share your code with others because they can get to a specific version of your code the same way you can revert to a specific version you have saved off</li>
+              </ul>
+            </li>
+            <li>it allows you to merge your changes and a collaborator's changes to the same code, automagically (GIT is magical)</li>
+            <li>it is written by the <a href="http://en.wikipedia.org/wiki/Linus_Torvalds">creator</a> of Linux to help programmers <a href="http://www.linux.com/news/featured-blogs/158-jim-zemlin/549805-the-greatness-of-git">collaborate</a> on the <a href="http://en.wikipedia.org/wiki/Linux_kernel">Linux kernel</a>, a very intense piece of software</li>
+          </ul>
+        </div>
+        <div class="point">
+          <p class="topic">What is GIT?</p>
+          <ul class="details">
+            <li>it is a <a href="http://en.wikipedia.org/wiki/Distributed_revision_control">distributed version control system</a>
+              <ul>
+                <li>distributed means not centralized
+                  <ul>
+                    <li>older version control systems were centralized so you cannot touch a specific file if someone else has it checked out and is editing it)</li>
+                  </ul>
+                </li>
+                <li>version control system means it will sytematically control each version of your code</li>
+              </ul>
+            </li>
+            <li>it is the core of Github
+              <ul>
+                <li><a href="http://www.entrepreneur.com/vc100">Andreessen Horowitz</a> is <a href="http://www.forbes.com/sites/tomiogeron/2012/07/09/cash-for-code-github-raises-100-million-from-andreessen-horowitz/">betting big</a> on Github</li>
+                <li>so it's most likely going to stay around for awhile</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="point">
+          <p class="topic">How to use GIT?</p>
+          <ul class="details">
+            <li>for the purposes of the challenges, you will just need to use the following commands:
+              <ul>
+                <li><code>git clone</code>: Downloads a project and its entire version history</li>
+                <li><code>git status</code>: List any changes you've made since the last save point</li>
+                <li><code>git branch</code>: List all local branches</li>
+                <li><code>git checkout</code>: Switch to another branch (all your files will automagically change to the last saved version of that branch</li>
+                <li><code>git add</code>: Prepare (aka stage) files to prepare for saving (aka committing)</li>
+                <li><code>git commit</code>: Save the staged files</li>
+                <li><code>git merge</code>: Combine to two saved (aka committed) versions and automagically make sure each change is accounted for</li>
+                <li><code>git push</code>: Upload the saved changes to the remote repository (e.g. Github)</li>
+                <li><code>git pull</code>: Download the saved changes from the remote repository (e.g. Github) since the last <code>git pull</code></li>
+              </ul>
+            </li>
+            <li>the typical workflow for these challenges will be as follows:
+              <p>Note: Be sure to check on what state your code is in by issuing <code>git status</code> and/or <code>git branch</code> at any time when performing the following steps</p>
+              <ol>
+                <li><code>git checkout -b feature/my_branch</code>
+                  <ul>
+                    <li><code>-b</code> means create <code>feature/my_branch</code> also</li>
+                    <li><code>feature</code> is just a naming convention; there's nothing special to it</li>
+                    <li>at the end of this <code>git checkout</code> command, issuing a <code>git status</code> should show that you are on the <code>feature/my_branch branch</code></li>
+                  </ul>
+                </li>
+                <li>[make the additions and changes to the source code]</li>
+                <li><code>git add .</code>
+                  <ul>
+                    <li><code>git add</code> will stage your updates in preparation to be committed</li>
+                    <li><code>.</code> means to stage all of your updates in preparation for committing</li>
+                  </ul>
+                </li>
+                <li><code>git commit -m "my commit message"</code>
+                  <ul>
+                    <li><code>git commit</code> will save the updates you've staged</li>
+                    <li>every commit needs a commit message to tell others what changes are being saved</li>
+                    <li><code>-m</code> says use <code>my commit message</code> as the commit message</li>
+                  </ul>
+                </li>
+                <li><code>git checkout master</code>
+                  <ul>
+                    <li>switch to the <code>master</code> branch</li>
+                    <li><code>master</code> is the name of the primary branch that is typically used by many GIT repositories</li>
+                    <li>notice all of your changes are gone and the code is back to it's original state before you started making your changes</li>
+                  </ul>
+                </li>
+                <li><code>git pull origin</code>
+                  <ul>
+                    <li>get the latest version of the code</li>
+                  </ul>
+                </li>
+                <li><code>git merge feature/my_branch --no-ff</code>
+                  <ul>
+                    <li>combine the saved changes in <code>feature/my_branch</code> with the code in the <code>master</code> branch</li>
+                  </ul>
+                </li>
+                <li><code>git push origin</code>
+                  <ul>
+                    <li>upload the changes to the remote repository (e.g. Github) so others can download your changes</li>
+                    <li><code>origin</code> is the name of the remote repository that is typically used by many GIT repositories</li>
+                    <li>you could have named <code>origin</code> something else and even add more remote repositories</li>
+                  </ul>
+                </li>
+              </ol>
+            </li>
+            <li>Be persistant
+              <ul>
+                <li>GIT does have a steeper learning curve than most other tools</li>
+                <li>like any tool, using GIT more often will make GIT easier to use</li>
+                <li>using a graphical user interface (aka <a href="http://git-scm.com/downloads/guis">GUI</a>) will help in the initial learning process</li>
+                <li>feel free to practice using GIT on this play repository: <a href="https://github.com/zhaol/git-practice">git-practice</a> (refer to the README for more info)</li>
+              </ul>
+            </li>
+            <li>References:
+              <ul>
+                <li>The official GIT <a href="http://git-scm.com/doc">documentation/reference</a></li>
+                <li><a href="http://nvie.com/posts/a-successful-git-branching-model/">A typical branching model</a> that has real world scenarios so you can visualize how GIT is often used and the differences between branches and commits</li>
+                <li>If you really want to learn the in's and out's of GIT, you can follow these <a href="https://www.atlassian.com/git/tutorials/">tutorials</a></li>
+                <li><a href="https://docs.google.com/drawings/d/1xiTpqIep89EezF5F6ShygsVZPF_AwHuWA7QkZXB2XNE/pub?w=1179&h=367">Visualize GIT staging and committing</a> (<code>git add</code>, <code>git commit</code>)</li>
+                <li><a href="https://docs.google.com/drawings/d/1T4Dp0Lk7a1fzQG3_eVBCdBB2I1udqjKwPRaa9WdhX-w/pub?w=2822&h=916">Visualize GIT committing, branching, checkout, and merging</a> (<code>git commit</code>, <code>git branch</code>, <code>git checkout</code>, <code>git merge</code>)</li>
+                <li><a href="https://docs.google.com/drawings/d/1He1w1gT-_unXiK75ODtRSEc3qQJm4t1XoeonD5pAjXs/pub?w=1290&h=846">Visualize GIT local and remote repositories</a> (<code>git pull</code>, <code>git push</code>)</li>
+              </ul>
+            </li>
+            <li>Other notes:
+              <ul>
+                <li>every commit is identically referenced by a <a href="http://en.wikipedia.org/wiki/SHA-1">SHA1</a> hash, which looks like ea24566c0f80b811d681b3a28bc42f52565444b7</li>
+                <li><code>git diff</code> allows you to see the exact changes
+                  <ul>
+                    <li>you can <code>git diff file1 file2</code> to see the differences between two files</li>
+                  </ul>
+                <li><code>git rebase</code> allows you to <a href="http://git-scm.com/book/ch3-6.html">move</a> a branch</li>
+                <li><code>git log</code> allows you to see the commit history
+                  <ul>
+                    <li>I typically use <code>git log --graph --oneline --decorate --all</code></li>
+                  </ul>
+                </li>
+                <li><code>git stash</code> allows you to temporarily save your changes so you can switch branches or start over from the last saved commit
+                  <ul>
+                    <li><code>git pop</code> will bring those temporarily saved changes back</li>
+                    <li>be careful when using <code>git stash</code> and <code>git pop</code>; you really have to know which stash is going to be brought back and how</li>
+                  </ul>
+                </li>
+                <li>The entire GIT repository is stored in the <code>.git</code> folder</li>
+                <li>All of the GIT configurations are located in <code>.git/config</code> file</li>
+                <li>When first learning, it is best to use the <code>git status</code> command before each GIT command to make sure the state of the files are in the state you think they are</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
