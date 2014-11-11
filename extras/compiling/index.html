@@ -1,23 +1,56 @@
 ---
 layout: default
-title: Compiling
+title: Compiling & Make
 ---
 
 <div class="lecture">
   <ul class="outline">
     <li class="item">
       <h2 class="headline">Compiling</h2>
-      <!--
       <div class="content">
         <div class="point">
-          <p class="topic">What are editors?</p>
+          <p class="topic">What is compiling?</p>
           <ul class="details">
-            <li>http://www.la-samhna.de/library/compile/index.html</li>
-            <li>http://stackoverflow.com/questions/2749733/how-to-add-libraries-in-c</li>
+            <li>compiling is what happens when you run the <code>gcc</code> command</li>
+            <li>there is a little more infor about compiling in <a href="{{ site.baseurl }}/lectures/hello_world">Lecture 02</a></li>
           </ul>
         </div>
       </div>
-      -->
-    </li>  
+    </li>
+    <li class="item">
+      <h2 class="headline">Make</h2>
+      <div class="content">
+        <div class="point">
+          <p class="topic">Why use Make?</p>
+          <ul class="details">
+            <li>with the way we've been using <code>gcc</code>, we have been compiling every file each time you run <code>gcc</code>; that can take a lot of time if you have a large program</li>
+            <li><code>make</code> allows you the flexibility to only compile the parts of the program that has changed</li>
+            <li><code>make</code> allows you to automatically repeat certain tasks, such as:
+              <ul>
+                <li>move files around before compiling</li>
+                <li>remove unnecessary files (i.e. clean up files)</li>
+              </ul>
+            </li>
+            <li><code>make</code> still uses a compiler underneath, such as <code>gcc</code></li>
+            <li>if you are distributing software that requires certain tasks to be done, you can put those tasks in the <code>makefile</code> and your end users will not have to worry about those details; they can just run <code>make</code></li>
+          </ul>
+        </div>
+        <div class="point">
+          <p class="topic">What is Make?</p>
+          <ul class="details">
+            <li>just another tool to make things easier for the programmer by automating tasks that just takes up time</li>
+            <li><a href="http://en.wikipedia.org/wiki/Make_(software)">http://en.wikipedia.org/wiki/Make_(software)</a>
+            <li><a href="http://www.gnu.org/software/make/">http://www.gnu.org/software/make/</a></li>
+          </ul>
+        </div>
+        <div class="point">
+          <p class="topic">How to use Make?</p>
+          <ul class="details">
+            <li>by issuing the <code>make</code> command in a folder that has a <code>makefile</code></li>
+            <li>you can also pick and run only specific rules defined in the <code>makefile</code>, such as <code>make clean</code></li>
+          </ul>
+        </div>
+      </div>
+    </li>
   </ul>
 </div>
