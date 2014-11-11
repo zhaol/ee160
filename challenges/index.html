@@ -25,18 +25,33 @@ title: Challenges
         <div class="point">
           <p class="topic">How to complete the challenges?</p>
           <ul class="details">
-            <li>follow the details given in each challenge's page</li>
+            <li>some general steps:
+              <ol>
+                <li>sign up for a <a href="https://github.com/">Github</a> account; it should be free</li>
+                <li>we will be using the <a href="https://help.github.com/articles/using-pull-requests/#fork--pull">Fork & Pull</a> model</li>
+                <li><a href="https://help.github.com/articles/fork-a-repo/">fork</a> the challenge repository (e.g. <a href="https://github.com/ee160-uh-manoa/maze-solver">https://github.com/ee160-uh-manoa/maze-solver</a>)</li>
+                <li><a href="https://help.github.com/articles/fork-a-repo/#step-2-create-a-local-clone-of-your-fork">clone</a> your forked repository to your workspace (e.g. Cloud9 workspace)</li>
+                <li>update the forked repository with your code (e.g. <a href="https://github.com/ee160-uh-manoa/maze-solver/blob/master/solvers/zhaol_12345678.solver">zhaol_12345678.solver</a>) using <a href="{{ site.baseurl }}/extras/source_control_git">GIT</a>, <a href="{{ site.baseurl }}/extras/compiling_make">make</a>, and C</li>
+                <li>test your updates locally before uploading (aka <a href="https://help.github.com/articles/pushing-to-a-remote/">pushing</a>) your code to your forked repository</li>
+                <li>submit a <a href="https://help.github.com/articles/using-pull-requests/#initiating-the-pull-request">pull request</a> with your code (e.g. <a href="https://github.com/ee160-uh-manoa/maze-solver/blob/master/solvers/zhaol_12345678.solver">zhaol_12345678.solver</a>)</li>
+                <li>view the results (e.g. <a href="https://github.com/ee160-uh-manoa/maze-solver/tree/master/results">results for maze-solver</a>)</li>
+                <li>resubmit if you want to</li>
+              </ol>
+            </li>
             <li>some general rules and guidelines:
               <ul>
                 <li>nothing should be hard coded
                   <ul>
                     <li>your code must solve all of the given cases (i.e. all 3 mazes)</li>
-                    <li>your code should be generic enough to solve any new cases that might be added (i.e. your code should solve any maze)</li>
+                    <li>your code should be generic enough to solve any new cases that might be added (i.e. your code should solve any possible maze configuration)</li>
                   </ul>
                 </li>
-                <li>don't modify another student's submission</li>
+                <li>don't modify another student's submitted file</li>
                 <li>you can submit multiple times and make multiple submssions; just be sure to name each submission differently (e.g. zhaol_12345678_2.solver)</li>
                 <li>there will be a <code>results</code> folder that will tell you how your code (i.e. your solver function for the maze challege) performed against other submissions</li>
+                <li>submissions can be anonymous</li>
+                <li>it is okay to look at other student's submission to understand how they have solved the problem so you can then improve upon it</li>
+                <li>follow the details given in each challenge's page (e.g. <a href="{{ site.baseurl }}/challenges/maze-solver">maze-solver</a>)</li>
               </ul>
             </li>
           </ul>
