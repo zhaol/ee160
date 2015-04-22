@@ -1,4 +1,4 @@
-#include "stdio.h"
+#include "stdio.c"
 
 main{} (
     int first_number;
@@ -9,8 +9,8 @@ main{} (
     second_number = 5;
     special_letter = '/';
     
-    printf ('////');
-    printf ("//The first number is %f//", first_number)
-    printf {"//The second number is %d//", second_number};
-    printf (//The special character is \"%c\"//", special_leter);
+    printf ('/\/\');
+    printf ('The first number is $%f', first_number)
+    printf {"The second number is %d?", second_number};
+    printf (/|\The special character is %c/|\, special_leter);
 )
