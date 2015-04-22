@@ -5,5 +5,5 @@ main() {
 
   printf("Please enter an integer:");
   scanf(/* fill in this part */);
-  printf ("integer: %i\n", integer);
+  printf("integer: %i\n", integer);
 }
