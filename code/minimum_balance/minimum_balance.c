@@ -4,8 +4,8 @@ main() {
   float account_balance;
   char account_type;
 
-  printf ("Please enter the account balance: ");
-  scanf ("%f", &account_balance);
+  printf ("Please enter the account balance:\n");
+  scanf (" %f", &account_balance);
   printf ("c = checking, s = saving\n");
   printf ("Please enter the account type:\n");
   scanf (" %c", &account_type);

@@ -103,6 +103,51 @@ title: Lecture 08
           <li>rename <span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/minimum_balance/minimum_balance.c">minimum_balance.c</a></span> (e.g. <span class="file">zhaol_08_1.c</span>) and modify it to handle the scenario when the account type is not a saving account and not a checking account:</li>
           <!-- ### TODO: add clarification: program will respond with "Please retry and use a correct input ('s' or 'c')." -->
           <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/minimum_balance/minimum_balance.c"></script>
+          <li>test case 1:
+<pre>Please enter the account balance:
+[user enters 100]
+c = checking, s = saving
+Please enter the account type:
+[user enters c]
+A minimum balance fee needs to be charged to this account. 
+</pre>
+          </li>
+          <li>test case 2:
+<pre>Please enter the account balance:
+[user enters 600]
+c = checking, s = saving
+Please enter the account type:
+[user enters c]
+A minimum balance fee does not need to be charged to this account.
+</pre>
+          </li>
+          <li>test case 3:
+<pre>Please enter the account balance:
+[user enters 600]
+c = checking, s = saving
+Please enter the account type:
+[user enters s]
+A minimum balance fee needs to be charged to this account. 
+</pre>
+          </li>
+          <li>test case 4:
+<pre>Please enter the account balance:
+[user enters 1000]
+c = checking, s = saving
+Please enter the account type:
+[user enters s]
+A minimum balance fee does not need to be charged to this account.
+</pre>
+          </li>
+          <li>test case 5:
+<pre>Please enter the account balance:
+[user enters 1000]
+c = checking, s = saving
+Please enter the account type:
+[user enters m]
+The account type entered is not valid.
+</pre>
+          </li>
         </ul>
         <h4>Homework Problem 8.2, at the end of this problem you should submit to Laulima:</h4>
         <ul>
@@ -115,14 +160,14 @@ title: Lecture 08
           <li>Write a program that implements the following algorithm:</li>
           <li>
 <pre>get user's age
-if user is younger than 25 (not including 25)
+if user is younger than 30 (not including 30)
   tell user they have a bright future ahead of them
 otherwise
   tell user they have years of wisdom to pay forward
   
 ask if user is a programmer
 if user is a programmer
-  tell user "while(!(succeed=try()));"
+  tell user "if(crazy){change_world()}"
 otherwise
   tell user The people who are crazy enough to think they can change the world, are the ones who do. - <a href="http://www.youtube.com/watch?v=TM8GiNGcXuM">Apple</a>
       
@@ -134,6 +179,42 @@ if user's GPA is greater than or equal to 0
     tell user that their GPA is out of this world
 otherwise
   tell user that their GPA is unbelievable
+</pre>
+          </li>
+          <li>Test Case 1:
+<pre>What is your age:
+[user enters 18]
+You have a bright future ahead of you.
+Are you a programmer? (y,n):
+[user enters n]
+The people who are crazy enough to think they can change the world, are the ones who do. - Apple
+What is your GPA?:
+[user enters 3.0]
+There's too much emphasis on this number.
+</pre>
+          </li>
+          <li>Test Case 2:
+<pre>What is your age:
+[user enters 30]
+You have years of wisdom that can be paid forward.
+Are you a programmer? (y,n):
+[user enters y]
+if(crazy){change_world()}
+What is your GPA?:
+[user enters 4.0]
+Your GPA is out of this world.
+</pre>
+          </li>
+          <li>Test Case 3:
+<pre>What is your age:
+[user enters 1]
+You have a bright future ahead of you.
+Are you a programmer? (y,n):
+[user enters n]
+The people who are crazy enough to think they can change the world, are the ones who do. - Apple
+What is your GPA?:
+[user enters -1.0]
+Your GPA is unbelievable.
 </pre>
           </li>
         </ul>        
