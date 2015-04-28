@@ -107,11 +107,30 @@ Enter 'y' to exit; Enter any other character to continue</pre>
             <ul>example:
               <li><span class="file well well-small">zhaol_10_1.c</span></li>
             </ul>
+            <p>improve <span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/minimum_balances/minimum_balances.c">minimum_balances.c</a></span> to allow the user to cancel the program when the program is asking the teller what type of account:</p>
+            <p>In other words, the user can choose saving account ('s'), checking account ('c'), or exit program ('x'), saving the user from answering another question</p>
+            <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/minimum_balances/minimum_balances.c"></script>
+          </li>
+          <li>Test Case 1:
+<pre>c = checking, s = saving, x = exit
+Please enter the account type:
+[user enters c]
+Please enter the account balance: [user enters 100]
+A minimum balance fee needs to be charged to this account.
+c = checking, s = saving, x = exit
+Please enter the account type:
+[user enters x]
+Exiting program...
+</pre>
+          </li>
+          <li>Test Case 2:
+<pre>c = checking, s = saving, x = exit
+Please enter the account type:
+[user enters x]
+Exiting program...
+</pre>
           </li>
         </ul>
-        <p>improve <span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/minimum_balances/minimum_balances.c">minimum_balances.c</a></span> to allow the user to cancel the program when the program is asking the teller what type of account:</p>
-        <p>In other words, the user can choose saving account ('s'), checking account ('c'), or exit program ('x'), saving the user from answering another question</p>
-        <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/minimum_balances/minimum_balances.c"></script>
       </div>
     </li>
   </ul>
