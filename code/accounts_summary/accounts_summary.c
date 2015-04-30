@@ -8,7 +8,7 @@ main() {
   float total_amount_in_accounts = 0;
   
   while (exit_program_flag == 'n') {
-    printf ("Please enter the account balance: ");
+    printf ("Please enter the account balance:\n");
     scanf ("%f", &account_balance);
     printf ("c = checking, s = saving\n");
     printf ("Please enter the account type:\n");

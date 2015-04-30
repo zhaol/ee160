@@ -125,6 +125,33 @@ display accounts summary information</pre>
             <p>the variable <code>total_amount_in_accounts</code> does not need to be modified for this exercise</p>
             <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/accounts_summary/accounts_summary.c"></script>          
           </li>
+          <li>Test Case 1:
+<pre>Please enter the account balance:
+[user enters 100]
+c = checking, s = saving
+Please enter the account type:
+[user enters c]
+A minimum balance fee needs to be charged to this account.
+
+Are you finished checking all your accounts?:
+Enter 'n' to check more accounts; Enter any other character to exit
+[user enters n]
+Please enter the account balance:
+[user enters 150]
+c = checking, s = saving
+Please enter the account type:
+[user enters s]
+A minimum balance fee needs to be charged to this account.
+
+Are you finished checking all your accounts?:
+Enter 'n' to check more accounts; Enter any other character to exit
+[user enters y]
+==== Accounts Summary ====
+The total number of accounts: 2
+The total amount in all accounts: \$250.00
+The total amount of minimum balance fee collected: \$40.00 
+</pre>
+          </li>
         </ul>
       </div>
     </li>
