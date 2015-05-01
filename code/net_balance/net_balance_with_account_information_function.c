@@ -20,7 +20,7 @@ int main() {
   int minimum_balance_fee_charged_flag = 0;
   
   while (exit_program_flag == 'n') {
-    printf ("Please enter the account balance: ");
+    printf ("Please enter the account balance:\n");
     scanf ("%f", &account_balance);
     printf ("c = checking, s = saving\n");
     printf ("Please enter the account type:\n");
@@ -50,12 +50,14 @@ int main() {
       total_accounts_with_minimum_balance_fees++;
       total_minimum_balance_fees += minimum_balance_fee;
       printf ("Minimum Balance Fee to Account Balance Percentage: %.1f%%\n", minimum_balance_fee / account_balance * 100);
-      printf ("The new account balance is %.2f\n", net_balance(account_balance, minimum_balance_fee));
+      printf ("The new account balance is $%.2f\n", net_balance(account_balance, minimum_balance_fee));
     } else {
       printf ("Minimum Balance Fee to Account Balance Percentage: %.1f%%\n", 0 / account_balance);
       printf ("The new account balance is $%.2f\n", net_balance(account_balance, 0)); // 0 for no minimum balance fee
     }
     */
+    // with this:
+    display_account_summary_info(minimum_balance_fee_charged_flag, &total_accounts_with_minimum_balance_fees, &total_minimum_balance_fees, minimum_balance_fee, account_balance);
     
     // Update account summary information
     total_number_of_accounts++;
