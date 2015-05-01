@@ -5,6 +5,8 @@
 
 #include <stdio.h>
 
+// declare function prototype
+
 // This program uses a function to add 2 numbers
 int main() {
   int number1;
@@ -19,3 +21,5 @@ int main() {
   
   return 0;
 }
+
+// define function
