@@ -120,12 +120,12 @@ display list of account balances</pre>
       <div class="content">
         <p>translate your algorithm into code, <span class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/account_balances/account_balances.c">account_balances.c</a></span>:</p>
         <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/account_balances/account_balances.c"></script>
-        <p>translate your algorithm into code, <span class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/account_balances/helper_functions.h">helper_functions.h</a></span>:</p>
-        <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/account_balances/helper_functions.h"></script>
-        <p>translate your algorithm into code, <span class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/account_balances/helper_functions.c">helper_functions.c</a></span>:</p>
-        <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/account_balances/helper_functions.c"></script>
-        <p>translate your algorithm into code, <span class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/account_balances/magic_numbers.h">magic_numbers.h</a></span>:</p>
-        <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/account_balances/magic_numbers.h"></script>
+        <p>translate your algorithm into code, <span class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/account_balances/functions.h">functions.h</a></span>:</p>
+        <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/account_balances/functions.h"></script>
+        <p>translate your algorithm into code, <span class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/account_balances/functions.c">functions.c</a></span>:</p>
+        <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/account_balances/functions.c"></script>
+        <p>translate your algorithm into code, <span class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/account_balances/macros.h">macros.h</a></span>:</p>
+        <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/account_balances/macros.h"></script>
         <ul>Things to note:
           <li>the first array element is index 0 <code>array[0]</code></li>
           <li>to define a 2 element array you put 2 in the brackets <code>int array[2];</code>
@@ -148,15 +148,15 @@ display list of account balances</pre>
         <h4>Homework Problem 20.1, at the end of this problem you should submit to Laulima:</h4>
         <ul>
           <li>a file named <span class="file well well-small">UHusername_20_1.c</span></li>
-          <li>a file named <span class="file well well-small">UHusername_20_1_magic_numbers.h</span></li>
-          <li>a file named <span class="file well well-small">UHusername_20_1_helper_functions.c</span></li>
-          <li>a file named <span class="file well well-small">UHusername_20_1_helper_functions.h</span></li>
+          <li>a file named <span class="file well well-small">UHusername_20_1_macros.h</span></li>
+          <li>a file named <span class="file well well-small">UHusername_20_1_functions.c</span></li>
+          <li>a file named <span class="file well well-small">UHusername_20_1_functions.h</span></li>
           <li>
             <ul>example:
               <li><span class="file well well-small">zhaol_20_1.c</span></li>
-              <li><span class="file well well-small">zhaol_20_1_magic_numbers.h</span></li>
-              <li><span class="file well well-small">zhaol_20_1_helper_functions.c</span></li>
-              <li><span class="file well well-small">zhaol_20_1_helper_functions.h</span></li>
+              <li><span class="file well well-small">zhaol_20_1_macros.h</span></li>
+              <li><span class="file well well-small">zhaol_20_1_functions.c</span></li>
+              <li><span class="file well well-small">zhaol_20_1_functions.h</span></li>
             </ul>
           </li>  
           <li>
@@ -164,6 +164,80 @@ display list of account balances</pre>
             <p>do not use any built-in functions, such as <code>qsort</code></p>        
             <p>assume the teller will never enter in more than 5 accounts</p>
             <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/account_balances/account_balances.c"></script>
+          </li>
+          <li>Test Case 1:
+<pre>Please enter the account balance:
+[user enters 500]
+c = checking, s = saving
+Please enter the account type:
+[user enters c]
+A minimum balance fee does not need to be charged to this account.
+Minimum Balance Fee to Account Balance Percentage: 0.0%
+The new account balance is \$500.00
+
+Are you finished checking all your accounts?:
+Enter 'n' to check more accounts; Enter any other character to exit
+[user enters n]
+Please enter the account balance:
+[user enters 350]
+c = checking, s = saving
+Please enter the account type:
+[user enters s]
+A minimum balance fee needs to be charged to this account.
+Minimum Balance Fee to Account Balance Percentage: 10.0%
+The new account balance is \$315.00
+
+Are you finished checking all your accounts?:
+Enter 'n' to check more accounts; Enter any other character to exit
+[user enters n]
+Please enter the account balance:
+[user enters 400]
+c = checking, s = saving
+Please enter the account type:
+[user enters c]
+A minimum balance fee needs to be charged to this account.
+Minimum Balance Fee to Account Balance Percentage: 8.7%
+The new account balance is \$365.00
+
+Are you finished checking all your accounts?:
+Enter 'n' to check more accounts; Enter any other character to exit
+[user enters n]
+Please enter the account balance:
+[user enters 100]
+c = checking, s = saving
+Please enter the account type:
+[user enters s]
+A minimum balance fee needs to be charged to this account.
+Minimum Balance Fee to Account Balance Percentage: 35.0%
+The new account balance is \$65.00
+
+Are you finished checking all your accounts?:
+Enter 'n' to check more accounts; Enter any other character to exit
+[user enters n]
+Please enter the account balance:
+[user enters 1]
+c = checking, s = saving
+Please enter the account type:
+[user enters s]
+A minimum balance fee needs to be charged to this account.
+Minimum Balance Fee to Account Balance Percentage: 3500.0%
+The new account balance is \$-34.00
+
+Are you finished checking all your accounts?:
+Enter 'n' to check more accounts; Enter any other character to exit
+[user enters y]
+==== Accounts Summary ====
+The total number of accounts: 5
+The total amount in all accounts: \$1351.00
+The percentage of the total minimum balance fees with respect to the total account balances: 10.4%
+The percentage of accounts that were charged a minimum balance fee: 80.0%
+==== List of Account Balances ====
+  0: \$    1.00
+  1: \$  100.00
+  2: \$  350.00
+  3: \$  400.00
+  4: \$  500.00
+</pre>
           </li>
         </ul>
         <div class="point">

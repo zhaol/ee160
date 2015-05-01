@@ -4,7 +4,7 @@ float net_balance(float account_balance, float minimum_balance_fee) {
 
 float get_account_balance() {
   float account_balance;  
-  printf ("Please enter the account balance: ");
+  printf ("Please enter the account balance:\n");
   scanf ("%f", &account_balance);
   return(account_balance);
 }
@@ -31,7 +31,7 @@ int is_account_below_minimum_balance(float account_balance, float minimum_balanc
   return(minimum_balance_fee_charged_flag);
 }
 
-int ask_to_exit() {
+char ask_to_exit() {
   char exit_program_flag;
   printf ("\n");
   printf ("Are you finished checking all your accounts?:\n");
