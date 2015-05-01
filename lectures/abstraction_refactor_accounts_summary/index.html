@@ -62,16 +62,16 @@ title: Lecture 18
                   <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/refactored_net_balance/refactored_net_balance.c"></script>
                 </li>
                 <li>
-                  <em class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/refactored_net_balance/magic_numbers.h">magic_numbers.h</a></em>
-                  <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/refactored_net_balance/magic_numbers.h"></script>
+                  <em class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/refactored_net_balance/macros.h">macros.h</a></em>
+                  <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/refactored_net_balance/macros.h"></script>
                 </li>
                 <li>
-                  <em class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/refactored_net_balance/helper_functions.h">helper_functions.h</a></em>
-                  <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/refactored_net_balance/helper_functions.h"></script>
+                  <em class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/refactored_net_balance/functions.h">functions.h</a></em>
+                  <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/refactored_net_balance/functions.h"></script>
                 </li>
                 <li>
-                  <em class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/refactored_net_balance/helper_functions.c">helper_functions.c</a></em>
-                  <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/refactored_net_balance/helper_functions.c"></script>
+                  <em class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/refactored_net_balance/functions.c">functions.c</a></em>
+                  <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/refactored_net_balance/functions.c"></script>
                 </li>
               </ul>
             </li>
@@ -101,15 +101,15 @@ title: Lecture 18
         <h4>Homework Problem 18.1, at the end of this problem you should submit to Laulima:</h4>
         <ul>
           <li>a file named <span class="file well well-small">UHusername_18_1.c</span></li>
-          <li>a file named <span class="file well well-small">UHusername_18_1_magic_numbers.h</span></li>
-          <li>a file named <span class="file well well-small">UHusername_18_1_helper_functions.c</span></li>
-          <li>a file named <span class="file well well-small">UHusername_18_1_helper_functions.h</span></li>
+          <li>a file named <span class="file well well-small">UHusername_18_1_macros.h</span></li>
+          <li>a file named <span class="file well well-small">UHusername_18_1_functions.c</span></li>
+          <li>a file named <span class="file well well-small">UHusername_18_1_functions.h</span></li>
           <li>
             <ul>example:
               <li><span class="file well well-small">zhaol_18_1.c</span></li>
-              <li><span class="file well well-small">zhaol_18_1_magic_numbers.h</span></li>
-              <li><span class="file well well-small">zhaol_18_1_helper_functions.c</span></li>
-              <li><span class="file well well-small">zhaol_18_1_helper_functions.h</span></li>
+              <li><span class="file well well-small">zhaol_18_1_macros.h</span></li>
+              <li><span class="file well well-small">zhaol_18_1_functions.c</span></li>
+              <li><span class="file well well-small">zhaol_18_1_functions.h</span></li>
             </ul>
           </li>
           <li>
@@ -117,7 +117,16 @@ title: Lecture 18
             <p>Note:</p>
             <ul>
               <li>be sure to update the include statements so they are using the new filenames</li>
-              <li>be sure to define the new function (<code>display_accounts_summary_information</code>) in the helper_functions file (i.e. <span class="file">zhaol_18_1_helper_functions.c</span>)</li>
+              <li>be sure to define the new function (<code>display_accounts_summary_information</code>) in the helper_functions file (i.e. <span class="file">zhaol_18_1_functions.c</span>)</li>
+              <li>be sure to use this function prototype:
+<pre>
+void display_accounts_summary_information(
+  int total_number_of_accounts,
+  float total_amount_in_accounts,
+  float total_minimum_balance_fees,
+  int total_accounts_with_minimum_balance_fees);
+</pre>
+              </li>
             </ul>
             <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/refactored_net_balance/refactored_net_balance_with_accounts_summary_function.c"></script>
           </li>
@@ -125,5 +134,4 @@ title: Lecture 18
       </div>
     </li>
   </ul>
-  <!-- TODO: update problem statement to define function protoype -->
 </div>
