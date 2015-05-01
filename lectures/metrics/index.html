@@ -130,6 +130,8 @@ to this:
 100.0 * total_number_of_accounts_charged / total_number_of_accounts
 and lastly to this:
 total_number_of_accounts_charged / total_number_of_accounts * 100.0); // will compile but give wrong calculation
+verbosity vs clarity:
+http://www.byrdseed.com/ambiguous-sentences/
         -->
       </div>
     </li>
@@ -154,6 +156,95 @@ total_number_of_accounts_charged / total_number_of_accounts * 100.0); // will co
           <li>
             <p>update <span class="file well well-small"><a href="http://github.com/zhaol/ee160/blob/gh-pages/code/metrics/metrics.c">metrics.c</a></span> so the program tells the teller the percentage of accounts below the minimum balance that are savings acounts (i.e. the total number of savings accounts below the minimum balance relative to the total number of accounts below the minimum balance)</p>
             <script src="http://gist-it.appspot.com/https://github.com/zhaol/ee160/blob/gh-pages/code/metrics/metrics.c"></script>          
+          </li>
+          <li>Test Case 1:
+<pre>Please enter the account balance:
+[user enters 100]
+c = checking, s = saving
+Please enter the account type:
+[user enters c]
+A minimum balance fee needs to be charged to this account.
+Minimum Balance Fee to Account Balance Percentage: 35.0%
+Are you finished checking all your accounts?:
+Enter 'n' to check more accounts; Enter any other character to exit
+[user enters n]
+Please enter the account balance:
+[user enters 200]
+c = checking, s = saving
+Please enter the account type:
+[user enters c]
+A minimum balance fee needs to be charged to this account.
+Minimum Balance Fee to Account Balance Percentage: 17.5%
+Are you finished checking all your accounts?:
+Enter 'n' to check more accounts; Enter any other character to exit
+[user enters n]
+Please enter the account balance:
+[user enters 300]
+c = checking, s = saving
+Please enter the account type:
+[user enters c]
+A minimum balance fee needs to be charged to this account.
+Minimum Balance Fee to Account Balance Percentage: 11.7%
+Are you finished checking all your accounts?:
+Enter 'n' to check more accounts; Enter any other character to exit
+[user enters n]
+Please enter the account balance:
+[user enters 600]
+c = checking, s = saving
+Please enter the account type:
+[user enters c]
+A minimum balance fee does not need to be charged to this account.
+Minimum Balance Fee to Account Balance Percentage: 0.0%
+Are you finished checking all your accounts?:
+Enter 'n' to check more accounts; Enter any other character to exit
+[user enters n]
+Please enter the account balance:
+[user enters 900]
+c = checking, s = saving
+Please enter the account type:
+[user enters s]
+A minimum balance fee needs to be charged to this account.
+Minimum Balance Fee to Account Balance Percentage: 3.9%
+Are you finished checking all your accounts?:
+Enter 'n' to check more accounts; Enter any other character to exit
+[user enters n]
+Please enter the account balance:
+[user enters 1100]
+c = checking, s = saving
+Please enter the account type:
+[user enters s]
+A minimum balance fee does not need to be charged to this account.
+Minimum Balance Fee to Account Balance Percentage: 0.0%
+Are you finished checking all your accounts?:
+Enter 'n' to check more accounts; Enter any other character to exit
+[user enters n]
+Please enter the account balance:
+[user enters 1200]
+c = checking, s = saving
+Please enter the account type:
+[user enters s]
+A minimum balance fee does not need to be charged to this account.
+Minimum Balance Fee to Account Balance Percentage: 0.0%
+Are you finished checking all your accounts?:
+Enter 'n' to check more accounts; Enter any other character to exit
+[user enters n]
+Please enter the account balance:
+[user enters 1300]
+c = checking, s = saving
+Please enter the account type:
+[user enters s]
+A minimum balance fee does not need to be charged to this account.
+Minimum Balance Fee to Account Balance Percentage: 0.0%
+Are you finished checking all your accounts?:
+Enter 'n' to check more accounts; Enter any other character to exit
+[user enters y]
+==== Accounts Summary ====
+The total number of accounts: 8
+The total amount in all accounts: $5700.00
+The percentage of the total minimum balance fees with respect to the total account balances: 2.5%
+The percentage of accounts that were charged a minimum balance fee: 50.0%
+The percentage of saving accounts that were charged a minimum balance fee (relative to the total number of accounts that were charged a minimum balance fee): 25.0%
+</pre>
           </li>
         </ul>
       </div>
