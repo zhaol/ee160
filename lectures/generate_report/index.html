@@ -132,12 +132,12 @@ output list of account balances to a file</pre>
       <div class="content">
         <p>translate your algorithm into code, <span class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/generate_report/generate_report.c">generate_report.c</a></span>:</p>
         <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/generate_report/generate_report.c"></script>
-        <p>translate your algorithm into code, <span class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/generate_report/helper_functions.h">helper_functions.h</a></span>:</p>
-        <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/generate_report/helper_functions.h"></script>
-        <p>translate your algorithm into code, <span class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/generate_report/helper_functions.c">helper_functions.c</a></span>:</p>
-        <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/generate_report/helper_functions.c"></script>
-        <p>translate your algorithm into code, <span class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/generate_report/magic_numbers.h">magic_numbers.h</a></span>:</p>
-        <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/generate_report/magic_numbers.h"></script>
+        <p>translate your algorithm into code, <span class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/generate_report/functions.h">functions.h</a></span>:</p>
+        <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/generate_report/functions.h"></script>
+        <p>translate your algorithm into code, <span class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/generate_report/functions.c">functions.c</a></span>:</p>
+        <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/generate_report/functions.c"></script>
+        <p>translate your algorithm into code, <span class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/generate_report/macros.h">macros.h</a></span>:</p>
+        <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/generate_report/macros.h"></script>
         <ul>Things to note:
           <li>folders need to exist before opening files</li>
           <li><code>fopen</code> does not automatically create folders</li>
@@ -154,41 +154,45 @@ output list of account balances to a file</pre>
         <h4>Homework Problem 24.1, at the end of this problem you should submit to Laulima:</h4>
         <ul>
           <li>a file named <span class="file well well-small">UHusername_24_1.c</span></li>
-          <li>a file named <span class="file well well-small">UHusername_24_1_magic_numbers.h</span></li>
-          <li>a file named <span class="file well well-small">UHusername_24_1_helper_functions.c</span></li>
-          <li>a file named <span class="file well well-small">UHusername_24_1_helper_functions.h</span></li>
+          <li>a file named <span class="file well well-small">UHusername_24_1_macros.h</span></li>
+          <li>a file named <span class="file well well-small">UHusername_24_1_functions.c</span></li>
+          <li>a file named <span class="file well well-small">UHusername_24_1_functions.h</span></li>
           <li>
             <ul>example:
               <li><span class="file well well-small">zhaol_24_1.c</span></li>
-              <li><span class="file well well-small">zhaol_24_1_magic_numbers.h</span></li>
-              <li><span class="file well well-small">zhaol_24_1_helper_functions.c</span></li>
-              <li><span class="file well well-small">zhaol_24_1_helper_functions.h</span></li>
+              <li><span class="file well well-small">zhaol_24_1_macros.h</span></li>
+              <li><span class="file well well-small">zhaol_24_1_functions.c</span></li>
+              <li><span class="file well well-small">zhaol_24_1_functions.h</span></li>
             </ul>
           </li>  
           <li>
             <p>Update <span class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/generate_report/generate_report.c">generate_report.c</a></span> to generate a file for each account entered by the user</p>
-            <ul>For example:
-              <li>if the teller enters in
-                <ul>
-                  <li>account holder: obama</li>
-                  <li>account balance: 100</li>
-                  <li>account type: checking</li>
-                </ul>
-              </li>
-              <li>the program will generate a file named <span class="file well well-small">obama.txt</span> with the following content:
-    <pre>=== Account Information for obama's Account ===
-    Minimum Balance Fee to Account Balance Percentage: 35.0%
-    The new account balance is 65.00</pre>
-              </li>
-            </ul>
-            <ul>Things to note for this assignment:
+            <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/generate_report/generate_report.c"></script>          
+            <li>Test Case 1:
+<pre>Please enter the account holder:
+obama
+Please enter the account balance:
+100
+c = checking, s = saving
+Please enter the account type:
+c
+A minimum balance fee needs to be charged to this account.
+
+Are you finished checking all your accounts?:
+Enter 'n' to check more accounts; Enter any other character to exit
+y
+Successfully opened file
+Successfully opened file
+</pre>
+            <p>the program will generate a file named <span class="file well well-small">obama.output</span> with the following content:</p>
+<pre>=== Account Information for obama's Account ===
+Minimum Balance Fee to Account Balance Percentage: 35.0%
+The new account balance is 65.00</pre>
+            <li><ul>Things to note for this assignment:
               <li>assume the filename won't be greater than 100 characters long</li>
               <li>look into string concatenation: <a href="http://en.wikipedia.org/wiki/Concatenation">http://en.wikipedia.org/wiki/Concatenation</a></li>
               <li>look into how to use the <code>strcat</code> function: <a href="http://www.cplusplus.com/reference/cstring/strcat/">http://www.cplusplus.com/reference/cstring/strcat/</a></li>
-            </ul>
-            <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/generate_report/generate_report.c"></script>          
-            </li>
-          </li>
+            </ul></li>
         </ul>
       </div>
     </li>
