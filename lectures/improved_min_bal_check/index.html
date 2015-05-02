@@ -172,6 +172,35 @@ output list of account balances to a file</pre>
             <p>Update <span class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/improved_min_bal_check/improved_min_bal_check.c">improved_min_bal_check.c</a></span> to allow the teller to choose whether they want to output the accounts summary and list of balances to a file, to the screen, or don't output anything</p>
             <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/improved_min_bal_check/improved_min_bal_check.c"></script>          
           </li>
+          <li>Test Case 1:
+<pre>Please enter the account holder:
+[user enters obama]
+Please enter the account balance:
+[user enters 100]
+c = checking, s = saving
+Please enter the account type:
+[user enters c]
+=== Account Information for obama's Account ===
+Minimum Balance Fee to Account Balance Percentage: 35.0%
+The new account balance is 65.00
+
+Are you finished checking all your accounts?:
+Enter 'n' to check more accounts; Enter any other character to exit
+[user enters y]
+Do you want to:
+(enter f) to output to file
+(enter s) to output to screen
+(enter n) to output nothing
+[user enters s]
+==== Accounts Summary ====
+The total number of accounts: 1
+The total amount in all accounts: \$100.00
+The percentage of the total minimum balance fees with respect to the total account balances: 35.0%
+The percentage of accounts that were charged a minimum balance fee: 100.0%
+==== List of Account Balances ====
+  0: \$  100.00
+</pre>
+          </li>
         </ul>
       </div>
     </li>
