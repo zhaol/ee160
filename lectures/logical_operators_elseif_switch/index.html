@@ -274,18 +274,50 @@ F || F: 0</pre>
           </li>
           <li>
             <p>Write a program that asks the user for an alphabet letter. If the letter entered is upper case, the program will check for the winning characters A, E, I, O, and U. If the letter entered is lower case, the program will check for the winning characters q and r. The program will tell the user if they've entered in a winning character or not.  If the user enters anything besides an upper case or lower case alphabet, then the program will tell the user that the character entered is invalid. The program exits after getting one character from the user.</p>
+          </li>
+          <li>
             <ul>There are multiple ways to write such a program, but please follow these guidelines:
               <li>avoid nested <code>if</code>/<code>else</code> statements</li>
               <li>use <code>switch</code>, <code>else if</code>, and logical operators whenever possible</li>
               <li>since the <code>switch</code>, <code>else if</code>, and logical operators perform similar functions, be sure to think about which one is a more "natural" fit for the operation at hand (this can be subjective, but for this simple assignment, it should be pretty clear)</li>
-            </ul>
-            <ul>example inputs and outputs:
-              <li>input: A; output: This is a winning character</li>
-              <li>input: Z; output: This uppercase character is not a winning character</li>
-              <li>input: q; output: This is a winning character</li>
-              <li>input: s; output: This lowercase character is not a winning character</li>
-              <li>input: +; output: This is an invalid character</li>
-            </ul>
+            </ul> 
+          </li>
+          <li>Test Cases:
+            <ul><li>Test Case 1:
+<pre>
+Please enter in a letter
+[user enters A]
+This is a winning character
+</pre>
+            </li>
+            <li>Test Case 2:
+<pre>
+Please enter in a letter
+[user enters Z]
+This uppercase character is not a winning character
+</pre>
+            </li>
+            <li>Test Case 3:
+<pre>
+Please enter in a letter
+[user enters q]
+This is a winning character
+</pre>
+            </li>
+            <li>Test Case 4:
+<pre>
+Please enter in a letter
+[user enters s]
+This lowercase character is not a winning character
+</pre>
+            </li>
+            <li>Test Case 5:
+<pre>
+Please enter in a letter
+[user enters +]
+This is an invalid character
+</pre>
+            </li></ul>
           </li>
         </ul>
       </div>
