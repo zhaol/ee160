@@ -139,12 +139,12 @@ output list of account balances to a file</pre>
       <div class="content">
         <p>translate your algorithm into code, <span class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/stop_list/stop_list.c">stop_list.c</a></span>:</p>
         <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/stop_list/stop_list.c"></script>
-        <p>translate your algorithm into code, <span class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/stop_list/helper_functions.h">helper_functions.h</a></span>:</p>
-        <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/stop_list/helper_functions.h"></script>
-        <p>translate your algorithm into code, <span class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/do_while_refactor/helper_functions.c">helper_functions.c</a></span>:</p>
-        <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/stop_list/helper_functions.c"></script>
-        <p>translate your algorithm into code, <span class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/stop_list/magic_numbers.h">magic_numbers.h</a></span>:</p>
-        <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/stop_list/magic_numbers.h"></script>
+        <p>translate your algorithm into code, <span class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/stop_list/functions.h">functions.h</a></span>:</p>
+        <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/stop_list/functions.h"></script>
+        <p>translate your algorithm into code, <span class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/do_while_refactor/functions.c">functions.c</a></span>:</p>
+        <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/stop_list/functions.c"></script>
+        <p>translate your algorithm into code, <span class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/stop_list/macros.h">macros.h</a></span>:</p>
+        <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/stop_list/macros.h"></script>
         <ul>Things to note:
           <li>the code to output to file is still executed</li>
           <li>to exit the program completely replace <code>break</code> with <code>return</code></li>
@@ -160,21 +160,46 @@ output list of account balances to a file</pre>
         <h4>Homework Problem 30.1, at the end of this problem you should submit to Laulima:</h4>
         <ul>
           <li>a file named <span class="file well well-small">UHusername_30_1.c</span></li>
-          <li>a file named <span class="file well well-small">UHusername_30_1_magic_numbers.h</span></li>
-          <li>a file named <span class="file well well-small">UHusername_30_1_helper_functions.c</span></li>
-          <li>a file named <span class="file well well-small">UHusername_30_1_helper_functions.h</span></li>
+          <li>a file named <span class="file well well-small">UHusername_30_1_macros.h</span></li>
+          <li>a file named <span class="file well well-small">UHusername_30_1_functions.c</span></li>
+          <li>a file named <span class="file well well-small">UHusername_30_1_functions.h</span></li>
           <li>
             <ul>example:
               <li><span class="file well well-small">zhaol_30_1.c</span></li>
-              <li><span class="file well well-small">zhaol_30_1_magic_numbers.h</span></li>
-              <li><span class="file well well-small">zhaol_30_1_helper_functions.c</span></li>
-              <li><span class="file well well-small">zhaol_30_1_helper_functions.h</span></li>
+              <li><span class="file well well-small">zhaol_30_1_macros.h</span></li>
+              <li><span class="file well well-small">zhaol_30_1_functions.c</span></li>
+              <li><span class="file well well-small">zhaol_30_1_functions.h</span></li>
             </ul>
           </li>  
           <li>
-            <p>Update <span class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/stop_list/stop_list.c">stop_list.c</a></span> and <span class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/stop_list/helper_functions.c">helper_functions.c</a></span> so the program uses a <code>goto</code> statement to ask the teller to reenter a positive number if the teller enters in a negative number for the account balance (this behaviour continues until the teller enters in a zero or positive number, i.e. use <code>goto</code> to mimic a loop)</p>
+            <p>Update <span class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/stop_list/stop_list.c">stop_list.c</a></span> and <span class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/stop_list/functions.c">functions.c</a></span> so the program uses a <code>goto</code> statement to ask the teller to reenter a positive number if the teller enters in a negative number for the account balance (this behaviour continues until the teller enters in a zero or positive number, i.e. use <code>goto</code> to mimic a loop)</p>
             <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/stop_list/stop_list.c"></script>
-            <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/stop_list/helper_functions.c"></script>          
+            <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/stop_list/functions.c"></script>          
+          </li>
+          <li>Test Case 1:
+<pre>Please enter the account holder:
+[user enters bush]
+Please enter the account balance:
+[user enters -100]
+Please enter a positive account balance
+Please enter the account balance:
+[user enters -120]
+Please enter a positive account balance
+Please enter the account balance:
+[user enters 100]
+c = checking, s = saving
+Please enter the account type:
+[user enters c]
+=== Account Information for bush's Account ===
+Minimum Balance Fee to Account Balance Percentage: 35.0%
+The new account balance is $65.00
+
+Are you finished checking all your accounts?:
+Enter 'n' to check more accounts; Enter any other character to exit
+[user enters y]
+Successfully opened file
+Successfully opened file
+</pre> 
           </li>
         </ul>
       </div>
