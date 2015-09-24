@@ -14,3 +14,4 @@ int main() {
 }
 
 // type casting, conversion specifiers, or variable declarations
+// 1 / 4 / 8
