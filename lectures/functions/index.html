@@ -310,55 +310,63 @@ The sum of your two numbers is: 9
       </div>
     </li>
     <li class="item">
-      <h2 class="headline">Pass By Value vs Pass By Reference</h2><!-- TODO add a diagram with a side by side comparison of the memory spaces -->
+      <h2 class="headline">Pass By Value vs Pass By Reference</h2>
       <div class="content">
-        <div>
-          <p>Comparing Pass By Value vs Pass By Reference?:</p>
-          <table class="table table-bordered table-striped table-hover">
-            <caption>Main Differences</caption>
-            <thead><tr>
-              <th></th><th>Pass By Value</th><th>Pass By Reference</th>
-            </tr></thead>
-            <tbody>
-              <tr>
-                <td>calling the function</td>
-                <td><code>function(main_variable);</code><br/>(pass in the variable value)</td>
-                <td><code>function(&amp;main_variable);</code><br/>(pass in the variable address)</td>
-              </tr>
-              <tr>
-                <td>defining the function</td>
-                <td><code>function(int function_variable);</code><br/>(initialize an <code>int</code> variable)</td>
-                <td><code>function(int *function_variable_pointer)</code><br/>(initialize a pointer to an <code>int</code>)</td>
-              </tr>
-              <tr>
-                <td>within the function</td>
-                <td><code>function_variable++;</code><br/>(process as a variable)</td>
-                <td><code>(*function_variable_pointer)++;</code><br/>(process as a pointer)</td>
-              </tr>
-              <tr>
-                <td>effect on variable</td>
-                <td>changes in the function will not affect the original variable</td>
-                <td>changes in the function will take affect on the original variable</td>
-              </tr>
-              <tr>
-                <td>analogous to</td>
-                <td>
-                  <ul>
-                    <li><span title="program calling the function" data-toggle="tooltip">Person A</span> passing information to <span title="the function" data-toggle="tooltip">Person B</span></li>
-                    <li>the information passed along is that the most awesome students at UH Manoa are in EE160</li>
-                    <li>when <span title="the function" data-toggle="tooltip">Person B</span> takes the information and says "EE160 students rocks", the students of EE160 will <span class="text-error">not be affected</span></li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li><span title="program calling the function" data-toggle="tooltip">Person A</span> passing information to <span title="the function" data-toggle="tooltip">Person B</span></li>
-                    <li>the information passed along is that the most awesome students at UH Manoa are located in MSB114</li>
-                    <li>when <span title="the function" data-toggle="tooltip">Person B</span> goes to MSB114 and says "EE160 students rocks", the students of EE160 will <span class="text-error">be affected</span></li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="point">
+          <p class="topic">Let us summarize the main differences between pass by value and pass by reference:</p>
+          <div class="details">
+            <table class="table table-bordered table-striped table-hover">
+              <caption>Main Differences</caption>
+              <thead><tr>
+                <th></th><th>Pass By Value</th><th>Pass By Reference</th>
+              </tr></thead>
+              <tbody>
+                <tr>
+                  <td>calling the function</td>
+                  <td><code>function(main_variable);</code><br/>(pass in the variable value)</td>
+                  <td><code>function(&amp;main_variable);</code><br/>(pass in the variable address)</td>
+                </tr>
+                <tr>
+                  <td>defining the function</td>
+                  <td><code>function(int function_variable);</code><br/>(initialize an <code>int</code> variable)</td>
+                  <td><code>function(int *function_variable_pointer)</code><br/>(initialize a pointer to an <code>int</code>)</td>
+                </tr>
+                <tr>
+                  <td>within the function</td>
+                  <td><code>function_variable++;</code><br/>(process as a variable)</td>
+                  <td><code>(*function_variable_pointer)++;</code><br/>(process as a pointer)</td>
+                </tr>
+                <tr>
+                  <td>effect on variable</td>
+                  <td>changes in the function will not affect the original variable</td>
+                  <td>changes in the function will take affect on the original variable</td>
+                </tr>
+                <tr>
+                  <td>analogous to</td>
+                  <td>
+                    <ul>
+                      <li><span title="program calling the function" data-toggle="tooltip">Person A</span> passing information to <span title="the function" data-toggle="tooltip">Person B</span></li>
+                      <li>the information passed along is that the most awesome students at UH Manoa are in EE160</li>
+                      <li>when <span title="the function" data-toggle="tooltip">Person B</span> takes the information and says "EE160 students rocks", the students of EE160 will <span class="text-error">not be affected</span></li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul>
+                      <li><span title="program calling the function" data-toggle="tooltip">Person A</span> passing information to <span title="the function" data-toggle="tooltip">Person B</span></li>
+                      <li>the information passed along is that the most awesome students at UH Manoa are located in MSB114</li>
+                      <li>when <span title="the function" data-toggle="tooltip">Person B</span> goes to MSB114 and says "EE160 students rocks", the students of EE160 will <span class="text-error">be affected</span></li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="point">
+          <p class="topic">Let us visualize the differences between pass by value and pass by reference:</p>
+          <div class="details">
+            <a href="https://docs.google.com/drawings/d/1UvocVSTstYmzxSIx_c7SINaPhGaY4h-FJVrYCvNwSp0/pub?w=1110&h=1216"><img src="https://docs.google.com/drawings/d/1UvocVSTstYmzxSIx_c7SINaPhGaY4h-FJVrYCvNwSp0/pub?w=1110&h=1216"/></a>
+          </div>
         </div>
       </div>
     </li>
