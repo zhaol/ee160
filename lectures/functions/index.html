@@ -235,11 +235,39 @@ The sum of your two numbers is: 9
             <li>you could store the value returned by the function or choose not to use it or a function might not return a value</li>
           </ul>
         </div>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">Pass By Value Example</h2>
+      <div class="content">
+        <div>
+          <p><span class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/pass_by_value/pass_by_value.c">pass_by_value.c</a></span>:</p>
+          <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/pass_by_value/pass_by_value.c"></script>
+        </div>
         <div class="point">
           <p class="topic">What is happening when you pass an argument by value to the function:</p>
           <div class="details">
             <a href="https://docs.google.com/drawings/d/1kmzqCRMzBbHHbKp3vShYJo7apXHk8PYxjpI4obCYExo/pub?w=863&h=1802"><img src="https://docs.google.com/drawings/d/1kmzqCRMzBbHHbKp3vShYJo7apXHk8PYxjpI4obCYExo/pub?w=863&h=1802"/></a>
           </div>
+        </div>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">Pass By Value Workarounds</h2>
+      <div class="content">
+        <div>
+          <p>How have we been updating the variables?:</p>
+          <ul>
+            <li><code>variable = add_one(variable);</code> will effectively update <code>variable</code></li>
+          </ul>
+          <p>How can we update multiple variables?:</p>
+          <ul>
+            <li>write 2 functions and pass each variable separately, e.g. something like this:
+              <p><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/pass_by_reference/pass_by_value_workaround.c"><em class="file well well-small">pass_by_value_workaround.c</em></a>:</p>
+              <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/pass_by_reference/pass_by_value_workaround.c"></script>
+            </li>
+            <li>or pass both variables by reference to the function</li>
+          </ul>
         </div>
       </div>
     </li>
@@ -261,22 +289,17 @@ The sum of your two numbers is: 9
         <div>
           <p>Why is pass by reference important?:</p>
           <ul>
-            <li>it allows the function to update multiple variables (in essence, returning multiple values)</li>
-            <li>for example:
-              <ul>
-                <li><code>variable = add_one(variable);</code> will effectively update <code>variable</code></li>
-                <li>but if you had 2 variables to update, you would need to:
-                  <ul>
-                    <li>write 2 functions and pass each variable separately, e.g. something like this:
-                      <p><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/pass_by_reference/pass_by_value_workaround.c"><em class="file well well-small">pass_by_value_workaround.c</em></a>:</p>
-                      <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/pass_by_reference/pass_by_value_workaround.c"></script>
-                    </li>
-                    <li>or pass both variables by reference to the function</li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
+            <li>it allows the function to update variable(s) directly</li>
           </ul>
+        </div>
+      </div>
+    </li>
+    <li class="item">
+      <h2 class="headline">Pass By Reference Example</h2>
+      <div class="content">
+        <div>
+          <p><span class="file well well-small"><a href="https://github.com/zhaol/ee160/blob/gh-pages/code/pass_by_reference/pass_by_reference.c">pass_by_reference.c</a></span>:</p>
+          <script src="https://gist-it.appspot.com/http://github.com/zhaol/ee160/blob/gh-pages/code/pass_by_reference/pass_by_reference.c"></script>
         </div>
         <div class="point">
           <p class="topic">What is happening when you pass an argument by reference to the function:</p>
@@ -287,7 +310,7 @@ The sum of your two numbers is: 9
       </div>
     </li>
     <li class="item">
-      <h2 class="headline">Pass By Value vs Pass By Reference</h2>
+      <h2 class="headline">Pass By Value vs Pass By Reference</h2><!-- TODO add a diagram with a side by side comparison of the memory spaces -->
       <div class="content">
         <div>
           <p>Comparing Pass By Value vs Pass By Reference?:</p>
@@ -305,7 +328,7 @@ The sum of your two numbers is: 9
               <tr>
                 <td>defining the function</td>
                 <td><code>function(int function_variable);</code><br/>(initialize an <code>int</code> variable)</td>
-                <td><code>function(int *function_variable_pointer)</code><br/>(initialize a pointer to an <code>int</code></td>
+                <td><code>function(int *function_variable_pointer)</code><br/>(initialize a pointer to an <code>int</code>)</td>
               </tr>
               <tr>
                 <td>within the function</td>
