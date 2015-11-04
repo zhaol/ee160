@@ -143,13 +143,14 @@ Calculate the distance travelled for each ride</pre>
                 </ul>
               </li>
               <li class="point">
-                <p class="topic">determine the distance travelled for each ride:</p>
+                <p class="topic">determine the distance travelled (or start-to-end displacement) for each ride:</p>
                 <ul class="details">
                   <li>assume the 3rd (x) and 4th (y) column of the data represent distance (in meters) from some arbitrary origin to simplify the calculations (the 3rd and 4th columns are actually lattitude and longitude, respectively)</li>
                     <li>you can calculate the distance travelled using any of the following methods:
                     <ul>
                       <li>$distance_x = {end\_position_x - start\_position_x}$, $distance_y = {end\_position_y - start\_position_y}$, $distance = &radic;(distance_x^2+distance_y^2)$</li>
                       <li>$distance_x = ({&Delta;distance}_{x,1} + {&Delta;distance}_{x,2} + ... + {&Delta;distance}_{x,n})$, $distance_y = ({&Delta;distance}_{y,1} + {&Delta;distance}_{y,2} + ... + {&Delta;distance}_{y,n})$, $distance = &radic;(distance_x^2+distance_y^2)$</li>
+                      <li>$distance_{total} = ({&Delta;distance}_{1} + {&Delta;distance}_{2} + ... + {&Delta;distance}_{n})$, $&Delta;distance_i = &radic;((position_{x,i}-position_{x,i+1})^2+(position_{y,i}-position_{y,i+1})^2)$</li>
                     </ul>
                   </li>
                   <li>Feel free to use the <code>sqrt</code> function from the <code>math.h</code> library
