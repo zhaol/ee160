@@ -52,7 +52,7 @@ int main() {
         total_accounts_with_minimum_balance_fees++;
         total_minimum_balance_fees += minimum_balance_fee;
         printf ("Minimum Balance Fee to Account Balance Percentage: %.1f%%\n", minimum_balance_fee / account_balance * PERCENT_CONVERSION_FACTOR);
-        printf ("The new account balance is %.2f\n", net_balance(account_balance, minimum_balance_fee));
+        printf ("The new account balance is $%.2f\n", net_balance(account_balance, minimum_balance_fee));
       } else {
         printf ("Minimum Balance Fee to Account Balance Percentage: %.1f%%\n", NO_MINIMUM_BALANCE / account_balance);
         printf ("The new account balance is $%.2f\n", net_balance(account_balance, NO_MINIMUM_BALANCE));
