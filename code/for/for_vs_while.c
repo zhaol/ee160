@@ -8,21 +8,21 @@
 
 // This program compares using a for loop with a while loop
 int main () {
-  int index; // both loops need to index to be declared prior
-  
-  // while loop
-  index = 1;
-  while (index <= NUMBER_OF_LOOPS) {
-    printf("This is loop #%d (using while)\n", index);
-    index++;
-  }
-  ////
-  
-  // for loop
-  for (index=1; index<=NUMBER_OF_LOOPS; index++) {
-    printf("This is loop #%d (using for)\n", index);
-  }
-  ////
-  
-  return 0;  
+    int index; // both loops need to index to be declared prior
+    
+    // while loop
+    index = 1;
+        while (index <= NUMBER_OF_LOOPS) {
+        printf("This is loop #%d (using while)\n", index);
+        index++;
+    }
+    ////
+    
+    // for loop
+    for (index=1; index<=NUMBER_OF_LOOPS; index++) {
+        printf("This is loop #%d (using for)\n", index);
+    }
+    ////
+    
+    return 0;  
 }

@@ -8,25 +8,25 @@
 
 // This program compares the initialization process when using a do while loop vs when using a while loop
 int main () {
-  char input;
-  
-  // do while loop
-  // do while loop does not require initializing input to an arbitrary value
-  do {
-    printf("Do you want to continue? (using do while)\n");
-    scanf(" %c", &input);
-  } while (input != 'n');
-  ////
-  
-  printf("\n\n");
-  
-  // while loop
-  input = 'a'; // while loop requires this
-  while (input != 'n') {
-    printf("Do you want to continue? (using while)\n");
-    scanf(" %c", &input);
-  }
-  ////
-  
-  return 0;  
+    char input;
+    
+    // do while loop
+    // do while loop does not require initializing input to an arbitrary value
+    do {
+        printf("Do you want to continue? (using do while)\n");
+        scanf(" %c", &input);
+    } while (input != 'n');
+    ////
+    
+    printf("\n\n");
+    
+    // while loop
+    input = 'a'; // while loop requires this
+    while (input != 'n') {
+        printf("Do you want to continue? (using while)\n");
+        scanf(" %c", &input);
+    }
+    ////
+    
+    return 0;  
 }

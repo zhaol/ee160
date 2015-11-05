@@ -8,23 +8,23 @@
 
 // This program compares using a do while loop with a while loop
 int main () {
-  int index; // both loops need to index to be declared prior
-  
-  // while loop
-  index = 1;
-  while (index <= NUMBER_OF_LOOPS) {
-    printf("This is loop #%d (using while)\n", index);
-    index++;
-  }
-  ////
-  
-  // do while loop
-  index = 1;
-  do {
-    printf("This is loop #%d (using do while)\n", index);
-    index++;
-  } while (index <= NUMBER_OF_LOOPS);
-  ////
-  
-  return 0;  
+    int index; // both loops need to index to be declared prior
+    
+    // while loop
+    index = 1;
+    while (index <= NUMBER_OF_LOOPS) {
+        printf("This is loop #%d (using while)\n", index);
+        index++;
+    }
+    ////
+    
+    // do while loop
+    index = 1;
+    do {
+        printf("This is loop #%d (using do while)\n", index);
+        index++;
+    } while (index <= NUMBER_OF_LOOPS);
+    ////
+    
+    return 0;  
 }
