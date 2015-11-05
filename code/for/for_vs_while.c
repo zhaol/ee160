@@ -12,7 +12,7 @@ int main () {
     
     // while loop
     index = 1;
-        while (index <= NUMBER_OF_LOOPS) {
+    while (index <= NUMBER_OF_LOOPS) {
         printf("This is loop #%d (using while)\n", index);
         index++;
     }
