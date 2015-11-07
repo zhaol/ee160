@@ -4,7 +4,7 @@
 */
 
 #include <stdio.h>
-#include "magic_numbers.h"
+#include "macros.h"
 #include "helper_functions.h"
 #include "helper_functions.c"
 
