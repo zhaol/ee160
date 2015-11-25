@@ -30,23 +30,18 @@ title: Lab 12
             <p>Update your Uber Ride Count and Distance program from <a href="{{ site.baseurl }}/labs/display_highscore_uber_ridecount_distance/">Lab 10</a> to add the following features (or write a new program that does the following):</p>
             <ol>
               <li class="point">
-                <p class="topic">Calculate the average velocity for each ride:</p>
+                <p class="topic">Calculate the velocity for each ride:</p>
                 <ul class="details">
-                  <li>you can calculate the average velocity using any of the following methods (the results will be different depending on which method you choose):
+                  <li>you can calculate the velocity using the following method:
                     <ul>
-                      <li>$velocity_x = {end\_position_x - start\_position_x}/{end\_time_x - start\_time_x}$, $velocity_y = {end\_position_y - start\_position_y}/{end\_time_y - start\_time_y}$, $average\_velocity = &radic;(velocity_x^2+velocity_y^2)$</li>
-                      <li>
-                        $velocity_x = {velocity_{x,1} + velocity_{x,2} + ... + velocity_{x,n}} / n$, $velocity_{x,i} = {&Delta;distance}_{x,i} / {&Delta;duration}_{x,i}$, <br/>
-                        $velocity_y = {velocity_{y,1} + velocity_{y,2} + ... + velocity_{y,n}} / n$, $velocity_{y,i} = {&Delta;distance}_{y,i} / {&Delta;duration}_{y,i}$, <br/>
-                        $average\_velocity = &radic;(velocity_x^2+velocity_y^2)$</li>
-                      <li>$velocity_i = &radic;{({&Delta;distance}_{x,i})^2 + (&Delta;distance_{y,i})^2} / {&Delta;duration_i}$, $average\_velocity = {velocity_1 + velocity_2 + ... + velocity_n} / n$</li>
+                      <li>$velocity = {displacement}/{end\_time - start\_time}$</li>
                     </ul>
                   </li>
-                  <li>Report velecoty as distance per hour
+                  <li>Report velocity as distance per hour
                     <ul>
-                      <li>Regardless of the method you choose above to compute velocity, when computing $&Delta;duration = end\_time - start\_time$, do so in hours</li>
+                      <li>When computing ${displacement}/{end\_time - start\_time}$, do so in hours</li>
                       <li>Do NOT ignore the minutes and seconds data</li>
-                      <li>For example, if the time difference is 1 hour, 15 minutes and 12 seconds, then $&Delta;duration = 1.2533$ not 1</li>
+                      <li>For example, if the time difference is 1 hour, 15 minutes and 12 seconds, then $end\_time - start\_time = 1.2533$ not 1</li>
                     </ul>
                   </li>
                   <li>Feel free to use the <code>sqrt</code> function from the <code>math.h</code> library
