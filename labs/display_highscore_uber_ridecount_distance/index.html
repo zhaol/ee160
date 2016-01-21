@@ -8,24 +8,8 @@ title: Lab 11
     <li class="item">
       <h2 class="headline">High Score</h2>
       <div class="content">
-        <h4>At the end of this problem you should submit to Laulima (please zip these files to work around the 5 file limit):</h4>
+        {% include instructions/labs/{{site.variation}}instruction.html assignment_name="display_highscore" %}
         <ul>
-          <li>a file named <span class="file well well-small">UHusername_display_highscore.c</span></li>
-          <li>a file named <span class="file well well-small">UHusername_display_highscore.h</span></li>
-          <li>a file named <span class="file well well-small">UHusername_display_highscore_constants.h</span></li>
-          <li>a file named <span class="file well well-small">UHusername_display_highscore_helpers.c</span></li>
-          <li>a file named <span class="file well well-small">UHusername_display_highscore_helpers.h</span></li>
-          <li>a file named <span class="file well well-small">UHusername_display_highscore_setup.h</span></li>
-            <p>example (these files will be at the root of the zip file, i.e. there will be no folders in the zip file):</p>
-            <ul>
-              <li><span class="file well well-small">zhaol_display_highscore.c</span></li>
-              <li><span class="file well well-small">zhaol_display_highscore.h</span></li>
-              <li><span class="file well well-small">zhaol_display_highscore_constants.h</span></li>
-              <li><span class="file well well-small">zhaol_display_highscore_helpers.c</span></li>
-              <li><span class="file well well-small">zhaol_display_highscore_helpers.h</span></li>
-              <li><span class="file well well-small">zhaol_display_highscore_setup.h</span></li>
-            </ul>
-          </li>
           <li>
             <p>Update the display program that you completed from <a href="{{ site.baseurl }}/labs/display_attacker_teleportation/">Lab 09</a></p>
             <p>It will be beneficial for you to leave your previous lab work untouched by copying them to a new folder for this lab and modify only the files in the new folder</p>
@@ -107,7 +91,7 @@ Calculate the distance travelled for each ride</pre>
     <li class="item">
       <h2 class="headline">Uber Ride Count and Distance</h2>
       <div class="content">
-        {% include instructions/labs/{{site.variation}}instruction.html %}
+        {% include instructions/labs/{{site.variation}}instruction.html assignment_name="uber_ridecount_distance" %}
         <ul>
           <li>
             <p>Write a program that will analyze the Uber data to do the following:
