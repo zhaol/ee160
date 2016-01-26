@@ -1,0 +1,30 @@
+{% include instructions/labs/{{site.variation}}instruction.html assignment_name="display_highscore" %}
+<ul>
+  <li>
+    <p>Update the display program that you completed from <a href="{{ site.baseurl }}/labs/display_attacker_teleportation/">Lab 09</a></p>
+    <p>It will be beneficial for you to leave your previous lab work untouched by copying them to a new folder for this lab and modify only the files in the new folder</p>
+    <p>If you were not able to complete Display with Attacker and Teleport from the <a href="{{ site.baseurl }}/labs/display_attacker_teleportation/">Lab 09</a>, you can modify a fresh copy of the display program. The feature set between both lab assignments are independent. Just follow the download instructions from <a href="{{ site.baseurl }}/labs/display_boundaries_items/">Lab 08</a> and coordinate with your lab instructor.</p>
+    <p>Update your Display with Attacker and Teleport program from <a href="{{ site.baseurl }}/labs/display_attacker_teleportation/">Lab 09</a> to add the following features:</p>
+    <ol>
+      <li class="point">
+        <p class="topic">Implement a high score feature:</p>
+        <ul class="details">
+          <li>each time the token moves "on top" of an item, increment the score by 1</li>
+          <li>when an attacker moves "on top" of the token, the game ends</li>
+          <li>when the game ends, the current score is compared with the high score
+            <ul>
+              <li>the high score is read/written to a file for persistence, i.e. the high score can be retrieved after the program ends</li>
+              <li>if the current score is greater than the high score, then the program will ask the user for his/her name and stores the user's name and high score to the file</li>
+            </ul>
+          </li>
+          <li>if you were not able to get the item and attacker to work, then:
+            <ul>
+              <li>increment the score each time the token is at one of the 4 corners of the screen</li>
+              <li>the game ends when the token is at a particular "trap" position, you can choose the "trap" position or make the "trap" position be random</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ol>          
+  </li>
+</ul>
