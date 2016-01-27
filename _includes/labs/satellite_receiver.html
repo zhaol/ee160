@@ -1,0 +1,49 @@
+{% include instructions/labs/{{site.variation}}instruction.html assignment_name="satellite_receiver" %}
+<ul>
+  <li>
+    <p>Your company runs a satellite communication system. At the ground station, the receiver sub-system is comprised of 3 receivers, each located at different corners of the ground station. The ground station also has a super computer that takes in knowledge of the satellite location, real time input from the 3 receivers, weather conditions, etc and outputs the exact signal that was sent by the satellite. However, the super computer cannot produce this exact signal fast enough to be useful in a real communication system. It does, however, allow your receiver sub-system to compare the signals received from the satellite by the 3 receivers against the exact signal sent by the satellite in a given window of time. This comparison is performed once every hour and the results are used to select the receiver that is getting the "best" signal as the primary receiver for the remainder of the hour. Write a program to determine which of the 3 receiver is receiving the "best" signal.</p>
+    <p>The "best" signal is the signal that most resembles the exact signal. One way to measure how different a signal is from another signal is by subtracting the signals from each other for each point in time, squaring the difference, and then adding all the squared differences together for each point in time. In other words, sum the square of the difference between the received signal and exact signal for each point in time. The signal with the lowest number (<span>$&delta;_{receiver\_i}$</span>) will be the "best" signal:</p>
+    <p>$&Delta;_{receiver\_i} = &sum;&#8601;{t=0 seconds}&#8598;{t=10 seconds} (signal_{receiver\_i,t} - signal_{exact,t})^2$</p>
+    <p>The dataset lists the time (column 1) and the received signal (column 2).</p>
+    <div class="point">
+      <p class="topic">Example Calculation:</p>
+      <div class="details">
+        <iframe width='1200' height='400' frameborder='0' src='https://docs.google.com/spreadsheet/pub?key=0Avp7coebpP_bdHl6V09abTNlczdoOUtWOWFVNVZpdEE&output=html&widget=true'></iframe>
+        <p>Download the .xlsx file to view the equations within each cell: <a href="https://docs.google.com/spreadsheet/pub?key=0Avp7coebpP_bdHl6V09abTNlczdoOUtWOWFVNVZpdEE&output=xls">https://docs.google.com/spreadsheet/pub?key=0Avp7coebpP_bdHl6V09abTNlczdoOUtWOWFVNVZpdEE&output=xls</a></p>
+        <p>To view a larger version of the spreadsheet: <a href="https://docs.google.com/spreadsheet/pub?key=0Avp7coebpP_bdHl6V09abTNlczdoOUtWOWFVNVZpdEE&output=html">https://docs.google.com/spreadsheet/pub?key=0Avp7coebpP_bdHl6V09abTNlczdoOUtWOWFVNVZpdEE&output=html</a></p>
+      </div>
+    </div>
+    <div class="point">
+      <p class="topic">You can download the dataset with any of the following methods:</p>
+      <div class="details">
+        <ul>Using GIT (recommended):
+          <li><code>cd</code> into your mini-project folder</li>
+          <li>issue these command at the command prompt:
+            <ul>
+              <li>git clone https://github.com/zhaol/datasets.git</li>
+              <li>cd datasets</li>
+              <li>git checkout tags/receiver.1.0.1</li>
+            </ul>
+          </li>
+        </ul>
+        <ul>Using the web browser:
+          <li>download the zip here: <a href="https://github.com/zhaol/datasets/archive/receiver.1.0.1.zip">https://github.com/zhaol/datasets/archive/receiver.1.0.1.zip</a></li>
+          <li>upload the files into your Cloud9 IDE:
+            <ul>
+              <li>File -> Upload Local Files</li>
+            </ul>
+          </li>
+        </ul>          
+        <ul>Manually copying and pasting the files:
+          <li>all the necessary files are listed here: <a href="https://github.com/zhaol/datasets/tree/receiver.1.0.1">https://github.com/zhaol/datasets/tree/receiver.1.0.1</a></li>
+          <li>when copying and pasting the file content, be sure you are copying and pasting the contents of the files for version receiver.1.0.1 (you should see "tag: receiver.1.0.1" in the top left area)</li>
+        </ul>
+      <p>No matter which method you choose, be sure the <em class="file well well-small">version.txt</em> file says:</p>
+<pre>receiver.1.0.1
+
+Receiver Lab:
+Find best signal</pre>
+      </div>
+    </div>          
+  </li>
+</ul>
