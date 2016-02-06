@@ -1,0 +1,36 @@
+{% include instructions/labs/{{site.variation}}instruction_game.html assignment_name="display_boundaries_items" %}
+<ul>
+  <li>
+    <p>Update the display program</p>
+    <p>Understand how the display program works (the program has changed slightly from the previous lab) and make the following modifications:</p>
+    <ol>
+      <li class="point">
+        <p class="topic">Add boundaries to the program:</p>  
+        <ul class="details">
+          <li>update the <code>update_y_position</code> and the <code>update_x_position</code> functions (in <a href="https://github.com/zhaol/game_scaffold/blob/v1.1.1/display_helpers.c"><em class="file well well-small">display_helpers.c</em></a>) so the token can never go outside the screen</li>
+        </ul>
+      </li>
+      <li class="point">
+        <p class="topic">Add items to the program:</p>
+        <ul class="details">
+          <li>update the program so an item is randomly placed somewhere on the screen at the beginning of the program</li>
+          <li>whenever the token moves "on top" of the item, the item dissappears and a new item appears randomly somewhere else on the screen</li>
+        </ul>
+      </li>        
+      <div class="point">
+        <p class="topic">Hints (feel free to not use them):</p>
+        <ul class="details">
+          <li>use <code>rand()</code> to generate a random number
+            <ul>
+              <li>read more at <a href="http://www.cplusplus.com/reference/cstdlib/rand/">http://www.cplusplus.com/reference/cstdlib/rand/</a></li>
+              <li>the <code>seed_random_generator()</code> function in <a href="https://github.com/zhaol/game_scaffold/blob/v1.1.1/display_helpers.c"><em class="file well well-small">display_helpers.c</em></a> should make it easier for you to use the <code>rand()</code> function</li>
+            </ul>
+          </li>
+          <li>you will most likely need to track another set of x and y positions</li>
+          <li>you will most likely need to have a function that compares the x and y positions of the token and the item</li>
+          <li>you will need to update the <code>redraw_screen()</code> function in <a href="https://github.com/zhaol/game_scaffold/blob/v1.1.1/display_helpers.c"><em class="file well well-small">display_helpers.c</em></a> to display the item</li>
+        </ul>  
+      </div>
+    </ol>        
+  </li>  
+</ul>

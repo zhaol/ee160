@@ -1,0 +1,99 @@
+{% include instructions/labs/{{site.variation}}instruction_single_file.html assignment_name="number_repeater" %}
+<h4>At the end of this problem you should submit to Laulima:</h4>
+<ul>
+  <li>
+    <p>Write a program that will allow the user to enter in a number and then the program will repeat the number back to the user. Values <em class="value well well-small">0</em> thru <em class="value well well-small">10</em> will be repeated by the same number of times as the number. Values <em class="value well well-small">11</em> thru <em class="value well well-small">100</em>, will be repeated 15 times. Values greater than <em class="value well well-small">100</em> will be repeated 20 times.  The program will continue until the user enters in <em class="value well well-small">999</em>.</p>
+    <div class="point">
+      <p class="topic">Click here for more details on the problem when you want to verify your understanding of the problem statement.</p>
+      <div class="details">
+        <ul>The program should:
+          <li>repeat the number entered a specific number of times</li>
+          <li>if the user enter <em class="value well well-small">0</em> thru <em class="value well well-small">10</em>, the program will repeat the number by the same amount as the entered number</li>
+          <li>if the user enter <em class="value well well-small">11</em> thru <em class="value well well-small">100</em>, the program will repeat the number 15 times</li>
+          <li>if the user enter anything greater than <em class="value well well-small">100</em>, the program will repeat the number 20 times</li>
+          <li>if the user enter <em class="value well well-small">999</em>, the program will exit</li>
+        </ul>          
+        <ul>Your program should have:
+          <li>a main <code>while</code> loop</li>
+          <li><code>if</code>/<code>else</code> statements inside the main <code>while</code> loop</li>
+          <li>nested <code>while</code> loop inside the <code>if</code>/<code>else</code> statements</li>
+        </ul>          
+      </div>
+      <h5>Test Cases:</h5>
+      <h6>test case 1:</h6>
+      <ul>
+        <li>input: <pre>2</pre></li>
+        <li>output:
+<pre>
+ 1. 2
+ 2. 2
+</pre>
+        </li>
+      </ul>
+      <h6>test case 2:</h6>
+      <ul>
+        <li>input: <pre>5</pre></li>
+        <li>output:
+<pre>
+ 1. 5
+ 2. 5
+ 3. 5
+ 4. 5
+ 5. 5
+</pre>
+        </li>
+      </ul>
+      <h6>test case 3:</h6>
+      <ul>
+        <li>input: <pre>19</pre></li>
+        <li>output:
+<pre>
+ 1. 19
+ 2. 19
+ 3. 19
+ 4. 19
+ 5. 19
+ 6. 19
+ 7. 19
+ 8. 19
+ 9. 19
+10. 19
+11. 19
+12. 19
+13. 19
+14. 19
+15. 19
+</pre>
+        </li>
+      </ul>
+      <h6>test case 4:</h6>
+      <ul>
+        <li>input: <pre>101</pre></li>
+        <li>output:
+<pre>
+ 1. 101
+ 2. 101
+ 3. 101
+ 4. 101
+ 5. 101
+ 6. 101
+ 7. 101
+ 8. 101
+ 9. 101
+10. 101
+11. 101
+12. 101
+13. 101
+14. 101
+15. 101
+16. 101
+17. 101
+18. 101
+19. 101
+20. 101
+</pre>
+        </li>
+      </ul>          
+    </div> 
+  </li>
+</ul>

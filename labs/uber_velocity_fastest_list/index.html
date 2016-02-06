@@ -8,65 +8,7 @@ title: Lab 12
     <li class="item">
       <h2 class="headline">Uber Velocity and Fastest List</h2>
       <div class="content">
-        <h4>At the end of this problem you should submit to Laulima:</h4>
-        <ul>
-          <li>a file named <span class="file well well-small">UHusername_uber_velocity_fastest_list.c</span></li>
-          <li>a file named <span class="file well well-small">UHusername_uber_velocity_fastest_list.h</span></li>
-          <li>a file named <span class="file well well-small">UHusername_uber_velocity_fastest_list_constants.h</span></li>
-          <li>a file named <span class="file well well-small">UHusername_uber_velocity_fastest_list_helpers.c</span></li>
-          <li>a file named <span class="file well well-small">UHusername_uber_velocity_fastest_list_helpers.h</span>
-            <p>example:</p>
-            <ul>
-              <li><span class="file well well-small">zhaol_uber_velocity_fastest_list.c</span></li>
-              <li><span class="file well well-small">zhaol_uber_velocity_fastest_list.h</span></li>
-              <li><span class="file well well-small">zhaol_uber_velocity_fastest_list_constants.h</span></li>
-              <li><span class="file well well-small">zhaol_uber_velocity_fastest_list_helpers.c</span></li>
-              <li><span class="file well well-small">zhaol_uber_velocity_fastest_list_helpers.h</span></li>
-            </ul>
-          </li>
-          <li>
-            <p>It will be beneficial for you to leave your previous lab work untouched by copying them to a new folder for this lab and modify only the files in the new folder</p>
-            <p>If you were not able to complete Uber Ride Count and Distance from the <a href="{{ site.baseurl }}/labs/display_highscore_uber_ridecount_distance/">Lab 10</a>, you can create a brand new program. The feature set between both lab assignments are independent, however, calculating velocity requires distance to be calculated as well. Just follow the download instructions from <a href="{{ site.baseurl }}/labs/display_highscore_uber_ridecount_distance/">Lab 10</a> and coordinate with your lab instructor.</p>
-            <p>Update your Uber Ride Count and Distance program from <a href="{{ site.baseurl }}/labs/display_highscore_uber_ridecount_distance/">Lab 10</a> to add the following features (or write a new program that does the following):</p>
-            <ol>
-              <li class="point">
-                <p class="topic">Calculate the velocity for each ride:</p>
-                <ul class="details">
-                  <li>you can calculate the velocity using the following method:
-                    <ul>
-                      <li>$velocity = {displacement}/{end\_time - start\_time}$</li>
-                    </ul>
-                  </li>
-                  <li>Report velocity as distance per hour
-                    <ul>
-                      <li>When computing ${displacement}/{end\_time - start\_time}$, do so in hours</li>
-                      <li>Do NOT ignore the minutes and seconds data</li>
-                      <li>For example, if the time difference is 1 hour, 15 minutes and 12 seconds, then $end\_time - start\_time = 1.2533$ not 1</li>
-                    </ul>
-                  </li>
-                  <li>Feel free to use the <code>sqrt</code> function from the <code>math.h</code> library
-                    <ul>
-                      <li>How to use the <code>sqrt</code>: <a href="http://www.cplusplus.com/reference/cmath/sqrt/">http://www.cplusplus.com/reference/cmath/sqrt/</a>
-                      <li>How to compile with the <code>math.h</code> library: <a href="http://stackoverflow.com/questions/4120592/c-programming-sqrt-function">http://stackoverflow.com/questions/4120592/c-programming-sqrt-function</a></li>
-                    </ul>
-                  <li>Or you can write your own <code>sqrt</code> function
-                    <ul>Use at your own risk:
-                      <li><a href="http://en.wikipedia.org/wiki/Methods_of_computing_square_roots">http://en.wikipedia.org/wiki/Methods_of_computing_square_roots</a></li>
-                      <li><a href="http://stackoverflow.com/questions/1623375/writing-your-own-square-root-function">http://stackoverflow.com/questions/1623375/writing-your-own-square-root-function</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li class="point">
-                <p class="topic">Generate a list of velocities sorted with the fastest ride on top:</p>
-                <ul class="details">
-                  <li>output a list of ride IDs with their average velocity to a file called <span class="file well well-small">uber_fastest_list_output.txt</span></li>
-                  <li>the ride IDs their average velocity are sorted with the fastest ride on top</li>
-                </ul>
-              </li>
-            </ol>
-          </li>
-        </ul>
+        {% include labs/uber_velocity_fastest_list.html %}
       </div>
     </li>
   </ul>
